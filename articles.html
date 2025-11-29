@@ -3,55 +3,122 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>المقالات — الحوار الثقافي</title>
+  <title>جميع المقالات — الحوار الثقافي</title>
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    body { background: #f7f7f7; font-family: sans-serif; margin: 0; }
-    header { background: #333; color: white; text-align: center; padding: 20px; }
-    nav { background: #444; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; }
-    .container { max-width: 800px; margin: auto; padding: 20px; }
+    body { margin:0; font-family:sans-serif; background:#f7f7f7; }
+
+    header {
+      background:#333;
+      color:white;
+      padding:20px;
+      text-align:center;
+      font-size:28px;
+      font-weight:bold;
+    }
+
+    nav {
+      background:#444;
+      padding:10px;
+      text-align:center;
+    }
+
+    nav a {
+      color:white;
+      margin:0 15px;
+      text-decoration:none;
+      font-size:18px;
+    }
+
+    .articles-container {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+      gap:20px;
+      max-width:1100px;
+      margin:30px auto;
+      padding:10px;
+    }
+
     .article-card {
-      background: white;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
-      box-shadow: 0 0 5px #ccc;
+      background:white;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 0 10px #ccc;
+      transition:0.3s;
+    }
+
+    .article-card:hover {
+      transform:translateY(-5px);
+      box-shadow:0 0 15px #bbb;
+    }
+
+    .article-card h2 {
+      margin-top:0;
+      color:#333;
+    }
+
+    .article-card a {
+      display:inline-block;
+      margin-top:10px;
+      background:#333;
+      color:white;
+      padding:8px 12px;
+      border-radius:6px;
+      text-decoration:none;
+      font-size:16px;
+    }
+
+    footer {
+      margin-top:40px;
+      background:#333;
+      color:white;
+      text-align:center;
+      padding:20px;
     }
   </style>
 </head>
 <body>
 
-<header>المقالات</header>
+<header>جميع المقالات</header>
 
 <nav>
   <a href="index.html">الرئيسية</a>
-  <a href="authors.html">الكتّاب</a>
+  <a href="authors.html">الكتاب</a>
   <a href="articles.html">المقالات</a>
   <a href="contact.html">تواصل معنا</a>
 </nav>
 
-<div class="container">
-  <h2>قائمة المقالات</h2>
+<div class="articles-container">
 
   <div class="article-card">
-    <h3>عنوان المقال الأول</h3>
-    <p>نبذة مختصرة عن المقال...</p>
-    <a href="#">قراءة المقال</a>
+    <h2>عنوان المقال الأول</h2>
+    <p>ملخص بسيط عن المقال الأول…</p>
+    <a href="article1.html">اقرأ المزيد</a>
   </div>
 
   <div class="article-card">
-    <h3>عنوان المقال الثاني</h3>
-    <p>نبذة مختصرة عن المقال...</p>
-    <a href="#">قراءة المقال</a>
+    <h2>عنوان المقال الثاني</h2>
+    <p>ملخص بسيط عن المقال الثاني…</p>
+    <a href="article2.html">اقرأ المزيد</a>
+  </div>
+
+  <div class="article-card">
+    <h2>عنوان المقال الثالث</h2>
+    <p>ملخص بسيط عن المقال الثالث…</p>
+    <a href="article3.html">اقرأ المزيد</a>
+  </div>
+
+  <div class="article-card">
+    <h2>عنوان المقال الرابع</h2>
+    <p>ملخص بسيط عن المقال الرابع…</p>
+    <a href="article4.html">اقرأ المزيد</a>
   </div>
 
 </div>
 
 <footer>
-  <p style="text-align:center; padding:20px; background:#333; color:white;">
-    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
-  </p>
+  جميع الحقوق محفوظة © 2025 — الحوار الثقافي
 </footer>
 
 </body>
