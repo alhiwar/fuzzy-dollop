@@ -1,89 +1,367 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الحوار الثقافي</title>
+
   <!-- Bootstrap CSS -->
-<link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-/>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </script>
 
-<!-- Bootstrap Icons -->
-<link
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-  rel="stylesheet"
-/>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f2f2f7;
+    }
 
-<!-- كود Bootstrap JS -->
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
-</script>
+    /* قسم البانر العلوي */
+    .hero {
+      background: radial-gradient(circle at top, #444 0, #111 45%, #000 100%);
+      color: white;
+      padding: 80px 0 70px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.7rem;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 25px;
+      opacity: 0.9;
+    }
+
+    /* بطاقات الأقسام / المقالات */
+    .section-title {
+      margin-bottom: 25px;
+    }
+
+    .card {
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      transition: 0.25s;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .category-pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      background: #eee;
+      margin-left: 5px;
+    }
+  </style>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">الحوار الثقافي</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+  <!-- شريط التصفح العلوي -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">الحوار الثقافي</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">الرئيسية</a>
-        </li>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-        <li class="nav-item">
-          <a class="nav-link" href="literature.html">الأدب</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">الرئيسية</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="art.html">الفن</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="literature.html">الأدب</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="politics.html">السياسة</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="art.html">الفن</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="religion.html">الدين</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="politics.html">السياسة</a>
+          </li>
 
-        <!-- Dropdown البحوث -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
-            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
-          </ul>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="religion.html">الدين</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="news.html">الأخبار</a>
-        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+              <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+            </ul>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="sports.html">الرياضة</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">الأخبار</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">تواصل معنا</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sports.html">الرياضة</a>
+          </li>
 
-      </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="authors.html">الكتّاب</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="articles.html">المقالات</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">تواصل معنا</a>
+          </li>
+
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-  
-  <div class="container">
-    <h2>مرحبًا بكم في موقع الحوار الثقافي</h2>
-    <p>
-      منصة ثقافية تهتم بالفكر والأدب والحوار المفتوح بين القرّاء والكتّاب.
-    </p>
-  </div>
+  </nav>
 
-  <footer>
+  <!-- البانر العلوي -->
+  <section class="hero">
+    <div class="container">
+      <h1>الحوار الثقافي</h1>
+      <p>
+        منصّة ثقافية تهتم بالفكر، والأدب، والفن، والدين، والبحوث،
+        وتُتيح مساحة حرّة للحوار بين الكاتب والقارئ.
+      </p>
+      <a href="articles.html" class="btn btn-outline-light btn-lg">
+        تصفّح المقالات
+        <i class="bi bi-arrow-left-short"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- المحتوى الرئيسي -->
+  <main class="container my-5">
+
+    <!-- قسم الأقسام الرئيسية -->
+    <section class="mb-5">
+      <div class="d-flex justify-content-between align-items-center section-title">
+        <h2 class="h4 mb-0">الأقسام الرئيسية</h2>
+        <a href="categories.html" class="text-decoration-none">
+          عرض جميع الأقسام
+          <i class="bi bi-arrow-left-short"></i>
+        </a>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-3 col-6">
+          <a href="literature.html" class="text-decoration-none text-dark">
+            <div class="card text-center p-3">
+              <div class="fs-2 mb-2">📚</div>
+              <div class="fw-bold">الأدب</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <a href="art.html" class="text-decoration-none text-dark">
+            <div class="card text-center p-3">
+              <div class="fs-2 mb-2">🎭</div>
+              <div class="fw-bold">الفن</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <a href="politics.html" class="text-decoration-none text-dark">
+            <div class="card text-center p-3">
+              <div class="fs-2 mb-2">📰</div>
+              <div class="fw-bold">السياسة</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <a href="religion.html" class="text-decoration-none text-dark">
+            <div class="card text-center p-3">
+              <div class="fs-2 mb-2">☪️</div>
+              <div class="fw-bold">الدين</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <a href="research.html" class="text-decoration-none text-dark">
+            <div class="card text-center p-3">
+              <div class="fs-2 mb-2">📑</div>
+              <div class="fw-bold">البحوث العامة</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <a href="islamic-research.html" class="text-decoration-none text-dark">
+            <div class="card text-center p-3">
+              <div class="fs-2 mb-2">📘</div>
+              <div class="fw-bold">البحوث الإسلامية</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <a href="news.html" class="text-decoration-none text-dark">
+            <div class="card text-center p-3">
+              <div class="fs-2 mb-2">🗞️</div>
+              <div class="fw-bold">الأخبار</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <a href="sports.html" class="text-decoration-none text-dark">
+            <div class="card text-center p-3">
+              <div class="fs-2 mb-2">⚽</div>
+              <div class="fw-bold">الرياضة</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم آخر المقالات (يستخدم المقالات التي أنشأناها تجريبيًا) -->
+    <section class="mb-5">
+      <div class="d-flex justify-content-between align-items-center section-title">
+        <h2 class="h4 mb-0">آخر المقالات</h2>
+        <a href="articles.html" class="text-decoration-none">
+          جميع المقالات
+          <i class="bi bi-arrow-left-short"></i>
+        </a>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="category-pill">أدب</span>
+              <small class="text-muted">مقال تجريبي</small>
+            </div>
+            <h3 class="h5">عنوان المقال الأول</h3>
+            <p class="mb-2">نبذة قصيرة عن المقال الأول، يمكنك لاحقًا استبدال النص بالمحتوى الحقيقي.</p>
+            <a href="article1.html" class="text-decoration-none">
+              قراءة المقال
+              <i class="bi bi-arrow-left-short"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="category-pill">أدب</span>
+              <small class="text-muted">مقال تجريبي</small>
+            </div>
+            <h3 class="h5">عنوان المقال الثاني</h3>
+            <p class="mb-2">نبذة قصيرة عن المقال الثاني، ويمكن تغييره لاحقًا بأي نص حقيقي.</p>
+            <a href="article2.html" class="text-decoration-none">
+              قراءة المقال
+              <i class="bi bi-arrow-left-short"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="category-pill">بحوث</span>
+              <small class="text-muted">مقال تجريبي</small>
+            </div>
+            <h3 class="h5">عنوان المقال الثالث</h3>
+            <p class="mb-2">محتوى تجريبي للمقال الثالث، يمثّل نموذجًا لمقال بحثي.</p>
+            <a href="article3.html" class="text-decoration-none">
+              قراءة المقال
+              <i class="bi bi-arrow-left-short"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="category-pill">بحوث</span>
+              <small class="text-muted">مقال تجريبي</small>
+            </div>
+            <h3 class="h5">عنوان المقال الرابع</h3>
+            <p class="mb-2">هذا مثال لمقال رابع يمكن استبداله لاحقًا بمحتوى حقيقي.</p>
+            <a href="article4.html" class="text-decoration-none">
+              قراءة المقال
+              <i class="bi bi-arrow-left-short"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الكتّاب -->
+    <section class="mb-4">
+      <div class="d-flex justify-content-between align-items-center section-title">
+        <h2 class="h4 mb-0">الكتّاب</h2>
+        <a href="authors.html" class="text-decoration-none">
+          عرض جميع الكتّاب
+          <i class="bi bi-arrow-left-short"></i>
+        </a>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card p-3 d-flex flex-row align-items-center">
+            <div class="fs-1 ms-3">✒️</div>
+            <div>
+              <h3 class="h5 mb-1">الكاتب الأول</h3>
+              <p class="mb-2 small text-muted">
+                كاتب يهتم بالمقالة الأدبية والنصوص السردية.
+              </p>
+              <a href="author1.html" class="text-decoration-none">
+                صفحة الكاتب
+                <i class="bi bi-arrow-left-short"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card p-3 d-flex flex-row align-items-center">
+            <div class="fs-1 ms-3">🖋️</div>
+            <div>
+              <h3 class="h5 mb-1">الكاتب الثاني</h3>
+              <p class="mb-2 small text-muted">
+                ناقد ثقافي يكتب في الفكر والتحولات الاجتماعية.
+              </p>
+              <a href="author2.html" class="text-decoration-none">
+                صفحة الكاتب
+                <i class="bi bi-arrow-left-short"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- التذييل -->
+  <footer class="text-center mt-4 p-3 bg-dark text-white">
     جميع الحقوق محفوظة © 2025 — الحوار الثقافي
   </footer>
 
