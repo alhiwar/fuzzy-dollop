@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Authors — Cultural Dialogue</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body { margin:0; font-family:sans-serif; background:#f7f7f7; direction:ltr; }
+    header { background:#333; color:white; padding:20px; text-align:center; font-size:28px; }
+
+    nav {
+      background:#444; padding:10px; text-align:center;
+    }
+    nav a {
+      color:white; margin:0 15px; text-decoration:none; font-size:18px;
+    }
+
+    .authors-container {
+      max-width:900px; margin:auto; margin-top:30px;
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+      gap:20px; padding:20px;
+    }
+
+    .author-card {
+      background:white; border-radius:12px; padding:20px;
+      box-shadow:0 0 10px #ccc;
+      text-align:center;
+    }
+
+    .author-card img {
+      width:120px; height:120px; border-radius:50%; object-fit:cover;
+      margin-bottom:15px;
+    }
+
+    .author-card a {
+      background:#333; color:white; padding:8px 14px;
+      border-radius:6px; text-decoration:none; font-size:16px;
+      display:inline-block; margin-top:10px;
+    }
+
+    footer {
+      margin-top:40px; background:#333; color:white;
+      text-align:center; padding:20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>Authors</header>
+
+<nav>
+  <a href="index-en.html">Home</a>
+  <a href="authors-en.html">Authors</a>
+  <a href="articles-en.html">Articles</a>
+  <a href="contact-en.html">Contact</a>
+
+  <!-- العودة إلى العربية -->
+  <a href="authors.html" style="float:left; color:yellow;">العربية</a>
+</nav>
+
+<div class="authors-container">
+
+  <div class="author-card">
+    <img src="images/author1.jpg" alt="Author 1">
+    <h2>Author One</h2>
+    <p>A short description about the author.</p>
+    <a href="author1.html">View Author Page</a>
+  </div>
+
+  <div class="author-card">
+    <img src="images/author2.jpg" alt="Author 2">
+    <h2>Author Two</h2>
+    <p>A short description about the author.</p>
+    <a href="author2.html">View Author Page</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 — Cultural Dialogue
+</footer>
+
+</body>
+</html>
