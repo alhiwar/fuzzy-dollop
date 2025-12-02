@@ -4,53 +4,62 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>الكتّاب — الحوار الثقافي</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body { background: #f7f7f7; font-family: sans-serif; margin: 0; }
-    header { background: #333; color: white; text-align: center; padding: 20px; }
-    nav { background: #444; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; }
-    .container { max-width: 800px; margin: auto; padding: 20px; }
-    .author-card {
-      background: white;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
-      box-shadow: 0 0 5px #ccc;
-    }
-  </style>
-</head>
-<body>
 
-<header>الكتّاب</header>
-<nav>
-  <a href="index.html">الرئيسية</a>
-  <a href="authors.html">الكتّاب</a>
-  <a href="articles.html">المقالات</a>
-  <a href="contact.html">تواصل معنا</a>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body style="background:#f7f7f7;">
+
+<!-- شريط التصفح -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="logo-small.svg" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%; margin-left:8px;">
+      <span>الحوار الثقافي</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link active" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<div class="container">
-  <h2>قائمة الكتّاب</h2>
+<!-- المحتوى -->
+<div class="container my-5">
+  <h2 class="mb-4 text-center fw-bold">قائمة الكتّاب</h2>
 
-  <div class="author-card">
-    <h3>الكاتب الأول</h3>
-    <p>نبذة قصيرة عن الكاتب.</p>
-   <a href="author1.html">عرض صفحة الكاتب</a>
+  <div class="card p-3 mb-3 shadow-sm">
+    <h3 class="h5 mb-1 fw-bold">الكاتب الأول</h3>
+    <p class="mb-2 text-muted small">نبذة قصيرة عن الكاتب.</p>
+    <a href="author1.html" class="text-decoration-none">
+      صفحة الكاتب <i class="bi bi-arrow-left-short"></i>
+    </a>
   </div>
 
-  <div class="author-card">
-    <h3>الكاتب الثاني</h3>
-    <p>نبذة قصيرة عن الكاتب.</p>
-  <a href="author1.html">عرض صفحة الكاتب</a>
+  <div class="card p-3 mb-3 shadow-sm">
+    <h3 class="h5 mb-1 fw-bold">الكاتب الثاني</h3>
+    <p class="mb-2 text-muted small">نبذة قصيرة عن الكاتب.</p>
+    <a href="author2.html" class="text-decoration-none">
+      صفحة الكاتب <i class="bi bi-arrow-left-short"></i>
+    </a>
   </div>
 
 </div>
 
-<footer>
-  <p style="text-align:center; padding:20px; background:#333; color:white;">
-    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
-  </p>
+<!-- التذييل -->
+<footer class="text-center mt-4 p-3 bg-dark text-white">
+  جميع الحقوق محفوظة © 2025 — الحوار الثقافي
 </footer>
 
 </body>
