@@ -26,7 +26,7 @@
       background: #f2f2f7;
     }
 
-    /* قسم البانر العلوي */
+    /* البانر العلوي */
     .hero {
       background: radial-gradient(circle at top, #444 0, #111 45%, #000 100%);
       color: white;
@@ -38,7 +38,6 @@
       margin-bottom: 15px;
       letter-spacing: 1px;
     }
-    }
     .hero p {
       font-size: 1.1rem;
       max-width: 600px;
@@ -46,7 +45,7 @@
       opacity: 0.9;
     }
 
-    /* بطاقات الأقسام / المقالات */
+    /* بطاقات الأقسام */
     .section-title {
       margin-bottom: 25px;
     }
@@ -75,13 +74,14 @@
 
 <body>
 
-  <!-- شريط التصفح العلوي -->
+  <!-- شريط التصفح -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-  <img src="logo.svg" alt="شعار الحوار الثقافي" width="52" height="52" style="border-radius:50%; margin-left:6px;">
-  <span>الحوار الثقافي</span>
-</a>
+        <img src="logo-small.svg" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%; margin-left:8px;">
+        <span>الحوار الثقافي</span>
+      </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -89,25 +89,11 @@
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">الرئيسية</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="literature.html">الأدب</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="art.html">الفن</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="politics.html">السياسة</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="religion.html">الدين</a>
-          </li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+          <li class="nav-item"><a class="nav-link" href="art.html">الفن</a></li>
+          <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
+          <li class="nav-item"><a class="nav-link" href="religion.html">الدين</a></li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
@@ -117,43 +103,30 @@
             </ul>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="news.html">الأخبار</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="sports.html">الرياضة</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="authors.html">الكتّاب</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="articles.html">المقالات</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">تواصل معنا</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="news.html">الأخبار</a></li>
+          <li class="nav-item"><a class="nav-link" href="sports.html">الرياضة</a></li>
+          <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+          <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
 
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- البانر العلوي -->
- <section class="hero">
-  <div class="container">
+  <!-- البانر مع الشعار -->
+  <section class="hero">
+    <div class="container">
 
-      <img src="logo.svg" alt="شعار الحوار الثقافي"
-           style="width:140px; height:auto; margin-bottom:20px;">
+      <img src="logo-main.svg" alt="شعار الحوار الثقافي"
+           style="width:200px; height:auto; margin-bottom:20px;">
 
       <h1>الحوار الثقافي</h1>
       <p>
         منصّة ثقافية تهتم بالفكر، والأدب، والفن، والدين، والبحوث،
         وتُتيح مساحة حرّة للحوار بين الكاتب والقارئ.
       </p>
+
       <a href="articles.html" class="btn btn-outline-light btn-lg">
         تصفّح المقالات
         <i class="bi bi-arrow-left-short"></i>
@@ -164,7 +137,7 @@
   <!-- المحتوى الرئيسي -->
   <main class="container my-5">
 
-    <!-- قسم الأقسام الرئيسية -->
+    <!-- الأقسام -->
     <section class="mb-5">
       <div class="d-flex justify-content-between align-items-center section-title">
         <h2 class="h4 mb-0">الأقسام الرئيسية</h2>
@@ -175,88 +148,22 @@
       </div>
 
       <div class="row g-3">
-        <div class="col-md-3 col-6">
-          <a href="literature.html" class="text-decoration-none text-dark">
-            <div class="card text-center p-3">
-              <div class="fs-2 mb-2">📚</div>
-              <div class="fw-bold">الأدب</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <a href="art.html" class="text-decoration-none text-dark">
-            <div class="card text-center p-3">
-              <div class="fs-2 mb-2">🎭</div>
-              <div class="fw-bold">الفن</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <a href="politics.html" class="text-decoration-none text-dark">
-            <div class="card text-center p-3">
-              <div class="fs-2 mb-2">📰</div>
-              <div class="fw-bold">السياسة</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <a href="religion.html" class="text-decoration-none text-dark">
-            <div class="card text-center p-3">
-              <div class="fs-2 mb-2">☪️</div>
-              <div class="fw-bold">الدين</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <a href="research.html" class="text-decoration-none text-dark">
-            <div class="card text-center p-3">
-              <div class="fs-2 mb-2">📑</div>
-              <div class="fw-bold">البحوث العامة</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <a href="islamic-research.html" class="text-decoration-none text-dark">
-            <div class="card text-center p-3">
-              <div class="fs-2 mb-2">📘</div>
-              <div class="fw-bold">البحوث الإسلامية</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <a href="news.html" class="text-decoration-none text-dark">
-            <div class="card text-center p-3">
-              <div class="fs-2 mb-2">🗞️</div>
-              <div class="fw-bold">الأخبار</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <a href="sports.html" class="text-decoration-none text-dark">
-            <div class="card text-center p-3">
-              <div class="fs-2 mb-2">⚽</div>
-              <div class="fw-bold">الرياضة</div>
-            </div>
-          </a>
-        </div>
+        <div class="col-md-3 col-6"><a href="literature.html" class="text-decoration-none text-dark"><div class="card text-center p-3"><div class="fs-2 mb-2">📚</div><div class="fw-bold">الأدب</div></div></a></div>
+        <div class="col-md-3 col-6"><a href="art.html" class="text-decoration-none text-dark"><div class="card text-center p-3"><div class="fs-2 mb-2">🎭</div><div class="fw-bold">الفن</div></div></a></div>
+        <div class="col-md-3 col-6"><a href="politics.html" class="text-decoration-none text-dark"><div class="card text-center p-3"><div class="fs-2 mb-2">📰</div><div class="fw-bold">السياسة</div></div></a></div>
+        <div class="col-md-3 col-6"><a href="religion.html" class="text-decoration-none text-dark"><div class="card text-center p-3"><div class="fs-2 mb-2">☪️</div><div class="fw-bold">الدين</div></div></a></div>
+        <div class="col-md-3 col-6"><a href="research.html" class="text-decoration-none text-dark"><div class="card text-center p-3"><div class="fs-2 mb-2">📑</div><div class="fw-bold">البحوث العامة</div></div></a></div>
+        <div class="col-md-3 col-6"><a href="islamic-research.html" class="text-decoration-none text-dark"><div class="card text-center p-3"><div class="fs-2 mb-2">📘</div><div class="fw-bold">البحوث الإسلامية</div></div></a></div>
+        <div class="col-md-3 col-6"><a href="news.html" class="text-decoration-none text-dark"><div class="card text-center p-3"><div class="fs-2 mb-2">🗞️</div><div class="fw-bold">الأخبار</div></div></a></div>
+        <div class="col-md-3 col-6"><a href="sports.html" class="text-decoration-none text-dark"><div class="card text-center p-3"><div class="fs-2 mb-2">⚽</div><div class="fw-bold">الرياضة</div></div></a></div>
       </div>
     </section>
 
-    <!-- قسم آخر المقالات (يستخدم المقالات التي أنشأناها تجريبيًا) -->
+    <!-- آخر المقالات -->
     <section class="mb-5">
       <div class="d-flex justify-content-between align-items-center section-title">
         <h2 class="h4 mb-0">آخر المقالات</h2>
-        <a href="articles.html" class="text-decoration-none">
-          جميع المقالات
-          <i class="bi bi-arrow-left-short"></i>
-        </a>
+        <a href="articles.html" class="text-decoration-none">جميع المقالات <i class="bi bi-arrow-left-short"></i></a>
       </div>
 
       <div class="row g-3">
@@ -268,10 +175,7 @@
             </div>
             <h3 class="h5">عنوان المقال الأول</h3>
             <p class="mb-2">نبذة قصيرة عن المقال الأول، يمكنك لاحقًا استبدال النص بالمحتوى الحقيقي.</p>
-            <a href="article1.html" class="text-decoration-none">
-              قراءة المقال
-              <i class="bi bi-arrow-left-short"></i>
-            </a>
+            <a href="article1.html" class="text-decoration-none">قراءة المقال <i class="bi bi-arrow-left-short"></i></a>
           </div>
         </div>
 
@@ -283,10 +187,7 @@
             </div>
             <h3 class="h5">عنوان المقال الثاني</h3>
             <p class="mb-2">نبذة قصيرة عن المقال الثاني، ويمكن تغييره لاحقًا بأي نص حقيقي.</p>
-            <a href="article2.html" class="text-decoration-none">
-              قراءة المقال
-              <i class="bi bi-arrow-left-short"></i>
-            </a>
+            <a href="article2.html" class="text-decoration-none">قراءة المقال <i class="bi bi-arrow-left-short"></i></a>
           </div>
         </div>
 
@@ -298,10 +199,7 @@
             </div>
             <h3 class="h5">عنوان المقال الثالث</h3>
             <p class="mb-2">محتوى تجريبي للمقال الثالث، يمثّل نموذجًا لمقال بحثي.</p>
-            <a href="article3.html" class="text-decoration-none">
-              قراءة المقال
-              <i class="bi bi-arrow-left-short"></i>
-            </a>
+            <a href="article3.html" class="text-decoration-none">قراءة المقال <i class="bi bi-arrow-left-short"></i></a>
           </div>
         </div>
 
@@ -313,23 +211,17 @@
             </div>
             <h3 class="h5">عنوان المقال الرابع</h3>
             <p class="mb-2">هذا مثال لمقال رابع يمكن استبداله لاحقًا بمحتوى حقيقي.</p>
-            <a href="article4.html" class="text-decoration-none">
-              قراءة المقال
-              <i class="bi bi-arrow-left-short"></i>
-            </a>
+            <a href="article4.html" class="text-decoration-none">قراءة المقال <i class="bi bi-arrow-left-short"></i></a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- قسم الكتّاب -->
+    <!-- الكتّاب -->
     <section class="mb-4">
       <div class="d-flex justify-content-between align-items-center section-title">
         <h2 class="h4 mb-0">الكتّاب</h2>
-        <a href="authors.html" class="text-decoration-none">
-          عرض جميع الكتّاب
-          <i class="bi bi-arrow-left-short"></i>
-        </a>
+        <a href="authors.html" class="text-decoration-none">عرض جميع الكتّاب <i class="bi bi-arrow-left-short"></i></a>
       </div>
 
       <div class="row g-3">
@@ -338,13 +230,8 @@
             <div class="fs-1 ms-3">✒️</div>
             <div>
               <h3 class="h5 mb-1">الكاتب الأول</h3>
-              <p class="mb-2 small text-muted">
-                كاتب يهتم بالمقالة الأدبية والنصوص السردية.
-              </p>
-              <a href="author1.html" class="text-decoration-none">
-                صفحة الكاتب
-                <i class="bi bi-arrow-left-short"></i>
-              </a>
+              <p class="mb-2 small text-muted">كاتب يهتم بالمقالة الأدبية والنصوص السردية.</p>
+              <a href="author1.html" class="text-decoration-none">صفحة الكاتب <i class="bi bi-arrow-left-short"></i></a>
             </div>
           </div>
         </div>
@@ -354,13 +241,8 @@
             <div class="fs-1 ms-3">🖋️</div>
             <div>
               <h3 class="h5 mb-1">الكاتب الثاني</h3>
-              <p class="mb-2 small text-muted">
-                ناقد ثقافي يكتب في الفكر والتحولات الاجتماعية.
-              </p>
-              <a href="author2.html" class="text-decoration-none">
-                صفحة الكاتب
-                <i class="bi bi-arrow-left-short"></i>
-              </a>
+              <p class="mb-2 small text-muted">ناقد ثقافي يكتب في الفكر والتحولات الاجتماعية.</p>
+              <a href="author2.html" class="text-decoration-none">صفحة الكاتب <i class="bi bi-arrow-left-short"></i></a>
             </div>
           </div>
         </div>
