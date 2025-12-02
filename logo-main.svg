@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+  <defs>
+    <style>
+      .gold { fill: #ffd86b; font-family: "Segoe UI", sans-serif; font-weight: 700; }
+      .gold-stroke { stroke: #ffd86b; fill: none; stroke-width: 14; }
+    </style>
+  </defs>
+  <circle cx="450" cy="450" r="390" class="gold-stroke"/>
+  <circle cx="450" cy="450" r="210" class="gold-stroke" opacity="0.8"/>
+  <g class="gold-stroke" opacity="0.9">
+    <ellipse cx="450" cy="450" rx="210" ry="110" transform="rotate(25 450 450)" />
+    <ellipse cx="450" cy="450" rx="210" ry="110" transform="rotate(-25 450 450)" />
+    <ellipse cx="450" cy="450" rx="210" ry="110" transform="rotate(60 450 450)" />
+    <ellipse cx="450" cy="450" rx="210" ry="110" transform="rotate(-60 450 450)" />
+  </g>
+  <text class="gold" font-size="58">
+    <textPath href="#topCircle" startOffset="50%" text-anchor="middle">الحوار الثقافي</textPath>
+  </text>
+  <text class="gold" font-size="48">
+    <textPath href="#bottomCircle" startOffset="50%" text-anchor="middle">CULTURAL DIALOGUE</textPath>
+  </text>
+  <path id="topCircle" d="M450 70 a380 380 0 0 1 0 760" fill="none"/>
+  <path id="bottomCircle" d="M450 830 a380 380 0 0 1 0 -760" fill="none"/>
+</svg>
