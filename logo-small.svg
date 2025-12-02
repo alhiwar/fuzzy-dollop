@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .gold { fill: #ffd86b; font-family: "Segoe UI", sans-serif; font-weight: 700; }
+      .gold-stroke { stroke: #ffd86b; fill: none; stroke-width: 12; }
+    </style>
+  </defs>
+  <circle cx="250" cy="250" r="220" class="gold-stroke"/>
+  <g class="gold-stroke" opacity="0.9">
+    <ellipse cx="250" cy="250" rx="140" ry="70" transform="rotate(25 250 250)"/>
+    <ellipse cx="250" cy="250" rx="140" ry="70" transform="rotate(-25 250 250)"/>
+    <ellipse cx="250" cy="250" rx="140" ry="70" transform="rotate(60 250 250)"/>
+    <ellipse cx="250" cy="250" rx="140" ry="70" transform="rotate(-60 250 250)"/>
+  </g>
+</svg>
