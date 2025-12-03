@@ -8,9 +8,23 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body { background:#f2f2f7; }
+
+    .author-card {
+      transition: 0.25s;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    .author-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.15);
+    }
+  </style>
 </head>
 
-<body style="background:#f7f7f7;">
+<body>
 
 <!-- شريط التصفح -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -26,10 +40,28 @@
 
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
         <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+        <li class="nav-item"><a class="nav-link" href="art.html">الفن</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="religion.html">الدين</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="news.html">الأخبار</a></li>
+        <li class="nav-item"><a class="nav-link" href="sports.html">الرياضة</a></li>
+
         <li class="nav-item"><a class="nav-link active" href="authors.html">الكتّاب</a></li>
         <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
       </ul>
     </div>
   </div>
@@ -37,24 +69,52 @@
 
 <!-- المحتوى -->
 <div class="container my-5">
-  <h2 class="mb-4 text-center fw-bold">قائمة الكتّاب</h2>
 
-  <div class="card p-3 mb-3 shadow-sm">
-    <h3 class="h5 mb-1 fw-bold">الكاتب الأول</h3>
-    <p class="mb-2 text-muted small">نبذة قصيرة عن الكاتب.</p>
-    <a href="author1.html" class="text-decoration-none">
-      صفحة الكاتب <i class="bi bi-arrow-left-short"></i>
-    </a>
+  <h1 class="h3 fw-bold mb-4 text-center">قائمة الكتّاب</h1>
+
+  <div class="row g-4">
+
+    <!-- الكاتب الأول -->
+    <div class="col-md-6">
+      <div class="card p-4 author-card d-flex flex-row align-items-center">
+        <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center ms-3"
+             style="width:70px; height:70px; font-size:1.4rem;">
+          ك1
+        </div>
+
+        <div>
+          <h3 class="h5 mb-1">الكاتب الأول</h3>
+          <p class="small text-muted mb-2">كاتب يهتم بالمقالة الأدبية والنصوص السردية.</p>
+
+          <a href="author1.html" class="text-decoration-none">
+            صفحة الكاتب
+            <i class="bi bi-arrow-left-short"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- الكاتب الثاني -->
+    <div class="col-md-6">
+      <div class="card p-4 author-card d-flex flex-row align-items-center">
+        <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center ms-3"
+             style="width:70px; height:70px; font-size:1.4rem;">
+          ك2
+        </div>
+
+        <div>
+          <h3 class="h5 mb-1">الكاتب الثاني</h3>
+          <p class="small text-muted mb-2">ناقد ثقافي يكتب في الفكر والتحولات الاجتماعية.</p>
+
+          <a href="author2.html" class="text-decoration-none">
+            صفحة الكاتب
+            <i class="bi bi-arrow-left-short"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
-
-  <div class="card p-3 mb-3 shadow-sm">
-    <h3 class="h5 mb-1 fw-bold">الكاتب الثاني</h3>
-    <p class="mb-2 text-muted small">نبذة قصيرة عن الكاتب.</p>
-    <a href="author2.html" class="text-decoration-none">
-      صفحة الكاتب <i class="bi bi-arrow-left-short"></i>
-    </a>
-  </div>
-
 </div>
 
 <!-- التذييل -->
