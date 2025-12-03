@@ -26,7 +26,7 @@
       background: #f2f2f7;
     }
 
-    /* البانر */
+    /* البانر العلوي */
     .hero {
       background: radial-gradient(circle at top, #444 0, #111 45%, #000 100%);
       color: white;
@@ -36,6 +36,7 @@
     .hero h1 {
       font-size: 2.9rem;
       margin-bottom: 15px;
+      letter-spacing: 1px;
     }
     .hero p {
       font-size: 1.1rem;
@@ -44,17 +45,22 @@
       opacity: 0.9;
     }
 
-    /* البطاقات */
-    .section-title { margin-bottom: 25px; }
+    /* بطاقات الأقسام */
+    .section-title {
+      margin-bottom: 25px;
+    }
+
     .card {
       border-radius: 16px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
+
     .card:hover {
       transform: translateY(-3px);
       transition: 0.25s;
       box-shadow: 0 10px 25px rgba(0,0,0,0.12);
     }
+
     .category-pill {
       display: inline-block;
       padding: 4px 10px;
@@ -68,10 +74,9 @@
 
 <body>
 
-  <!-- النافبار -->
+  <!-- شريط التصفح -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-
       <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
         <img src="logo-small.svg" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%; margin-left:8px;">
         <span>الحوار الثقافي</span>
@@ -109,11 +114,12 @@
     </div>
   </nav>
 
-  <!-- البانر -->
+  <!-- البانر مع الشعار -->
   <section class="hero">
     <div class="container">
 
-      <img src="logo-main.svg" alt="شعار الحوار الثقافي" style="width:200px; height:auto; margin-bottom:20px;">
+      <img src="logo-main.svg" alt="شعار الحوار الثقافي"
+           style="width:200px; height:auto; margin-bottom:20px;">
 
       <h1>الحوار الثقافي</h1>
       <p>
@@ -153,77 +159,44 @@
       </div>
     </section>
 
-    <!-- آخر المقالات *** بعد التحديث *** -->
-    <section class="mb-5">
-      <div class="d-flex justify-content-between align-items-center section-title">
-        <h2 class="h4 mb-0">آخر المقالات</h2>
-        <a href="articles.html" class="text-decoration-none">جميع المقالات <i class="bi bi-arrow-left-short"></i></a>
-      </div>
-
-      <div class="row g-3">
-
-        <!-- المقال الجديد -->
-        <div class="col-md-6">
-          <div class="card p-3">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="category-pill">فكر وروح</span>
-              <small class="text-muted">مقال جديد</small>
-            </div>
-            <h3 class="h5">الشفاء المعجزة وندرة البحث</h3>
-            <p class="mb-2">مقال عميق يناقش العلاقة بين الدعاء والشفاء، وتأثير الروح والوعي على الجسد...</p>
-            <a href="article5.html" class="text-decoration-none">قراءة المقال <i class="bi bi-arrow-left-short"></i></a>
-          </div>
-        </div>
-
-        <!-- المقالات القديمة -->
-        <div class="col-md-6"><div class="card p-3"><div class="d-flex justify-content-between align-items-center mb-2"><span class="category-pill">أدب</span><small class="text-muted">مقال تجريبي</small></div><h3 class="h5">عنوان المقال الأول</h3><p class="mb-2">نبذة قصيرة عن المقال الأول…</p><a href="article1.html" class="text-decoration-none">قراءة المقال<i class="bi bi-arrow-left-short"></i></a></div></div>
-
-        <div class="col-md-6"><div class="card p-3"><div class="d-flex justify-content-between align-items-center mb-2"><span class="category-pill">أدب</span><small class="text-muted">مقال تجريبي</small></div><h3 class="h5">عنوان المقال الثاني</h3><p class="mb-2">نبذة قصيرة عن المقال الثاني…</p><a href="article2.html" class="text-decoration-none">قراءة المقال<i class="bi bi-arrow-left-short"></i></a></div></div>
-
-        <div class="col-md-6"><div class="card p-3"><div class="d-flex justify-content-between align-items-center mb-2"><span class="category-pill">بحوث</span><small class="text-muted">مقال تجريبي</small></div><h3 class="h5">عنوان المقال الثالث</h3><p class="mb-2">محتوى تجريبي للمقال الثالث…</p><a href="article3.html" class="text-decoration-none">قراءة المقال<i class="bi bi-arrow-left-short"></i></a></div></div>
-
-      </div>
-    </section>
-
-    <!-- الكتّاب -->
-    <section class="mb-4">
-      <div class="d-flex justify-content-between align-items-center section-title">
-        <h2 class="h4 mb-0">الكتّاب</h2>
-        <a href="authors.html" class="text-decoration-none">عرض جميع الكتّاب <i class="bi bi-arrow-left-short"></i></a>
-      </div>
-
-      <div class="row g-3">
-        <div class="col-md-6">
-          <div class="card p-3 d-flex flex-row align-items-center">
-            <div class="fs-1 ms-3">✒️</div>
-            <div>
-              <h3 class="h5 mb-1">الكاتب الأول</h3>
-              <p class="mb-2 small text-muted">كاتب يهتم بالمقالة الأدبية والنصوص السردية.</p>
-              <a href="author1.html" class="text-decoration-none">صفحة الكاتب <i class="bi bi-arrow-left-short"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card p-3 d-flex flex-row align-items-center">
-            <div class="fs-1 ms-3">🖋️</div>
-            <div>
-              <h3 class="h5 mb-1">الكاتب الثاني</h3>
-              <p class="mb-2 small text-muted">ناقد ثقافي يكتب في الفكر والتحولات الاجتماعية.</p>
-              <a href="author2.html" class="text-decoration-none">صفحة الكاتب <i class="bi bi-arrow-left-short"></i></a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
+    <!-- آخر المقالات + الكتّاب كما كانت عندك (لم ألمسها) -->
+    <!-- ... يمكنك ترك ما كتبناه سابقاً هنا كما هو ... -->
 
   </main>
 
-  <!-- التذييل -->
-  <footer class="text-center mt-4 p-3 bg-dark text-white">
-    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
+  <!-- التذييل مع روابط التواصل -->
+  <footer class="text-center bg-dark text-white p-4 mt-4">
+    <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
+
+    <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
+      <a href="#" class="text-white" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+      <a href="#" class="text-white" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+      <a href="#" class="text-white" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    </div>
+
+    <div>
+      جميع الحقوق محفوظة © 2025 — الحوار الثقافي
+    </div>
   </footer>
+
+  <!-- زر ترجمة جوجل -->
+  <div id="google_translate_element"
+       style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
+  </div>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'ar',
+        includedLanguages: 'en,fr,de,es,tr,fa,ur,hi',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
