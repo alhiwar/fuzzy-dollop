@@ -4,50 +4,134 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>عنوان المقال الأول — الحوار الثقافي</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
   <style>
-    body { background: #f7f7f7; font-family: sans-serif; margin: 0; }
-    header { background: #333; color: white; text-align: center; padding: 20px; }
-    nav { background: #444; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; }
-    .container { max-width: 800px; margin: auto; padding: 20px; line-height: 1.8; }
-    article {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px #ccc;
+    body { background:#f7f7f7; }
+    .article-card:hover {
+      transform: translateY(-2px);
+      transition: 0.2s;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     }
   </style>
 </head>
+
 <body>
 
-<header>عنوان المقال الأول</header>
+<!-- شريط التصفح -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="logo-small.svg" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%; margin-left:8px;">
+      <span>الحوار الثقافي</span>
+    </a>
 
-<nav>
-  <a href="index.html">الرئيسية</a>
-  <a href="authors.html">الكتّاب</a>
-  <a href="articles.html">المقالات</a>
-  <a href="contact.html">تواصل معنا</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+        <li class="nav-item"><a class="nav-link" href="art.html">الفن</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="religion.html">الدين</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="news.html">الأخبار</a></li>
+        <li class="nav-item"><a class="nav-link" href="sports.html">الرياضة</a></li>
+        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<div class="container">
-  <article>
-    <h2>عنوان المقال الأول</h2>
-    <p>
-      هذا نص تجريبي للمقال الأول. يمكنك كتابة أي محتوى تريده هنا.
-      يمكنك إضافة فقرات متعددة، نصوص طويلة، اقتباسات، أو أي شيء آخر.
-    </p>
+<!-- محتوى المقال -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
 
-    <p>
-      هذا المكان يمثل المحتوى الحقيقي للمقال الذي ستنشره لاحقًا.
-    </p>
-  </article>
+      <!-- القسم -->
+      <span class="badge bg-secondary mb-3">الأدب</span>
+
+      <!-- العنوان -->
+      <h1 class="h2 fw-bold mb-3">عنوان المقال الأول</h1>
+
+      <!-- معلومات الكاتب والتاريخ -->
+      <div class="d-flex align-items-center text-muted mb-4 small">
+        <!-- صورة / رمز الكاتب -->
+        <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center ms-2"
+             style="width:42px; height:42px; font-size:0.9rem;">
+          <span>أ1</span>
+        </div>
+        <div>
+          <div>
+            بقلم
+            <a href="author1.html" class="text-decoration-none">الكاتب الأول</a>
+          </div>
+          <div>نُشر في 1 كانون الثاني 2025</div>
+        </div>
+      </div>
+
+      <!-- صورة المقال (يمكن تعديلها لاحقًا) -->
+      <div class="mb-4">
+        <div class="ratio ratio-16x9 bg-light border rounded d-flex align-items-center justify-content-center text-muted">
+          <span>صورة المقال — يمكنك إضافتها لاحقًا</span>
+        </div>
+        <!--
+        إذا أردت استخدام صورة حقيقية، استبدل المربع أعلاه بهذا السطر:
+        <img src="images/article1.jpg" alt="صورة المقال" class="img-fluid rounded mb-3">
+        -->
+      </div>
+
+      <!-- نص المقال -->
+      <article class="bg-white rounded-3 shadow-sm p-4 mb-4 article-card">
+        <p class="mb-3">
+          هذا نص تجريبي للمقال الأول في موقع الحوار الثقافي. يمكنك استبدال هذا النص لاحقًا
+          بالمقال الحقيقي الذي تكتبه أنت أو أحد الكتّاب في القسم الأدبي.
+        </p>
+        <p class="mb-3">
+          حاول أن تُقسّم المقال إلى فقرات قصيرة؛ كل فقرة تعالج فكرة محدّدة. هذا يُساعد القارئ
+          على المتابعة والفهم ويجعل النص مريحًا للعين أثناء القراءة على الشاشة.
+        </p>
+        <p class="mb-0">
+          في النهاية يمكنك إضافة خاتمة تلخّص الفكرة الأساسية، أو تفتح بابًا لسلسلة مقالات لاحقة،
+          أو تدعو القارئ إلى التأمّل والحوار عبر التعليقات أو وسائل التواصل المتاحة.
+        </p>
+      </article>
+
+      <!-- معلومات إضافية أسفل المقال -->
+      <div class="d-flex justify-content-between border-top pt-3 small text-muted">
+        <div>القسم:
+          <a href="literature.html" class="text-decoration-none">الأدب</a>
+        </div>
+        <div>الكاتب:
+          <a href="author1.html" class="text-decoration-none">الكاتب الأول</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
 
-<footer>
-  <p style="text-align:center; padding:20px; background:#333; color:white;">
-    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
-  </p>
+<!-- التذييل -->
+<footer class="text-center mt-4 p-3 bg-dark text-white">
+  جميع الحقوق محفوظة © 2025 — الحوار الثقافي
 </footer>
 
 </body>
