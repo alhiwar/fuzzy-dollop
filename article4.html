@@ -4,37 +4,127 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>عنوان المقال الرابع — الحوار الثقافي</title>
-  <link rel="stylesheet" href="style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
   <style>
-    body { background:#f7f7f7; font-family:sans-serif; margin:0; }
-    header { background:#333; color:white; text-align:center; padding:20px; }
-    nav { background:#444; padding:10px; text-align:center; }
-    nav a { color:white; margin:0 15px; text-decoration:none; font-size:18px; }
-    .container { max-width:800px; margin:auto; background:white; padding:20px; margin-top:25px; border-radius:10px; box-shadow:0 0 10px #ccc; }
+    body { background:#f7f7f7; }
+    .article-card:hover {
+      transform: translateY(-2px);
+      transition: 0.2s;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
   </style>
 </head>
+
 <body>
 
-<header>المقال الرابع</header>
+<!-- شريط التصفح -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="logo-small.svg" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%; margin-left:8px;">
+      <span>الحوار الثقافي</span>
+    </a>
 
-<nav>
-  <a href="index.html">الرئيسية</a>
-  <a href="authors.html">الكتّاب</a>
-  <a href="articles.html">المقالات</a>
-  <a href="contact.html">تواصل معنا</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+        <li class="nav-item"><a class="nav-link" href="art.html">الفن</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="religion.html">الدين</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="news.html">الأخبار</a></li>
+        <li class="nav-item"><a class="nav-link" href="sports.html">الرياضة</a></li>
+
+        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<div class="container">
-  <h1>عنوان المقال الرابع</h1>
-  <p>
-    هذا نص تجريبي للمقال الرابع. يمكنك لاحقاً تعديل المحتوى بالكامل أو استبداله بمقال حقيقي.
-  </p>
+<!-- محتوى المقال -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+
+      <!-- القسم -->
+      <span class="badge bg-secondary mb-3">البحوث</span>
+
+      <!-- العنوان -->
+      <h1 class="h2 fw-bold mb-3">عنوان المقال الرابع</h1>
+
+      <!-- معلومات الكاتب -->
+      <div class="d-flex align-items-center text-muted mb-4 small">
+        <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center ms-2"
+             style="width:42px; height:42px; font-size:0.9rem;">
+          <span>أ2</span>
+        </div>
+        <div>
+          <div>
+            بقلم
+            <a href="author2.html" class="text-decoration-none">الكاتب الثاني</a>
+          </div>
+          <div>نُشر في 2 كانون الثاني 2025</div>
+        </div>
+      </div>
+
+      <!-- صورة المقال -->
+      <div class="mb-4">
+        <div class="ratio ratio-16x9 bg-light border rounded d-flex align-items-center justify-content-center text-muted">
+          <span>صورة المقال — يمكنك إضافتها لاحقًا</span>
+        </div>
+      </div>
+
+      <!-- نص المقال -->
+      <article class="bg-white rounded-3 shadow-sm p-4 mb-4 article-card">
+        <p class="mb-3">
+          هذا هو النص التجريبي للمقال الرابع، المخصّص لقسم البحوث. يمكنك استبداله لاحقًا بمحتوى حقيقي متكامل.
+        </p>
+        <p class="mb-3">
+          يفضّل أن يحتوي البحث على منهجية واضحة، وأمثلة، وتحليل، ثم الخروج بنتائج واستنتاجات.
+        </p>
+        <p class="mb-0">
+          كما يمكن إضافة مراجع أو مصادر في نهاية المقال.
+        </p>
+      </article>
+
+      <!-- روابط أسفل المقال -->
+      <div class="d-flex justify-content-between border-top pt-3 small text-muted">
+        <div>القسم:
+          <a href="research.html" class="text-decoration-none">البحوث العامة</a>
+        </div>
+        <div>الكاتب:
+          <a href="author2.html" class="text-decoration-none">الكاتب الثاني</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
 
-<footer>
-  <p style="text-align:center; padding:20px; background:#333; color:white;">
-    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
-  </p>
+<!-- التذييل -->
+<footer class="text-center mt-4 p-3 bg-dark text-white">
+  جميع الحقوق محفوظة © 2025 — الحوار الثقافي
 </footer>
 
 </body>
