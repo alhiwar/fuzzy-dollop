@@ -10,31 +10,29 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body { background:#f2f2f7; }
-    .author-photo {
-      width:90px; height:90px;
-      border-radius:50%;
-      background:#444;
-      color:white;
-      display:flex; align-items:center; justify-content:center;
-      font-size:2rem;
-      margin-bottom:12px;
+    body { background:#f7f7f7; font-family:"Segoe UI", sans-serif; }
+    .author-card {
+      background:white;
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+      transition:0.3s;
     }
-    .author-card:hover {
-      transform:translateY(-4px);
-      transition:0.25s;
-      box-shadow:0 6px 18px rgba(0,0,0,0.1);
+    .author-card:hover { transform:translateY(-4px); }
+    .author-img {
+      width:90px; height:90px; border-radius:50%; object-fit:cover;
+      border:2px solid #ddd; margin-left:15px;
     }
   </style>
 </head>
 
 <body>
 
-<!-- شريط التصفح -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%; margin-left:8px;">
+      <img src="logo.svg" width="38" height="38" style="border-radius:50%;">
       <span>الحوار الثقافي</span>
     </a>
 
@@ -44,69 +42,49 @@
 
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
         <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
-        <li class="nav-item"><a class="nav-link" href="art.html">الفن</a></li>
-        <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
-        <li class="nav-item"><a class="nav-link" href="religion.html">الدين</a></li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
-            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="news.html">الأخبار</a></li>
-        <li class="nav-item"><a class="nav-link" href="sports.html">الرياضة</a></li>
-
         <li class="nav-item"><a class="nav-link active" href="authors.html">الكتّاب</a></li>
         <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
-
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- محتوى الكتّاب -->
-<div class="container my-5">
+<div class="container mt-5" style="max-width:850px;">
 
-  <h1 class="h4 mb-4">قائمة الكتّاب</h1>
+  <h1 class="h3 fw-bold mb-4">قائمة الكتّاب</h1>
 
-  <div class="row g-4">
-
-    <!-- الكاتب الأول -->
-    <div class="col-md-6">
-      <div class="card p-4 text-center author-card">
-        <div class="author-photo">ك1</div>
-        <h3 class="h5">الكاتب الأول</h3>
-        <p class="text-muted small">
-          كاتب يهتم بالمقالة الأدبية والنصوص السردية.
-        </p>
-        <a href="author1.html" class="btn btn-dark btn-sm">
-          صفحة الكاتب <i class="bi bi-arrow-left-short"></i>
-        </a>
-      </div>
+  <!-- الكاتب الأول -->
+  <div class="author-card d-flex align-items-center mb-3">
+    <img src="author1.jpg" class="author-img" alt="">
+    <div>
+      <h4 class="mb-1">الكاتب الأول</h4>
+      <p class="text-muted small mb-2">كاتب يهتم بالمقالة الأدبية والنصوص السردية.</p>
+      <a href="author1.html">عرض صفحة الكاتب</a>
     </div>
-
-    <!-- الكاتب الثاني -->
-    <div class="col-md-6">
-      <div class="card p-4 text-center author-card">
-        <div class="author-photo">ك2</div>
-        <h3 class="h5">الكاتب الثاني</h3>
-        <p class="text-muted small">
-          ناقد ثقافي يكتب في الفكر والتحولات الاجتماعية.
-        </p>
-        <a href="author2.html" class="btn btn-dark btn-sm">
-          صفحة الكاتب <i class="bi bi-arrow-left-short"></i>
-        </a>
-      </div>
-    </div>
-
   </div>
+
+  <!-- الكاتب الثاني -->
+  <div class="author-card d-flex align-items-center mb-3">
+    <img src="author2.jpg" class="author-img" alt="">
+    <div>
+      <h4 class="mb-1">الكاتب الثاني</h4>
+      <p class="text-muted small mb-2">ناقد ثقافي يكتب في الفكر والتحولات الاجتماعية.</p>
+      <a href="author2.html">عرض صفحة الكاتب</a>
+    </div>
+  </div>
+
+  <!-- الكاتب الجديد جاسم محمد علي المعموري -->
+  <div class="author-card d-flex align-items-center mb-3">
+    <img src="author3.jpg" class="author-img" alt="">
+    <div>
+      <h4 class="mb-1">جاسم محمد علي المعموري</h4>
+      <p class="text-muted small mb-2">كاتب وباحث في الفكر والروحانيات وعلم النفس الروحي.</p>
+      <a href="author3.html">عرض صفحة الكاتب</a>
+    </div>
+  </div>
+
 </div>
 
 <footer class="text-center mt-4 p-3 bg-dark text-white">
