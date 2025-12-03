@@ -4,58 +4,101 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>الكاتب الثاني — الحوار الثقافي</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
   <style>
-    body { background: #f7f7f7; font-family: sans-serif; margin: 0; }
-    header { background: #333; color: white; text-align: center; padding: 20px; }
-    nav { background: #444; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; }
-    .container { max-width: 800px; margin: auto; padding: 20px; }
-    .article-link { 
-      display: block;
-      background: white;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 10px 0;
-      box-shadow: 0 0 5px #ccc;
-      text-decoration: none;
-      color: black;
+    body { background:#f2f2f7; }
+    .author-photo {
+      width:120px; height:120px;
+      border-radius:50%;
+      background:#555;
+      color:white;
+      display:flex; align-items:center; justify-content:center;
+      font-size:2.4rem;
+      margin:auto;
     }
-    .author-bio { background:white; padding:15px; border-radius:8px; box-shadow:0 0 5px #ccc; }
+    .article-item:hover {
+      background:#f0f0f0;
+      transition:0.25s;
+    }
   </style>
 </head>
+
 <body>
 
-<header>الكاتب الثاني</header>
+<!-- شريط التصفح -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%; margin-left:8px;">
+      <span>الحوار الثقافي</span>
+    </a>
 
-<nav>
-  <a href="index.html">الرئيسية</a>
-  <a href="authors.html">الكتّاب</a>
-  <a href="articles.html">المقالات</a>
-  <a href="contact.html">تواصل معنا</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+        <li class="nav-item"><a class="nav-link" href="art.html">الفن</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="religion.html">الدين</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="news.html">الأخبار</a></li>
+        <li class="nav-item"><a class="nav-link" href="sports.html">الرياضة</a></li>
+
+        <li class="nav-item"><a class="nav-link active" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<div class="container">
+<!-- محتوى الكاتب -->
+<div class="container my-5">
 
-  <h2>نبذة عن الكاتب الثاني</h2>
-  <div class="author-bio">
-    <p>
-      اسمه: <strong>مروان الزاهد</strong><br/>
-      نبذة: ناقد ثقافي وكاتب مقالات في الفكر والفن. يكتب عن التحولات الاجتماعية في العالم العربي.
-    </p>
+  <div class="text-center mb-4">
+    <div class="author-photo">ك2</div>
+    <h1 class="h3 mt-3">الكاتب الثاني</h1>
+    <p class="text-muted">ناقد ثقافي يكتب في الفكر والتحولات الاجتماعية.</p>
   </div>
 
-  <h2 style="margin-top:20px;">مقالات الكاتب</h2>
+  <hr class="my-4">
 
-  <a class="article-link" href="article3.html">عنوان المقال الثالث (تجريبي)</a>
-  <a class="article-link" href="article4.html">عنوان المقال الرابع (تجريبي)</a>
+  <h2 class="h5 mb-3">مقالات هذا الكاتب</h2>
 
+  <div class="list-group">
+
+    <a href="article3.html" class="list-group-item list-group-item-action article-item">
+      عنوان المقال الثالث — مقال فكري
+    </a>
+
+    <a href="article4.html" class="list-group-item list-group-item-action article-item">
+      عنوان المقال الرابع — مقال اجتماعي
+    </a>
+
+  </div>
 </div>
 
-<footer>
-  <p style="text-align:center; padding:20px; background:#333; color:white;">
-    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
-  </p>
+<!-- التذييل -->
+<footer class="text-center mt-4 p-3 bg-dark text-white">
+  جميع الحقوق محفوظة © 2025 — الحوار الثقافي
 </footer>
 
 </body>
