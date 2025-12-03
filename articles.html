@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>جميع المقالات — الحوار الثقافي</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -10,15 +10,31 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body { background:#f7f7f7; font-family:"Segoe UI", sans-serif; }
-    .article-card {
-      background:white;
-      padding:18px;
-      border-radius:12px;
-      box-shadow:0 0 10px rgba(0,0,0,0.08);
-      transition:0.3s;
+    body { background:#f5f5f5; font-family:"Segoe UI", sans-serif; }
+    .article-card img {
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      border-radius:8px;
     }
-    .article-card:hover { transform:translateY(-4px); }
+    .category-tag {
+      background:#222;
+      color:white;
+      padding:3px 10px;
+      border-radius:20px;
+      font-size:0.8rem;
+      position:absolute;
+      top:10px;
+      right:10px;
+    }
+    .article-card {
+      transition:0.25s;
+      border-radius:12px;
+    }
+    .article-card:hover {
+      transform:translateY(-5px);
+      box-shadow:0 6px 15px rgba(0,0,0,0.14);
+    }
   </style>
 </head>
 
@@ -28,7 +44,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo.svg" width="38" height="38" style="border-radius:50%;">
+      <img src="logo-small.svg" width="40" height="40" style="border-radius:50%;">
       <span>الحوار الثقافي</span>
     </a>
 
@@ -37,69 +53,107 @@
     </button>
 
     <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto">
+
         <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
         <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
         <li class="nav-item"><a class="nav-link active" href="articles.html">المقالات</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container mt-5" style="max-width:950px;">
+<!-- MAIN CONTENT -->
+<div class="container my-5">
 
-  <h1 class="h3 fw-bold mb-4">جميع المقالات</h1>
+  <h2 class="mb-4 fw-bold">جميع المقالات</h2>
 
-  <div class="row g-3">
+  <div class="row gy-4">
 
-    <!-- المقال الجديد -->
-    <div class="col-md-6">
-      <div class="article-card">
-        <h4 class="fw-bold">الشفاء المعجزة وندرة البحث</h4>
-        <p class="text-muted small mb-2">بقلم: جاسم محمد علي المعموري — <span>2025</span></p>
-        <p>مقال بين العلم والروح، يستكشف العلاقة بين الدعاء والشفاء والتجليات النفسية العميقة...</p>
-        <a href="article5.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+    <!-- ARTICLE 1 -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card article-card p-2">
+        <div style="position:relative;">
+          <span class="category-tag">أدب</span>
+          <img src="article-img1.jpg" alt="">
+        </div>
+        <div class="p-3">
+          <h5 class="fw-bold">عنوان المقال الأول</h5>
+          <p class="text-muted small">
+            ملخص بسيط عن المقال الأول، يمكنك تغييره لاحقًا…
+          </p>
+          <a href="article1.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+        </div>
       </div>
     </div>
 
-    <!-- المقال القديم 1 -->
-    <div class="col-md-6">
-      <div class="article-card">
-        <h4 class="fw-bold">عنوان المقال الأول</h4>
-        <p class="text-muted small mb-2">بقلم: الكاتب الأول</p>
-        <p>ملخص بسيط عن المقال الأول…</p>
-        <a href="article1.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+    <!-- ARTICLE 2 -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card article-card p-2">
+        <div style="position:relative;">
+          <span class="category-tag">أدب</span>
+          <img src="article-img2.jpg" alt="">
+        </div>
+        <div class="p-3">
+          <h5 class="fw-bold">عنوان المقال الثاني</h5>
+          <p class="text-muted small">
+            ملخص بسيط عن المقال الثاني…
+          </p>
+          <a href="article2.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+        </div>
       </div>
     </div>
 
-    <!-- المقال القديم 2 -->
-    <div class="col-md-6">
-      <div class="article-card">
-        <h4 class="fw-bold">عنوان المقال الثاني</h4>
-        <p class="text-muted small mb-2">بقلم: الكاتب الثاني</p>
-        <p>ملخص بسيط عن المقال الثاني…</p>
-        <a href="article2.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+    <!-- ARTICLE 3 -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card article-card p-2">
+        <div style="position:relative;">
+          <span class="category-tag">بحوث</span>
+          <img src="article-img3.jpg" alt="">
+        </div>
+        <div class="p-3">
+          <h5 class="fw-bold">عنوان المقال الثالث</h5>
+          <p class="text-muted small">
+            ملخص بسيط عن المقال الثالث…
+          </p>
+          <a href="article3.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+        </div>
       </div>
     </div>
 
-    <!-- المقال القديم 3 -->
-    <div class="col-md-6">
-      <div class="article-card">
-        <h4 class="fw-bold">عنوان المقال الثالث</h4>
-        <p class="text-muted small mb-2">بقلم: الكاتب الأول</p>
-        <p>ملخص بسيط عن المقال الثالث…</p>
-        <a href="article3.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+    <!-- ARTICLE 4 -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card article-card p-2">
+        <div style="position:relative;">
+          <span class="category-tag">بحوث</span>
+          <img src="article-img4.jpg" alt="">
+        </div>
+        <div class="p-3">
+          <h5 class="fw-bold">عنوان المقال الرابع</h5>
+          <p class="text-muted small">
+            ملخص بسيط عن المقال الرابع…
+          </p>
+          <a href="article4.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+        </div>
       </div>
     </div>
 
-    <!-- المقال القديم 4 -->
-    <div class="col-md-6">
-      <div class="article-card">
-        <h4 class="fw-bold">عنوان المقال الرابع</h4>
-        <p class="text-muted small mb-2">بقلم: الكاتب الثاني</p>
-        <p>ملخص بسيط عن المقال الرابع…</p>
-        <a href="article4.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+    <!-- ARTICLE 5 — مثال على مقال حقيقي -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card article-card p-2">
+        <div style="position:relative;">
+          <span class="category-tag">روحانيات</span>
+          <img src="article-img5.jpg" alt="">
+        </div>
+        <div class="p-3">
+          <h5 class="fw-bold">الشفاء المعجزة وندرة البحث</h5>
+          <p class="text-muted small">
+            مقال للكاتب جاسم محمد علي المعموري حول العلاقة بين الدعاء والشفاء…
+          </p>
+          <a href="article5.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+        </div>
       </div>
     </div>
 
