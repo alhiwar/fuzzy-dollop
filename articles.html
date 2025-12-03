@@ -10,33 +10,25 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body { background:#f2f2f7; }
+    body { background:#f7f7f7; font-family:"Segoe UI", sans-serif; }
     .article-card {
-      border-radius:14px;
-      overflow:hidden;
       background:white;
-      box-shadow:0 5px 15px rgba(0,0,0,0.1);
-      transition:0.25s;
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 0 10px rgba(0,0,0,0.08);
+      transition:0.3s;
     }
-    .article-card:hover {
-      transform:translateY(-4px);
-      box-shadow:0 8px 20px rgba(0,0,0,0.15);
-    }
-    .badge {
-      font-size:0.75rem;
-      padding:4px 10px;
-      border-radius:20px;
-    }
+    .article-card:hover { transform:translateY(-4px); }
   </style>
 </head>
 
 <body>
 
-<!-- شريط التصفح -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%; margin-left:8px;">
+      <img src="logo.svg" width="38" height="38" style="border-radius:50%;">
       <span>الحوار الثقافي</span>
     </a>
 
@@ -46,93 +38,68 @@
 
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
         <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
-        <li class="nav-item"><a class="nav-link" href="art.html">الفن</a></li>
-        <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
-        <li class="nav-item"><a class="nav-link" href="religion.html">الدين</a></li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
-            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="news.html">الأخبار</a></li>
-        <li class="nav-item"><a class="nav-link" href="sports.html">الرياضة</a></li>
-
         <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
         <li class="nav-item"><a class="nav-link active" href="articles.html">المقالات</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
-
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- المحتوى -->
-<div class="container my-5">
+<div class="container mt-5" style="max-width:950px;">
 
-  <h1 class="h4 mb-4">جميع المقالات</h1>
+  <h1 class="h3 fw-bold mb-4">جميع المقالات</h1>
 
-  <div class="row g-4">
+  <div class="row g-3">
 
-    <!-- المقال الأول -->
-    <div class="col-md-6 col-lg-4">
-      <div class="article-card p-3">
-        <span class="badge bg-primary mb-2">أدب</span>
-        <h3 class="h5">عنوان المقال الأول</h3>
-        <p class="text-muted small">
-          ملخص بسيط عن المقال الأول…
-        </p>
-        <a href="article1.html" class="btn btn-dark btn-sm">
-          اقرأ المزيد <i class="bi bi-arrow-left-short"></i>
-        </a>
+    <!-- المقال الجديد -->
+    <div class="col-md-6">
+      <div class="article-card">
+        <h4 class="fw-bold">الشفاء المعجزة وندرة البحث</h4>
+        <p class="text-muted small mb-2">بقلم: جاسم محمد علي المعموري — <span>2025</span></p>
+        <p>مقال بين العلم والروح، يستكشف العلاقة بين الدعاء والشفاء والتجليات النفسية العميقة...</p>
+        <a href="article5.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
       </div>
     </div>
 
-    <!-- المقال الثاني -->
-    <div class="col-md-6 col-lg-4">
-      <div class="article-card p-3">
-        <span class="badge bg-primary mb-2">أدب</span>
-        <h3 class="h5">عنوان المقال الثاني</h3>
-        <p class="text-muted small">
-          ملخص بسيط عن المقال الثاني…
-        </p>
-        <a href="article2.html" class="btn btn-dark btn-sm">
-          اقرأ المزيد <i class="bi bi-arrow-left-short"></i>
-        </a>
+    <!-- المقال القديم 1 -->
+    <div class="col-md-6">
+      <div class="article-card">
+        <h4 class="fw-bold">عنوان المقال الأول</h4>
+        <p class="text-muted small mb-2">بقلم: الكاتب الأول</p>
+        <p>ملخص بسيط عن المقال الأول…</p>
+        <a href="article1.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
       </div>
     </div>
 
-    <!-- المقال الثالث -->
-    <div class="col-md-6 col-lg-4">
-      <div class="article-card p-3">
-        <span class="badge bg-success mb-2">بحوث</span>
-        <h3 class="h5">عنوان المقال الثالث</h3>
-        <p class="text-muted small">
-          ملخص بسيط عن المقال الثالث…
-        </p>
-        <a href="article3.html" class="btn btn-dark btn-sm">
-          اقرأ المزيد <i class="bi bi-arrow-left-short"></i>
-        </a>
+    <!-- المقال القديم 2 -->
+    <div class="col-md-6">
+      <div class="article-card">
+        <h4 class="fw-bold">عنوان المقال الثاني</h4>
+        <p class="text-muted small mb-2">بقلم: الكاتب الثاني</p>
+        <p>ملخص بسيط عن المقال الثاني…</p>
+        <a href="article2.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
       </div>
     </div>
 
-    <!-- المقال الرابع -->
-    <div class="col-md-6 col-lg-4">
-      <div class="article-card p-3">
-        <span class="badge bg-success mb-2">بحوث</span>
-        <h3 class="h5">عنوان المقال الرابع</h3>
-        <p class="text-muted small">
-          ملخص بسيط عن المقال الرابع…
-        </p>
-        <a href="article4.html" class="btn btn-dark btn-sm">
-          اقرأ المزيد <i class="bi bi-arrow-left-short"></i>
-        </a>
+    <!-- المقال القديم 3 -->
+    <div class="col-md-6">
+      <div class="article-card">
+        <h4 class="fw-bold">عنوان المقال الثالث</h4>
+        <p class="text-muted small mb-2">بقلم: الكاتب الأول</p>
+        <p>ملخص بسيط عن المقال الثالث…</p>
+        <a href="article3.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+      </div>
+    </div>
+
+    <!-- المقال القديم 4 -->
+    <div class="col-md-6">
+      <div class="article-card">
+        <h4 class="fw-bold">عنوان المقال الرابع</h4>
+        <p class="text-muted small mb-2">بقلم: الكاتب الثاني</p>
+        <p>ملخص بسيط عن المقال الرابع…</p>
+        <a href="article4.html" class="btn btn-dark btn-sm">اقرأ المزيد</a>
       </div>
     </div>
 
