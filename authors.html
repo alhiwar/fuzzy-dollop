@@ -11,15 +11,19 @@
 
   <style>
     body { background:#f2f2f7; }
-
-    .author-card {
-      transition: 0.25s;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    .author-photo {
+      width:90px; height:90px;
+      border-radius:50%;
+      background:#444;
+      color:white;
+      display:flex; align-items:center; justify-content:center;
+      font-size:2rem;
+      margin-bottom:12px;
     }
     .author-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 26px rgba(0,0,0,0.15);
+      transform:translateY(-4px);
+      transition:0.25s;
+      box-shadow:0 6px 18px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -30,7 +34,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%; margin-left:8px;">
+      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%; margin-left:8px;">
       <span>الحوار الثقافي</span>
     </a>
 
@@ -67,57 +71,44 @@
   </div>
 </nav>
 
-<!-- المحتوى -->
+<!-- محتوى الكتّاب -->
 <div class="container my-5">
 
-  <h1 class="h3 fw-bold mb-4 text-center">قائمة الكتّاب</h1>
+  <h1 class="h4 mb-4">قائمة الكتّاب</h1>
 
   <div class="row g-4">
 
     <!-- الكاتب الأول -->
     <div class="col-md-6">
-      <div class="card p-4 author-card d-flex flex-row align-items-center">
-        <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center ms-3"
-             style="width:70px; height:70px; font-size:1.4rem;">
-          ك1
-        </div>
-
-        <div>
-          <h3 class="h5 mb-1">الكاتب الأول</h3>
-          <p class="small text-muted mb-2">كاتب يهتم بالمقالة الأدبية والنصوص السردية.</p>
-
-          <a href="author1.html" class="text-decoration-none">
-            صفحة الكاتب
-            <i class="bi bi-arrow-left-short"></i>
-          </a>
-        </div>
+      <div class="card p-4 text-center author-card">
+        <div class="author-photo">ك1</div>
+        <h3 class="h5">الكاتب الأول</h3>
+        <p class="text-muted small">
+          كاتب يهتم بالمقالة الأدبية والنصوص السردية.
+        </p>
+        <a href="author1.html" class="btn btn-dark btn-sm">
+          صفحة الكاتب <i class="bi bi-arrow-left-short"></i>
+        </a>
       </div>
     </div>
 
     <!-- الكاتب الثاني -->
     <div class="col-md-6">
-      <div class="card p-4 author-card d-flex flex-row align-items-center">
-        <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center ms-3"
-             style="width:70px; height:70px; font-size:1.4rem;">
-          ك2
-        </div>
-
-        <div>
-          <h3 class="h5 mb-1">الكاتب الثاني</h3>
-          <p class="small text-muted mb-2">ناقد ثقافي يكتب في الفكر والتحولات الاجتماعية.</p>
-
-          <a href="author2.html" class="text-decoration-none">
-            صفحة الكاتب
-            <i class="bi bi-arrow-left-short"></i>
-          </a>
-        </div>
+      <div class="card p-4 text-center author-card">
+        <div class="author-photo">ك2</div>
+        <h3 class="h5">الكاتب الثاني</h3>
+        <p class="text-muted small">
+          ناقد ثقافي يكتب في الفكر والتحولات الاجتماعية.
+        </p>
+        <a href="author2.html" class="btn btn-dark btn-sm">
+          صفحة الكاتب <i class="bi bi-arrow-left-short"></i>
+        </a>
       </div>
     </div>
 
   </div>
 </div>
 
-<!-- التذييل -->
 <footer class="text-center mt-4 p-3 bg-dark text-white">
   جميع الحقوق محفوظة © 2025 — الحوار الثقافي
 </footer>
