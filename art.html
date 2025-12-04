@@ -10,21 +10,30 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body {
-      background:#f7f7f7;
-      font-family: "Segoe UI", sans-serif;
+    body { background:#f5f5f5; font-family:"Segoe UI", sans-serif; }
+
+    .hero {
+      background: linear-gradient(to bottom, #333, #000);
+      color:white;
+      padding:80px 0;
+      text-align:center;
+      margin-bottom:40px;
     }
-    .section-box {
+    .hero h1 { font-size:2.5rem; margin-bottom:15px; }
+    .hero p { opacity:0.85; }
+
+    .category-box {
       background:white;
       padding:25px;
       border-radius:12px;
-      box-shadow:0 0 10px rgba(0,0,0,0.08);
-      margin-top:25px;
-      line-height:1.9;
+      box-shadow:0 0 12px rgba(0,0,0,0.08);
+      transition:0.2s;
+      text-decoration:none;
+      color:#000;
     }
-    h2.section-title {
-      font-weight:bold;
-      margin-bottom:20px;
+    .category-box:hover {
+      transform:translateY(-4px);
+      box-shadow:0 0 18px rgba(0,0,0,0.15);
     }
   </style>
 </head>
@@ -35,7 +44,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%; margin-left:8px;">
+      <img src="logo-small.svg" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%;">
       <span>الحوار الثقافي</span>
     </a>
 
@@ -44,9 +53,8 @@
     </button>
 
     <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto">
 
-        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
         <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
         <li class="nav-item"><a class="nav-link active" href="art.html">الفن</a></li>
         <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
@@ -62,6 +70,9 @@
 
         <li class="nav-item"><a class="nav-link" href="news.html">الأخبار</a></li>
         <li class="nav-item"><a class="nav-link" href="sports.html">الرياضة</a></li>
+
+        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
 
       </ul>
@@ -69,34 +80,42 @@
   </div>
 </nav>
 
-<!-- CONTENT -->
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="container">
+    <h1>قسم الفن</h1>
+    <p>السينما — المسرح — الرسم — التصميم — النقد الفني — مقابلات الفنانين</p>
+  </div>
+</section>
+
+<!-- ARTICLES LIST -->
 <div class="container">
 
-  <div class="section-box">
-    <h2 class="section-title">قسم الفن</h2>
+  <h3 class="mb-4">مقالات فنية</h3>
 
-    <p>
-      يقدّم قسم <strong>الفن</strong> محتوى متنوعاً يشمل:
-    </p>
+  <div class="row g-4">
 
-    <ul>
-      <li>السينما وتحليل الأفلام</li>
-      <li>المسرح وتاريخ العروض الفنية</li>
-      <li>الفن التشكيلي والرسم</li>
-      <li>التصميم الحديث والعمارة</li>
-      <li>مقابلات مع الفنانين ورواد الإبداع</li>
-    </ul>
+    <!-- Example articles: يمكنك إضافة أو حذف -->
+    <div class="col-md-4">
+      <a href="article1.html" class="category-box d-block">
+        <h4 class="h5 mb-2">عنوان المقال الأول</h4>
+        <p class="text-muted mb-1" style="font-size:0.9rem;">مقال فني</p>
+      </a>
+    </div>
 
-    <p>
-      ستجد هنا كل ما يخص الحركة الفنية محليًا وعالميًا، مع مقالات تحليلية واستطلاعات فريدة.
-    </p>
+    <div class="col-md-4">
+      <a href="article2.html" class="category-box d-block">
+        <h4 class="h5 mb-2">عنوان المقال الثاني</h4>
+        <p class="text-muted mb-1" style="font-size:0.9rem;">مقال فني</p>
+      </a>
+    </div>
+
   </div>
 
 </div>
 
 <!-- FOOTER -->
-<footer class="text-center bg-dark text-white p-4 mt-4">
-
+<footer class="text-center bg-dark text-white p-4 mt-5">
   <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
@@ -108,16 +127,15 @@
     <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
   </div>
 
-  <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
-
+  جميع الحقوق محفوظة © 2025 — الحوار الثقافي
 </footer>
 
-<!-- TRANSLATE ICON -->
+<!-- TRANSLATE BUTTON -->
 <div id="google_translate_element"
      style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
 </div>
 
-<script type="text/javascript">
+<script>
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'ar',
