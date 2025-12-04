@@ -4,59 +4,72 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>عن الموقع — الحوار الثقافي</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
-    body { margin:0; font-family:sans-serif; background:#f7f7f7; }
-    header { background:#333; color:white; padding:20px; text-align:center; font-size:28px; }
-
-    nav {
-      background:#444;
-      padding:10px;
-      text-align:center;
+    body {
+      margin:0;
+      font-family:sans-serif;
+      background:#f7f7f7;
+      line-height:1.9;
     }
-    nav a {
+
+    header.about-header {
+      background: linear-gradient(to bottom, #333, #111);
       color:white;
-      margin:0 15px;
-      text-decoration:none;
-      font-size:18px;
+      padding:40px 0;
+      text-align:center;
+      font-size:32px;
+      font-weight:bold;
+      margin-bottom:20px;
     }
 
-    .container {
+    .content-box {
       max-width:900px;
       margin:auto;
       background:white;
       padding:30px;
-      margin-top:30px;
       border-radius:12px;
       box-shadow:0 0 10px #ccc;
-      line-height:1.9;
       font-size:19px;
-    }
-
-    h2 { color:#333; margin-top:0; }
-
-    footer {
-      margin-top:40px;
-      background:#333;
-      color:white;
-      text-align:center;
-      padding:20px;
     }
   </style>
 </head>
+
 <body>
 
-<header>عن الموقع</header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="logo-small.svg" width="50" height="50" style="border-radius:50%;">
+      <span>الحوار الثقافي</span>
+    </a>
 
-<nav>
-  <a href="index.html">الرئيسية</a>
-  <a href="authors.html">الكتّاب</a>
-  <a href="articles.html">المقالات</a>
-  <a href="contact.html">تواصل معنا</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<div class="container">
+<!-- HEADER -->
+<header class="about-header">عن الموقع</header>
+
+<!-- CONTENT -->
+<div class="content-box">
+
   <h2>من نحن؟</h2>
   <p>
     <strong>الحوار الثقافي</strong> هو مساحة مفتوحة للفكر، للكلمة، ولتبادل الرؤى بين الكتّاب والقرّاء.
@@ -65,7 +78,7 @@
 
   <h2>رسالتنا</h2>
   <p>
-    نؤمن بأن الثقافة ليست حكرًا على نخبة، بل حق للجميع.  
+    نؤمن بأن الثقافة ليست حكرًا على نخبة، بل حق للجميع.
     نسعى عبر هذه المنصّة إلى تقديم محتوى راقٍ، صادق، ومتنوع، يلامس اهتمامات القرّاء ويثري معرفتهم.
   </p>
 
@@ -81,23 +94,28 @@
   <p>
     لإيماننا بأن الكلمة تملك قوة التغيير، وأن الحوار هو أساس البناء الثقافي والفكري في أي مجتمع.
   </p>
+
 </div>
-<footer class="text-center bg-dark text-white p-4 mt-4">
+
+<!-- FOOTER -->
+<footer class="text-center bg-dark text-white p-4 mt-5">
   <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
-    <a href="#" class="text-white" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="text-white" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-    <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-    <a href="#" class="text-white" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
-    <a href="#" class="text-white" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    <a href="https://facebook.com" target="_blank" class="text-white"><i class="bi bi-facebook"></i></a>
+    <a href="https://twitter.com" target="_blank" class="text-white"><i class="bi bi-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank" class="text-white"><i class="bi bi-instagram"></i></a>
+    <a href="https://youtube.com" target="_blank" class="text-white"><i class="bi bi-youtube"></i></a>
+    <a href="https://t.me" target="_blank" class="text-white"><i class="bi bi-telegram"></i></a>
+    <a href="https://wa.me" target="_blank" class="text-white"><i class="bi bi-whatsapp"></i></a>
   </div>
 
   <div>
     جميع الحقوق محفوظة © 2025 — الحوار الثقافي
   </div>
 </footer>
+
+<!-- TRANSLATE WIDGET -->
 <div id="google_translate_element"
      style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
 </div>
@@ -113,6 +131,7 @@
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
