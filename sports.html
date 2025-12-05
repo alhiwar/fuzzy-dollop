@@ -7,54 +7,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
-  <style>
-    body {
-      background:#f7f7f7;
-      font-family:sans-serif;
-    }
-
-    .sports-card {
-      background:white;
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow:0 0 14px rgba(0,0,0,0.08);
-      transition:0.25s;
-    }
-    .sports-card:hover {
-      transform:translateY(-4px);
-      box-shadow:0 0 18px rgba(0,0,0,0.15);
-    }
-
-    .sports-img {
-      width:100%;
-      height:210px;
-      object-fit:cover;
-    }
-
-    .sports-body {
-      padding:15px 20px;
-    }
-
-    .sports-body h5 {
-      color:#222;
-      margin-bottom:10px;
-    }
-
-    .sports-body p {
-      color:#555;
-      line-height:1.7;
-    }
-
-    .section-title {
-      font-size:1.8rem;
-      font-weight:bold;
-      margin-bottom:25px;
-      border-right:5px solid #444;
-      padding-right:10px;
-      color:#333;
-    }
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -62,17 +15,19 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
+
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
       <img src="logo-small.svg" width="55" height="55" style="border-radius:50%;">
-      الحوار الثقافي
+      <span>الحوار الثقافي</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sportsNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
+    <div class="collapse navbar-collapse" id="sportsNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
         <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
         <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
@@ -95,54 +50,27 @@
         <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
 
+        <!-- زر EN -->
+        <li class="nav-item">
+          <a href="sports-en.html"
+             class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2">EN</a>
+        </li>
+
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- CONTENT -->
-<div class="container my-5">
+<div class="container mt-4">
+  <h2 class="mb-4">قسم الرياضة</h2>
+  <p>
+    يقدّم هذا القسم تغطية شاملة للأحداث الرياضية، التحليلات، المقالات،  
+    وآخر المستجدات في عالم الرياضة المحلية والعالمية.
+  </p>
 
-  <h2 class="section-title">الأخبار الرياضية</h2>
-
-  <div class="row g-4">
-
-    <!-- بطاقة 1 -->
-    <div class="col-md-4 col-sm-6">
-      <div class="sports-card">
-        <img src="images/sport1.jpg" class="sports-img" alt="خبر رياضي">
-        <div class="sports-body">
-          <h5>فوز فريق كبير في مباراة مثيرة</h5>
-          <p>نموذج خبر رياضي يمكن استبداله لاحقًا بنتائج حقيقية أو تحليلات للمباريات.</p>
-          <a href="#" class="btn btn-dark btn-sm">اقرأ المزيد</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- بطاقة 2 -->
-    <div class="col-md-4 col-sm-6">
-      <div class="sports-card">
-        <img src="images/sport2.jpg" class="sports-img" alt="رياضة">
-        <div class="sports-body">
-          <h5>تحضيرات المنتخب لبطولة جديدة</h5>
-          <p>تفاصيل حول استعدادات المنتخبات، التدريبات، وأجواء الفرق قبل انطلاق البطولات.</p>
-          <a href="#" class="btn btn-dark btn-sm">اقرأ المزيد</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- بطاقة 3 -->
-    <div class="col-md-4 col-sm-6">
-      <div class="sports-card">
-        <img src="images/sport3.jpg" class="sports-img" alt="أخبار الرياضة">
-        <div class="sports-body">
-          <h5>تحليل مباراة هامة</h5>
-          <p>يمكن إضافة التحليلات، آراء الخبراء الرياضيين، وأبرز النقاط الفنية للمباراة.</p>
-          <a href="#" class="btn btn-dark btn-sm">اقرأ المزيد</a>
-        </div>
-      </div>
-    </div>
-
+  <div class="alert alert-info mt-4">
+    لا توجد مقالات رياضية بعد — سيتم الإضافة قريبًا.
   </div>
 </div>
 
@@ -159,24 +87,10 @@
     <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
   </div>
 
-  جميع الحقوق محفوظة © 2025 — الحوار الثقافي
+  <div>
+    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
+  </div>
 </footer>
-
-<!-- GOOGLE TRANSLATE -->
-<div id="google_translate_element"
-     style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
-</div>
-
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'ar',
-      includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi',
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-    }, 'google_translate_element');
-  }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
