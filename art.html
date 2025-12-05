@@ -8,34 +8,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <style>
-    body { background:#f5f5f5; font-family:"Segoe UI", sans-serif; }
-
-    .hero {
-      background: linear-gradient(to bottom, #333, #000);
-      color:white;
-      padding:80px 0;
-      text-align:center;
-      margin-bottom:40px;
-    }
-    .hero h1 { font-size:2.5rem; margin-bottom:15px; }
-    .hero p { opacity:0.85; }
-
-    .category-box {
-      background:white;
-      padding:25px;
-      border-radius:12px;
-      box-shadow:0 0 12px rgba(0,0,0,0.08);
-      transition:0.2s;
-      text-decoration:none;
-      color:#000;
-    }
-    .category-box:hover {
-      transform:translateY(-4px);
-      box-shadow:0 0 18px rgba(0,0,0,0.15);
-    }
-  </style>
 </head>
 
 <body>
@@ -44,7 +16,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%;">
+      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%;">
       <span>الحوار الثقافي</span>
     </a>
 
@@ -53,8 +25,9 @@
     </button>
 
     <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
         <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
         <li class="nav-item"><a class="nav-link active" href="art.html">الفن</a></li>
         <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
@@ -75,47 +48,28 @@
         <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
 
+        <!-- زر التحويل للإنجليزية -->
+        <li class="nav-item">
+          <a class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2" href="art-en.html">
+            EN
+          </a>
+        </li>
+
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- HERO SECTION -->
-<section class="hero">
-  <div class="container">
-    <h1>قسم الفن</h1>
-    <p>السينما — المسرح — الرسم — التصميم — النقد الفني — مقابلات الفنانين</p>
-  </div>
-</section>
-
-<!-- ARTICLES LIST -->
-<div class="container">
-
-  <h3 class="mb-4">مقالات فنية</h3>
-
-  <div class="row g-4">
-
-    <!-- Example articles: يمكنك إضافة أو حذف -->
-    <div class="col-md-4">
-      <a href="article1.html" class="category-box d-block">
-        <h4 class="h5 mb-2">عنوان المقال الأول</h4>
-        <p class="text-muted mb-1" style="font-size:0.9rem;">مقال فني</p>
-      </a>
-    </div>
-
-    <div class="col-md-4">
-      <a href="article2.html" class="category-box d-block">
-        <h4 class="h5 mb-2">عنوان المقال الثاني</h4>
-        <p class="text-muted mb-1" style="font-size:0.9rem;">مقال فني</p>
-      </a>
-    </div>
-
-  </div>
-
+<!-- CONTENT -->
+<div class="container mt-4">
+  <h2 class="mb-4">قسم الفن</h2>
+  <p>
+    تُعرض هنا المقالات الفنية: السينما، المسرح، الرسم، التصميم، والتحليل الفني، إضافة إلى مقابلات الفنانين.
+  </p>
 </div>
 
 <!-- FOOTER -->
-<footer class="text-center bg-dark text-white p-4 mt-5">
+<footer class="text-center bg-dark text-white p-4 mt-4">
   <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
@@ -127,24 +81,10 @@
     <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
   </div>
 
-  جميع الحقوق محفوظة © 2025 — الحوار الثقافي
+  <div>
+    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
+  </div>
 </footer>
-
-<!-- TRANSLATE BUTTON -->
-<div id="google_translate_element"
-     style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
-</div>
-
-<script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'ar',
-      includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi',
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-    }, 'google_translate_element');
-  }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
