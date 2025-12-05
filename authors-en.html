@@ -1,41 +1,33 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Authors — Al-Hiwar Al-Thaqafi</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Authors — Cultural Dialogue</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body {
-      margin:0;
-      font-family: system-ui, sans-serif;
-      background:#f7f7f7;
-    }
-
+    body { background:#f2f2f7; }
     .author-card {
       background:white;
       padding:20px;
       border-radius:12px;
-      box-shadow:0 0 10px rgba(0,0,0,0.08);
-      display:flex;
-      gap:20px;
-      align-items:center;
-      transition:0.2s;
+      box-shadow:0 0 12px rgba(0,0,0,0.1);
+      transition:0.3s;
     }
-
     .author-card:hover {
-      transform:translateY(-4px);
-      box-shadow:0 0 16px rgba(0,0,0,0.13);
+      transform:translateY(-5px);
+      box-shadow:0 0 18px rgba(0,0,0,0.15);
     }
-
     .author-img {
       width:110px;
       height:110px;
-      border-radius:50%;
       object-fit:cover;
+      border-radius:50%;
+      margin-right:15px;
       border:3px solid #ddd;
     }
   </style>
@@ -49,64 +41,49 @@
 
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index-en.html">
       <img src="logo-small.svg" width="55" height="55" style="border-radius:50%;">
-      <span>Al-Hiwar Al-Thaqafi</span>
+      <span>Cultural Dialogue</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#authorsNavEn">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <div class="collapse navbar-collapse" id="authorsNavEn">
+      <ul class="navbar-nav ms-auto">
 
         <li class="nav-item"><a class="nav-link" href="index-en.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about-en.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles-en.html">Articles</a></li>
+
         <li class="nav-item"><a class="nav-link active" href="authors-en.html">Authors</a></li>
-        <li class="nav-item"><a class="nav-link" href="articles.html">Articles (AR)</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+        <li class="nav-item"><a class="nav-link" href="contact-en.html">Contact</a></li>
+
+        <!-- زر AR -->
+        <li class="nav-item">
+          <a href="authors.html"
+             class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2">AR</a>
+        </li>
 
       </ul>
     </div>
   </div>
 </nav>
 
+<!-- CONTENT -->
+<div class="container my-5">
 
-<!-- PAGE TITLE -->
-<div class="container mt-5">
-  <h1 class="fw-bold mb-4 text-center">Our Authors</h1>
+  <h2 class="mb-4 text-center">Authors</h2>
 
-  <!-- AUTHOR 3 (REAL WRITER) -->
-  <div class="author-card mb-4">
-    <img src="images/author3.jpg" class="author-img" alt="Author Image">
+  <div class="author-card d-flex align-items-center mb-4">
+    <img src="author3.jpg" class="author-img" alt="Author Photo">
     <div>
       <h3 class="h5 mb-1">Jasim Mohammed Ali Al-Mamouri</h3>
-      <p class="mb-2 text-muted">Writer & Researcher in Spirituality and Human Consciousness</p>
+      <p class="text-muted mb-2">Writer and researcher in spirituality, faith psychology, and human consciousness studies.</p>
       <a href="author3.html" class="btn btn-dark btn-sm">View Profile</a>
     </div>
   </div>
 
-  <!-- PLACEHOLDER AUTHOR 1 -->
-  <div class="author-card mb-4">
-    <img src="images/author3.jpg" class="author-img">
-    <div>
-      <h3 class="h5 mb-1">Author One</h3>
-      <p class="mb-2 text-muted">Sample writer — replace with a real author later.</p>
-      <a href="#" class="btn btn-secondary btn-sm disabled">Profile Coming Soon</a>
-    </div>
-  </div>
-
-  <!-- PLACEHOLDER AUTHOR 2 -->
-  <div class="author-card mb-4">
-    <img src="images/author3.jpg" class="author-img">
-    <div>
-      <h3 class="h5 mb-1">Author Two</h3>
-      <p class="mb-2 text-muted">Sample writer — replace later if needed.</p>
-      <a href="#" class="btn btn-secondary btn-sm disabled">Profile Coming Soon</a>
-    </div>
-  </div>
-
 </div>
-
 
 <!-- FOOTER -->
 <footer class="text-center bg-dark text-white p-4 mt-4">
@@ -122,26 +99,8 @@
     <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
   </div>
 
-  <div>© 2025 — Al-Hiwar Al-Thaqafi</div>
+  <div>© 2025 Cultural Dialogue — All Rights Reserved</div>
 </footer>
-
-<!-- GOOGLE TRANSLATE -->
-<div id="google_translate_element"
-     style="position:fixed; bottom:16px; left:16px; z-index:9999;
-            background:white; padding:4px 8px; border-radius:8px;
-            box-shadow:0 0 6px rgba(0,0,0,0.2);"></div>
-
-<script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi',
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-    }, 'google_translate_element');
-  }
-</script>
-
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
