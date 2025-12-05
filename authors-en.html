@@ -10,30 +10,33 @@
 
   <style>
     body {
-      background:#f7f7f7;
+      margin:0;
       font-family: system-ui, sans-serif;
+      background:#f7f7f7;
     }
 
     .author-card {
       background:white;
-      border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
       padding:20px;
-      transition:0.25s;
+      border-radius:12px;
+      box-shadow:0 0 10px rgba(0,0,0,0.08);
+      display:flex;
+      gap:20px;
+      align-items:center;
+      transition:0.2s;
     }
 
     .author-card:hover {
-      transform:translateY(-3px);
-      box-shadow:0 8px 18px rgba(0,0,0,0.12);
+      transform:translateY(-4px);
+      box-shadow:0 0 16px rgba(0,0,0,0.13);
     }
 
-    .author-photo {
-      width:90px;
-      height:90px;
-      object-fit:cover;
+    .author-img {
+      width:110px;
+      height:110px;
       border-radius:50%;
+      object-fit:cover;
       border:3px solid #ddd;
-      margin-right:15px;
     }
   </style>
 </head>
@@ -43,8 +46,9 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
+
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index-en.html">
-      <img src="logo-small.svg" width="50" height="50" style="border-radius:50%;">
+      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%;">
       <span>Al-Hiwar Al-Thaqafi</span>
     </a>
 
@@ -53,58 +57,60 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
         <li class="nav-item"><a class="nav-link" href="index-en.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about-en.html">About</a></li>
         <li class="nav-item"><a class="nav-link active" href="authors-en.html">Authors</a></li>
         <li class="nav-item"><a class="nav-link" href="articles.html">Articles (AR)</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- CONTENT -->
-<div class="container my-5" style="max-width:850px;">
 
-  <h1 class="mb-4 fw-bold text-center">Our Authors</h1>
-  <p class="text-muted mb-5 text-center">
-    Meet the authors who enrich this platform with valuable thoughts, research, and cultural insights.
-  </p>
+<!-- PAGE TITLE -->
+<div class="container mt-5">
+  <h1 class="fw-bold mb-4 text-center">Our Authors</h1>
 
-  <!-- AUTHOR 1 -->
-  <div class="author-card d-flex align-items-center mb-3">
-    <img src="images/author3.jpg" class="author-photo" alt="Author Photo">
+  <!-- AUTHOR 3 (REAL WRITER) -->
+  <div class="author-card mb-4">
+    <img src="images/author3.jpg" class="author-img" alt="Author Image">
     <div>
-      <h4 class="mb-1">Author One</h4>
-      <p class="text-muted mb-2">Writer and essayist in literature and cultural thought.</p>
-      <a href="author1.html" class="text-decoration-none">Visit Profile →</a>
+      <h3 class="h5 mb-1">Jasim Mohammed Ali Al-Mamouri</h3>
+      <p class="mb-2 text-muted">Writer & Researcher in Spirituality and Human Consciousness</p>
+      <a href="author3.html" class="btn btn-dark btn-sm">View Profile</a>
     </div>
   </div>
 
-  <!-- AUTHOR 2 -->
-  <div class="author-card d-flex align-items-center mb-3">
-    <img src="images/author3.jpg" class="author-photo" alt="Author Photo">
+  <!-- PLACEHOLDER AUTHOR 1 -->
+  <div class="author-card mb-4">
+    <img src="images/author3.jpg" class="author-img">
     <div>
-      <h4 class="mb-1">Author Two</h4>
-      <p class="text-muted mb-2">Researcher in philosophy, society, and critical thinking.</p>
-      <a href="author2.html" class="text-decoration-none">Visit Profile →</a>
+      <h3 class="h5 mb-1">Author One</h3>
+      <p class="mb-2 text-muted">Sample writer — replace with a real author later.</p>
+      <a href="#" class="btn btn-secondary btn-sm disabled">Profile Coming Soon</a>
     </div>
   </div>
 
-  <!-- AUTHOR 3 (REAL ONE) -->
-  <div class="author-card d-flex align-items-center mb-3">
-    <img src="images/author3.jpg" class="author-photo" alt="Jasim Al-Maamouri">
+  <!-- PLACEHOLDER AUTHOR 2 -->
+  <div class="author-card mb-4">
+    <img src="images/author3.jpg" class="author-img">
     <div>
-      <h4 class="mb-1">Jasim Mohammed Ali Al-Maamouri</h4>
-      <p class="text-muted mb-2">Writer & Researcher in spirituality, psychology, and human consciousness.</p>
-      <a href="author3.html" class="text-decoration-none">Visit Profile →</a>
+      <h3 class="h5 mb-1">Author Two</h3>
+      <p class="mb-2 text-muted">Sample writer — replace later if needed.</p>
+      <a href="#" class="btn btn-secondary btn-sm disabled">Profile Coming Soon</a>
     </div>
   </div>
 
 </div>
 
+
 <!-- FOOTER -->
 <footer class="text-center bg-dark text-white p-4 mt-4">
+
   <h5 class="mb-3">Follow Us</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
@@ -121,7 +127,9 @@
 
 <!-- GOOGLE TRANSLATE -->
 <div id="google_translate_element"
-     style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);"></div>
+     style="position:fixed; bottom:16px; left:16px; z-index:9999;
+            background:white; padding:4px 8px; border-radius:8px;
+            box-shadow:0 0 6px rgba(0,0,0,0.2);"></div>
 
 <script>
   function googleTranslateElementInit() {
@@ -132,6 +140,7 @@
     }, 'google_translate_element');
   }
 </script>
+
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
