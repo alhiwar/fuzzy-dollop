@@ -3,48 +3,77 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>قسم الأخبار</title>
+  <title>قسم الأخبار — الحوار الثقافي</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      background:#f7f7f7;
+      font-family:sans-serif;
+    }
+
+    .news-card {
+      background:white;
+      border-radius:12px;
+      box-shadow:0 0 12px rgba(0,0,0,0.08);
+      overflow:hidden;
+      transition:0.25s;
+    }
+    .news-card:hover {
+      transform:translateY(-4px);
+      box-shadow:0 0 18px rgba(0,0,0,0.15);
+    }
+    .news-img {
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+    .news-body {
+      padding:15px 20px;
+    }
+    .news-body h5 {
+      margin-bottom:10px;
+      color:#222;
+    }
+    .news-body p {
+      color:#555;
+      line-height:1.7;
+    }
+
+    .section-title {
+      font-size:1.8rem;
+      font-weight:bold;
+      margin-bottom:25px;
+      color:#333;
+      border-right:5px solid #444;
+      padding-right:10px;
+    }
+  </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%; margin-left:8px;">
-      <span>الحوار الثقافي</span>
+      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%;">
+      الحوار الثقافي
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">الرئيسية</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="literature.html">الأدب</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="art.html">الفن</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="politics.html">السياسة</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="religion.html">الدين</a>
-        </li>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+        <li class="nav-item"><a class="nav-link" href="art.html">الفن</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="religion.html">الدين</a></li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
@@ -54,58 +83,95 @@
           </ul>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link active" href="news.html">الأخبار</a>
-        </li>
+        <li class="nav-item"><a class="nav-link active" href="news.html">الأخبار</a></li>
+        <li class="nav-item"><a class="nav-link" href="sports.html">الرياضة</a></li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="sports.html">الرياضة</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">تواصل معنا</a>
-        </li>
-
+        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container mt-4">
-  <h2 class="mb-4">قسم الأخبار</h2>
-  <p>تُعرض هنا الأخبار المحلية والعالمية والتحليلات العاجلة.</p>
+<!-- CONTENT -->
+<div class="container my-5">
+
+  <h2 class="section-title">آخر الأخبار</h2>
+
+  <div class="row g-4">
+
+    <!-- خبر 1 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="news-card">
+        <img src="images/news1.jpg" class="news-img" alt="خبر 1">
+        <div class="news-body">
+          <h5>عنوان الخبر الأول</h5>
+          <p>هذا نموذج لخبر يمكن استبداله لاحقًا بخبر حقيقي من الأحداث المحلية أو العالمية.</p>
+          <a href="#" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- خبر 2 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="news-card">
+        <img src="images/news2.jpg" class="news-img" alt="خبر 2">
+        <div class="news-body">
+          <h5>عنوان الخبر الثاني</h5>
+          <p>نص تجريبي لعرض خبر جديد، سيتم تطوير قسم الأخبار لاحقًا بآلية نشر فورية.</p>
+          <a href="#" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- خبر 3 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="news-card">
+        <img src="images/news3.jpg" class="news-img" alt="خبر 3">
+        <div class="news-body">
+          <h5>عنوان الخبر الثالث</h5>
+          <p>يمكنك إضافة أي عدد من الأخبار بسهولة عن طريق نسخ إحدى البطاقات وتكرارها.</p>
+          <a href="#" class="btn btn-dark btn-sm">اقرأ المزيد</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
+
+<!-- FOOTER -->
 <footer class="text-center bg-dark text-white p-4 mt-4">
   <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
-    <a href="#" class="text-white" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="text-white" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-    <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-    <a href="#" class="text-white" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
-    <a href="#" class="text-white" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
   </div>
 
-  <div>
-    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
-  </div>
+  جميع الحقوق محفوظة © 2025 — الحوار الثقافي
 </footer>
+
+<!-- GOOGLE TRANSLATE -->
 <div id="google_translate_element"
-     style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
+     style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white;
+            padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
 </div>
 
 <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'ar',
-      includedLanguages: 'en,fr,de,es,tr,fa,ur,hi',
+      includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi',
       layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
     }, 'google_translate_element');
   }
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 
 </body>
 </html>
