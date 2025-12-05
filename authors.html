@@ -1,42 +1,34 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>الكتّاب — الحوار الثقافي</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body {
-      background:#f5f5f5;
-      font-family:"Segoe UI", sans-serif;
-    }
-
+    body { background:#f2f2f7; }
     .author-card {
       background:white;
-      border-radius:12px;
       padding:20px;
-      box-shadow:0 0 12px rgba(0,0,0,0.08);
-      transition:0.2s;
-      text-decoration:none;
-      color:#000;
-      display:block;
+      border-radius:12px;
+      box-shadow:0 0 12px rgba(0,0,0,0.1);
+      transition:0.3s;
     }
-
     .author-card:hover {
-      transform:translateY(-4px);
-      box-shadow:0 3px 15px rgba(0,0,0,0.15);
+      transform:translateY(-5px);
+      box-shadow:0 0 18px rgba(0,0,0,0.15);
     }
-
-    .author-photo {
+    .author-img {
       width:110px;
       height:110px;
-      border-radius:50%;
       object-fit:cover;
+      border-radius:50%;
+      margin-left:15px;
       border:3px solid #ddd;
-      margin-bottom:12px;
     }
   </style>
 </head>
@@ -46,22 +38,31 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
+
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
       <img src="logo-small.svg" width="55" height="55" style="border-radius:50%;">
       <span>الحوار الثقافي</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#authorsNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="mainNavbar">
+    <div class="collapse navbar-collapse" id="authorsNav">
       <ul class="navbar-nav ms-auto">
 
         <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-        <li class="nav-item"><a class="nav-link active" href="authors.html">الكتّاب</a></li>
         <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+
+        <li class="nav-item"><a class="nav-link active" href="authors.html">الكتّاب</a></li>
+
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
+        <!-- زر EN -->
+        <li class="nav-item">
+          <a href="authors-en.html"
+             class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2">EN</a>
+        </li>
 
       </ul>
     </div>
@@ -71,43 +72,22 @@
 <!-- CONTENT -->
 <div class="container my-5">
 
-  <h1 class="mb-4 text-center fw-bold">كتّاب الموقع</h1>
+  <h2 class="mb-4 text-center">قائمة الكتّاب</h2>
 
-  <div class="row g-4">
-
-    <!-- الكاتب رقم 1 -->
-    <div class="col-md-4">
-      <a href="author1.html" class="author-card text-center">
-        <img src="images/author3.jpg" class="author-photo" alt="صورة الكاتب">
-        <h4 class="fw-bold">الكاتب الأول</h4>
-        <p class="text-muted small">كاتب يهتم بالأدب والنصوص الثقافية</p>
-      </a>
+  <div class="author-card d-flex align-items-center mb-4">
+    <img src="author3.jpg" class="author-img" alt="صورة الكاتب">
+    <div>
+      <h3 class="h5 mb-1">جاسم محمد علي المعموري</h3>
+      <p class="text-muted mb-2">كاتب وباحث في الفكر والروحانيات وعلم النفس الروحي</p>
+      <a href="author3.html" class="btn btn-dark btn-sm">عرض صفحة الكاتب</a>
     </div>
-
-    <!-- الكاتب رقم 2 -->
-    <div class="col-md-4">
-      <a href="author2.html" class="author-card text-center">
-        <img src="images/author3.jpg" class="author-photo" alt="صورة الكاتب">
-        <h4 class="fw-bold">الكاتب الثاني</h4>
-        <p class="text-muted small">باحث وناقد في الفكر والتحولات الاجتماعية</p>
-      </a>
-    </div>
-
-    <!-- الكاتب رقم 3 (جاسم محمد علي المعموري) -->
-    <div class="col-md-4">
-      <a href="author3.html" class="author-card text-center">
-        <img src="images/author3.jpg" class="author-photo" alt="صورة الكاتب">
-        <h4 class="fw-bold">جاسم محمد علي المعموري</h4>
-        <p class="text-muted small">كاتب وباحث في الفكر والروحانيات</p>
-      </a>
-    </div>
-
   </div>
 
 </div>
 
 <!-- FOOTER -->
 <footer class="text-center bg-dark text-white p-4 mt-4">
+
   <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
@@ -121,21 +101,6 @@
 
   <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
 </footer>
-
-<div id="google_translate_element"
-     style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
-</div>
-
-<script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'ar',
-      includedLanguages: 'en,fr,de,es,tr,fa,ur,hi',
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-    }, 'google_translate_element');
-  }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
