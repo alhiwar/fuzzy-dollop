@@ -7,81 +7,34 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body {
-      background:#f5f5f5;
-      font-family:"Segoe UI", sans-serif;
-      line-height:1.9;
-    }
-
-    .hero-image {
-      width:100%;
-      max-height:350px;
-      object-fit:cover;
-      border-bottom:4px solid #333;
-      margin-bottom:-40px;
-    }
-
-    .article-header {
-      background: linear-gradient(to bottom, #222, #000);
-      color:white;
-      text-align:center;
-      padding:90px 0 65px;
-      margin-bottom:40px;
-    }
-
+    body { background:#f2f2f7; font-family:"Segoe UI", sans-serif; }
     .article-box {
       background:white;
-      padding:30px;
+      padding:25px;
       border-radius:12px;
-      box-shadow:0 5px 20px rgba(0,0,0,0.1);
+      box-shadow:0 0 15px rgba(0,0,0,0.1);
     }
-
     .author-photo {
-      width:85px;
-      height:85px;
+      width:80px;
+      height:80px;
       border-radius:50%;
       object-fit:cover;
-      border:3px solid #ddd;
-      margin-left:15px;
-    }
-
-    .related-article {
-      background:white;
-      padding:15px;
-      border-radius:10px;
-      box-shadow:0 0 10px rgba(0,0,0,0.07);
-      text-decoration:none;
-      color:#000;
-      transition:0.2s;
-      display:block;
-    }
-
-    .related-article:hover {
-      transform:translateY(-3px);
-      box-shadow:0 0 14px rgba(0,0,0,0.12);
-    }
-
-    .share-btn {
-      background:#222;
-      color:white;
-      padding:10px 18px;
-      border-radius:8px;
-      display:inline-block;
-      margin-top:20px;
-      text-decoration:none;
+      margin-left:12px;
+      border:2px solid #ccc;
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- شريط التصفح -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%;">
+      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%; margin-left:8px;">
       <span>الحوار الثقافي</span>
     </a>
 
@@ -91,11 +44,13 @@
 
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
         <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
         <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
         <li class="nav-item"><a class="nav-link" href="art.html">الفن</a></li>
         <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
         <li class="nav-item"><a class="nav-link" href="religion.html">الدين</a></li>
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
           <ul class="dropdown-menu">
@@ -103,77 +58,58 @@
             <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
           </ul>
         </li>
+
         <li class="nav-item"><a class="nav-link" href="news.html">الأخبار</a></li>
         <li class="nav-item"><a class="nav-link" href="sports.html">الرياضة</a></li>
+
         <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
         <li class="nav-item"><a class="nav-link active" href="articles.html">المقالات</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- HERO IMAGE -->
-<img src="images/article1.jpg" class="hero-image" alt="صورة المقال">
+<!-- محتوى المقال -->
+<div class="container my-5">
 
-<!-- ARTICLE HEADER -->
-<header class="article-header">
-  <h1 class="fw-bold display-6">عنوان المقال الأول</h1>
-  <p class="mt-3 text-light opacity-75">
-    مقال تجريبي — 
-    <script>document.write(new Date().toLocaleDateString('ar-EG'));</script>
-  </p>
-</header>
-
-<!-- ARTICLE BODY -->
-<div class="container mb-5">
   <div class="article-box">
-
-    <!-- AUTHOR BOX -->
-    <div class="d-flex align-items-center mb-4">
-      <img src="author1.jpg" class="author-photo" alt="الكاتب الأول">
+    
+    <!-- معلومات الكاتب -->
+    <div class="d-flex align-items-center mb-3">
+      <img src="images/author3.jpg" alt="صورة الكاتب" class="author-photo">
       <div>
-        <h5 class="mb-1">الكاتب الأول</h5>
-        <small class="text-muted">كاتب في الأدب والمقالات الفكرية</small>
+        <h5 class="mb-1">بقلم: جاسم محمد علي المعموري</h5>
+        <small class="text-muted">
+          <script>document.write(new Date().toLocaleDateString('ar-EG'));</script>
+        </small>
       </div>
     </div>
 
+    <span class="badge bg-primary mb-3">أدب</span>
+
+    <h1 class="h3 mb-3">عنوان المقال الأول</h1>
+
     <p>
-      هذا نص تجريبي يمثل محتوى المقال الأول.  
-      يمكنك استبداله لاحقًا بالنص الحقيقي الذي تريده،
-      وسيظهر داخل التصميم الجديد بشكل جميل ومنسق.
+      هذا نص تجريبي يمثل محتوى المقال الأول.
+      يمكنك استبداله لاحقًا بالنص الحقيقي الذي تريده ليظهر بتنسيق احترافي.
     </p>
 
     <p>
-      أضف هنا المزيد من الفقرات، النصوص، الاقتباسات، أو أي شيء تريد أن يحتويه المقال.
+      أضف هنا المزيد من الفقرات، النصوص، الاقتباسات، أو أي عناصر تريدها داخل المقال.
     </p>
 
-    <!-- NAVIGATION -->
-    <div class="d-flex justify-content-between mt-4 mb-4">
-      <a href="article4.html" class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i> المقال السابق</a>
-      <a href="articles.html" class="btn btn-secondary">كل المقالات</a>
-      <a href="article2.html" class="btn btn-outline-dark">المقال التالي <i class="bi bi-arrow-left"></i></a>
-    </div>
+    <hr class="my-4">
 
-    <!-- SHARE -->
-    <a class="share-btn" target="_blank"
-       href="https://wa.me/?text=أنصحكم بقراءة هذا المقال: https://alhiwar.github.io/article1.html">
-       <i class="bi bi-share"></i> مشاركة المقال
+    <a href="articles.html" class="btn btn-dark">
+      <i class="bi bi-arrow-right"></i> العودة إلى جميع المقالات
     </a>
 
   </div>
-
-  <!-- RELATED ARTICLES -->
-  <h3 class="mt-5 mb-3">مقالات مشابهة</h3>
-  <div class="row g-3">
-    <div class="col-md-4"><a href="article2.html" class="related-article">عنوان المقال الثاني</a></div>
-    <div class="col-md-4"><a href="article3.html" class="related-article">عنوان المقال الثالث</a></div>
-    <div class="col-md-4"><a href="article5.html" class="related-article">الشفاء المعجزة وندرة البحث</a></div>
-  </div>
-
 </div>
 
-<!-- FOOTER -->
+<!-- الفوتر -->
 <footer class="text-center bg-dark text-white p-4 mt-4">
   <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
 
@@ -186,24 +122,24 @@
     <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
   </div>
 
-  جميع الحقوق محفوظة © 2025 — الحوار الثقافي
+  <div>
+    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
+  </div>
 </footer>
 
-<!-- TRANSLATE WIDGET -->
 <div id="google_translate_element"
-     style="position:fixed; bottom:16px; left:16px; z-index:99999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
+     style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
 </div>
 
 <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'ar',
-      includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi',
+      includedLanguages: 'en,fr,de,es,tr,fa,ur,hi',
       layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
     }, 'google_translate_element');
   }
 </script>
-
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
