@@ -1,261 +1,147 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>المقالات — الحوار الثقافي</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>جميع المقالات — الحوار الثقافي</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body {
-      background:#f2f2f7;
-      font-family:"Segoe UI", sans-serif;
-    }
-
-    .page-header {
-      background:radial-gradient(circle at top, #444 0, #111 45%, #000 100%);
-      color:white;
-      padding:70px 0 60px;
-      text-align:center;
-      margin-bottom:40px;
-    }
-
-    .page-header h1 {
-      font-size:2.3rem;
-      margin-bottom:10px;
-    }
-
+    body { background:#f2f2f7; }
     .article-card {
-      border-radius:14px;
-      box-shadow:0 4px 16px rgba(0,0,0,0.08);
-      transition:0.2s;
-      height:100%;
+      background:white;
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 0 12px rgba(0,0,0,0.1);
+      transition:0.25s;
     }
-
     .article-card:hover {
       transform:translateY(-4px);
-      box-shadow:0 8px 22px rgba(0,0,0,0.12);
-    }
-
-    .badge-category {
-      font-size:0.8rem;
-      border-radius:999px;
-      padding:4px 10px;
+      box-shadow:0 0 18px rgba(0,0,0,0.15);
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR الرئيسي -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
+
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
       <img src="logo-small.svg" width="55" height="55" style="border-radius:50%;">
       <span>الحوار الثقافي</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navArticles">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <div class="collapse navbar-collapse" id="navArticles">
+      <ul class="navbar-nav ms-auto">
 
         <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-
-        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
-        <li class="nav-item"><a class="nav-link" href="art.html">الفن</a></li>
-        <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
-        <li class="nav-item"><a class="nav-link" href="religion.html">الدين</a></li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
-            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="news.html">الأخبار</a></li>
-        <li class="nav-item"><a class="nav-link" href="sports.html">الرياضة</a></li>
-
-        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
         <li class="nav-item"><a class="nav-link active" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
+        <!-- EN BUTTON -->
+        <li class="nav-item">
+          <a href="articles-en.html"
+             class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2">EN</a>
+        </li>
 
       </ul>
     </div>
+
   </div>
 </nav>
 
-<!-- العنوان العلوي -->
-<header class="page-header">
-  <div class="container">
-    <h1>جميع المقالات</h1>
-    <p class="text-light-50">
-      هنا تجد آخر المقالات المنشورة في موقع <strong>الحوار الثقافي</strong>.
-    </p>
-  </div>
-</header>
+<!-- CONTENT -->
+<div class="container my-5">
 
-<!-- قائمة المقالات -->
-<main class="container mb-5">
+  <h2 class="mb-4 text-center">جميع المقالات</h2>
 
   <div class="row g-4">
 
-    <!-- مقال 5 الحقيقي -->
-    <div class="col-md-6 col-lg-4">
-      <div class="card article-card h-100">
-        <div class="card-body d-flex flex-column">
-          <span class="badge badge-category bg-success mb-2">بحث / روحانيات</span>
-          <h2 class="h5 mb-2">الشفاء المعجزة وندرة البحث</h2>
-          <p class="text-muted small mb-1">
-            بقلم: جاسم محمد علي المعموري
-          </p>
-          <p class="text-muted small mb-3">
-            تاريخ النشر:
-            <script>document.write(new Date().toLocaleDateString('ar-EG'));</script>
-          </p>
-          <p class="mb-3 flex-grow-1">
-            مقالة تتأمل العلاقة بين الدعاء، الإيمان، وجهاز المناعة
-            في جسد الإنسان، وكيف يمكن للحظة صدق حقيقية أن تغيّر مجرى المرض...
-          </p>
-          <a href="article5.html" class="btn btn-dark mt-auto">
-            قراءة المقال <i class="bi bi-arrow-left"></i>
-          </a>
-        </div>
+    <!-- Article 5 -->
+    <div class="col-md-6">
+      <div class="article-card p-3">
+        <span class="badge bg-success mb-2">فكر وروحانيات</span>
+        <h3 class="h5">الشفاء المعجزة وندرة البحث</h3>
+        <p class="text-muted small mb-2">بقلم: جاسم محمد علي المعموري</p>
+        <p>مقال عميق يناقش العلاقة بين الدعاء والشفاء وتأثير الإيمان على الجسد والنفس...</p>
+        <a href="article5.html" class="btn btn-dark btn-sm">قراءة المقال</a>
       </div>
     </div>
 
-    <!-- مقال 1 -->
-    <div class="col-md-6 col-lg-4">
-      <div class="card article-card h-100">
-        <div class="card-body d-flex flex-column">
-          <span class="badge badge-category bg-primary mb-2">أدب</span>
-          <h2 class="h5 mb-2">عنوان المقال الأول</h2>
-          <p class="text-muted small mb-1">
-            مقال تجريبي — نموذج لمقال أدبي.
-          </p>
-          <p class="text-muted small mb-3">
-            سنة النشر: 2025
-          </p>
-          <p class="mb-3 flex-grow-1">
-            هذا نص تجريبي يمثل محتوى المقال الأول، يمكنك استبداله لاحقًا
-            بنص حقيقي من كتاباتك أو كتابات أحد الكتّاب في الموقع...
-          </p>
-          <a href="article1.html" class="btn btn-outline-dark mt-auto">
-            قراءة المقال <i class="bi bi-arrow-left"></i>
-          </a>
-        </div>
+    <!-- Article 1 -->
+    <div class="col-md-6">
+      <div class="article-card p-3">
+        <span class="badge bg-primary mb-2">أدب</span>
+        <h3 class="h5">عنوان المقال الأول</h3>
+        <p class="text-muted small mb-2">مقال تجريبي</p>
+        <p>مقال تجريبي يعرض نموذجًا أوليًا لطريقة عرض المقالات داخل الموقع...</p>
+        <a href="article1.html" class="btn btn-dark btn-sm">قراءة المقال</a>
       </div>
     </div>
 
-    <!-- مقال 2 -->
-    <div class="col-md-6 col-lg-4">
-      <div class="card article-card h-100">
-        <div class="card-body d-flex flex-column">
-          <span class="badge badge-category bg-primary mb-2">أدب</span>
-          <h2 class="h5 mb-2">عنوان المقال الثاني</h2>
-          <p class="text-muted small mb-1">
-            مقال تجريبي — نص أدبي قصير.
-          </p>
-          <p class="text-muted small mb-3">
-            سنة النشر: 2025
-          </p>
-          <p class="mb-3 flex-grow-1">
-            يمثل هذا المقال نموذجًا لمقال أدبي يمكن أن يتناول السرد،
-            القصة القصيرة، أو انطباعات الكاتب حول موضوع ثقافي معيّن...
-          </p>
-          <a href="article2.html" class="btn btn-outline-dark mt-auto">
-            قراءة المقال <i class="bi bi-arrow-left"></i>
-          </a>
-        </div>
+    <!-- Article 2 -->
+    <div class="col-md-6">
+      <div class="article-card p-3">
+        <span class="badge bg-primary mb-2">أدب</span>
+        <h3 class="h5">عنوان المقال الثاني</h3>
+        <p class="text-muted small mb-2">مقال تجريبي</p>
+        <p>مقال تجريبي يمثل نموذجًا آخر لطريقة ترتيب المحتوى داخل صفحات الموقع...</p>
+        <a href="article2.html" class="btn btn-dark btn-sm">قراءة المقال</a>
       </div>
     </div>
 
-    <!-- مقال 3 -->
-    <div class="col-md-6 col-lg-4">
-      <div class="card article-card h-100">
-        <div class="card-body d-flex flex-column">
-          <span class="badge badge-category bg-success mb-2">بحوث</span>
-          <h2 class="h5 mb-2">عنوان المقال الثالث</h2>
-          <p class="text-muted small mb-1">
-            مقال بحثي تجريبي — 2025
-          </p>
-          <p class="mb-3 flex-grow-1">
-            نموذج لمقال بحثي يمكن أن يتناول قضايا فكرية أو اجتماعية
-            أو تاريخية، مع قابلية تطويره لاحقًا إلى دراسة موسعة...
-          </p>
-          <a href="article3.html" class="btn btn-outline-dark mt-auto">
-            قراءة المقال <i class="bi bi-arrow-left"></i>
-          </a>
-        </div>
+    <!-- Article 3 -->
+    <div class="col-md-6">
+      <div class="article-card p-3">
+        <span class="badge bg-success mb-2">بحوث</span>
+        <h3 class="h5">عنوان المقال الثالث</h3>
+        <p class="text-muted small mb-2">مقال تجريبي</p>
+        <p>مقال بحثي تجريبي يعرض نموذجًا لإمكانية كتابة الدراسات التحليلية داخل الموقع...</p>
+        <a href="article3.html" class="btn btn-dark btn-sm">قراءة المقال</a>
       </div>
     </div>
 
-    <!-- مقال 4 -->
-    <div class="col-md-6 col-lg-4">
-      <div class="card article-card h-100">
-        <div class="card-body d-flex flex-column">
-          <span class="badge badge-category bg-success mb-2">بحوث</span>
-          <h2 class="h5 mb-2">عنوان المقال الرابع</h2>
-          <p class="text-muted small mb-3">
-            نموذج لمقال فكري أو بحثي يمكن استبدال محتواه لاحقًا
-            بنص حقيقي يناسب طبيعة موقع الحوار الثقافي.
-          </p>
-          <p class="mb-3 flex-grow-1">
-            هذا المقال معدّ كنموذج تجريبي لعرض البحوث أو المقالات
-            ذات الطابع التحليلي والفلسفي...
-          </p>
-          <a href="article4.html" class="btn btn-outline-dark mt-auto">
-            قراءة المقال <i class="bi bi-arrow-left"></i>
-          </a>
-        </div>
+    <!-- Article 4 -->
+    <div class="col-md-6">
+      <div class="article-card p-3">
+        <span class="badge bg-info mb-2">ثقافة عامة</span>
+        <h3 class="h5">عنوان المقال الرابع</h3>
+        <p class="text-muted small mb-2">مقال تجريبي</p>
+        <p>مقال تجريبي رابع يعرض محتوى مبسطًا ضمن إطار ثقافي عام...</p>
+        <a href="article4.html" class="btn btn-dark btn-sm">قراءة المقال</a>
       </div>
     </div>
 
   </div>
-
-</main>
+</div>
 
 <!-- FOOTER -->
 <footer class="text-center bg-dark text-white p-4 mt-4">
+
   <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
-    <a href="#" class="text-white" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="text-white" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-    <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-    <a href="#" class="text-white" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
-    <a href="#" class="text-white" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
   </div>
 
-  <div>
-    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
-  </div>
+  <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
 </footer>
-
-<!-- ويدجت الترجمة -->
-<div id="google_translate_element"
-     style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
-</div>
-
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'ar',
-      includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi',
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-    }, 'google_translate_element');
-  }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
