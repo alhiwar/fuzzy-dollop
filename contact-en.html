@@ -21,10 +21,30 @@
       max-width:650px;
       margin:auto;
     }
+
+    /* زر تغيير اللغة */
+    .lang-btn {
+      position:fixed;
+      top:20px;
+      left:20px;
+      background:#fff;
+      padding:6px 12px;
+      border-radius:8px;
+      font-weight:bold;
+      box-shadow:0 0 6px rgba(0,0,0,0.2);
+      z-index:9999;
+      text-decoration:none;
+      color:#000;
+    }
   </style>
 </head>
 
 <body>
+
+<!-- زر تبديل اللغة -->
+<a class="lang-btn" href="contact.html">
+  العربية <i class="bi bi-translate"></i>
+</a>
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -93,6 +113,24 @@
 
   <div>© 2025 Cultural Dialogue — All Rights Reserved</div>
 </footer>
+
+<!-- Google Translate Floating Box -->
+<div id="google_translate_element"
+     style="position:fixed; bottom:16px; right:16px; z-index:9999;
+     background:white; padding:4px 8px; border-radius:8px;
+     box-shadow:0 0 6px rgba(0,0,0,0.2);">
+</div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+    }, 'google_translate_element');
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
