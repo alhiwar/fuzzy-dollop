@@ -3,40 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>جاسم محمد علي المعموري — الحوار الثقافي</title>
+  <title>عنوان المقال الثالث — الحوار الثقافي</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body {
-      background:#f7f7f7;
-      font-family: "Segoe UI", sans-serif;
-    }
-    .author-img {
-      width:160px;
-      height:160px;
-      border-radius:50%;
-      object-fit:cover;
-      border:3px solid #ddd;
-      margin-bottom:15px;
-    }
-    .bio-box {
+    body { background:#f2f2f7; font-family:"Segoe UI", sans-serif; }
+    .article-box {
       background:white;
       padding:25px;
       border-radius:12px;
-      box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+      box-shadow:0 0 15px rgba(0,0,0,0.1);
+    }
+    .author-photo {
+      width:80px;
+      height:80px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-left:12px;
+      border:2px solid #ccc;
     }
   </style>
 </head>
 
 <body>
 
+<!-- شريط التصفح -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo.svg" width="38" height="38" style="border-radius:50%;">
+      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%; margin-left:8px;">
       <span>الحوار الثقافي</span>
     </a>
 
@@ -45,11 +43,27 @@
     </button>
 
     <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
         <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-        <li class="nav-item"><a class="nav-link active" href="authors.html">الكتّاب</a></li>
-        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+        <li class="nav-item"><a class="nav-link" href="art.html">الفن</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="religion.html">الدين</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="news.html">الأخبار</a></li>
+        <li class="nav-item"><a class="nav-link" href="sports.html">الرياضة</a></li>
+
+        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link active" href="articles.html">المقالات</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
 
       </ul>
@@ -57,40 +71,53 @@
   </div>
 </nav>
 
-<div class="container my-5" style="max-width:850px;">
+<!-- محتوى المقال -->
+<div class="container my-5">
 
-  <div class="text-center mb-4">
-    <img src="images/author3.jpg" alt="صورة الكاتب" class="author-img">
-    <h1 class="h3 fw-bold">جاسم محمد علي المعموري</h1>
-    <p class="text-muted">كاتب وباحث في الفكر والروحانيات وعلم النفس الروحي</p>
-  </div>
+  <div class="article-box">
 
-  <div class="bio-box">
-    <h4 class="mb-3">نبذة عن الكاتب</h4>
-    <p style="line-height:1.9;">
-      جاسم محمد علي المعموري كاتب وباحث مهتم بدراسة تأثير الإيمان والدعاء على الإنسان،
-      وعلاقة الروح بالجسد، والتحولات النفسية العميقة التي تكشفها التجارب الإنسانية النادرة.
-      له العديد من المقالات في الفكر والروحانيات والبحث النفسي، ويهتم بربط المعارف الحديثة
-      بالتراث الديني والروحي عبر منهج علمي وتأملي متوازن.
+    <!-- معلومات الكاتب -->
+    <div class="d-flex align-items-center mb-3">
+      <img src="images/author3.jpg" alt="صورة الكاتب" class="author-photo">
+      <div>
+        <h5 class="mb-1">بقلم: جاسم محمد علي المعموري</h5>
+        <small class="text-muted">
+          <script>document.write(new Date().toLocaleDateString('ar-EG'));</script>
+        </small>
+      </div>
+    </div>
+
+    <span class="badge bg-success mb-3">بحوث</span>
+
+    <h1 class="h3 mb-3">عنوان المقال الثالث</h1>
+    <p class="text-muted mb-4">مقال بحثي تجريبي — 2025</p>
+
+    <p>
+      هذا المقال يُمثّل نموذجًا لمقال بحثي.
+      يمكنك كتابة نصوص طويلة، شروحات، تحليلات أو مقارنات فكرية.
+      تم تصميم التنسيق بحيث يمنح القارئ تجربة قراءة مريحة وواضحة.
     </p>
-  </div>
 
-  <hr class="my-5">
+    <p>
+      يمكنك تطوير هذا المقال لاحقًا ليشمل موضوعات بحثية أوسع:
+      مثل الدراسات الاجتماعية، الفكرية، التاريخية أو الروحية.
+    </p>
 
-  <h4 class="mb-3">مقالات الكاتب</h4>
+    <p>
+      الهدف من هذا النموذج هو أن ترى كيف سيبدو المقال الحقيقي بعد نشره في موقعك.
+      كل شيء قابل للتعديل لاحقًا بسهولة كبيرة.
+    </p>
 
-  <div class="list-group">
+    <hr class="my-4">
 
-    <a href="article5.html" class="list-group-item list-group-item-action">
-      <strong>الشفاء المعجزة وندرة البحث</strong>
-      <br>
-      <small class="text-muted">مقال — تاريخ اليوم</small>
+    <a href="articles.html" class="btn btn-dark">
+      <i class="bi bi-arrow-right"></i> العودة إلى جميع المقالات
     </a>
 
   </div>
-
 </div>
 
+<!-- الفوتر -->
 <footer class="text-center bg-dark text-white p-4 mt-4">
   <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
 
@@ -103,7 +130,9 @@
     <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
   </div>
 
-  جميع الحقوق محفوظة © 2025 — الحوار الثقافي
+  <div>
+    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
+  </div>
 </footer>
 
 <div id="google_translate_element"
@@ -114,7 +143,7 @@
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'ar',
-      includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi',
+      includedLanguages: 'en,fr,de,es,tr,fa,ur,hi',
       layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
     }, 'google_translate_element');
   }
