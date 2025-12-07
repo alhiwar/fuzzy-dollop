@@ -90,23 +90,11 @@
   </div>
 </nav>
 
-<!-- ✅ زر التبديل بين اللغتين (بدون 404 نهائيًا) -->
+<!-- LANGUAGE SWITCH -->
 <div style="position:fixed; top:12px; left:12px; z-index:9999;">
-  <a href="#" onclick="setLang('ar')" style="margin-right:6px; padding:4px 8px; background:#000; color:#fff; border-radius:6px; text-decoration:none;">AR</a>
-  <a href="#" onclick="setLang('en')" style="padding:4px 8px; background:#555; color:#fff; border-radius:6px; text-decoration:none;">EN</a>
+  <button onclick="setLang('ar')" style="margin-right:6px; padding:4px 8px; background:#000; color:#fff; border-radius:6px; border:none;">AR</button>
+  <button onclick="setLang('en')" style="padding:4px 8px; background:#555; color:#fff; border-radius:6px; border:none;">EN</button>
 </div>
-
-<script>
-function setLang(lang) {
-  const select = document.querySelector("select.goog-te-combo");
-  if (!select) {
-    alert("مترجم جوجل لم يكتمل تحميله بعد");
-    return;
-  }
-  select.value = lang;
-  select.dispatchEvent(new Event("change"));
-}
-</script>
 
 <!-- HERO -->
 <section class="hero">
@@ -158,19 +146,26 @@ function setLang(lang) {
   جميع الحقوق محفوظة © 2025 — الحوار الثقافي
 </footer>
 
-<!-- ✅ مترجم جوجل -->
+<!-- TRANSLATION TOOL -->
 <div id="google_translate_element"
      style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
 </div>
 
 <script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'ar',
-    includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi',
-    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-  }, 'google_translate_element');
-}
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ar',
+      includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+    }, 'google_translate_element');
+  }
+
+  function setLang(lang) {
+    const combo = document.querySelector("select.goog-te-combo");
+    if (!combo) return;
+    combo.value = lang;
+    combo.dispatchEvent(new Event("change"));
+  }
 </script>
 
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
