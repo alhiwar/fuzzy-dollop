@@ -3,34 +3,110 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cultural Dialogue</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Cultural Dialogue</title>
+  <meta name="description" content="A cultural platform featuring articles, research, and authors in one place — Cultural Dialogue." />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
 
   <style>
-    body { background:#f2f2f7; }
+    body{
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:#f2f2f7;
+    }
+
+    /* Hero */
+    .hero{
+      background: radial-gradient(circle at top, #444 0, #111 45%, #000 100%);
+      color:#fff;
+      padding:80px 0 70px;
+      text-align:center;
+    }
+    .hero h1{ font-size:2.6rem; margin-bottom:12px; letter-spacing:.5px; }
+    .hero p{ font-size:1.1rem; max-width:760px; margin:0 auto 22px; opacity:.92; }
+
+    /* Cards */
+    .card{
+      border-radius:16px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      transition:.2s;
+      border:0;
+    }
+    .card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .category-pill{
+      display:inline-block;
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:.85rem;
+      background:#eee;
+    }
+
+    /* Language buttons */
+    .lang-switch{
+      position:fixed;
+      top:12px;
+      left:12px;
+      z-index:9999;
+      display:flex;
+      gap:6px;
+    }
+    .lang-switch a{
+      padding:4px 10px;
+      border-radius:8px;
+      text-decoration:none;
+      color:#fff;
+      font-weight:600;
+      font-size:.9rem;
+    }
+    .lang-switch .ar{ background:#555; }
+    .lang-switch .en{ background:#000; }
+
+    /* Google translate widget */
+    #google_translate_element{
+      position:fixed;
+      bottom:16px;
+      left:16px;
+      z-index:9999;
+      background:#fff;
+      padding:4px 8px;
+      border-radius:8px;
+      box-shadow:0 0 6px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 
 <body>
 
+<!-- AR/EN Switch -->
+<div class="lang-switch" aria-label="Language switch">
+  <a class="ar" href="index.html">AR</a>
+  <a class="en" href="index-en.html">EN</a>
+</div>
+
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index-en.html">
-      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%;">
+      <img src="logo-small.svg" alt="Cultural Dialogue Logo" width="55" height="55" style="border-radius:50%;" />
       <span>Cultural Dialogue</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="Open menu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
         <li class="nav-item"><a class="nav-link active" href="index-en.html">Home</a></li>
+
+        <!-- Sections (English) -->
         <li class="nav-item"><a class="nav-link" href="literature-en.html">Literature</a></li>
         <li class="nav-item"><a class="nav-link" href="art-en.html">Art</a></li>
         <li class="nav-item"><a class="nav-link" href="politics-en.html">Politics</a></li>
@@ -50,40 +126,262 @@
         <li class="nav-item"><a class="nav-link" href="authors-en.html">Authors</a></li>
         <li class="nav-item"><a class="nav-link" href="articles-en.html">Articles</a></li>
         <li class="nav-item"><a class="nav-link" href="contact-en.html">Contact</a></li>
-
-        <!-- 🔥 زر العودة إلى النسخة العربية -->
-        <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2" href="index.html">
-            AR
-          </a>
-        </li>
-
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container mt-4">
-  <h2 class="mb-4">Welcome to Cultural Dialogue</h2>
-  <p>
-    A cultural and intellectual platform offering articles, research, and writings by various authors.
-  </p>
-</div>
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <img src="logo-main.svg" alt="Cultural Dialogue Logo" style="width:180px; height:auto; margin-bottom:16px;" />
+    <h1>Welcome to Cultural Dialogue</h1>
+    <p>
+      A cultural platform that brings together articles, research, and authors in one knowledge space.
+      Our goal is to share thoughtful content and expand meaningful dialogue.
+    </p>
+    <div class="d-flex justify-content-center gap-2 flex-wrap">
+      <a href="articles-en.html" class="btn btn-outline-light btn-lg">
+        Browse Articles <i class="bi bi-arrow-right-short"></i>
+      </a>
+      <a href="authors-en.html" class="btn btn-light btn-lg">
+        Authors <i class="bi bi-person-lines-fill"></i>
+      </a>
+    </div>
+  </div>
+</header>
 
+<main class="container my-5" role="main">
+
+  <!-- MAIN SECTIONS -->
+  <section class="mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="h4 mb-0">Main Sections</h2>
+      <span class="text-muted small">Choose a section</span>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-md-3 col-6">
+        <a href="literature-en.html" class="text-decoration-none text-dark">
+          <div class="card text-center p-3">
+            <div class="fs-2 mb-2">📚</div>
+            <div class="fw-bold">Literature</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="art-en.html" class="text-decoration-none text-dark">
+          <div class="card text-center p-3">
+            <div class="fs-2 mb-2">🎭</div>
+            <div class="fw-bold">Art</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="politics-en.html" class="text-decoration-none text-dark">
+          <div class="card text-center p-3">
+            <div class="fs-2 mb-2">📰</div>
+            <div class="fw-bold">Politics</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="religion-en.html" class="text-decoration-none text-dark">
+          <div class="card text-center p-3">
+            <div class="fs-2 mb-2">☪️</div>
+            <div class="fw-bold">Religion</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="research-en.html" class="text-decoration-none text-dark">
+          <div class="card text-center p-3">
+            <div class="fs-2 mb-2">📑</div>
+            <div class="fw-bold">General Research</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="islamic-research-en.html" class="text-decoration-none text-dark">
+          <div class="card text-center p-3">
+            <div class="fs-2 mb-2">📘</div>
+            <div class="fw-bold">Islamic Research</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="news-en.html" class="text-decoration-none text-dark">
+          <div class="card text-center p-3">
+            <div class="fs-2 mb-2">🗞️</div>
+            <div class="fw-bold">News</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="sports-en.html" class="text-decoration-none text-dark">
+          <div class="card text-center p-3">
+            <div class="fs-2 mb-2">⚽</div>
+            <div class="fw-bold">Sports</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST ARTICLES -->
+  <section class="mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="h4 mb-0">Latest Articles</h2>
+      <a href="articles-en.html" class="text-decoration-none">All Articles <i class="bi bi-arrow-right-short"></i></a>
+    </div>
+
+    <div class="row g-3">
+
+      <div class="col-lg-6">
+        <div class="card p-3">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="category-pill">Research</span>
+            <small class="text-muted">Featured</small>
+          </div>
+          <h3 class="h5 mb-2">Miracle Healing & The Rarity of Research</h3>
+          <p class="mb-2 text-muted">By: Jassim Mohammed Ali Al-Maamouri</p>
+          <p class="mb-3">
+            A reflective research introduction exploring faith, prayer, and the interplay of mind and body in healing...
+          </p>
+          <a href="article5-en.html" class="text-decoration-none">Read Article <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-3">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="category-pill">Research</span>
+            <small class="text-muted">Sample</small>
+          </div>
+          <h3 class="h5 mb-2">Article Three Title</h3>
+          <p class="mb-2 text-muted">Sample research article</p>
+          <p class="mb-3">A simple demo for displaying research-style articles — replace later with real content.</p>
+          <a href="article3-en.html" class="text-decoration-none">Read Article <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-3">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="category-pill">Literature</span>
+            <small class="text-muted">Sample</small>
+          </div>
+          <h3 class="h5 mb-2">Article One Title</h3>
+          <p class="mb-3">Demo text — replace later with a real article.</p>
+          <a href="article1-en.html" class="text-decoration-none">Read Article <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-3">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="category-pill">Literature</span>
+            <small class="text-muted">Sample</small>
+          </div>
+          <h3 class="h5 mb-2">Article Two Title</h3>
+          <p class="mb-3">Demo text — ready to edit later.</p>
+          <a href="article2-en.html" class="text-decoration-none">Read Article <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AUTHORS -->
+  <section class="mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="h4 mb-0">Authors</h2>
+      <a href="authors-en.html" class="text-decoration-none">All Authors <i class="bi bi-arrow-right-short"></i></a>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-lg-6">
+        <div class="card p-3 d-flex flex-row align-items-center gap-3">
+          <img src="author3.jpg" alt="Author photo: Jassim Mohammed Ali Al-Maamouri" width="76" height="76" style="border-radius:50%; object-fit:cover;" />
+          <div>
+            <h3 class="h5 mb-1">Jassim Mohammed Ali Al-Maamouri</h3>
+            <p class="mb-2 small text-muted">Writer and researcher in spirituality and psychological depth.</p>
+            <a href="author3-en.html" class="text-decoration-none">Author Page <i class="bi bi-arrow-right-short"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-3 d-flex flex-row align-items-center gap-3">
+          <div class="d-flex align-items-center justify-content-center" style="width:76px; height:76px; border-radius:50%; background:#eee; font-size:30px;">
+            ✒️
+          </div>
+          <div>
+            <h3 class="h5 mb-1">Space for future authors</h3>
+            <p class="mb-2 small text-muted">You can add real authors later easily.</p>
+            <a href="authors-en.html" class="text-decoration-none">View List <i class="bi bi-arrow-right-short"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="mb-4">
+    <div class="card p-4">
+      <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+        <div>
+          <h2 class="h4 mb-2">Want to publish an article?</h2>
+          <p class="mb-0 text-muted">Contact us and we’ll review your submission and publish it in the right section.</p>
+        </div>
+        <div>
+          <a href="contact-en.html" class="btn btn-dark btn-lg">
+            Contact Us <i class="bi bi-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
 <footer class="text-center bg-dark text-white p-4 mt-4">
-  <h5 class="mb-3">Follow Us</h5>
+  <h2 class="h5 mb-3">Follow us on Social Media</h2>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
-    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+    <a href="#" class="text-white" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="text-white" aria-label="Twitter" target="_blank" rel="noopener"><i class="bi bi-twitter"></i></a>
+    <a href="#" class="text-white" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="text-white" aria-label="YouTube" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+    <a href="#" class="text-white" aria-label="Telegram" target="_blank" rel="noopener"><i class="bi bi-telegram"></i></a>
+    <a href="#" class="text-white" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
   </div>
 
   <div>© 2025 Cultural Dialogue — All Rights Reserved</div>
 </footer>
 
+<!-- Google Translate (optional but useful) -->
+<div id="google_translate_element"></div>
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+    }, 'google_translate_element');
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
