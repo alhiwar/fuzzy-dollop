@@ -2,227 +2,229 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>الشفاء المعجزة وندرة البحث — الحوار الثقافي</title>
+
+  <meta name="description" content="مقال بقلم جاسم محمد علي المعموري حول الدعاء والإيمان والشفاء وندرة البحث في هذه الظاهرة.">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
     body {
-      background:#f5f5f5;
-      font-family:"Segoe UI", sans-serif;
-      line-height:1.9;
+      background:#f2f2f7;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      line-height:2;
     }
 
     .article-header {
-      background: linear-gradient(to bottom, #222, #000);
+      background: radial-gradient(circle at top, #444 0, #111 45%, #000 100%);
       color:white;
-      padding:85px 0 70px;
+      padding:70px 0;
       text-align:center;
-      margin-bottom:40px;
-    }
-
-    .hero-image {
-      width:100%;
-      max-height:380px;
-      object-fit:cover;
-      border-bottom:4px solid #333;
-      margin-bottom:-40px;
     }
 
     .article-box {
       background:white;
-      padding:30px;
-      border-radius:12px;
-      box-shadow:0 4px 20px rgba(0,0,0,0.08);
-      margin-top:40px;
+      padding:35px;
+      border-radius:16px;
+      box-shadow:0 6px 22px rgba(0,0,0,0.10);
     }
 
-    .author-photo {
+    .author-img {
       width:90px;
       height:90px;
-      border-radius:50%;
       object-fit:cover;
+      border-radius:50%;
       border:3px solid #ddd;
-      margin-left:15px;
     }
 
-    .article-content {
-      font-size:1.15rem;
-      white-space:pre-line;
+    .article-text p {
+      font-size:1.12rem;
+      margin-bottom:1.4rem;
+      text-align:justify;
     }
 
-    blockquote {
-      background:#fafafa;
-      border-right:6px solid #333;
-      padding:20px;
-      margin:30px 0;
-      border-radius:8px;
-      font-size:1.2rem;
-      font-weight:bold;
+    .intro-note {
+      background:#f7f7f7;
+      border-right:5px solid #222;
+      padding:15px 18px;
+      border-radius:10px;
+      margin-bottom:25px;
       color:#333;
     }
 
-    .share-btn {
-      background:#222;
-      color:white;
-      padding:10px 18px;
+    .lang-switch {
+      position:fixed;
+      top:12px;
+      left:12px;
+      z-index:9999;
+      display:flex;
+      gap:6px;
+    }
+
+    .lang-switch a {
+      padding:4px 10px;
       border-radius:8px;
-      display:inline-block;
-      margin-top:20px;
       text-decoration:none;
+      color:#fff;
+      font-weight:600;
+      font-size:.9rem;
     }
 
-    .related-article {
-      background:white;
-      padding:15px;
-      border-radius:10px;
-      box-shadow:0 0 10px rgba(0,0,0,0.07);
-      text-decoration:none;
-      color:#000;
-      transition:0.2s;
-      display:block;
-    }
+    .lang-switch .ar { background:#000; }
+    .lang-switch .en { background:#555; }
 
-    .related-article:hover {
-      transform:translateY(-3px);
-      box-shadow:0 0 14px rgba(0,0,0,0.12);
-    }
-
-    .comment-box {
+    #google_translate_element {
+      position:fixed;
+      bottom:16px;
+      left:16px;
+      z-index:9999;
       background:#fff;
-      padding:20px;
-      border-radius:10px;
-      box-shadow:0 0 10px rgba(0,0,0,0.08);
-      margin-top:25px;
+      padding:4px 8px;
+      border-radius:8px;
+      box-shadow:0 0 6px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<div class="lang-switch" aria-label="تبديل اللغة">
+  <a class="ar" href="article5.html">AR</a>
+  <a class="en" href="article5-en.html">EN</a>
+</div>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
+
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%;">
-      الحوار الثقافي
+      <img src="logo-small.svg" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%;">
+      <span>الحوار الثقافي</span>
     </a>
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="فتح القائمة">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
         <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">البحوث</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+          </ul>
+        </li>
+
         <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link active" href="articles.html">المقالات</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- HERO IMAGE -->
-<img src="images/article5.jpg" class="hero-image" alt="صورة المقال">
-
-<!-- ARTICLE HEADER -->
 <header class="article-header">
   <div class="container">
-    <h1 class="fw-bold display-6">الشفاء المعجزة وندرة البحث</h1>
-    <p class="mt-3 text-light opacity-75">
-      بقلم: جاسم محمد علي المعموري — 
-      <script>document.write(new Date().toLocaleDateString('ar-EG'));</script>
-    </p>
+    <span class="badge bg-light text-dark mb-3">بحوث</span>
+    <h1 class="fw-bold">الشفاء المعجزة وندرة البحث</h1>
+    <p class="mt-3 opacity-75">بقلم: جاسم محمد علي المعموري</p>
   </div>
 </header>
 
-<!-- ARTICLE BODY -->
-<div class="container mb-5">
-  <div class="article-box">
+<main class="container my-5" style="max-width:950px;">
 
-    <!-- AUTHOR BOX -->
-    <div class="d-flex align-items-center mb-4">
-      <img src="author3.jpg" class="author-photo" alt="صورة الكاتب">
+  <article class="article-box">
+
+    <div class="d-flex align-items-center gap-3 mb-4">
+      <img src="author3.jpg" class="author-img" alt="صورة الكاتب جاسم محمد علي المعموري">
       <div>
-        <h5 class="mb-1">جاسم محمد علي المعموري</h5>
-        <small class="text-muted">كاتب وباحث في الفكر والروحانيات</small>
+        <h2 class="h5 mb-1">جاسم محمد علي المعموري</h2>
+        <p class="text-muted mb-0">سانت لويس — 2 - 9 - 2020</p>
       </div>
     </div>
 
-    <!-- CONTENT -->
-    <div class="article-content">
+    <div class="intro-note">
+      هو عبارة عن مقدمة - انشرها هنا بتصرف - موجزة لبحث قدمته الى الجامعة قبل خمس سنوات
+    </div>
 
-    <!-- تم إدراج النص الكامل هنا في الإصدار النهائي في ملفك -->
+    <div class="article-text">
+
+      <p>يحدث أحيانا ان تتصل خيوط الغيب بخيوط النفس, فتتشكل من هذا الاتصال لحظةٌ نادرة, يتحقق فيها ما نظنه معجزة, وقد يكون هذا في دعاء لمؤمن ملهوف، او دمعة خاشعة لمؤمنة مظلومة, أو صرخة ألم من مريض تُطلق في وجه السماء, لكن ما يغيب عنا كثيرًا هو ان سرّ المعجزة لا يكمن خارجنا فقط, بل ربما يسكن في اعماق كياننا. الانسان كائنٌ عجيب.. مركبٌ من مادة وروح.. من عصب وفكر.. من خوفٍ ورجاء, و حين يرفع يديه إلى السماء, يظن أنه يطلب شيئًا من الخارج, وهو لا يعلم ان هذه الحركة البسيطة توقظ داخله منظومةً كاملة من القوى الدفينة, التي ربما ظلت نائمة في أغوار الجسد حتى أيقظها وجع او حفزها أمل.</p>
+
+      <p>إن لحظة الدعاء ليست لحظة كلام يُقال, بل هي لحظة كونية كاملة, تُعاد فيها صياغة التوازن بين النفس والبدن.. بين القلب والعقل.. بين الروح والجسد.. والمؤمن حين يدعو لا ينطق فقط, بل يدخل في حالة كيميائية ونفسية وروحية معقدة.. تتسارع نبضاته.. تتغير ملامح دماغه.. تفرز غدد جسمه هرمونات لم يكن ليفرزها في الحالات العادية. هناك ما يُعرف بتأثير الايمان على جهاز المناعة, وتأثير اليقين على كيمياء الجسد, وهذه ليست مجرد افكار شعرية او مزاعم صوفية, بل هي اليوم موضع دراسات علم الأعصاب, وعلم النفس الحيوي.</p>
+
+      <p>كم من مريض نهض من فراشه بعدما قال له الطبيب لا أمل للشفاء؟ كم من عينٍ أُعيد إليها البصر بعدما اقتنع صاحبها أن العمى قدر لا مفر منه ؟ هل يكون هذا تدخلا خارقا؟ أم ان الانسان يحمل في داخله زرّا خفيا لا يُفتح إلا في لحظة صدق مطلقة.. لحظة تجرّد.. لحظة تناغم تام بين العقل والوجدان؟.. الدعاء إذًا ليس مجرد وسيلة لطلب شيء من الله, بل هو عودة إلى الذات.. عودة إلى أصل الإنسان حيث كان متصلا بالطاقة العليا.. بالله.. بالكون.. بالحياة..</p>
+
+      <p>في القصة التي يُروى فيها أن أحد ملوك إيران زار الامام الرضا عليه السلام ورأى رجلا أعمى يدعو ولا يُستجاب له, ثم هدده الملك بالقتل إن لم يُشفَ في ساعة, فانفتحت عيناه واخذ يرى, وهنا ليست العبرة  في التهديد, ولا في المعجزة, بل في تلك اللحظة التي تحوّل فيها دعاء الرجل من عادة إلى صرخة وجود.. لقد دُفع إلى أقصى درجات التوتر الوجودي, فصار دعاؤه ليس طلبا بل نداء حياة, لم يعد يهمه الشكل, ولا الصيغة, ولا الكلمات, بل خرج دعاؤه من أعماق الأعماق, وكأن وجوده كله استحال دعاء.. وهنا فقط استجاب الكون أو استجابت روحه أو استجابت ذاته.</p>
+
+      <p>هل نحن نملك في داخلنا شفرة سرية عجيبة (كود) هذا الكود العجيب الذي لا يعمل إلا بطريقة معينة وفي حالات نادرة؟ وهل الدعاء الصادق هو مفتاح هذا الكود؟ كل شيء يشير إلى أن الإنسان حين يؤمن, يؤمن بذاته ايضا وان الرجاء بالله هو رجاء بالقدرة التي أودعها الله فيه, وأن الخشوع لا ينفصل عن التوازن العصبي والهرموني، وان بكاء العبد قد يكون أبلغ من كل دواء.</p>
+
+      <p>في عصور قديمة كانت القبائل تشفي بالرقية والدعاء وكانت تُشفى فعلا.. لم يكن لديهم مستشفيات ولا اشعة مقطعية، لكنهم كانوا يملكون يقينا.. اليقين ذلك العنصر الغامض الذي لا يمكن قياسه بالمجهر ولا تحليله في المختبر, لكنه قادر على تغيير سريان الدم, وتنشيط جهاز المناعة, بل وربما إيقاف السرطان.. كم من العلماء وقفوا حائرين أمام شفاءٍ غير مبرر؟ وكم من اطباء كتبوا على تقاريرهم (تحسن مفاجئ غير مفسر)؟ لكن الفطن لا يكتفي بالحيرة بل يتأمل.. يسأل.. ما الذي تغيّر؟.. أهو الجسم؟.. أم الإيمان؟.. أهو الدعاء؟.. أم صدق النفس لحظة الدعاء؟</p>
+
+      <p>كل هذا يقودنا إلى فهم أعمق لفكرة التوحيد. ان الله لا يُطلب خارج الإنسان فقط ,بل يُكتشف داخله ايضا.. إنه أقرب إلى الإنسان من حبل الوريد, وهذا القرب ليس مجازا فقط, بل هو قرب حقيقي في بنية الوعي.. في حركة الخلايا.. في رجفة القلب حين يُذكر اسم الله عز اسمه. وعندما يدعو الانسان فهو لا يناشد السماء وحدها , بل يحرّك كيانه، يزلزل ذاته، يوقظ فيها طاقات نائمة كانت تنتظر لحظة التمكين.</p>
+
+      <p>وليس بعيداً عن ذلك فإن الصلاة نفسها بكل تفاصيلها الحركية والروحية قد ثبت علميا أنها تهدئ التوتر, وتوازن عمل الجهاز العصبي الذاتي, وتُعيد تنظيم التنفس ونبض القلب.. فهل هي عبادة فقط؟ أم انها أيضا مفتاح كيميائي للوصول إلى حالة جسدية ونفسية اقرب ما تكون إلى الشفاء؟ لقد أدرك الأقدمون هذا قبل ان يعرفه العلم. كانوا يضعون أيديهم على المريض ويقرأون عليه كلمات.. هذه الكلمات ليست لوحدها تشفي، بل لأن الإنسان حين يقرأ من قلبه, يملأ الجو بطاقة نفسية تنفذ في الآخر, فيحدث ما نسميه خطأً (الشفاء العجائبي).</p>
+
+      <p>وإنه لعجيب أن الطب الحديث بدأ يقترب من هذه الرؤى بعدما كان يسخر منها.. اليوم, هناك اعتراف بأن العامل النفسي هو نصف الشفاء, وأن التفاؤل يحسن النتائج الطبية, وأن الدعم الروحي قد يُسرع التعافي.. إذًا, فإننا لا نطلب من الغيب فقط, بل نحركه داخل أنفسنا.. الله يسمع نعم، لكنه أيضا أودع فينا آليات تجعل السمع فعالا. وحين لا نُشفى, ربما يكون السبب أن الدعاء لم يكن صادقًا بما يكفي, أو لم يكن يائسا مضطرا بما يكفي أّمن يجيب المضطر اذا دعاه ويكشف السوء (النمل 62) أو ان الانسان لم يبلغ تلك اللحظة الفاصلة التي لا تعود فيها الكلمات كلمات, بل طاقة قادرة على اختراق الحجب.</p>
+
+      <p>ومن هنا نفهم لماذا لم يُشفَ الرجل الأعمى طوال المدة التي قضاها يدعو في ضريح الامام الرضا ع  حتى جاءه التهديد بالموت. إن الشعور بالموت يطلق في الإنسان أقوى ما فيه, فإما أن ينكسر, او ينفجر بالمعنى.. بالصلاة.. بالدعاء الذي يغير المصير.. إنها فلسفة الضيق الذي يولد الفرج, والخوف الذي يولد الرجاء, والانكسار الذي يفتح باب العافية, فالنفس حين تصل إلى لحظاتها الأخيرة, تُعيد اكتشاف الله, وتعيد اكتشاف ذاتها, وتعيد اكتشاف الشفاء..</p>
+
+      <p>ولذلك فإن الإيمان ليس مجرد فكرة بل هو حركة داخلية مادية أيضًا. إنه عملية حيوية. ومن هنا، فإن المؤمن حين يدعو, يكون أشبه بمن يُدخل شفرةً سرية (كود) في نظام جسده, تُطلق سراح قوى الشفاء وتحرر الهرمونات النافعة, وتُغلق نوافذ القلق. وقد يبدو هذا للبعض خيالا, لكنه واقع يُثبت نفسه كل يوم.. وحين نقول (الدعاء شفاء), فإننا لا نتكلم فقط عن استجابة إلهية قادمة من السماء, بل عن انسجام داخلي, يكتمل فيه المعنى, وتكتمل فيه الثقة ويتوقف العقل عن مقاومة الجسد, فينطلق الشفاء.</p>
+
+      <p>وهكذا.. نعود دائما إلى انفسنا.. إلى هذا الكيان العجيب الذي نسكنه, فالدعاء حين يكون صادقا يفتح بوابة بين الروح والجسد.. بين الله والإنسان.. بين الأمل والحقيقة, والشفاء حين يحدث, فإنه لا يكون فقط ناتجا عن تدخلٍ خارق, بل أيضا عن انسجام عميق تحقق فجأة داخل الإنسان.. ذلك الانسجام هو بيت السر.. الذي ربما لم نُدركه,</p>
+
+      <p>لو أنّ مؤسسةً للبحوث الطبية قررت دراسة هذه الظاهرة بشكل علمي، لكان لزامًا عليها أن تتعامل معها بأقصى درجات الحذر. فالدعاء ليس تجربة مخبرية يمكن قياسها بسهولة، بل هو حالة إنسانية داخلية شديدة الحساسية، وأي تدخّل خارجي في وعي المشارك قد يفسد التجربة من أساسها. إذا علم المتطوع أنّه جزء من دراسة، فسيتحوّل دعاؤه من تلقائية روحية إلى فعل مراقب محكوم بالشك والانتظار، وهنا تضيع الصدقية وتختفي العفوية التي تُشكّل روح الدعاء.</p>
+
+      <p>لذلك، الأفضل أن يلجأ الباحثون إلى منهج غير مباشر وهو دراسة أولئك الذين مرّوا بالفعل بتجربة الشفاء (المفاجئ) أو (غير المفسَّر), ويمكن أن تُبنى الاستبيانات حول أسئلة محددة.. ما الصيغ التي كانوا يكررونها في الدعاء؟ هل كان الدعاء جزءًا من الصلوات المفروضة أم خارجها؟ هل كان يرتبط بوقت محدد مثل ما بين المغرب والعشاء؟ هل كانوا يحرصون على الطهارة والوضوء قبل الدعاء؟ هل كانوا يقدمون صدقة أو عملاً صالحا قبله؟ وأين كانوا يمارسونه غالبًا.. في البيت, أم في مسجد, أم عند مقام مقدس؟...</p>
+
+      <p>هذه التفاصيل قد تبدو بسيطة, لكنها قد تكشف أنماطًا متكررة, وتفتح باباً لفهم العلاقة بين الممارسات الروحية والنتائج الجسدية.. قد يكتشف الباحثون مثلاً أنّ الصدق العاطفي في الدعاء أهم من الكلمات نفسها, او ان الكلمات اذا قيلت كما وردت عن اهل بيت النبوة والعصمة عليه السلام يكون لها مفعول وتاثير فهل هي شفرة سرية؟, أو أنّ الطقوس المصاحبة كالوضوء والصدقة ليست مجرد مظاهر دينية, بل آليات تُهيئ الجسد والنفس للدخول في حالة من الانسجام العميق, وهي الحالة التي قد تُطلق قوى الشفاء الكامنة في الإنسان.</p>
+
+      <p>بهذا الأسلوب يمكن للعلم أن يقترب من سرّ الدعاء دون أن يفسده، وأن يقدّم قراءة علمية لتجربة إنسانية وروحية طالما بدت عصيّة على التفسير.</p>
 
     </div>
 
-    <!-- QUOTE -->
-    <blockquote class="mt-4">
-      “الدعاء ليس كلمات تُقال بل حالة كونية يعاد فيها تشكيل التوازن بين الروح والجسد.”
-    </blockquote>
+    <hr class="my-4">
 
-    <!-- NEXT / PREVIOUS -->
-    <div class="d-flex justify-content-between mt-4">
-      <a href="article4.html" class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i> المقال السابق</a>
-      <a href="articles.html" class="btn btn-secondary">كل المقالات</a>
-      <a href="article1.html" class="btn btn-outline-dark">المقال التالي <i class="bi bi-arrow-left"></i></a>
+    <div class="d-flex justify-content-between flex-wrap gap-2">
+      <a href="articles.html" class="btn btn-dark">
+        <i class="bi bi-arrow-right"></i> العودة إلى المقالات
+      </a>
+
+      <a href="author3.html" class="btn btn-outline-dark">
+        صفحة الكاتب
+      </a>
     </div>
 
-    <!-- SHARE -->
-    <a class="share-btn" href="https://wa.me/?text=أنصحكم بقراءة هذا المقال: https://alhiwar.github.io/article5.html" target="_blank">
-      <i class="bi bi-share"></i> مشاركة المقال
-    </a>
+  </article>
 
-  </div>
+</main>
 
-  <!-- RELATED ARTICLES -->
-  <h3 class="mt-5 mb-3">مقالات مشابهة</h3>
-  <div class="row g-3">
-    <div class="col-md-4"><a href="article1.html" class="related-article">عنوان المقال الأول</a></div>
-    <div class="col-md-4"><a href="article2.html" class="related-article">عنوان المقال الثاني</a></div>
-    <div class="col-md-4"><a href="article3.html" class="related-article">عنوان المقال الثالث</a></div>
-  </div>
-
-  <!-- COMMENTS -->
-  <div class="comment-box">
-    <h5 class="mb-3">أضف تعليقًا</h5>
-    <input class="form-control mb-2" placeholder="اسمك">
-    <textarea class="form-control mb-2" rows="3" placeholder="اكتب تعليقك..."></textarea>
-    <button class="btn btn-dark w-100">إرسال</button>
-    <p class="text-muted mt-2" style="font-size:0.9rem;">(التعليقات غير مفعّلة — نموذج عرض فقط)</p>
-  </div>
-
-</div>
-
-<!-- FOOTER -->
 <footer class="text-center bg-dark text-white p-4 mt-4">
-
   <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
-    <a href="https://facebook.com" target="_blank" class="text-white"><i class="bi bi-facebook"></i></a>
-    <a href="https://twitter.com" target="_blank" class="text-white"><i class="bi bi-twitter"></i></a>
-    <a href="https://instagram.com" target="_blank" class="text-white"><i class="bi bi-instagram"></i></a>
-    <a href="https://youtube.com" target="_blank" class="text-white"><i class="bi bi-youtube"></i></a>
-    <a href="https://t.me" target="_blank" class="text-white"><i class="bi bi-telegram"></i></a>
-    <a href="https://wa.me" target="_blank" class="text-white"><i class="bi bi-whatsapp"></i></a>
+    <a href="#" class="text-white" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="text-white" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+    <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+    <a href="#" class="text-white" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+    <a href="#" class="text-white" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
   </div>
 
-  جميع الحقوق محفوظة © 2025 — الحوار الثقافي
+  <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<div id="google_translate_element"></div>
 
-<!-- زر الترجمة (أسفل اليسار) -->
-<div id="google_translate_element"
-     style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
-</div>
-
-<!-- كود الترجمة الصحيح -->
-<script type="text/javascript">
+<script>
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'ar',
@@ -233,6 +235,7 @@
 </script>
 
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
