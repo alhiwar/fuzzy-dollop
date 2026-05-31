@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
@@ -5,24 +6,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>الحوار الثقافي</title>
-  <meta name="description" content="منصّة ثقافية عربية تهتم بالفكر والأدب والسياسة والبحوث، وتجمع المقالات والكتّاب في مساحة معرفية واحدة." />
+  <meta name="description" content="منصّة ثقافية عربية تهتم بالفكر والأدب والبحوث والمقالات الثقافية، وتجمع الكتّاب في مساحة معرفية هادئة وجادّة." />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
 
   <style>
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f2f2f7;}
-    .hero{background:radial-gradient(circle at top,#444 0,#111 45%,#000 100%);color:#fff;padding:80px 0 70px;text-align:center;}
-    .hero h1{font-size:2.6rem;margin-bottom:12px;letter-spacing:.5px;}
-    .hero p{font-size:1.1rem;max-width:760px;margin:0 auto 22px;opacity:.92;}
-    .card{border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,0.08);transition:.2s;border:0;}
-    .card:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,0.12);}
-    .category-pill{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.85rem;background:#eee;}
-    .lang-switch{position:fixed;top:12px;left:12px;z-index:9999;display:flex;gap:6px;}
-    .lang-switch a{padding:4px 10px;border-radius:8px;text-decoration:none;color:#fff;font-weight:600;font-size:.9rem;}
-    .lang-switch .ar{background:#000;}
-    .lang-switch .en{background:#555;}
-    #google_translate_element{position:fixed;bottom:16px;left:16px;z-index:9999;background:#fff;padding:4px 8px;border-radius:8px;box-shadow:0 0 6px rgba(0,0,0,0.2);}
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f4f1ea;
+      color: #222;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1f1a16, #5b4227);
+      color: #fff;
+      padding: 80px 0 70px;
+      text-align: center;
+      border-bottom: 5px solid #c9a45c;
+    }
+
+    .hero h1 {
+      font-size: 2.7rem;
+      margin-bottom: 14px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 1.12rem;
+      max-width: 760px;
+      margin: 0 auto 24px;
+      opacity: .94;
+      line-height: 2;
+    }
+
+    .card {
+      border-radius: 18px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      border: 0;
+    }
+
+    .section-title {
+      border-right: 5px solid #c9a45c;
+      padding-right: 12px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .category-pill {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: .85rem;
+      background: #efe4cf;
+      color: #5b4227;
+      font-weight: 600;
+    }
+
+    .author-img {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #eee;
+    }
+
+    .lang-switch {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 9999;
+      display: flex;
+      gap: 6px;
+    }
+
+    .lang-switch a {
+      padding: 4px 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: .9rem;
+    }
+
+    .lang-switch .ar { background:#000; }
+    .lang-switch .en { background:#555; }
+
+    #google_translate_element {
+      position: fixed;
+      bottom: 16px;
+      left: 16px;
+      z-index: 9999;
+      background: #fff;
+      padding: 4px 8px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    }
+
+    footer a {
+      text-decoration: none;
+    }
   </style>
 </head>
 
@@ -48,7 +131,7 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
         <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
-        <li class="nav-item"><a class="nav-link" href="politics.html">السياسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
@@ -69,14 +152,14 @@
 <header class="hero">
   <div class="container">
     <img src="logo-main.svg" alt="شعار الحوار الثقافي" style="width:180px;height:auto;margin-bottom:16px;" />
-    <h1>مرحبًا بكم في الحوار الثقافي</h1>
+    <h1>الحوار الثقافي</h1>
     <p>
-      منصّة فكرية وثقافية تجمع المقالات والبحوث والكتّاب في مساحة معرفية واحدة.
-      هدفنا هو تقديم محتوى راقٍ، وتوسيع دائرة الحوار والمعرفة.
+      منصّة فكرية وثقافية تهتم بالمقالات الجادّة والبحوث والكتابات التي تفتح باب التأمل والحوار،
+      وتحفظ للنصوص أصالتها وللكتّاب حضورهم.
     </p>
     <div class="d-flex justify-content-center gap-2 flex-wrap">
-      <a href="articles.html" class="btn btn-outline-light btn-lg">تصفّح المقالات <i class="bi bi-arrow-left-short"></i></a>
-      <a href="authors.html" class="btn btn-light btn-lg">الكتّاب <i class="bi bi-person-lines-fill"></i></a>
+      <a href="article5.html" class="btn btn-light btn-lg">قراءة المقال المميز <i class="bi bi-arrow-left-short"></i></a>
+      <a href="authors.html" class="btn btn-outline-light btn-lg">الكتّاب <i class="bi bi-person-lines-fill"></i></a>
     </div>
   </div>
 </header>
@@ -84,15 +167,39 @@
 <main class="container my-5" role="main">
 
   <section class="mb-5">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-      <h2 class="h4 mb-0">الأقسام الرئيسية</h2>
-      <span class="text-muted small">اختر القسم الذي تريد</span>
+    <h2 class="section-title h4">المقال المميز</h2>
+
+    <div class="card p-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-3 text-center">
+          <img src="author3.jpg" alt="جاسم محمد علي المعموري" class="author-img" style="width:150px;height:150px;">
+        </div>
+
+        <div class="col-md-9">
+          <span class="category-pill mb-3">بحوث وتأملات فكرية</span>
+          <h3 class="fw-bold mb-2">الشفاء المعجزة وندرة البحث</h3>
+          <p class="text-muted mb-2">بقلم: جاسم محمد علي المعموري</p>
+          <p style="line-height:2;">
+            مقال يتناول تجربة الشفاء النادرة من زاوية فكرية وتأملية، ويطرح أسئلة حول أثر الإيمان والدعاء
+            والعلاقة بين النفس والجسد والروح.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article5.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <section class="mb-5">
+    <h2 class="section-title h4">أقسام الموقع</h2>
 
     <div class="row g-3">
       <div class="col-md-3 col-6">
         <a href="literature.html" class="text-decoration-none text-dark">
-          <div class="card text-center p-3">
+          <div class="card text-center p-4">
             <div class="fs-2 mb-2">📚</div>
             <div class="fw-bold">الأدب</div>
           </div>
@@ -101,16 +208,16 @@
 
       <div class="col-md-3 col-6">
         <a href="politics.html" class="text-decoration-none text-dark">
-          <div class="card text-center p-3">
-            <div class="fs-2 mb-2">📰</div>
-            <div class="fw-bold">السياسة</div>
+          <div class="card text-center p-4">
+            <div class="fs-2 mb-2">🖋️</div>
+            <div class="fw-bold">الفكر والسياسة</div>
           </div>
         </a>
       </div>
 
       <div class="col-md-3 col-6">
         <a href="research.html" class="text-decoration-none text-dark">
-          <div class="card text-center p-3">
+          <div class="card text-center p-4">
             <div class="fs-2 mb-2">📑</div>
             <div class="fw-bold">البحوث العامة</div>
           </div>
@@ -119,7 +226,7 @@
 
       <div class="col-md-3 col-6">
         <a href="islamic-research.html" class="text-decoration-none text-dark">
-          <div class="card text-center p-3">
+          <div class="card text-center p-4">
             <div class="fs-2 mb-2">📘</div>
             <div class="fw-bold">البحوث الإسلامية</div>
           </div>
@@ -129,67 +236,17 @@
   </section>
 
   <section class="mb-5">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-      <h2 class="h4 mb-0">أحدث المقالات</h2>
-      <a href="articles.html" class="text-decoration-none">جميع المقالات <i class="bi bi-arrow-left-short"></i></a>
-    </div>
+    <h2 class="section-title h4">الكتّاب</h2>
 
-    <div class="row g-3">
-      <div class="col-lg-6">
-        <div class="card p-3">
-          <span class="category-pill mb-2">بحوث</span>
-          <h3 class="h5 mb-2">الشفاء المعجزة وندرة البحث</h3>
-          <p class="mb-2 text-muted">بقلم: جاسم محمد علي المعموري</p>
-          <p class="mb-3">مقدّمة بحثية تتناول أثر الدعاء والإيمان على النفس والجسد، وكيف تتداخل الروح والوعي مع الشفاء…</p>
-          <a href="article5.html" class="text-decoration-none">قراءة المقال <i class="bi bi-arrow-left-short"></i></a>
-        </div>
-      </div>
+    <div class="card p-4 d-flex flex-column flex-md-row align-items-center gap-3">
+      <img src="author3.jpg" alt="صورة الكاتب جاسم محمد علي المعموري" class="author-img" />
 
-      <div class="col-lg-6">
-        <div class="card p-3">
-          <span class="category-pill mb-2">بحوث</span>
-          <h3 class="h5 mb-2">عنوان المقال الثالث</h3>
-          <p class="mb-3">نموذج بسيط لعرض المقالات البحثية داخل الموقع — قابل للاستبدال لاحقًا.</p>
-          <a href="article3.html" class="text-decoration-none">قراءة المقال <i class="bi bi-arrow-left-short"></i></a>
-        </div>
-      </div>
-
-      <div class="col-lg-6">
-        <div class="card p-3">
-          <span class="category-pill mb-2">أدب</span>
-          <h3 class="h5 mb-2">عنوان المقال الأول</h3>
-          <p class="mb-3">نص تجريبي — يمكنك استبداله لاحقًا بمقال حقيقي.</p>
-          <a href="article1.html" class="text-decoration-none">قراءة المقال <i class="bi bi-arrow-left-short"></i></a>
-        </div>
-      </div>
-
-      <div class="col-lg-6">
-        <div class="card p-3">
-          <span class="category-pill mb-2">أدب</span>
-          <h3 class="h5 mb-2">عنوان المقال الثاني</h3>
-          <p class="mb-3">نص تجريبي — قابل للتعديل لاحقًا.</p>
-          <a href="article2.html" class="text-decoration-none">قراءة المقال <i class="bi bi-arrow-left-short"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="mb-5">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-      <h2 class="h4 mb-0">الكتّاب</h2>
-      <a href="authors.html" class="text-decoration-none">عرض جميع الكتّاب <i class="bi bi-arrow-left-short"></i></a>
-    </div>
-
-    <div class="row g-3">
-      <div class="col-lg-6">
-        <div class="card p-3 d-flex flex-row align-items-center gap-3">
-          <img src="author3.jpg" alt="صورة الكاتب جاسم محمد علي المعموري" width="76" height="76" style="border-radius:50%;object-fit:cover;" />
-          <div>
-            <h3 class="h5 mb-1">جاسم محمد علي المعموري</h3>
-            <p class="mb-2 small text-muted">كاتب وباحث في الفكر والروحانيات وعلم النفس الروحي.</p>
-            <a href="author3.html" class="text-decoration-none">صفحة الكاتب <i class="bi bi-arrow-left-short"></i></a>
-          </div>
-        </div>
+      <div class="text-center text-md-end">
+        <h3 class="h5 fw-bold mb-1">جاسم محمد علي المعموري</h3>
+        <p class="mb-2 text-muted">
+          كاتب وباحث يهتم بقضايا الفكر والإنسان والتجربة الروحية والنفسية.
+        </p>
+        <a href="author3.html" class="text-decoration-none">زيارة صفحة الكاتب <i class="bi bi-arrow-left-short"></i></a>
       </div>
     </div>
   </section>
@@ -198,8 +255,10 @@
     <div class="card p-4">
       <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
         <div>
-          <h2 class="h4 mb-2">هل لديك مقال أو فكرة تريد نشرها؟</h2>
-          <p class="mb-0 text-muted">تواصل معنا وسنراجع مشاركتك وننشرها ضمن القسم المناسب.</p>
+          <h2 class="h4 mb-2">هل لديك مقال أو دراسة تريد نشرها؟</h2>
+          <p class="mb-0 text-muted">
+            يمكنك التواصل معنا لإرسال المواد الثقافية والبحثية، وسيتم النظر فيها للنشر ضمن القسم المناسب.
+          </p>
         </div>
         <a href="contact.html" class="btn btn-dark btn-lg">تواصل معنا <i class="bi bi-envelope"></i></a>
       </div>
@@ -224,6 +283,7 @@
 </footer>
 
 <div id="google_translate_element"></div>
+
 <script>
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
@@ -233,8 +293,10 @@
     }, 'google_translate_element');
   }
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+```
