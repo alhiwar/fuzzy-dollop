@@ -11,22 +11,55 @@
 
   <style>
     body {
-      background:#f7f7f7;
-      font-family: "Segoe UI", sans-serif;
+      background: #f6f4ef;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      color: #222;
     }
+
+    .author-hero {
+      background: linear-gradient(135deg, #2b2118, #6b4f32);
+      color: white;
+      padding: 60px 20px;
+      border-bottom: 5px solid #c9a45c;
+    }
+
     .author-img {
-      width:160px;
-      height:160px;
-      border-radius:50%;
-      object-fit:cover;
-      border:3px solid #ddd;
-      margin-bottom:15px;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      margin-bottom: 20px;
     }
-    .bio-box {
-      background:white;
-      padding:25px;
-      border-radius:12px;
-      box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+
+    .content-card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      border: 1px solid #eee;
+    }
+
+    .section-title {
+      border-right: 5px solid #c9a45c;
+      padding-right: 12px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .article-card {
+      transition: 0.2s;
+      border-radius: 14px;
+    }
+
+    .article-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    footer a {
+      text-decoration: none;
     }
   </style>
 </head>
@@ -37,7 +70,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" width="38" height="38" style="border-radius:50%;">
+      <img src="logo-small.svg" width="38" height="38" alt="شعار الحوار الثقافي" style="border-radius:50%;">
       <span>الحوار الثقافي</span>
     </a>
 
@@ -47,52 +80,66 @@
 
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
         <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
         <li class="nav-item"><a class="nav-link active" href="authors.html">الكتّاب</a></li>
         <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
-
       </ul>
     </div>
   </div>
 </nav>
 
+<!-- AUTHOR HERO -->
+<section class="author-hero text-center">
+  <div class="container">
+    <img src="author3.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+    <h1 class="fw-bold mb-2">جاسم محمد علي المعموري</h1>
+    <p class="lead mb-0">كاتب وباحث في الفكر والبحث الثقافي والتأملات الإنسانية</p>
+  </div>
+</section>
+
 <!-- MAIN CONTENT -->
-<div class="container my-5" style="max-width:850px;">
+<main class="container my-5" style="max-width:950px;">
 
-  <div class="text-center mb-4">
-    <img src="author3.jpg" alt="صورة الكاتب" class="author-img">
-    <h1 class="h3 fw-bold">جاسم محمد علي المعموري</h1>
-    <p class="text-muted">كاتب وباحث في الفكر والروحانيات وعلم النفس الروحي</p>
-  </div>
-
-  <div class="bio-box">
-    <h4 class="mb-3">نبذة عن الكاتب</h4>
-    <p style="line-height:1.9;">
-      جاسم محمد علي المعموري كاتب وباحث مهتم بدراسة تأثير الإيمان والدعاء على الإنسان،
-      وعلاقة الروح بالجسد، والتحولات النفسية العميقة التي تكشفها التجارب الإنسانية النادرة.
-      له العديد من المقالات في الفكر والروحانيات والبحث النفسي، ويهتم بربط المعارف الحديثة
-      بالتراث الديني والروحي عبر منهج علمي وتأملي متوازن.
+  <section class="content-card mb-4">
+    <h3 class="section-title">نبذة عن الكاتب</h3>
+    <p style="line-height:2; font-size:1.08rem;">
+      جاسم محمد علي المعموري كاتب وباحث يهتم بقضايا الفكر والإنسان، وبالأسئلة التي تتصل
+      بالتجربة الروحية والنفسية والمعرفية. يكتب في موضوعات تتناول علاقة الإنسان بالإيمان
+      والمعرفة، ويقترب من الظواهر الإنسانية بعين تأملية تجمع بين الحس الثقافي والبحث الهادئ.
     </p>
-  </div>
+  </section>
 
-  <hr class="my-5">
+  <section class="content-card">
+    <h3 class="section-title">مقالات الكاتب</h3>
 
-  <h4 class="mb-3">مقالات الكاتب</h4>
+    <a href="article5.html" class="text-decoration-none text-dark">
+      <div class="article-card border p-4 bg-light">
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+          <div>
+            <h4 class="fw-bold mb-2">الشفاء المعجزة وندرة البحث</h4>
+            <p class="text-muted mb-2">
+              مقال ثقافي يتناول تجربة الشفاء النادرة من زاوية فكرية وتأملية.
+            </p>
+            <small class="text-muted">
+              <i class="bi bi-calendar3"></i>
+              2-9-2020
+            </small>
+          </div>
 
-  <div class="list-group">
-
-    <a href="article5.html" class="list-group-item list-group-item-action">
-      <strong>الشفاء المعجزة وندرة البحث</strong>
-      <br>
-      <small class="text-muted">مقال — 2-9-2020</small>
+          <span class="btn btn-outline-dark btn-sm mt-2">
+            قراءة المقال
+          </span>
+        </div>
+      </div>
     </a>
 
-  </div>
+  </section>
 
-</div>
-<footer class="text-center bg-dark text-white p-4 mt-4">
+</main>
+
+<!-- FOOTER -->
+<footer class="text-center bg-dark text-white p-4 mt-5">
   <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
@@ -108,6 +155,8 @@
     جميع الحقوق محفوظة © 2025 — الحوار الثقافي
   </div>
 </footer>
+
+<!-- GOOGLE TRANSLATE -->
 <div id="google_translate_element"
      style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
 </div>
@@ -122,7 +171,6 @@
   }
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 
 </body>
 </html>
