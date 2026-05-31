@@ -10,27 +10,35 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body { background:#f2f2f7; font-family:Arial, sans-serif; }
+    body { background:#f4f1ea; font-family:Arial, sans-serif; }
+    .page-header {
+      background:linear-gradient(135deg,#1f1a16,#5b4227);
+      color:white;
+      padding:65px 20px;
+      text-align:center;
+      border-bottom:5px solid #c9a45c;
+    }
     .article-card {
       background:white;
-      padding:20px;
-      border-radius:12px;
-      box-shadow:0 0 12px rgba(0,0,0,0.1);
-      transition:0.25s;
+      padding:25px;
+      border-radius:18px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.08);
+      border:1px solid #eee;
     }
-    .article-card:hover {
-      transform:translateY(-4px);
-      box-shadow:0 0 18px rgba(0,0,0,0.15);
+    .author-thumb {
+      width:76px;
+      height:76px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid #eee;
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index-en.html">
       <img src="logo-small.svg" width="55" height="55" style="border-radius:50%;">
       <span>Cultural Dialogue</span>
@@ -42,95 +50,57 @@
 
     <div class="collapse navbar-collapse" id="navArticles">
       <ul class="navbar-nav ms-auto">
-
         <li class="nav-item"><a class="nav-link" href="index-en.html">Home</a></li>
         <li class="nav-item"><a class="nav-link active" href="articles-en.html">Articles</a></li>
         <li class="nav-item"><a class="nav-link" href="authors-en.html">Authors</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
-        <!-- AR BUTTON -->
+        <li class="nav-item"><a class="nav-link" href="contact-en.html">Contact</a></li>
         <li class="nav-item">
-          <a href="articles.html"
-             class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2">AR</a>
+          <a href="articles.html" class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2">AR</a>
         </li>
-
       </ul>
     </div>
-
   </div>
 </nav>
 
-<!-- CONTENT -->
-<div class="container my-5">
+<header class="page-header">
+  <div class="container">
+    <h1 class="fw-bold mb-3">Articles</h1>
+    <p class="lead mb-0">Selected cultural articles and studies published on Cultural Dialogue.</p>
+  </div>
+</header>
 
-  <h2 class="mb-4 text-center">All Articles</h2>
-
+<div class="container my-5" style="max-width:1050px;">
   <div class="row g-4">
 
-    <!-- Article 5 -->
     <div class="col-md-6">
-      <div class="article-card p-3">
-        <span class="badge bg-success mb-2">Spirituality</span>
-        <h3 class="h5">Miracle Healing & The Rarity of Research</h3>
-        <p class="text-muted small mb-2">By: Jasim Muhammad Ali Al-Maamouri</p>
-        <p>
-          A deep article exploring the relationship between prayer, healing, 
-          and the hidden interaction between soul and body...
+      <div class="article-card h-100">
+
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img src="jassim-author.jpg" alt="Jasim Muhammad Ali Al-Maamouri" class="author-thumb">
+
+          <div>
+            <h2 class="h5 fw-bold mb-1">Miracle Healing and the Rarity of Research</h2>
+            <p class="text-muted small mb-0">By: Jasim Muhammad Ali Al-Maamouri</p>
+          </div>
+        </div>
+
+        <span class="badge bg-dark mb-3">Research and Reflection</span>
+
+        <p style="line-height:1.8;">
+          An article that approaches the rare experience of healing from a reflective and intellectual perspective,
+          raising questions about faith, prayer, and the relationship between body, soul, and meaning.
         </p>
+
         <a href="article5.html" class="btn btn-dark btn-sm">Read Article</a>
-      </div>
-    </div>
+        <a href="author3.html" class="btn btn-outline-dark btn-sm">Author Page</a>
 
-    <!-- Article 1 -->
-    <div class="col-md-6">
-      <div class="article-card p-3">
-        <span class="badge bg-primary mb-2">Literature</span>
-        <h3 class="h5">First Sample Article</h3>
-        <p class="text-muted small mb-2">Demo Article</p>
-        <p>A simple sample article representing how articles are displayed on the site...</p>
-        <a href="article1.html" class="btn btn-dark btn-sm">Read Article</a>
-      </div>
-    </div>
-
-    <!-- Article 2 -->
-    <div class="col-md-6">
-      <div class="article-card p-3">
-        <span class="badge bg-primary mb-2">Literature</span>
-        <h3 class="h5">Second Sample Article</h3>
-        <p class="text-muted small mb-2">Demo Article</p>
-        <p>A second demo article showing how content may be organized inside the design...</p>
-        <a href="article2.html" class="btn btn-dark btn-sm">Read Article</a>
-      </div>
-    </div>
-
-    <!-- Article 3 -->
-    <div class="col-md-6">
-      <div class="article-card p-3">
-        <span class="badge bg-success mb-2">Research</span>
-        <h3 class="h5">Third Sample Article</h3>
-        <p class="text-muted small mb-2">Demo Article</p>
-        <p>A research-style demo article representing analytical and academic writing...</p>
-        <a href="article3.html" class="btn btn-dark btn-sm">Read Article</a>
-      </div>
-    </div>
-
-    <!-- Article 4 -->
-    <div class="col-md-6">
-      <div class="article-card p-3">
-        <span class="badge bg-info mb-2">Culture</span>
-        <h3 class="h5">Fourth Sample Article</h3>
-        <p class="text-muted small mb-2">Demo Article</p>
-        <p>A fourth demo article showing simple and general cultural content...</p>
-        <a href="article4.html" class="btn btn-dark btn-sm">Read Article</a>
       </div>
     </div>
 
   </div>
 </div>
 
-<!-- FOOTER -->
-<footer class="text-center bg-dark text-white p-4 mt-4">
-
+<footer class="text-center bg-dark text-white p-4 mt-5">
   <h5 class="mb-3">Follow Us</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
