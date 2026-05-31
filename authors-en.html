@@ -10,37 +10,57 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body { background:#f2f2f7; }
+    body {
+      background:#f4f1ea;
+      font-family:"Segoe UI", Tahoma, sans-serif;
+      color:#222;
+    }
+
+    .page-header {
+      background:linear-gradient(135deg,#1f1a16,#5b4227);
+      color:white;
+      padding:65px 20px;
+      text-align:center;
+      border-bottom:5px solid #c9a45c;
+    }
+
     .author-card {
       background:white;
-      padding:20px;
-      border-radius:12px;
-      box-shadow:0 0 12px rgba(0,0,0,0.1);
-      transition:0.3s;
+      padding:25px;
+      border-radius:18px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.08);
+      border:1px solid #eee;
+      transition:0.25s;
     }
+
     .author-card:hover {
-      transform:translateY(-5px);
-      box-shadow:0 0 18px rgba(0,0,0,0.15);
+      transform:translateY(-4px);
+      box-shadow:0 10px 26px rgba(0,0,0,0.12);
     }
+
     .author-img {
-      width:110px;
-      height:110px;
+      width:120px;
+      height:120px;
       object-fit:cover;
       border-radius:50%;
-      margin-right:15px;
-      border:3px solid #ddd;
+      margin-right:18px;
+      border:4px solid #eee;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    footer a {
+      text-decoration:none;
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
 
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index-en.html">
-      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%;">
+      <img src="logo-small.svg" width="55" height="55" alt="Cultural Dialogue Logo" style="border-radius:50%;">
       <span>Cultural Dialogue</span>
     </a>
 
@@ -52,13 +72,11 @@
       <ul class="navbar-nav ms-auto">
 
         <li class="nav-item"><a class="nav-link" href="index-en.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about-en.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="articles-en.html">Articles</a></li>
-
         <li class="nav-item"><a class="nav-link active" href="authors-en.html">Authors</a></li>
-
         <li class="nav-item"><a class="nav-link" href="contact-en.html">Contact</a></li>
 
-        <!-- زر AR -->
         <li class="nav-item">
           <a href="authors.html"
              class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2">AR</a>
@@ -69,23 +87,39 @@
   </div>
 </nav>
 
-<!-- CONTENT -->
-<div class="container my-5">
+<header class="page-header">
+  <div class="container">
+    <h1 class="fw-bold mb-3">Authors</h1>
+    <p class="lead mb-0">
+      Writers and researchers contributing to Cultural Dialogue through essays, studies, and literary work.
+    </p>
+  </div>
+</header>
 
-  <h2 class="mb-4 text-center">Authors</h2>
+<div class="container my-5" style="max-width:1000px;">
 
-  <div class="author-card d-flex align-items-center mb-4">
-    <img src="author3.jpg" class="author-img" alt="Author Photo">
-    <div>
-      <h3 class="h5 mb-1">Jasim Mohammed Ali Al-Mamouri</h3>
-      <p class="text-muted mb-2">Writer and researcher in spirituality, faith psychology, and human consciousness studies.</p>
-      <a href="author3.html" class="btn btn-dark btn-sm">View Profile</a>
+  <div class="author-card d-flex align-items-center flex-column flex-md-row gap-4">
+
+    <img src="jassim-author.jpg" class="author-img" alt="Jassim Mohammed Ali Al-Maamouri">
+
+    <div class="text-center text-md-start">
+      <h3 class="h4 fw-bold mb-2">Jassim Mohammed Ali Al-Maamouri</h3>
+
+      <p class="text-muted mb-3" style="line-height:1.9;">
+        Iraqi writer, storyteller, and poet interested in literature in general,
+        and in short stories and narrative writing in particular.
+      </p>
+
+      <div class="d-flex gap-2 flex-wrap justify-content-center justify-content-md-start">
+        <a href="author3-en.html" class="btn btn-dark btn-sm">View Profile</a>
+        <a href="article5.html" class="btn btn-outline-dark btn-sm">Read Article</a>
+      </div>
     </div>
+
   </div>
 
 </div>
 
-<!-- FOOTER -->
 <footer class="text-center bg-dark text-white p-4 mt-4">
 
   <h5 class="mb-3">Follow Us</h5>
