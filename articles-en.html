@@ -1,16 +1,23 @@
+```html
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>All Articles — Cultural Dialogue</title>
+
+  <title>Articles — Cultural Dialogue</title>
+  <meta name="description" content="Archive of articles, studies, and cultural writings published on Cultural Dialogue." />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body { background:#f4f1ea; font-family:Arial, sans-serif; }
+    body {
+      background:#f4f1ea;
+      font-family:"Segoe UI", Arial, sans-serif;
+      color:#222;
+    }
+
     .page-header {
       background:linear-gradient(135deg,#1f1a16,#5b4227);
       color:white;
@@ -18,13 +25,29 @@
       text-align:center;
       border-bottom:5px solid #c9a45c;
     }
+
+    .section-title {
+      border-left:5px solid #c9a45c;
+      padding-left:12px;
+      font-weight:800;
+      margin-bottom:20px;
+    }
+
     .article-card {
       background:white;
       padding:25px;
       border-radius:18px;
       box-shadow:0 8px 22px rgba(0,0,0,0.08);
       border:1px solid #eee;
+      transition:.2s;
+      height:100%;
     }
+
+    .article-card:hover {
+      transform:translateY(-3px);
+      box-shadow:0 10px 28px rgba(0,0,0,0.12);
+    }
+
     .author-thumb {
       width:76px;
       height:76px;
@@ -32,13 +55,41 @@
       object-fit:cover;
       border:3px solid #eee;
     }
+
+    .category-pill {
+      display:inline-block;
+      padding:5px 12px;
+      border-radius:999px;
+      font-size:.85rem;
+      background:#efe4cf;
+      color:#5b4227;
+      font-weight:600;
+    }
+
+    .empty-card {
+      background:#faf7f1;
+      border:1px dashed #c9a45c;
+      border-radius:18px;
+      padding:28px;
+      height:100%;
+    }
+
+    footer a {
+      text-decoration:none;
+    }
   </style>
 </head>
 
 <body>
 
+<div style="position:fixed; top:12px; left:12px; z-index:9999;">
+  <a href="articles.html" style="margin-right:6px; padding:4px 8px; background:#555; color:#fff; border-radius:6px; text-decoration:none;">AR</a>
+  <a href="articles-en.html" style="padding:4px 8px; background:#000; color:#fff; border-radius:6px; text-decoration:none;">EN</a>
+</div>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
+
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index-en.html">
       <img src="logo-small.svg" width="55" height="55" alt="Cultural Dialogue Logo" style="border-radius:50%;">
       <span>Cultural Dialogue</span>
@@ -50,37 +101,62 @@
 
     <div class="collapse navbar-collapse" id="navArticles">
       <ul class="navbar-nav ms-auto">
+
         <li class="nav-item"><a class="nav-link" href="index-en.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about-en.html">About</a></li>
-        <li class="nav-item"><a class="nav-link active" href="articles-en.html">Articles</a></li>
-        <li class="nav-item"><a class="nav-link" href="authors-en.html">Authors</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact-en.html">Contact</a></li>
-        <li class="nav-item">
-          <a href="articles.html" class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2">AR</a>
+        <li class="nav-item"><a class="nav-link" href="literature-en.html">Literature</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics-en.html">Thought & Politics</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Research</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="research-en.html">General Research</a></li>
+            <li><a class="dropdown-item" href="islamic-research-en.html">Islamic Research</a></li>
+          </ul>
         </li>
+
+        <li class="nav-item"><a class="nav-link" href="authors-en.html">Authors</a></li>
+        <li class="nav-item"><a class="nav-link active" href="articles-en.html">Articles</a></li>
+        <li class="nav-item"><a class="nav-link" href="submit-en.html">Submit Article</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact-en.html">Contact</a></li>
+
       </ul>
     </div>
+
   </div>
 </nav>
 
 <header class="page-header">
   <div class="container">
     <h1 class="fw-bold mb-3">Articles</h1>
-    <p class="lead mb-0">Selected cultural articles and studies published on Cultural Dialogue.</p>
+    <p class="lead mb-0">
+      An archive of cultural articles, studies, and reflective writings published on Cultural Dialogue.
+    </p>
   </div>
 </header>
 
-<div class="container my-5" style="max-width:1050px;">
+<main class="container my-5" style="max-width:1100px;">
+
+  <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+    <h2 class="section-title h4 mb-0">Latest Publications</h2>
+    <a href="submit-en.html" class="btn btn-dark">
+      Submit Article <i class="bi bi-pencil-square"></i>
+    </a>
+  </div>
+
   <div class="row g-4">
 
-    <div class="col-md-6">
-      <div class="article-card h-100">
+    <div class="col-lg-7">
+      <div class="article-card">
 
         <div class="d-flex align-items-center gap-3 mb-3">
           <img src="jassim-author.jpg" alt="Jassim Mohammed Ali Al-Maamouri" class="author-thumb">
 
           <div>
-            <h2 class="h5 fw-bold mb-1">Miracle Healing and the Rarity of Research</h2>
+            <h2 class="h4 fw-bold mb-1">
+              Miracle Healing and the Rarity of Research
+            </h2>
+
             <p class="text-muted small mb-0">
               By:
               <a href="author3-en.html" class="text-decoration-none text-muted">
@@ -90,23 +166,101 @@
           </div>
         </div>
 
-        <span class="badge bg-dark mb-3">Research and Reflection</span>
+        <span class="category-pill mb-3">
+          Research and Reflection
+        </span>
 
         <p style="line-height:1.8;">
-          An article that approaches the rare experience of healing from a reflective and intellectual perspective,
-          raising questions about faith, prayer, and the relationship between body, soul, and meaning.
+          An article that approaches the rare experience of healing from a reflective
+          and intellectual perspective, raising questions about faith, prayer,
+          and the relationship between body, soul, and meaning.
         </p>
 
-        <a href="article5-en.html" class="btn btn-dark btn-sm">Read Article</a>
-        <a href="author3-en.html" class="btn btn-outline-dark btn-sm">Author Page</a>
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="article5-en.html" class="btn btn-dark">
+            Read Article
+          </a>
+
+          <a href="author3-en.html" class="btn btn-outline-dark">
+            Author Page
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-lg-5">
+      <div class="empty-card">
+
+        <span class="category-pill mb-3">Coming Soon</span>
+
+        <h3 class="h5 fw-bold mb-3">
+          New articles under review
+        </h3>
+
+        <p class="text-muted" style="line-height:1.9;">
+          Future articles will appear here after review and publication,
+          organized by author, section, and type of contribution.
+        </p>
+
+        <a href="submit-en.html" class="btn btn-outline-dark">
+          Send Your Contribution
+          <i class="bi bi-pencil-square"></i>
+        </a>
 
       </div>
     </div>
 
   </div>
-</div>
+
+  <section class="mt-5">
+    <h2 class="section-title h4">Related Sections</h2>
+
+    <div class="row g-3">
+
+      <div class="col-md-3 col-6">
+        <a href="literature-en.html" class="text-decoration-none text-dark">
+          <div class="article-card text-center">
+            <div class="fs-2 mb-2">📚</div>
+            <div class="fw-bold">Literature</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="politics-en.html" class="text-decoration-none text-dark">
+          <div class="article-card text-center">
+            <div class="fs-2 mb-2">🖋️</div>
+            <div class="fw-bold">Thought & Politics</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="research-en.html" class="text-decoration-none text-dark">
+          <div class="article-card text-center">
+            <div class="fs-2 mb-2">📑</div>
+            <div class="fw-bold">General Research</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="islamic-research-en.html" class="text-decoration-none text-dark">
+          <div class="article-card text-center">
+            <div class="fs-2 mb-2">📘</div>
+            <div class="fw-bold">Islamic Research</div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
 
 <footer class="text-center bg-dark text-white p-4 mt-5">
+
   <h5 class="mb-3">Follow Us</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
@@ -119,7 +273,11 @@
   </div>
 
   <div>All rights reserved © 2025 — Cultural Dialogue</div>
+
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
+```
