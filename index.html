@@ -64,8 +64,17 @@
     }
 
     .author-img {
-      width: 230px;
-      height: 230px;
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #eee;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .small-author-img {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #eee;
@@ -145,12 +154,7 @@
 
         <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
         <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
-
-        <!-- زر إرسال مقال -->
-        <li class="nav-item">
-          <a class="nav-link" href="submit.html">إرسال مقال</a>
-        </li>
-
+        <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
       </ul>
     </div>
@@ -166,8 +170,8 @@
       وتحفظ للنصوص أصالتها وللكتّاب حضورهم.
     </p>
     <div class="d-flex justify-content-center gap-2 flex-wrap">
-      <a href="article5.html" class="btn btn-light btn-lg">قراءة المقال المميز <i class="bi bi-arrow-left-short"></i></a>
-      <a href="authors.html" class="btn btn-outline-light btn-lg">الكتّاب <i class="bi bi-person-lines-fill"></i></a>
+      <a href="article5.html" class="btn btn-light btn-lg">قراءة أحدث مقال <i class="bi bi-arrow-left-short"></i></a>
+      <a href="submit.html" class="btn btn-outline-light btn-lg">إرسال مقال <i class="bi bi-pencil-square"></i></a>
     </div>
   </div>
 </header>
@@ -175,29 +179,61 @@
 <main class="container my-5" role="main">
 
   <section class="mb-5">
-    <h2 class="section-title h4">المقال المميز</h2>
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+      <h2 class="section-title h4 mb-0">آخر المقالات</h2>
+      <a href="articles.html" class="btn btn-outline-dark btn-sm">
+        عرض جميع المقالات
+        <i class="bi bi-arrow-left-short"></i>
+      </a>
+    </div>
 
-    <div class="card p-4">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-4 text-center">
-          <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-        </div>
+    <div class="row g-4">
 
-        <div class="col-md-8">
-          <span class="category-pill mb-3">بحوث وتأملات فكرية</span>
-          <h3 class="fw-bold mb-2">الشفاء المعجزة وندرة البحث</h3>
-          <p class="text-muted mb-2">بقلم: جاسم محمد علي المعموري</p>
-          <p style="line-height:2;">
-            مقال يتناول تجربة الشفاء النادرة من زاوية فكرية وتأملية، ويطرح أسئلة حول أثر الإيمان والدعاء
-            والعلاقة بين النفس والجسد والروح.
-          </p>
+      <div class="col-lg-8">
+        <div class="card p-4 h-100">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-4 text-center">
+              <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+            </div>
 
-          <div class="d-flex gap-2 flex-wrap">
-            <a href="article5.html" class="btn btn-dark">قراءة المقال</a>
-            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+            <div class="col-md-8">
+              <span class="category-pill mb-3">بحوث وتأملات فكرية</span>
+              <h3 class="fw-bold mb-2">الشفاء المعجزة وندرة البحث</h3>
+              <p class="text-muted mb-2">
+                بقلم:
+                <a href="author3.html" class="text-decoration-none text-muted">
+                  جاسم محمد علي المعموري
+                </a>
+              </p>
+              <p style="line-height:2;">
+                مقال يتناول تجربة الشفاء النادرة من زاوية فكرية وتأملية،
+                ويطرح أسئلة حول أثر الإيمان والدعاء والعلاقة بين النفس والجسد والروح.
+              </p>
+
+              <div class="d-flex gap-2 flex-wrap">
+                <a href="article5.html" class="btn btn-dark">قراءة المقال</a>
+                <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="col-lg-4">
+        <div class="card p-4 h-100 d-flex justify-content-center">
+          <span class="category-pill mb-3">قريبًا</span>
+          <h3 class="h5 fw-bold mb-3">مساحة للمقالات الجديدة</h3>
+          <p class="text-muted" style="line-height:2;">
+            ستظهر هنا المقالات القادمة بعد مراجعتها ونشرها،
+            مع ربط كل مقال بصفحة الكاتب والقسم المناسب.
+          </p>
+          <a href="submit.html" class="btn btn-outline-dark mt-2">
+            إرسال مساهمة
+            <i class="bi bi-pencil-square"></i>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -247,7 +283,7 @@
     <h2 class="section-title h4">الكتّاب</h2>
 
     <div class="card p-4 d-flex flex-column flex-md-row align-items-center gap-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="small-author-img">
       <div class="text-center text-md-end">
         <h3 class="h5 fw-bold mb-1">جاسم محمد علي المعموري</h3>
         <p class="mb-2 text-muted">
