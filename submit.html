@@ -6,15 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>إرسال مقال — الحوار الثقافي</title>
-
-  <meta name="description"
-        content="إرسال المقالات والبحوث والمواد الثقافية إلى موقع الحوار الثقافي." />
+  <meta name="description" content="إرسال المقالات والبحوث والمواد الثقافية إلى موقع الحوار الثقافي." />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
-
     body{
       background:#f4f1ea;
       font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -81,7 +78,6 @@
       border-radius:8px;
       box-shadow:0 0 6px rgba(0,0,0,0.2);
     }
-
   </style>
 </head>
 
@@ -90,172 +86,121 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
 
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2"
-       href="index.html">
-
-      <img src="logo-small.svg"
-           width="55"
-           height="55"
-           style="border-radius:50%;">
-
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="logo-small.svg" width="55" height="55" alt="شعار الحوار الثقافي" style="border-radius:50%;">
       <span>الحوار الثقافي</span>
     </a>
 
-    <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNavbar">
-
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="mainNavbar">
-
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">الرئيسية</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">من نحن</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="authors.html">الكتّاب</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="articles.html">المقالات</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link active" href="submit.html">إرسال مقال</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">تواصل معنا</a>
-        </li>
-
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link active" href="submit.html">إرسال مقال</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
       </ul>
-
     </div>
+
   </div>
 </nav>
 
 <header class="hero">
-
   <div class="container">
-
     <h1>إرسال مقال أو بحث</h1>
-
     <p>
-      يرحب موقع الحوار الثقافي بالمقالات والبحوث والدراسات
-      والمواد الأدبية والفكرية الجادة،
+      يرحب موقع الحوار الثقافي بالمقالات والبحوث والدراسات والمواد الأدبية والفكرية الجادة،
       مع الحفاظ الكامل على اسم الكاتب وحقوقه الفكرية.
     </p>
-
   </div>
-
 </header>
 
 <main class="container my-5" style="max-width:950px;">
 
   <section class="form-box">
 
-    <h2 class="section-title h4">
-      نموذج الإرسال
-    </h2>
+    <h2 class="section-title h4">نموذج الإرسال</h2>
 
     <div class="info-box">
-
-      يرجى إرسال المادة بصيغة واضحة،
-      مع كتابة اسم الكاتب الحقيقي أو الاسم الأدبي،
-      وإرفاق نبذة مختصرة وصورة شخصية إن وُجدت.
-
+      يتم استقبال المواد للمراجعة قبل النشر. يرجى كتابة البيانات بوضوح، وإرسال النص داخل النموذج،
+      ويمكن أيضًا إرفاق ملف Word أو PDF وصورة للكاتب إن وُجدت.
     </div>
 
     <form action="https://formspree.io/f/movoovwk"
-          method="POST">
+          method="POST"
+          enctype="multipart/form-data">
 
       <div class="mb-3">
-
-        <label class="form-label fw-bold">
-          اسم الكاتب
-        </label>
-
-        <input type="text"
-               name="author"
-               class="form-control"
-               required>
-
+        <label class="form-label fw-bold">اسم الكاتب</label>
+        <input type="text" name="author" class="form-control" required>
       </div>
 
       <div class="mb-3">
-
-        <label class="form-label fw-bold">
-          البريد الإلكتروني
-        </label>
-
-        <input type="email"
-               name="email"
-               class="form-control"
-               required>
-
+        <label class="form-label fw-bold">البريد الإلكتروني</label>
+        <input type="email" name="email" class="form-control" required>
       </div>
 
       <div class="mb-3">
-
-        <label class="form-label fw-bold">
-          عنوان المقال أو البحث
-        </label>
-
-        <input type="text"
-               name="title"
-               class="form-control"
-               required>
-
+        <label class="form-label fw-bold">عنوان المقال أو البحث</label>
+        <input type="text" name="title" class="form-control" required>
       </div>
 
       <div class="mb-3">
-
-        <label class="form-label fw-bold">
-          نوع المادة
-        </label>
-
-        <select name="category"
-                class="form-select">
-
+        <label class="form-label fw-bold">نوع المادة</label>
+        <select name="category" class="form-select">
           <option>مقال فكري</option>
           <option>بحث</option>
           <option>أدب</option>
           <option>قصة قصيرة</option>
           <option>دراسة ثقافية</option>
           <option>نص أدبي</option>
-
         </select>
+      </div>
 
+      <div class="mb-3">
+        <label class="form-label fw-bold">نبذة مختصرة عن الكاتب</label>
+        <textarea name="author_bio" rows="4" class="form-control"
+                  placeholder="اكتب نبذة مختصرة عن الكاتب، ويمكن تركها فارغة إذا لم تكن متوفرة."></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">إرفاق ملف المقال Word أو PDF</label>
+        <input type="file"
+               name="article_file"
+               class="form-control"
+               accept=".doc,.docx,.pdf">
+        <div class="form-text">
+          يمكنك إرفاق ملف Word أو PDF، أو الاكتفاء بلصق النص في الحقل التالي.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">إرفاق صورة الكاتب</label>
+        <input type="file"
+               name="author_image"
+               class="form-control"
+               accept="image/*">
+        <div class="form-text">
+          هذا الحقل اختياري.
+        </div>
       </div>
 
       <div class="mb-4">
-
-        <label class="form-label fw-bold">
-          نص المقال أو الرسالة
-        </label>
-
+        <label class="form-label fw-bold">نص المقال أو الرسالة</label>
         <textarea name="message"
                   rows="10"
                   class="form-control"
+                  placeholder="الصق نص المقال هنا، أو اكتب ملاحظتك إذا أرفقت الملف أعلاه."
                   required></textarea>
-
       </div>
 
-      <button type="submit"
-              class="btn btn-dark btn-lg w-100">
-
+      <button type="submit" class="btn btn-dark btn-lg w-100">
         <i class="bi bi-send"></i>
         إرسال المادة
-
       </button>
 
     </form>
@@ -266,42 +211,18 @@
 
 <footer class="text-center bg-dark text-white p-4 mt-5">
 
-  <h5 class="mb-3">
-    تابعونا على مواقع التواصل
-  </h5>
+  <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
 
-  <div class="d-flex justify-content-center gap-3 mb-3"
-       style="font-size:1.6rem;">
-
-    <a href="#" class="text-white">
-      <i class="bi bi-facebook"></i>
-    </a>
-
-    <a href="#" class="text-white">
-      <i class="bi bi-twitter"></i>
-    </a>
-
-    <a href="#" class="text-white">
-      <i class="bi bi-instagram"></i>
-    </a>
-
-    <a href="#" class="text-white">
-      <i class="bi bi-youtube"></i>
-    </a>
-
-    <a href="#" class="text-white">
-      <i class="bi bi-telegram"></i>
-    </a>
-
-    <a href="#" class="text-white">
-      <i class="bi bi-whatsapp"></i>
-    </a>
-
+  <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
+    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
   </div>
 
-  <div>
-    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
-  </div>
+  <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
 
 </footer>
 
