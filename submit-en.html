@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Submit an Article — Cultural Dialogue</title>
+  <meta name="description" content="Submit articles, studies, and cultural materials to Cultural Dialogue." />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body{
+      background:#f4f1ea;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:#222;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#1f1a16,#5b4227);
+      color:white;
+      padding:70px 20px;
+      text-align:center;
+      border-bottom:5px solid #c9a45c;
+    }
+
+    .hero h1{
+      font-size:2.4rem;
+      font-weight:800;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      max-width:760px;
+      margin:auto;
+      line-height:2;
+      opacity:.92;
+      font-size:1.05rem;
+    }
+
+    .form-box{
+      background:white;
+      border-radius:18px;
+      padding:35px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.08);
+      border:1px solid #eee;
+    }
+
+    .section-title{
+      border-left:5px solid #c9a45c;
+      padding-left:12px;
+      font-weight:800;
+      margin-bottom:20px;
+    }
+
+    .info-box{
+      background:#faf7f1;
+      border-left:4px solid #c9a45c;
+      padding:18px;
+      border-radius:12px;
+      line-height:2;
+      margin-bottom:25px;
+    }
+
+    footer a{
+      text-decoration:none;
+    }
+  </style>
+</head>
+
+<body>
+
+<div style="position:fixed; top:12px; left:12px; z-index:9999;">
+  <a href="submit.html" style="margin-right:6px; padding:4px 8px; background:#555; color:#fff; border-radius:6px; text-decoration:none;">AR</a>
+  <a href="submit-en.html" style="padding:4px 8px; background:#000; color:#fff; border-radius:6px; text-decoration:none;">EN</a>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index-en.html">
+      <img src="logo-small.svg" width="55" height="55" alt="Cultural Dialogue Logo" style="border-radius:50%;">
+      <span>Cultural Dialogue</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index-en.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about-en.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="authors-en.html">Authors</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles-en.html">Articles</a></li>
+        <li class="nav-item"><a class="nav-link active" href="submit-en.html">Submit Article</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact-en.html">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <h1>Submit an Article or Study</h1>
+    <p>
+      Cultural Dialogue welcomes serious articles, studies, literary texts,
+      and thoughtful cultural contributions, while preserving the author’s name and intellectual rights.
+    </p>
+  </div>
+</header>
+
+<main class="container my-5" style="max-width:950px;">
+
+  <section class="form-box">
+
+    <h2 class="section-title h4">Submission Form</h2>
+
+    <div class="info-box">
+      Submitted materials are reviewed before publication. Please paste the article text inside the form.
+      If the article is very long or you have a Word file, PDF, or author photo, mention that in the notes,
+      and we will contact you by email to receive the files appropriately.
+    </div>
+
+    <form action="https://formspree.io/f/movoovwk" method="POST">
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">Author Name</label>
+        <input type="text" name="author" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">Email Address</label>
+        <input type="email" name="email" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">Article or Study Title</label>
+        <input type="text" name="title" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">Type of Material</label>
+        <select name="category" class="form-select">
+          <option>Intellectual Article</option>
+          <option>Research</option>
+          <option>Literature</option>
+          <option>Short Story</option>
+          <option>Cultural Study</option>
+          <option>Literary Text</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">Short Author Bio</label>
+        <textarea name="author_bio" rows="4" class="form-control"
+                  placeholder="Write a short author bio. You may leave this empty if unavailable."></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">Article or Study Text</label>
+        <textarea name="message"
+                  rows="12"
+                  class="form-control"
+                  placeholder="Paste the article or study text here..."
+                  required></textarea>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label fw-bold">Additional Notes</label>
+        <textarea name="notes"
+                  rows="4"
+                  class="form-control"
+                  placeholder="Mention here if you have a Word file, PDF, or author photo to send later."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-dark btn-lg w-100">
+        <i class="bi bi-send"></i>
+        Submit Material
+      </button>
+
+    </form>
+
+  </section>
+
+</main>
+
+<footer class="text-center bg-dark text-white p-4 mt-5">
+
+  <h5 class="mb-3">Follow Us</h5>
+
+  <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
+    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+  </div>
+
+  <div>All Rights Reserved © 2025 — Cultural Dialogue</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
