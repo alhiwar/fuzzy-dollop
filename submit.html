@@ -1,4 +1,3 @@
-```html
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
@@ -126,13 +125,12 @@
     <h2 class="section-title h4">نموذج الإرسال</h2>
 
     <div class="info-box">
-      يتم استقبال المواد للمراجعة قبل النشر. يرجى كتابة البيانات بوضوح، وإرسال النص داخل النموذج،
-      ويمكن أيضًا إرفاق ملف Word أو PDF وصورة للكاتب إن وُجدت.
+      يتم استقبال المواد للمراجعة قبل النشر. يرجى لصق نص المقال داخل النموذج.
+      إذا كان المقال طويلًا جدًا أو لديك ملف Word أو صورة للكاتب، فاكتب ذلك في خانة الملاحظات
+      وسنرد عليك عبر البريد الإلكتروني لاستلام الملفات بطريقة مناسبة.
     </div>
 
-    <form action="https://formspree.io/f/movoovwk"
-          method="POST"
-          enctype="multipart/form-data">
+    <form action="https://formspree.io/f/movoovwk" method="POST">
 
       <div class="mb-3">
         <label class="form-label fw-bold">اسم الكاتب</label>
@@ -168,34 +166,20 @@
       </div>
 
       <div class="mb-3">
-        <label class="form-label fw-bold">إرفاق ملف المقال Word أو PDF</label>
-        <input type="file"
-               name="article_file"
-               class="form-control"
-               accept=".doc,.docx,.pdf">
-        <div class="form-text">
-          يمكنك إرفاق ملف Word أو PDF، أو الاكتفاء بلصق النص في الحقل التالي.
-        </div>
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label fw-bold">إرفاق صورة الكاتب</label>
-        <input type="file"
-               name="author_image"
-               class="form-control"
-               accept="image/*">
-        <div class="form-text">
-          هذا الحقل اختياري.
-        </div>
+        <label class="form-label fw-bold">نص المقال أو البحث</label>
+        <textarea name="article_text"
+                  rows="12"
+                  class="form-control"
+                  placeholder="الصق نص المقال أو البحث هنا..."
+                  required></textarea>
       </div>
 
       <div class="mb-4">
-        <label class="form-label fw-bold">نص المقال أو الرسالة</label>
-        <textarea name="message"
-                  rows="10"
+        <label class="form-label fw-bold">ملاحظات إضافية</label>
+        <textarea name="notes"
+                  rows="4"
                   class="form-control"
-                  placeholder="الصق نص المقال هنا، أو اكتب ملاحظتك إذا أرفقت الملف أعلاه."
-                  required></textarea>
+                  placeholder="اكتب هنا إن كان لديك ملف Word أو PDF أو صورة كاتب تريد إرسالها لاحقًا."></textarea>
       </div>
 
       <button type="submit" class="btn btn-dark btn-lg w-100">
@@ -243,4 +227,3 @@
 
 </body>
 </html>
-```
