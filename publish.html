@@ -1,0 +1,291 @@
+```html
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مولّد المقالات — الحوار الثقافي</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background:#f4f1ea;
+      font-family:"Segoe UI", Tahoma, sans-serif;
+      color:#222;
+    }
+
+    .page-header {
+      background:linear-gradient(135deg,#1f1a16,#5b4227);
+      color:white;
+      padding:45px 20px;
+      border-bottom:5px solid #c9a45c;
+      text-align:center;
+    }
+
+    .card {
+      border:0;
+      border-radius:18px;
+      box-shadow:0 8px 24px rgba(0,0,0,.08);
+    }
+
+    textarea {
+      min-height:220px;
+    }
+
+    #output {
+      min-height:420px;
+      direction:ltr;
+      text-align:left;
+      font-family:Consolas, monospace;
+      font-size:.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="page-header">
+  <h1 class="fw-bold">مولّد المقالات</h1>
+  <p class="mb-0">أدخل بيانات المقال، ثم انسخ الكود الناتج وضعه في ملف مقال جديد.</p>
+</header>
+
+<main class="container my-5">
+
+  <div class="card p-4 mb-4">
+    <div class="row g-3">
+
+      <div class="col-md-6">
+        <label class="form-label">عنوان المقال</label>
+        <input id="title" class="form-control" placeholder="مثال: عنوان المقال">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">اسم الكاتب</label>
+        <input id="author" class="form-control" placeholder="مثال: جاسم محمد علي المعموري">
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">اسم ملف المقال</label>
+        <input id="filename" class="form-control" placeholder="article7.html">
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">القسم</label>
+        <input id="category" class="form-control" placeholder="الأدب / بحوث / فكر">
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">التاريخ</label>
+        <input id="date" class="form-control" placeholder="2026/06/03">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">رابط صفحة الكاتب</label>
+        <input id="authorPage" class="form-control" value="author3.html">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">صورة الكاتب</label>
+        <input id="authorImage" class="form-control" value="jassim-author.jpg">
+      </div>
+
+      <div class="col-12">
+        <label class="form-label">نص المقال</label>
+        <textarea id="articleText" class="form-control" placeholder="الصق نص المقال هنا كما هو دون تعديل"></textarea>
+      </div>
+
+      <div class="col-12">
+        <button onclick="generateArticle()" class="btn btn-dark btn-lg">
+          توليد كود المقال
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <h2 class="h5 fw-bold mb-3">الكود الناتج</h2>
+    <textarea id="output" class="form-control" readonly></textarea>
+
+    <button onclick="copyCode()" class="btn btn-outline-dark mt-3">
+      نسخ الكود
+    </button>
+  </div>
+
+</main>
+
+<script>
+function escapeHtml(text) {
+  return text
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+}
+
+function paragraphsFromText(text) {
+  return text
+    .split(/\n\s*\n/)
+    .map(p => p.trim())
+    .filter(p => p.length > 0)
+    .map(p => `      <p>${escapeHtml(p).replaceAll("\n", "<br>")}</p>`)
+    .join("\n\n");
+}
+
+function generateArticle() {
+  const title = document.getElementById("title").value.trim();
+  const author = document.getElementById("author").value.trim();
+  const category = document.getElementById("category").value.trim();
+  const date = document.getElementById("date").value.trim();
+  const authorPage = document.getElementById("authorPage").value.trim();
+  const authorImage = document.getElementById("authorImage").value.trim();
+  const articleText = document.getElementById("articleText").value.trim();
+
+  const paragraphs = paragraphsFromText(articleText);
+
+  const html = `<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${escapeHtml(title)} — الحوار الثقافي</title>
+  <meta name="description" content="${escapeHtml(title)}، مقال منشور في موقع الحوار الثقافي.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background:#f6f4ef;
+      font-family:"Segoe UI", Tahoma, sans-serif;
+      color:#222;
+    }
+
+    .article-hero {
+      background:linear-gradient(135deg,#2b2118,#6b4f32);
+      color:white;
+      padding:55px 20px;
+      border-bottom:5px solid #c9a45c;
+      text-align:center;
+    }
+
+    .author-img {
+      width:95px;
+      height:95px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid #fff;
+      box-shadow:0 6px 18px rgba(0,0,0,.2);
+      margin-bottom:15px;
+    }
+
+    .article-card {
+      background:white;
+      border-radius:20px;
+      padding:35px;
+      box-shadow:0 8px 25px rgba(0,0,0,.08);
+      border:1px solid #eee;
+    }
+
+    .article-body p {
+      line-height:2.2;
+      font-size:1.12rem;
+      margin-bottom:1.4rem;
+    }
+
+    .category-pill {
+      display:inline-block;
+      padding:5px 13px;
+      border-radius:999px;
+      background:#efe4cf;
+      color:#5b4227;
+      font-weight:600;
+      margin-bottom:14px;
+    }
+
+    footer a {
+      text-decoration:none;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="logo-small.svg" width="45" height="45" alt="شعار الحوار الثقافي" style="border-radius:50%;">
+      <span>الحوار الثقافي</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="research.html">البحوث</a></li>
+        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link active" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <div class="container">
+    <span class="category-pill">${escapeHtml(category)}</span>
+    <h1 class="fw-bold mb-3">${escapeHtml(title)}</h1>
+
+    <img src="${escapeHtml(authorImage)}" alt="${escapeHtml(author)}" class="author-img">
+
+    <p class="mb-1">
+      بقلم:
+      <a href="${escapeHtml(authorPage)}" class="text-white fw-bold text-decoration-none">
+        ${escapeHtml(author)}
+      </a>
+    </p>
+
+    <p class="mb-0">
+      <i class="bi bi-calendar3"></i>
+      ${escapeHtml(date)}
+    </p>
+  </div>
+</header>
+
+<main class="container my-5" style="max-width:900px;">
+  <article class="article-card">
+    <div class="article-body">
+${paragraphs}
+    </div>
+  </article>
+</main>
+
+<footer class="text-center bg-dark text-white p-4 mt-5">
+  <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>`;
+
+  document.getElementById("output").value = html;
+}
+
+function copyCode() {
+  const output = document.getElementById("output");
+  output.select();
+  document.execCommand("copy");
+  alert("تم نسخ الكود");
+}
+</script>
+
+</body>
+</html>
+```
