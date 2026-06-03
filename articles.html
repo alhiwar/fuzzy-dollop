@@ -1,5 +1,5 @@
-html
 <!doctype html>
+
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -80,6 +80,7 @@ html
       box-shadow: 0 0 6px rgba(0,0,0,0.2);
     }
   </style>
+
 </head>
 
 <body>
@@ -96,76 +97,42 @@ html
       <span>الحوار الثقافي</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="فتح القائمة">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+```
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="فتح القائمة">
+  <span class="navbar-toggler-icon"></span>
+</button>
 
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
-        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
-        <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
+<div class="collapse navbar-collapse" id="mainNavbar">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+    <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+    <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+    <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
-            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
-          </ul>
-        </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+        <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+      </ul>
+    </li>
 
-        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
-        ```html
-<a href="article7.html" class="text-decoration-none text-dark">
+    <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+    <li class="nav-item"><a class="nav-link active" href="articles.html">المقالات</a></li>
 
-  <div class="article-card border p-4 bg-light mb-3">
+    <li class="nav-item">
+      <a class="nav-link" href="search.html">
+        <i class="bi bi-search"></i>
+        البحث
+      </a>
+    </li>
 
-    <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
-
-      <div>
-
-        <span class="category-pill">
-          الأدب
-        </span>
-
-        <h4 class="fw-bold mb-2">
-          هيا لنحرق العِربيد ! *
-        </h4>
-
-        <p class="text-muted mb-2">
-          قصة تستعيد خوف الطفولة وخرافاتها الصغيرة، وتمزج بين الذاكرة والسرد والحنين في أجواء عراقية حميمة.
-        </p>
-
-        <small class="text-muted">
-          <i class="bi bi-calendar3"></i>
-          2026/06/03
-        </small>
-
-      </div>
-
-      <span class="btn btn-outline-dark btn-sm mt-2">
-        قراءة المقال
-      </span>
-
-    </div>
-
-  </div>
-
-</a>
+    <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
+    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+  </ul>
+</div>
 ```
 
-        <li class="nav-item"><a class="nav-link active" href="articles.html">المقالات</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="search.html">
-            <i class="bi bi-search"></i>
-            البحث
-          </a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
-      </ul>
-    </div>
   </div>
 </nav>
 
@@ -189,123 +156,164 @@ html
 
   <div class="row g-4">
 
-    <div class="col-lg-6">
-      <div class="article-card p-4">
+```
+<div class="col-lg-6">
+  <div class="article-card p-4">
 
-        <div class="d-flex align-items-center gap-3 mb-3">
-          <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-thumb">
+    <div class="d-flex align-items-center gap-3 mb-3">
+      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-thumb">
 
-          <div>
-            <h2 class="h4 fw-bold mb-1">ولوج في حُبيبات المطر</h2>
-            <p class="text-muted small mb-0">
-              بقلم:
-              <a href="author3.html" class="text-decoration-none text-muted">
-                جاسم محمد علي المعموري
-              </a>
-            </p>
-          </div>
-        </div>
-
-        <span class="category-pill mb-3">الأدب</span>
-
-        <p style="line-height:2;">
-          نص أدبي يستعيد ذاكرة الطفولة والمطر والدهشة الأولى، في لغة تجمع بين السرد والتأمل والحنين.
+      <div>
+        <h2 class="h4 fw-bold mb-1">هيا لنحرق العِربيد ! *</h2>
+        <p class="text-muted small mb-0">
+          بقلم:
+          <a href="author3.html" class="text-decoration-none text-muted">
+            جاسم محمد علي المعموري
+          </a>
         </p>
-
-        <div class="d-flex gap-2 flex-wrap">
-          <a href="article6.html" class="btn btn-dark">
-            قراءة المقال
-          </a>
-
-          <a href="author3.html" class="btn btn-outline-dark">
-            صفحة الكاتب
-          </a>
-        </div>
-
       </div>
     </div>
 
-    <div class="col-lg-6">
-      <div class="article-card p-4">
+    <span class="category-pill mb-3">الأدب</span>
 
-        <div class="d-flex align-items-center gap-3 mb-3">
-          <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-thumb">
+    <p style="line-height:2;">
+      قصة تستعيد خوف الطفولة وخرافاتها الصغيرة، وتمزج بين الذاكرة والسرد والحنين في أجواء عراقية حميمة.
+    </p>
 
-          <div>
-            <h2 class="h4 fw-bold mb-1">الشفاء المعجزة وندرة البحث</h2>
-            <p class="text-muted small mb-0">
-              بقلم:
-              <a href="author3.html" class="text-decoration-none text-muted">
-                جاسم محمد علي المعموري
-              </a>
-            </p>
-          </div>
-        </div>
+    <div class="d-flex gap-2 flex-wrap">
+      <a href="article7.html" class="btn btn-dark">
+        قراءة المقال
+      </a>
 
-        <span class="category-pill mb-3">بحوث وتأملات فكرية</span>
+      <a href="author3.html" class="btn btn-outline-dark">
+        صفحة الكاتب
+      </a>
+    </div>
 
-        <p style="line-height:2;">
-          مقال يتناول تجربة الشفاء النادرة من زاوية فكرية وتأملية،
-          ويطرح أسئلة حول أثر الإيمان والدعاء والعلاقة بين النفس والجسد والروح.
+  </div>
+</div>
+
+<div class="col-lg-6">
+  <div class="article-card p-4">
+
+    <div class="d-flex align-items-center gap-3 mb-3">
+      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-thumb">
+
+      <div>
+        <h2 class="h4 fw-bold mb-1">ولوج في حُبيبات المطر</h2>
+        <p class="text-muted small mb-0">
+          بقلم:
+          <a href="author3.html" class="text-decoration-none text-muted">
+            جاسم محمد علي المعموري
+          </a>
         </p>
-
-        <div class="d-flex gap-2 flex-wrap">
-          <a href="article5.html" class="btn btn-dark">
-            قراءة المقال
-          </a>
-
-          <a href="author3.html" class="btn btn-outline-dark">
-            صفحة الكاتب
-          </a>
-        </div>
-
       </div>
     </div>
+
+    <span class="category-pill mb-3">الأدب</span>
+
+    <p style="line-height:2;">
+      نص أدبي يستعيد ذاكرة الطفولة والمطر والدهشة الأولى، في لغة تجمع بين السرد والتأمل والحنين.
+    </p>
+
+    <div class="d-flex gap-2 flex-wrap">
+      <a href="article6.html" class="btn btn-dark">
+        قراءة المقال
+      </a>
+
+      <a href="author3.html" class="btn btn-outline-dark">
+        صفحة الكاتب
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<div class="col-lg-6">
+  <div class="article-card p-4">
+
+    <div class="d-flex align-items-center gap-3 mb-3">
+      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-thumb">
+
+      <div>
+        <h2 class="h4 fw-bold mb-1">الشفاء المعجزة وندرة البحث</h2>
+        <p class="text-muted small mb-0">
+          بقلم:
+          <a href="author3.html" class="text-decoration-none text-muted">
+            جاسم محمد علي المعموري
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <span class="category-pill mb-3">بحوث وتأملات فكرية</span>
+
+    <p style="line-height:2;">
+      مقال يتناول تجربة الشفاء النادرة من زاوية فكرية وتأملية،
+      ويطرح أسئلة حول أثر الإيمان والدعاء والعلاقة بين النفس والجسد والروح.
+    </p>
+
+    <div class="d-flex gap-2 flex-wrap">
+      <a href="article5.html" class="btn btn-dark">
+        قراءة المقال
+      </a>
+
+      <a href="author3.html" class="btn btn-outline-dark">
+        صفحة الكاتب
+      </a>
+    </div>
+
+  </div>
+</div>
+```
 
   </div>
 
   <section class="mt-5">
     <h2 class="section-title h4">الأقسام المرتبطة</h2>
 
-    <div class="row g-3">
+```
+<div class="row g-3">
 
-      <div class="col-md-3 col-6">
-        <a href="literature.html" class="text-decoration-none text-dark">
-          <div class="article-card p-4 text-center">
-            <div class="fs-2 mb-2">📚</div>
-            <div class="fw-bold">الأدب</div>
-          </div>
-        </a>
+  <div class="col-md-3 col-6">
+    <a href="literature.html" class="text-decoration-none text-dark">
+      <div class="article-card p-4 text-center">
+        <div class="fs-2 mb-2">📚</div>
+        <div class="fw-bold">الأدب</div>
       </div>
+    </a>
+  </div>
 
-      <div class="col-md-3 col-6">
-        <a href="politics.html" class="text-decoration-none text-dark">
-          <div class="article-card p-4 text-center">
-            <div class="fs-2 mb-2">🖋️</div>
-            <div class="fw-bold">الفكر والسياسة</div>
-          </div>
-        </a>
+  <div class="col-md-3 col-6">
+    <a href="politics.html" class="text-decoration-none text-dark">
+      <div class="article-card p-4 text-center">
+        <div class="fs-2 mb-2">🖋️</div>
+        <div class="fw-bold">الفكر والسياسة</div>
       </div>
+    </a>
+  </div>
 
-      <div class="col-md-3 col-6">
-        <a href="research.html" class="text-decoration-none text-dark">
-          <div class="article-card p-4 text-center">
-            <div class="fs-2 mb-2">📑</div>
-            <div class="fw-bold">البحوث العامة</div>
-          </div>
-        </a>
+  <div class="col-md-3 col-6">
+    <a href="research.html" class="text-decoration-none text-dark">
+      <div class="article-card p-4 text-center">
+        <div class="fs-2 mb-2">📑</div>
+        <div class="fw-bold">البحوث العامة</div>
       </div>
+    </a>
+  </div>
 
-      <div class="col-md-3 col-6">
-        <a href="islamic-research.html" class="text-decoration-none text-dark">
-          <div class="article-card p-4 text-center">
-            <div class="fs-2 mb-2">📘</div>
-            <div class="fw-bold">البحوث الإسلامية</div>
-          </div>
-        </a>
+  <div class="col-md-3 col-6">
+    <a href="islamic-research.html" class="text-decoration-none text-dark">
+      <div class="article-card p-4 text-center">
+        <div class="fs-2 mb-2">📘</div>
+        <div class="fw-bold">البحوث الإسلامية</div>
       </div>
+    </a>
+  </div>
 
-    </div>
+</div>
+```
+
   </section>
 
 </main>
@@ -340,8 +348,8 @@ html
 </script>
 
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-
