@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
@@ -58,6 +59,17 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
 
+    .category-pill {
+      display:inline-block;
+      padding:5px 12px;
+      border-radius:999px;
+      font-size:.85rem;
+      background:#efe4cf;
+      color:#5b4227;
+      font-weight:600;
+      margin-bottom:10px;
+    }
+
     footer a {
       text-decoration: none;
     }
@@ -80,27 +92,38 @@
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-  <li class="nav-item">
-    <a class="nav-link" href="index.html">الرئيسية</a>
-  </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">الرئيسية</a>
+        </li>
 
-  <li class="nav-item">
-    <a class="nav-link" href="about.html">من نحن</a>
-  </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">من نحن</a>
+        </li>
 
-  <li class="nav-item">
-    <a class="nav-link active" href="authors.html">الكتّاب</a>
-  </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="authors.html">الكتّاب</a>
+        </li>
 
-  <li class="nav-item">
-    <a class="nav-link" href="articles.html">المقالات</a>
-  </li>
+        <li class="nav-item">
+          <a class="nav-link" href="articles.html">المقالات</a>
+        </li>
 
-  <li class="nav-item">
-    <a class="nav-link" href="contact.html">تواصل معنا</a>
-  </li>
+        <li class="nav-item">
+          <a class="nav-link" href="search.html">
+            <i class="bi bi-search"></i>
+            البحث
+          </a>
+        </li>
 
-</ul>
+        <li class="nav-item">
+          <a class="nav-link" href="submit.html">إرسال مقال</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">تواصل معنا</a>
+        </li>
+
+      </ul>
     </div>
   </div>
 </nav>
@@ -138,10 +161,33 @@
   <section class="content-card">
     <h3 class="section-title">مقالات الكاتب</h3>
 
+    <a href="article6.html" class="text-decoration-none text-dark">
+      <div class="article-card border p-4 bg-light mb-3">
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+          <div>
+            <span class="category-pill">الأدب</span>
+            <h4 class="fw-bold mb-2">ولوج في حُبيبات المطر</h4>
+            <p class="text-muted mb-2">
+              نص أدبي يستعيد ذاكرة الطفولة والمطر والدهشة الأولى، في لغة تجمع بين السرد والتأمل والحنين.
+            </p>
+            <small class="text-muted">
+              <i class="bi bi-calendar3"></i>
+              2016/06/04
+            </small>
+          </div>
+
+          <span class="btn btn-outline-dark btn-sm mt-2">
+            قراءة المقال
+          </span>
+        </div>
+      </div>
+    </a>
+
     <a href="article5.html" class="text-decoration-none text-dark">
       <div class="article-card border p-4 bg-light">
         <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
           <div>
+            <span class="category-pill">بحوث وتأملات فكرية</span>
             <h4 class="fw-bold mb-2">الشفاء المعجزة وندرة البحث</h4>
             <p class="text-muted mb-2">
               مقال ثقافي يتناول الشفاء والدعاء من زاوية فكرية وتأملية.
@@ -197,3 +243,4 @@
 
 </body>
 </html>
+```
