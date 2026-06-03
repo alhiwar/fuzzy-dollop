@@ -4,62 +4,100 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>جاسم محمد علي المعموري — الحوار الثقافي</title>
+
+  <meta name="description" content="الصفحة الشخصية للكاتب جاسم محمد علي المعموري في موقع الحوار الثقافي، وتتضمن نبذة عن الكاتب ومقالاته المنشورة." />
+
+  <link rel="canonical" href="https://hiwardialogue.org/author3.html">
+
+  <meta property="og:title" content="جاسم محمد علي المعموري — الحوار الثقافي">
+  <meta property="og:description" content="كاتب وقاص وشاعر عراقي يهتم بالأدب والقصة القصيرة وفنون السرد.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://hiwardialogue.org/author3.html">
+  <meta property="og:image" content="https://hiwardialogue.org/jassim-author.jpg">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    body {
-      background: #f6f4ef;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      color: #222;
+
+    body{
+      background:#f6f4ef;
+      font-family:"Segoe UI",Tahoma,sans-serif;
+      color:#222;
     }
 
-    .author-hero {
-      background: linear-gradient(135deg, #2b2118, #6b4f32);
-      color: white;
-      padding: 60px 20px;
-      border-bottom: 5px solid #c9a45c;
+    .navbar{
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
     }
 
-    .author-img {
-      width: 190px;
-      height: 190px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #fff;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-      margin-bottom: 20px;
+    .author-hero{
+      background:linear-gradient(135deg,#2b2118,#6b4f32);
+      color:white;
+      padding:70px 20px;
+      border-bottom:5px solid #c9a45c;
+      position:relative;
+      overflow:hidden;
     }
 
-    .content-card {
-      background: white;
-      border-radius: 18px;
-      padding: 30px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-      border: 1px solid #eee;
+    .author-hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(255,255,255,0.03);
+      backdrop-filter:blur(1px);
     }
 
-    .section-title {
-      border-right: 5px solid #c9a45c;
-      padding-right: 12px;
-      margin-bottom: 20px;
-      font-weight: bold;
+    .author-hero .container{
+      position:relative;
+      z-index:2;
     }
 
-    .article-card {
-      transition: 0.2s;
-      border-radius: 14px;
+    .author-img{
+      width:200px;
+      height:200px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid #fff;
+      box-shadow:0 10px 30px rgba(0,0,0,0.25);
+      margin-bottom:22px;
+      transition:0.3s;
     }
 
-    .article-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    .author-img:hover{
+      transform:scale(1.02);
     }
 
-    .category-pill {
+    .content-card{
+      background:white;
+      border-radius:20px;
+      padding:35px;
+      box-shadow:0 10px 28px rgba(0,0,0,0.07);
+      border:1px solid #eee;
+    }
+
+    .section-title{
+      border-right:5px solid #c9a45c;
+      padding-right:14px;
+      margin-bottom:22px;
+      font-weight:800;
+      color:#2b2118;
+    }
+
+    .article-card{
+      transition:0.25s;
+      border-radius:16px;
+      overflow:hidden;
+      background:#faf8f4;
+    }
+
+    .article-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 10px 24px rgba(0,0,0,0.12);
+    }
+
+    .category-pill{
       display:inline-block;
       padding:5px 12px;
       border-radius:999px;
@@ -70,9 +108,33 @@
       margin-bottom:10px;
     }
 
-    footer a {
-      text-decoration: none;
+    .quote-box{
+      background:#f8f3ea;
+      border-right:4px solid #c9a45c;
+      padding:22px;
+      border-radius:14px;
+      line-height:2;
+      font-size:1.06rem;
+      color:#5a4630;
     }
+
+    footer a{
+      text-decoration:none;
+    }
+
+    @media (max-width:768px){
+
+      .author-img{
+        width:165px;
+        height:165px;
+      }
+
+      .content-card{
+        padding:25px;
+      }
+
+    }
+
   </style>
 </head>
 
@@ -80,8 +142,9 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
+
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" width="38" height="38" alt="شعار الحوار الثقافي" style="border-radius:50%;">
+      <img src="logo-small.svg" width="45" height="45" alt="شعار الحوار الثقافي" style="border-radius:50%;">
       <span>الحوار الثقافي</span>
     </a>
 
@@ -90,6 +153,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="mainNavbar">
+
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
@@ -97,7 +161,27 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="about.html">من نحن</a>
+          <a class="nav-link" href="literature.html">الأدب</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="politics.html">الفكر والسياسة</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            البحوث
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="research.html">البحوث العامة</a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a>
+            </li>
+          </ul>
         </li>
 
         <li class="nav-item">
@@ -124,85 +208,145 @@
         </li>
 
       </ul>
+
     </div>
   </div>
 </nav>
 
 <section class="author-hero text-center">
+
   <div class="container">
+
     <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    <h1 class="fw-bold mb-2">جاسم محمد علي المعموري</h1>
-    <p class="lead mb-0">كاتب وقاص وشاعر عراقي يهتم بالأدب والقصة القصيرة وفنون السرد</p>
+
+    <h1 class="fw-bold mb-3">
+      جاسم محمد علي المعموري
+    </h1>
+
+    <p class="lead mb-0">
+      كاتب وقاص وشاعر عراقي يهتم بالأدب والقصة القصيرة وفنون السرد
+    </p>
+
   </div>
+
 </section>
 
-<main class="container my-5" style="max-width:950px;">
+<main class="container my-5" style="max-width:980px;">
 
   <section class="content-card mb-4">
-    <h3 class="section-title">نبذة عن الكاتب</h3>
 
-    <p style="line-height:2; font-size:1.08rem;">
+    <h2 class="section-title">
+      نبذة عن الكاتب
+    </h2>
+
+    <p style="line-height:2.1; font-size:1.08rem;">
       جاسم محمد علي المعموري كاتب وقاص وشاعر عراقي، يهتم بالأدب عمومًا وبالقصة القصيرة وفنون السرد خصوصًا، ويكتب في مجالات النقد الأدبي والفكر والسياسة والدين، إلى جانب البحوث والدراسات والمقالات الثقافية التي نُشر عدد منها في الصحف الورقية والمواقع الإلكترونية العربية.
     </p>
 
-    <p style="line-height:2; font-size:1.08rem;">
+    <p style="line-height:2.1; font-size:1.08rem;">
       كتب في مراحل مختلفة بأسماء مستعارة، من بينها: «أبو سجاد المعموري» و«جاسم المعموري»، وانشغل عبر تجربته بالبحث عن القيمة الإنسانية والجمالية للنص، وبالدور الذي يمكن أن تؤديه الكتابة في إيقاظ الوعي وتحريك الأسئلة الكبرى داخل المجتمع.
     </p>
 
-    <p style="line-height:2; font-size:1.08rem;">
+    <p style="line-height:2.1; font-size:1.08rem;">
       ينظر إلى الكتابة بوصفها فعلًا معرفيًا وأخلاقيًا يتجاوز حدود التعبير العابر، ويؤمن بأنها من أرقى أشكال العمل الإنساني وأكثرها قدرة على إحداث التغيير، لما تحمله من أثر في تشكيل الوعي، وبناء الحس النقدي، والدفاع عن القيم الثقافية والإنسانية.
     </p>
 
-    <p style="line-height:2; font-size:1.08rem;">
+    <p style="line-height:2.1; font-size:1.08rem;">
       تميل كتاباته إلى المزج بين التأمل الفكري واللغة الأدبية، مع اهتمام خاص بالسرد بوصفه وسيلة لفهم الإنسان وتحولاته وأسئلته العميقة.
     </p>
+
+  </section>
+
+  <section class="content-card mb-4">
+
+    <h2 class="section-title">
+      من رؤيته للكتابة
+    </h2>
+
+    <div class="quote-box">
+      «الكتابة ليست ترفًا لغويًا ولا مجرد وسيلة للتعبير، بل محاولة مستمرة لفهم الإنسان والعالم، وفتح باب التأمل والأسئلة داخل الذات والمجتمع.»
+    </div>
+
   </section>
 
   <section class="content-card">
-    <h3 class="section-title">مقالات الكاتب</h3>
+
+    <h2 class="section-title">
+      مقالات الكاتب
+    </h2>
 
     <a href="article6.html" class="text-decoration-none text-dark">
-      <div class="article-card border p-4 bg-light mb-3">
+
+      <div class="article-card border p-4 mb-3">
+
         <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+
           <div>
-            <span class="category-pill">الأدب</span>
-            <h4 class="fw-bold mb-2">ولوج في حُبيبات المطر</h4>
-            <p class="text-muted mb-2">
+
+            <span class="category-pill">
+              الأدب
+            </span>
+
+            <h3 class="fw-bold mb-2">
+              ولوج في حُبيبات المطر
+            </h3>
+
+            <p class="text-muted mb-2" style="line-height:1.9;">
               نص أدبي يستعيد ذاكرة الطفولة والمطر والدهشة الأولى، في لغة تجمع بين السرد والتأمل والحنين.
             </p>
+
             <small class="text-muted">
               <i class="bi bi-calendar3"></i>
               2016/06/04
             </small>
+
           </div>
 
           <span class="btn btn-outline-dark btn-sm mt-2">
             قراءة المقال
           </span>
+
         </div>
+
       </div>
+
     </a>
 
     <a href="article5.html" class="text-decoration-none text-dark">
-      <div class="article-card border p-4 bg-light">
+
+      <div class="article-card border p-4">
+
         <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+
           <div>
-            <span class="category-pill">بحوث وتأملات فكرية</span>
-            <h4 class="fw-bold mb-2">الشفاء المعجزة وندرة البحث</h4>
-            <p class="text-muted mb-2">
+
+            <span class="category-pill">
+              بحوث وتأملات فكرية
+            </span>
+
+            <h3 class="fw-bold mb-2">
+              الشفاء المعجزة وندرة البحث
+            </h3>
+
+            <p class="text-muted mb-2" style="line-height:1.9;">
               مقال ثقافي يتناول الشفاء والدعاء من زاوية فكرية وتأملية.
             </p>
+
             <small class="text-muted">
               <i class="bi bi-calendar3"></i>
               2-9-2020
             </small>
+
           </div>
 
           <span class="btn btn-outline-dark btn-sm mt-2">
             قراءة المقال
           </span>
+
         </div>
+
       </div>
+
     </a>
 
   </section>
@@ -210,36 +354,69 @@
 </main>
 
 <footer class="text-center bg-dark text-white p-4 mt-5">
-  <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
+
+  <h5 class="mb-3">
+    تابعونا على مواقع التواصل
+  </h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
-    <a href="#" class="text-white" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="text-white" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-    <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-    <a href="#" class="text-white" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
-    <a href="#" class="text-white" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+    <a href="#" class="text-white" aria-label="Facebook">
+      <i class="bi bi-facebook"></i>
+    </a>
+
+    <a href="#" class="text-white" aria-label="Twitter">
+      <i class="bi bi-twitter"></i>
+    </a>
+
+    <a href="#" class="text-white" aria-label="Instagram">
+      <i class="bi bi-instagram"></i>
+    </a>
+
+    <a href="#" class="text-white" aria-label="YouTube">
+      <i class="bi bi-youtube"></i>
+    </a>
+
+    <a href="#" class="text-white" aria-label="Telegram">
+      <i class="bi bi-telegram"></i>
+    </a>
+
+    <a href="#" class="text-white" aria-label="WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
   </div>
 
   <div>
     جميع الحقوق محفوظة © 2025 — الحوار الثقافي
   </div>
+
 </footer>
 
 <div id="google_translate_element"
-     style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
+style="position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);">
 </div>
 
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'ar',
-      includedLanguages: 'en,fr,de,es,tr,fa,ur,hi',
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-    }, 'google_translate_element');
-  }
+<script>
+
+function googleTranslateElementInit() {
+
+  new google.translate.TranslateElement({
+
+    pageLanguage:'ar',
+
+    includedLanguages:'en,fr,de,es,tr,fa,ur,hi',
+
+    layout:google.translate.TranslateElement.InlineLayout.HORIZONTAL
+
+  }, 'google_translate_element');
+
+}
+
 </script>
+
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
