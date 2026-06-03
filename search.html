@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>البحث — الحوار الثقافي</title>
+  <meta name="description" content="البحث داخل موقع الحوار الثقافي في المقالات والكتّاب والبحوث والأقسام." />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body{
+      background:#f4f1ea;
+      font-family:"Segoe UI", Tahoma, sans-serif;
+      color:#222;
+    }
+
+    .page-header{
+      background:linear-gradient(135deg,#1f1a16,#5b4227);
+      color:white;
+      padding:65px 20px;
+      text-align:center;
+      border-bottom:5px solid #c9a45c;
+    }
+
+    .search-box,
+    .result-card{
+      background:white;
+      border-radius:18px;
+      padding:25px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.08);
+      border:1px solid #eee;
+    }
+
+    .result-card{
+      margin-bottom:18px;
+      transition:.2s;
+    }
+
+    .result-card:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 28px rgba(0,0,0,0.12);
+    }
+
+    .category-pill{
+      display:inline-block;
+      padding:4px 11px;
+      border-radius:999px;
+      font-size:.82rem;
+      background:#efe4cf;
+      color:#5b4227;
+      font-weight:600;
+      margin-bottom:10px;
+    }
+
+    footer a{
+      text-decoration:none;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="logo-small.svg" width="55" height="55" alt="شعار الحوار الثقافي" style="border-radius:50%;">
+      <span>الحوار الثقافي</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link active" href="search.html">البحث</a></li>
+        <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <h1 class="fw-bold mb-3">البحث في الموقع</h1>
+    <p class="lead mb-0">
+      ابحث في المقالات والكتّاب والبحوث والأقسام المنشورة في الحوار الثقافي.
+    </p>
+  </div>
+</header>
+
+<main class="container my-5" style="max-width:950px;">
+
+  <section class="search-box mb-4">
+
+    <label for="searchInput" class="form-label fw-bold">
+      اكتب كلمة البحث
+    </label>
+
+    <input type="search"
+           id="searchInput"
+           class="form-control form-control-lg"
+           placeholder="مثال: الشفاء، جاسم، الأدب، البحوث، السياسة">
+
+    <p class="text-muted mt-3 mb-0">
+      تظهر النتائج مباشرة أثناء الكتابة.
+    </p>
+
+  </section>
+
+  <section id="results"></section>
+
+</main>
+
+<footer class="text-center bg-dark text-white p-4 mt-5">
+
+  <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
+
+  <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
+    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+  </div>
+
+  <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
+
+</footer>
+
+<script>
+  const pages = [
+    {
+      title: "الشفاء المعجزة وندرة البحث",
+      url: "article5.html",
+      category: "مقال / بحث",
+      text: "الشفاء المعجزة وندرة البحث جاسم محمد علي المعموري الدعاء الإيمان الشفاء النفس الجسد الروح بحث تأمل فكري"
+    },
+    {
+      title: "جاسم محمد علي المعموري",
+      url: "author3.html",
+      category: "كاتب",
+      text: "جاسم محمد علي المعموري كاتب وقاص وشاعر عراقي الأدب القصة القصيرة السرد النقد الأدبي السياسة الدين"
+    },
+    {
+      title: "المقالات",
+      url: "articles.html",
+      category: "أرشيف",
+      text: "المقالات البحوث الدراسات المنشورات الشفاء المعجزة وندرة البحث"
+    },
+    {
+      title: "الكتّاب",
+      url: "authors.html",
+      category: "كتّاب",
+      text: "الكتّاب المؤلفون جاسم محمد علي المعموري"
+    },
+    {
+      title: "الأدب",
+      url: "literature.html",
+      category: "قسم",
+      text: "الأدب الشعر السرد القصة القصيرة النقد الأدبي النصوص الأدبية"
+    },
+    {
+      title: "الفكر والسياسة",
+      url: "politics.html",
+      category: "قسم",
+      text: "الفكر السياسة المجتمع التحليل السياسي الوعي التحولات الثقافية"
+    },
+    {
+      title: "البحوث العامة",
+      url: "research.html",
+      category: "قسم",
+      text: "البحوث العامة الدراسات التحليل الفكر الثقافة الإنسان المجتمع المعرفة"
+    },
+    {
+      title: "البحوث الإسلامية",
+      url: "islamic-research.html",
+      category: "قسم",
+      text: "البحوث الإسلامية التراث الإسلامي الدراسات الروحية الفكرية الدعاء الإيمان"
+    },
+    {
+      title: "من نحن",
+      url: "about.html",
+      category: "تعريف",
+      text: "من نحن الحوار الثقافي منصة ثقافية الفكر الأدب البحوث المقالات الكتّاب"
+    },
+    {
+      title: "إرسال مقال",
+      url: "submit.html",
+      category: "خدمة",
+      text: "إرسال مقال بحث دراسة نص أدبي مساهمة الكاتب نشر المواد"
+    },
+    {
+      title: "تواصل معنا",
+      url: "contact.html",
+      category: "تواصل",
+      text: "تواصل معنا رسالة بريد إلكتروني اقتراحات"
+    }
+  ];
+
+  const searchInput = document.getElementById("searchInput");
+  const results = document.getElementById("results");
+
+  function renderResults(query) {
+    results.innerHTML = "";
+
+    const value = query.trim().toLowerCase();
+
+    if (!value) {
+      results.innerHTML = `
+        <div class="result-card text-muted">
+          اكتب كلمة في مربع البحث لعرض النتائج.
+        </div>
+      `;
+      return;
+    }
+
+    const filtered = pages.filter(page =>
+      page.title.toLowerCase().includes(value) ||
+      page.category.toLowerCase().includes(value) ||
+      page.text.toLowerCase().includes(value)
+    );
+
+    if (filtered.length === 0) {
+      results.innerHTML = `
+        <div class="result-card">
+          <h2 class="h5 fw-bold mb-2">لا توجد نتائج</h2>
+          <p class="text-muted mb-0">
+            جرّب كلمة أخرى مثل: المقالات، جاسم، الأدب، البحوث.
+          </p>
+        </div>
+      `;
+      return;
+    }
+
+    filtered.forEach(page => {
+      const card = document.createElement("div");
+      card.className = "result-card";
+
+      card.innerHTML = `
+        <span class="category-pill">${page.category}</span>
+        <h2 class="h5 fw-bold mb-2">${page.title}</h2>
+        <p class="text-muted mb-3">${page.text.substring(0, 150)}...</p>
+        <a href="${page.url}" class="btn btn-dark btn-sm">
+          فتح الصفحة <i class="bi bi-arrow-left-short"></i>
+        </a>
+      `;
+
+      results.appendChild(card);
+    });
+  }
+
+  searchInput.addEventListener("input", function() {
+    renderResults(this.value);
+  });
+
+  renderResults("");
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
