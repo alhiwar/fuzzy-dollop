@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -33,10 +34,41 @@
       border:1px solid #eee;
     }
 
+    .article-card{
+      background:#faf8f4;
+      border-radius:16px;
+      transition:0.25s;
+    }
+
+    .article-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 24px rgba(0,0,0,0.12);
+    }
+
+    .author-thumb{
+      width:76px;
+      height:76px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid #eee;
+    }
+
+    .category-pill{
+      display:inline-block;
+      padding:5px 12px;
+      border-radius:999px;
+      font-size:.85rem;
+      background:#efe4cf;
+      color:#5b4227;
+      font-weight:600;
+      margin-bottom:10px;
+    }
+
     footer a{
       text-decoration:none;
     }
   </style>
+
 </head>
 
 <body>
@@ -44,73 +76,76 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
 
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" width="55" height="55" alt="شعار الحوار الثقافي" style="border-radius:50%;">
-      <span>الحوار الثقافي</span>
-    </a>
+```
+<a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+  <img src="logo-small.svg" width="55" height="55" alt="شعار الحوار الثقافي" style="border-radius:50%;">
+  <span>الحوار الثقافي</span>
+</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPolitics">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPolitics">
+  <span class="navbar-toggler-icon"></span>
+</button>
 
-    <div class="collapse navbar-collapse" id="navbarPolitics">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<div class="collapse navbar-collapse" id="navbarPolitics">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">من نحن</a>
-        </li>
+    <li class="nav-item">
+      <a class="nav-link" href="about.html">من نحن</a>
+    </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="literature.html">الأدب</a>
-        </li>
+    <li class="nav-item">
+      <a class="nav-link" href="literature.html">الأدب</a>
+    </li>
 
-        <li class="nav-item">
-          <a class="nav-link active" href="politics.html">الفكر والسياسة</a>
-        </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="politics.html">الفكر والسياسة</a>
+    </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-            البحوث
-          </a>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+        البحوث
+      </a>
 
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="research.html">
-                البحوث العامة
-              </a>
-            </li>
-
-            <li>
-              <a class="dropdown-item" href="islamic-research.html">
-                البحوث الإسلامية
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="authors.html">الكتّاب</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="articles.html">المقالات</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">تواصل معنا</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2"
-             href="politics-en.html">
-            EN
+      <ul class="dropdown-menu">
+        <li>
+          <a class="dropdown-item" href="research.html">
+            البحوث العامة
           </a>
         </li>
 
+        <li>
+          <a class="dropdown-item" href="islamic-research.html">
+            البحوث الإسلامية
+          </a>
+        </li>
       </ul>
-    </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="authors.html">الكتّاب</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="articles.html">المقالات</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="contact.html">تواصل معنا</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2"
+         href="politics-en.html">
+        EN
+      </a>
+    </li>
+
+  </ul>
+</div>
+```
+
   </div>
 </nav>
 
@@ -118,104 +153,113 @@
   <div class="container">
     <h1 class="fw-bold mb-3">الفكر والسياسة</h1>
 
-    <p class="lead mb-0">
-      مقالات ودراسات فكرية وسياسية تتناول قضايا المجتمع والوعي والتحولات الإنسانية.
-    </p>
+```
+<p class="lead mb-0">
+  مقالات ودراسات فكرية وسياسية تتناول قضايا المجتمع والوعي والتحولات الإنسانية.
+</p>
+```
+
   </div>
 </header>
 
 <main class="container my-5" style="max-width:950px;">
 
-  <section class="content-card">
+  <section class="content-card mb-4">
 
-    <h2 class="h4 fw-bold mb-3">
-      قسم الفكر والسياسة
-    </h2>
+```
+<h2 class="h4 fw-bold mb-3">
+  قسم الفكر والسياسة
+</h2>
 
-    <p style="line-height:2; font-size:1.08rem;">
-      يضم هذا القسم المقالات والدراسات الفكرية والسياسية التي تتناول
-      قضايا الإنسان والمجتمع والتحولات الثقافية والسياسية،
-      إضافة إلى القراءات التحليلية والرؤى النقدية المعاصرة.
-    </p>
+<p style="line-height:2; font-size:1.08rem;">
+  يضم هذا القسم المقالات والدراسات الفكرية والسياسية التي تتناول
+  قضايا الإنسان والمجتمع والتحولات الثقافية والسياسية،
+  إضافة إلى القراءات التحليلية والرؤى النقدية المعاصرة.
+</p>
 
-    <p class="text-muted mb-0">
-      ستُضاف هنا المقالات السياسية والفكرية المنشورة ضمن موقع الحوار الثقافي.
-    </p>
+<p class="text-muted mb-0">
+  ستُضاف هنا المقالات السياسية والفكرية المنشورة ضمن موقع الحوار الثقافي.
+</p>
+```
 
   </section>
- <section class="content-card">
 
-  <h2 class="h4 fw-bold mb-4">
-    المقالات المنشورة
-  </h2>
+  <section class="content-card">
 
-  <div class="col-md-6 col-lg-4 mb-4">
+```
+<h2 class="h4 fw-bold mb-4">
+  المقالات المنشورة
+</h2>
 
-    <div class="card h-100 shadow-sm border-0">
+<a href="article15.html" class="text-decoration-none text-dark">
+  <div class="article-card border p-4 mb-3">
 
-      <img src="jassim-author.jpg"
-           class="card-img-top"
-           alt="جاسم محمد علي المعموري">
+    <div class="d-flex align-items-center gap-3 mb-3">
+      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-thumb">
 
-      <div class="card-body">
+      <div>
+        <h3 class="fw-bold mb-1">
+          أبي يتظاهر في شارع الرشيد!
+        </h3>
 
-        <span class="badge bg-warning text-dark mb-2">
-          الفكر والسياسة
-        </span>
-
-        <h5 class="card-title">
-          يوم اكتمل فيه معنى الرسالة
-        </h5>
-
-        <p class="card-text">
-          مقال فكري يتناول دلالة يوم الغدير ومكانته في الوجدان الشيعي والتاريخ الإسلامي.
-        </p>
-
-        <a href="article13.html"
-           class="btn btn-dark">
-           قراءة المقال
-        </a>
-
+        <small class="text-muted">
+          <i class="bi bi-person"></i>
+          جاسم محمد علي المعموري
+        </small>
       </div>
-
     </div>
 
-  </div>
-<div class="col-md-6 col-lg-4 mb-4">
+    <span class="category-pill">
+      الفكر والسياسة
+    </span>
 
-  <div class="card h-100 shadow-sm border-0">
+    <p class="text-muted mb-2" style="line-height:1.9;">
+      مقال يتأمل في صورة قديمة من تظاهرات بغداد سنة 1956 ويطرح أسئلة حول الوعي والحرية والخوف في الواقع العربي المعاصر.
+    </p>
 
-```
-<img src="jassim-author.jpg"
-     class="card-img-top"
-     alt="جاسم محمد علي المعموري">
-
-<div class="card-body">
-
-  <span class="badge bg-warning text-dark mb-2">
-    الفكر والسياسة
-  </span>
-
-  <h5 class="card-title">
-    أبي يتظاهر في شارع الرشيد!
-  </h5>
-
-  <p class="card-text">
-    مقال يتأمل في صورة قديمة من تظاهرات بغداد سنة 1956 ويطرح أسئلة حول الوعي والحرية والخوف في الواقع العربي المعاصر.
-  </p>
-
-  <a href="article15.html" class="btn btn-dark">
-    قراءة المقال
-  </a>
-
-</div>
-```
+    <span class="btn btn-outline-dark btn-sm">
+      قراءة المقال
+    </span>
 
   </div>
+</a>
 
-</div>
+<a href="article13.html" class="text-decoration-none text-dark">
+  <div class="article-card border p-4">
 
-</section>
+    <div class="d-flex align-items-center gap-3 mb-3">
+      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-thumb">
+
+      <div>
+        <h3 class="fw-bold mb-1">
+          يوم اكتمل فيه معنى الرسالة
+        </h3>
+
+        <small class="text-muted">
+          <i class="bi bi-person"></i>
+          جاسم محمد علي المعموري
+        </small>
+      </div>
+    </div>
+
+    <span class="category-pill">
+      الفكر والسياسة
+    </span>
+
+    <p class="text-muted mb-2" style="line-height:1.9;">
+      مقال فكري يتناول دلالة يوم الغدير ومكانته في الوجدان الشيعي والتاريخ الإسلامي.
+    </p>
+
+    <span class="btn btn-outline-dark btn-sm">
+      قراءة المقال
+    </span>
+
+  </div>
+</a>
+```
+
+  </section>
+
 </main>
 
 <footer class="text-center bg-dark text-white p-4 mt-4">
@@ -224,29 +268,31 @@
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
 
-    <a href="#" class="text-white">
-      <i class="bi bi-facebook"></i>
-    </a>
+```
+<a href="#" class="text-white">
+  <i class="bi bi-facebook"></i>
+</a>
 
-    <a href="#" class="text-white">
-      <i class="bi bi-twitter"></i>
-    </a>
+<a href="#" class="text-white">
+  <i class="bi bi-twitter"></i>
+</a>
 
-    <a href="#" class="text-white">
-      <i class="bi bi-instagram"></i>
-    </a>
+<a href="#" class="text-white">
+  <i class="bi bi-instagram"></i>
+</a>
 
-    <a href="#" class="text-white">
-      <i class="bi bi-youtube"></i>
-    </a>
+<a href="#" class="text-white">
+  <i class="bi bi-youtube"></i>
+</a>
 
-    <a href="#" class="text-white">
-      <i class="bi bi-telegram"></i>
-    </a>
+<a href="#" class="text-white">
+  <i class="bi bi-telegram"></i>
+</a>
 
-    <a href="#" class="text-white">
-      <i class="bi bi-whatsapp"></i>
-    </a>
+<a href="#" class="text-white">
+  <i class="bi bi-whatsapp"></i>
+</a>
+```
 
   </div>
 
