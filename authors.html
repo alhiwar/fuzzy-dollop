@@ -1,215 +1,107 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>الكتّاب — الحوار الثقافي</title>
+<!doctype html> <html lang="ar" dir="rtl"> <head> <meta charset="utf-8"/> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>الكتّاب — الحوار الثقافي</title> <meta name="description" content="صفحة الكتّاب المشاركين في موقع الحوار الثقافي." /> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet"> <style> body { background:#f4f1ea; font-family:"Segoe UI",Tahoma,sans-serif; color:#222; } .page-header{ background:linear-gradient(135deg,#1f1a16,#5b4227); color:white; padding:65px 20px; text-align:center; border-bottom:5px solid #c9a45c; } .author-card{ background:white; padding:25px; border-radius:18px; box-shadow:0 8px 22px rgba(0,0,0,0.08); border:1px solid #eee; transition:0.25s; margin-bottom:24px; } .author-card:hover{ transform:translateY(-4px); box-shadow:0 10px 26px rgba(0,0,0,0.12); } .author-img{ width:120px; height:120px; object-fit:cover; border-radius:14px; margin-left:18px; border:4px solid #eee; box-shadow:0 4px 12px rgba(0,0,0,0.15); } footer a{ text-decoration:none; } #google_translate_element{ position:fixed; bottom:16px; left:16px; z-index:9999; background:white; padding:4px 8px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2); } </style> </head> <body> <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <div class="container">
+  <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+  <img src="logo-small.svg" width="55" height="55" alt="شعار الحوار الثقافي" style="border-radius:50%;">
+  <span>الحوار الثقافي</span>
+</a>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#authorsNav" aria-label="فتح القائمة">
+  <span class="navbar-toggler-icon"></span>
+</button>
 
-  <style>
-    body {
-      background:#f4f1ea;
-      font-family:"Segoe UI",Tahoma,sans-serif;
-      color:#222;
-    }
+<div class="collapse navbar-collapse" id="authorsNav">
+  <ul class="navbar-nav ms-auto">
 
-    .page-header{
-      background:linear-gradient(135deg,#1f1a16,#5b4227);
-      color:white;
-      padding:65px 20px;
-      text-align:center;
-      border-bottom:5px solid #c9a45c;
-    }
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">الرئيسية</a>
+    </li>
 
-    .author-card{
-      background:white;
-      padding:25px;
-      border-radius:18px;
-      box-shadow:0 8px 22px rgba(0,0,0,0.08);
-      border:1px solid #eee;
-      transition:0.25s;
-    }
+    <li class="nav-item">
+      <a class="nav-link" href="about.html">من نحن</a>
+    </li>
 
-    .author-card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 10px 26px rgba(0,0,0,0.12);
-    }
+    <li class="nav-item">
+      <a class="nav-link" href="articles.html">المقالات</a>
+    </li>
 
-    .author-img{
-      width:120px;
-      height:120px;
-      object-fit:cover;
-      border-radius:50%;
-      margin-left:18px;
-      border:4px solid #eee;
-      box-shadow:0 4px 12px rgba(0,0,0,0.15);
-    }
+    <li class="nav-item">
+      <a class="nav-link active" href="authors.html">الكتّاب</a>
+    </li>
 
-    footer a{
-      text-decoration:none;
-    }
+    <li class="nav-item">
+      <a class="nav-link" href="search.html">
+        <i class="bi bi-search"></i>
+        البحث
+      </a>
+    </li>
 
-    #google_translate_element{
-      position:fixed;
-      bottom:16px;
-      left:16px;
-      z-index:9999;
-      background:white;
-      padding:4px 8px;
-      border-radius:8px;
-      box-shadow:0 0 6px rgba(0,0,0,0.2);
-    }
-  </style>
-</head>
+    <li class="nav-item">
+      <a class="nav-link" href="contact.html">تواصل معنا</a>
+    </li>
 
-<body>
+    <li class="nav-item">
+      <a href="authors-en.html"
+         class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2">
+         EN
+      </a>
+    </li>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
+  </ul>
+</div>
+</div> </nav> <div style="position:fixed; top:12px; left:12px; z-index:9999;"> <a href="authors.html" style="margin-right:6px; padding:4px 8px; background:#000; color:#fff; border-radius:6px; text-decoration:none;"> AR </a>
 
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" width="55" height="55" style="border-radius:50%;">
-      <span>الحوار الثقافي</span>
+<a href="authors-en.html" style="padding:4px 8px; background:#555; color:#fff; border-radius:6px; text-decoration:none;">
+EN
+</a>
+
+</div> <header class="page-header"> <div class="container"> <h1 class="fw-bold mb-3">الكتّاب</h1>
+<p class="lead mb-0">
+  كتّاب وباحثون يساهمون في إثراء الحوار الثقافي بالمقالات والدراسات والنصوص الأدبية.
+</p>
+<img src="yahya-alsamawi.jpg" class="author-img" alt="يحيى السماوي">
+
+<div class="text-center text-md-end">
+
+  <h3 class="h4 fw-bold mb-2">
+    يحيى السماوي
+  </h3>
+
+  <p class="text-muted mb-3" style="line-height:1.9;">
+    شاعر عراقي بارز من الأصوات الشعرية العربية المعاصرة، ارتبط اسمه بقصيدة الوطن والمنفى والحب والإنسان، وصدرت له مجموعات شعرية عديدة حظيت باهتمام نقدي وأدبي واسع.
+  </p>
+
+  <div class="d-flex gap-2 flex-wrap justify-content-center justify-content-md-start">
+
+    <a href="author4.html" class="btn btn-dark btn-sm">
+      عرض صفحة الكاتب
     </a>
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#authorsNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="authorsNav">
-      <ul class="navbar-nav ms-auto">
-
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">الرئيسية</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">من نحن</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="articles.html">المقالات</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link active" href="authors.html">الكتّاب</a>
-        </li>
-<li class="nav-item">
- <a class="nav-link" href="search.html">
-  <i class="bi bi-search"></i>
-  البحث
-</a>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">تواصل معنا</a>
-        </li>
-
-        <li class="nav-item">
-          <a href="authors-en.html"
-             class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2">
-             EN
-          </a>
-        </li>
-
-      </ul>
-    </div>
   </div>
-</nav>
 
-<div style="position:fixed; top:12px; left:12px; z-index:9999;">
-  <a href="authors.html"
-     style="margin-right:6px; padding:4px 8px; background:#000; color:#fff; border-radius:6px; text-decoration:none;">
-     AR
-  </a>
-
-  <a href="authors-en.html"
-     style="padding:4px 8px; background:#555; color:#fff; border-radius:6px; text-decoration:none;">
-     EN
-  </a>
 </div>
+<img src="jassim-author.jpg" class="author-img" alt="جاسم محمد علي المعموري">
 
-<!-- HEADER -->
-<header class="page-header">
-  <div class="container">
-    <h1 class="fw-bold mb-3">الكتّاب</h1>
+<div class="text-center text-md-end">
 
-    <p class="lead mb-0">
-      كتّاب وباحثون يساهمون في إثراء الحوار الثقافي بالمقالات والدراسات والنصوص الأدبية.
-    </p>
-  </div>
-</header>
+  <h3 class="h4 fw-bold mb-2">
+    جاسم محمد علي المعموري
+  </h3>
 
-<!-- CONTENT -->
-<div class="container my-5" style="max-width:1000px;">
+  <p class="text-muted mb-3" style="line-height:1.9;">
+    كاتب وقاص وشاعر عراقي، يهتم بالأدب عمومًا وبالقصة القصيرة وفنون السرد خصوصًا،
+    وله كتابات ودراسات ومقالات منشورة في الصحف الورقية والمواقع الثقافية.
+  </p>
 
-  <div class="author-card d-flex align-items-center flex-column flex-md-row gap-4">
+  <div class="d-flex gap-2 flex-wrap justify-content-center justify-content-md-start">
 
-    <img src="jassim-author.jpg" class="author-img" alt="صورة الكاتب">
+    <a href="author3.html" class="btn btn-dark btn-sm">
+      عرض صفحة الكاتب
+    </a>
 
-    <div class="text-center text-md-end">
-
-      <h3 class="h4 fw-bold mb-2">
-        جاسم محمد علي المعموري
-      </h3>
-
-      <p class="text-muted mb-3" style="line-height:1.9;">
-        كاتب وقاص وشاعر عراقي، يهتم بالأدب عمومًا وبالقصة القصيرة وفنون السرد خصوصًا،
-        وله كتابات ودراسات ومقالات منشورة في الصحف الورقية والمواقع الثقافية.
-      </p>
-
-      <div class="d-flex gap-2 flex-wrap justify-content-center justify-content-md-start">
-
-        <a href="author3.html" class="btn btn-dark btn-sm">
-          عرض صفحة الكاتب
-        </a>
-
-        <a href="article5.html" class="btn btn-outline-dark btn-sm">
-          قراءة المقال
-        </a>
-
-      </div>
-
-    </div>
+    <a href="article5.html" class="btn btn-outline-dark btn-sm">
+      قراءة المقال
+    </a>
 
   </div>
 
 </div>
-
-<!-- FOOTER -->
-<footer class="text-center bg-dark text-white p-4 mt-4">
-
-  <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
-
-  <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
-    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
-  </div>
-
-  <div>
-    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
-  </div>
-</footer>
-
-<div id="google_translate_element"></div>
-
-<script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'ar',
-      includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi',
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-    }, 'google_translate_element');
-  }
-</script>
-
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-</body>
-</html>
+</div> </div> <footer class="text-center bg-dark text-white p-4 mt-4"> <h5 class="mb-3">تابعونا على مواقع التواصل</h5> <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;"> <a href="#" class="text-white"><i class="bi bi-facebook"></i></a> <a href="#" class="text-white"><i class="bi bi-twitter"></i></a> <a href="#" class="text-white"><i class="bi bi-instagram"></i></a> <a href="#" class="text-white"><i class="bi bi-youtube"></i></a> <a href="#" class="text-white"><i class="bi bi-telegram"></i></a> <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a> </div> <div> جميع الحقوق محفوظة © 2025 — الحوار الثقافي </div> </footer> <div id="google_translate_element"></div> <script> function googleTranslateElementInit() { new google.translate.TranslateElement({ pageLanguage: 'ar', includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element'); } </script> <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> </body> </html>
