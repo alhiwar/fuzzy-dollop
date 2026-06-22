@@ -1,65 +1,17 @@
-<!doctype html>
+<!doctype html> <html lang="ar" dir="rtl"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>مولّد النشر — الحوار الثقافي</title> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> <style> body{ background:#f4f1ea; font-family:"Segoe UI", Tahoma, sans-serif; color:#222; } .page-header{ background:linear-gradient(135deg,#1f1a16,#5b4227); color:white; padding:45px 20px; border-bottom:5px solid #c9a45c; text-align:center; } .card{ border:0; border-radius:18px; box-shadow:0 8px 24px rgba(0,0,0,.08); } textarea{ min-height:180px; font-family:Consolas, monospace; font-size:.9rem; direction:ltr; text-align:left; } #articleText{ min-height:360px; direction:rtl; text-align:right; font-family:"Segoe UI", Tahoma, sans-serif; font-size:1rem; } .output-box{ min-height:320px; } </style> </head> <body> <header class="page-header"> <h1 class="fw-bold">مولّد النشر — الحوار الثقافي</h1> <p class="mb-0">أدخل بيانات المادة مرة واحدة، واحصل على ملف المقال والبطاقات المطلوبة.</p> </header> <main class="container my-5"> <div class="card p-4 mb-4"> <div class="row g-3">
+    <div class="col-md-3">
+    <label class="form-label">رقم المقال</label>
+    <input id="articleNumber" class="form-control" placeholder="22">
+  </div>
 
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>مولّد المقالات — الحوار الثقافي</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <style>
-    body {
-      background:#f4f1ea;
-      font-family:"Segoe UI", Tahoma, sans-serif;
-      color:#222;
-    }
-
-    .page-header {
-      background:linear-gradient(135deg,#1f1a16,#5b4227);
-      color:white;
-      padding:45px 20px;
-      border-bottom:5px solid #c9a45c;
-      text-align:center;
-    }
-
-    .card {
-      border:0;
-      border-radius:18px;
-      box-shadow:0 8px 24px rgba(0,0,0,.08);
-    }
-
-    textarea {
-      min-height:220px;
-    }
-
-    #output {
-      min-height:420px;
-      direction:ltr;
-      text-align:left;
-      font-family:Consolas, monospace;
-      font-size:.9rem;
-    }
-  </style>
-
-</head>
-
-<body>
-
-<header class="page-header">
-  <h1 class="fw-bold">مولّد المقالات</h1>
-  <p class="mb-0">أدخل بيانات المقال، ثم انسخ الكود الناتج وضعه في ملف مقال جديد.</p>
-</header>
-
-<main class="container my-5">
-
-  <div class="card p-4 mb-4">
-    <div class="row g-3">
-
-```
-  <div class="col-md-6">
+  <div class="col-md-9">
     <label class="form-label">عنوان المقال</label>
     <input id="title" class="form-control">
+  </div>
+
+  <div class="col-md-6">
+    <label class="form-label">عنوان فرعي اختياري</label>
+    <input id="subtitle" class="form-control">
   </div>
 
   <div class="col-md-6">
@@ -68,148 +20,207 @@
   </div>
 
   <div class="col-md-4">
-    <label class="form-label">القسم</label>
-    <input id="category" class="form-control">
-  </div>
-
-  <div class="col-md-4">
-    <label class="form-label">التاريخ</label>
-    <input id="date" class="form-control">
+    <label class="form-label">رابط صفحة الكاتب</label>
+    <input id="authorPage" class="form-control" placeholder="author5.html">
   </div>
 
   <div class="col-md-4">
     <label class="form-label">صورة الكاتب</label>
-    <input id="authorImage" class="form-control" value="jassim-author.jpg">
+    <input id="authorImage" class="form-control" placeholder="jabbar-albahadli.jpg">
+  </div>
+
+  <div class="col-md-4">
+    <label class="form-label">القسم</label>
+    <select id="category" class="form-select">
+      <option value="الأدب">الأدب</option>
+      <option value="الفكر والسياسة">الفكر والسياسة</option>
+      <option value="البحوث العامة">البحوث العامة</option>
+      <option value="البحوث الإسلامية">البحوث الإسلامية</option>
+    </select>
   </div>
 
   <div class="col-md-12">
-    <label class="form-label">رابط صفحة الكاتب</label>
-    <input id="authorPage" class="form-control" value="author3.html">
+    <label class="form-label">ملخص البطاقة</label>
+    <input id="summary" class="form-control" placeholder="اكتب ملخصاً قصيراً يظهر في البطاقات">
   </div>
 
   <div class="col-12">
-    <label class="form-label">نص المقال</label>
+    <label class="form-label">نص المقال كاملاً</label>
     <textarea id="articleText" class="form-control"></textarea>
   </div>
 
-  <div class="col-12">
-    <button type="button" onclick="generateArticle()" class="btn btn-dark btn-lg">
-      توليد كود المقال
+  <div class="col-12 d-flex gap-2 flex-wrap">
+    <button type="button" onclick="generateAll()" class="btn btn-dark btn-lg">
+      توليد كل الأكواد
+    </button>
+
+    <button type="button" onclick="clearAll()" class="btn btn-outline-danger btn-lg">
+      تفريغ الحقول
     </button>
   </div>
 
 </div>
-```
-
-  </div>
-
-  <div class="card p-4">
-    <h2 class="h5 fw-bold mb-3">الكود الناتج</h2>
-    <textarea id="output" class="form-control" readonly></textarea>
-
-```
-<button type="button" onclick="copyCode()" class="btn btn-outline-dark mt-3">
-  نسخ الكود
-</button>
-```
-
-  </div>
-
-</main>
-
-<script>
-function clean(text) {
-  return String(text || "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;");
-}
-
-function makeParagraphs(text) {
-  return String(text || "")
-    .split(/\n\s*\n/)
-    .map(function(p) {
-      return p.trim();
-    })
-    .filter(function(p) {
-      return p.length > 0;
-    })
-    .map(function(p) {
-      return "      <p>" + clean(p).replaceAll("\n", "<br>") + "</p>";
-    })
-    .join("\n\n");
-}
-
-function generateArticle() {
-  var title = document.getElementById("title").value.trim();
-  var author = document.getElementById("author").value.trim();
-  var category = document.getElementById("category").value.trim();
-  var date = document.getElementById("date").value.trim();
-  var authorImage = document.getElementById("authorImage").value.trim();
-  var authorPage = document.getElementById("authorPage").value.trim();
-  var articleText = document.getElementById("articleText").value.trim();
-
-  var paragraphs = makeParagraphs(articleText);
-
-  var html =
-'<!doctype html>\n' +
-'<html lang="ar" dir="rtl">\n' +
-'<head>\n' +
-'  <meta charset="utf-8">\n' +
-'  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-'  <title>' + clean(title) + ' — الحوار الثقافي</title>\n' +
-'  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">\n' +
-'  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">\n' +
-'  <style>\n' +
-'    body{background:#f6f4ef;font-family:"Segoe UI",Tahoma,sans-serif;color:#222;}\n' +
-'    .article-hero{background:linear-gradient(135deg,#2b2118,#6b4f32);color:white;padding:55px 20px;border-bottom:5px solid #c9a45c;text-align:center;}\n' +
-'    .author-img{width:95px;height:95px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.2);margin-bottom:15px;}\n' +
-'    .article-card{background:white;border-radius:20px;padding:35px;box-shadow:0 8px 25px rgba(0,0,0,.08);border:1px solid #eee;}\n' +
-'    .article-body p{line-height:2.2;font-size:1.12rem;margin-bottom:1.4rem;}\n' +
-'    .category-pill{display:inline-block;padding:5px 13px;border-radius:999px;background:#efe4cf;color:#5b4227;font-weight:600;margin-bottom:14px;}\n' +
-'  </style>\n' +
+</div> <div class="card p-4 mb-4"> <h2 class="h5 fw-bold mb-3">1 — ملف المقال articleXX.html</h2> <textarea id="articleOutput" class="form-control output-box" readonly></textarea> <button type="button" onclick="copyField('articleOutput')" class="btn btn-outline-dark mt-3">نسخ ملف المقال</button> </div> <div class="card p-4 mb-4"> <h2 class="h5 fw-bold mb-3">2 — بطاقة الصفحة الرئيسية index.html</h2> <textarea id="indexOutput" class="form-control output-box" readonly></textarea> <button type="button" onclick="copyField('indexOutput')" class="btn btn-outline-dark mt-3">نسخ بطاقة index.html</button> </div> <div class="card p-4 mb-4"> <h2 class="h5 fw-bold mb-3">3 — بطاقة articles.html</h2> <textarea id="articlesOutput" class="form-control output-box" readonly></textarea> <button type="button" onclick="copyField('articlesOutput')" class="btn btn-outline-dark mt-3">نسخ بطاقة articles.html</button> </div> <div class="card p-4 mb-4"> <h2 class="h5 fw-bold mb-3">4 — بطاقة صفحة القسم</h2> <textarea id="sectionOutput" class="form-control output-box" readonly></textarea> <button type="button" onclick="copyField('sectionOutput')" class="btn btn-outline-dark mt-3">نسخ بطاقة القسم</button> </div> <div class="card p-4"> <h2 class="h5 fw-bold mb-3">5 — بطاقة authors.html للكاتب</h2> <textarea id="authorCardOutput" class="form-control output-box" readonly></textarea> <button type="button" onclick="copyField('authorCardOutput')" class="btn btn-outline-dark mt-3">نسخ بطاقة الكاتب</button> </div> </main> <script> function esc(text){ return String(text || "") .replaceAll("&","&amp;") .replaceAll("<","&lt;") .replaceAll(">","&gt;"); } function makeParagraphs(text){ return String(text || "") .split(/\n\s*\n/) .map(function(p){ return p.trim(); }) .filter(function(p){ return p.length > 0; }) .map(function(p){ return " <p>" + esc(p).replaceAll("\n","<br>") + "</p>"; }) .join("\n\n"); } function getSectionFile(category){ if(category === "الأدب") return "literature.html"; if(category === "الفكر والسياسة") return "politics.html"; if(category === "البحوث العامة") return "research.html"; if(category === "البحوث الإسلامية") return "islamic-research.html"; return "articles.html"; } function getReadWord(category){ if(category === "الأدب") return "قراءة النص"; return "قراءة المقال"; } function generateAll(){ var n = document.getElementById("articleNumber").value.trim(); var title = document.getElementById("title").value.trim(); var subtitle = document.getElementById("subtitle").value.trim(); var author = document.getElementById("author").value.trim(); var authorPage = document.getElementById("authorPage").value.trim(); var authorImage = document.getElementById("authorImage").value.trim(); var category = document.getElementById("category").value.trim(); var summary = document.getElementById("summary").value.trim(); var articleText = document.getElementById("articleText").value.trim(); if(!n || !title || !author || !authorPage || !authorImage || !category || !summary || !articleText){ alert("أكمل الحقول الأساسية أولاً"); return; } var fileName = "article" + n + ".html"; var sectionFile = getSectionFile(category); var readWord = getReadWord(category); var paragraphs = makeParagraphs(articleText); var subtitleHtml = subtitle ? '\n <div class="article-subtitle">' + esc(subtitle) + '</div>\n' : ""; var articleHtml = '<!doctype html>\n' + '<html lang="ar" dir="rtl">\n' + '<head>\n' + ' <meta charset="utf-8" />\n' + ' <meta name="viewport" content="width=device-width, initial-scale=1.0" />\n' + ' <title>' + esc(title) + ' — الحوار الثقافي</title>\n' + ' <meta name="description" content="' + esc(summary) + '" />\n\n' + ' <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">\n' + ' <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">\n\n' + ' <style>\n' + ' body{background:#f4f1ea;font-family:"Segoe UI",Tahoma,sans-serif;color:#222;}\n' + ' .page-header{background:linear-gradient(135deg,#1f1a16,#5b4227);color:white;padding:65px 20px;text-align:center;border-bottom:5px solid #c9a45c;}\n' + ' .article-card{background:white;border-radius:18px;padding:34px;box-shadow:0 8px 22px rgba(0,0,0,0.08);border:1px solid #eee;}\n' + ' .author-box{display:flex;align-items:center;gap:16px;border-bottom:1px solid #eee;padding-bottom:18px;margin-bottom:24px;}\n' + ' .author-box img{width:90px;height:90px;border-radius:14px;object-fit:cover;border:3px solid #eee;}\n' + ' .category-pill{display:inline-block;padding:5px 12px;border-radius:999px;font-size:.85rem;background:#efe4cf;color:#5b4227;font-weight:600;margin-bottom:10px;}\n' + ' .article-subtitle{font-size:1.35rem;font-weight:800;color:#5b4227;margin:0 0 1.8rem;text-align:center;line-height:2;}\n' + ' .article-content{line-height:2.25;font-size:1.15rem;color:#111;font-weight:600;}\n' + ' .article-content p{margin-bottom:1.35rem;text-align:justify;}\n' + ' footer a{text-decoration:none;}\n' + ' @media(max-width:768px){.article-card{padding:22px;}.article-content{font-size:1.05rem;line-height:2.15;}.author-box{flex-direction:column;text-align:center;}}\n' + ' </style>\n' +
 
 '</head>\n\n' +
 '<body>\n\n' +
 '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">\n' +
-'  <div class="container">\n' +
-'    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">\n' +
-'      <img src="logo-small.svg" width="45" height="45" alt="شعار الحوار الثقافي" style="border-radius:50%;">\n' +
-'      <span>الحوار الثقافي</span>\n' +
-'    </a>\n' +
-'  </div>\n' +
+' <div class="container">\n' +
+' <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">\n' +
+' <img src="logo-small.svg" width="55" height="55" alt="شعار الحوار الثقافي" style="border-radius:50%;">\n' +
+' <span>الحوار الثقافي</span>\n' +
+' </a>\n' +
+' <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">\n' +
+' <span class="navbar-toggler-icon"></span>\n' +
+' </button>\n' +
+' <div class="collapse navbar-collapse" id="mainNavbar">\n' +
+' <ul class="navbar-nav ms-auto mb-2 mb-lg-0">\n' +
+' <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>\n' +
+' <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>\n' +
+' <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>\n' +
+' <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>\n' +
+' <li class="nav-item dropdown">\n' +
+' <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>\n' +
+' <ul class="dropdown-menu">\n' +
+' <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>\n' +
+' <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>\n' +
+' </ul>\n' +
+' </li>\n' +
+' <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>\n' +
+' <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>\n' +
+' <li class="nav-item"><a class="nav-link" href="search.html">البحث</a></li>\n' +
+' <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>\n' +
+' <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>\n' +
+' </ul>\n' +
+' </div>\n' +
+' </div>\n' +
 '</nav>\n\n' +
-'<header class="article-hero">\n' +
-'  <div class="container">\n' +
-'    <span class="category-pill">' + clean(category) + '</span>\n' +
-'    <h1 class="fw-bold mb-3">' + clean(title) + '</h1>\n' +
-'    <img src="' + clean(authorImage) + '" alt="' + clean(author) + '" class="author-img">\n' +
-'    <p class="mb-1">بقلم: <a href="' + clean(authorPage) + '" class="text-white fw-bold text-decoration-none">' + clean(author) + '</a></p>\n' +
-'    <p class="mb-0"><i class="bi bi-calendar3"></i> ' + clean(date) + '</p>\n' +
-'  </div>\n' +
+'<header class="page-header">\n' +
+' <div class="container">\n' +
+' <span class="category-pill">' + esc(category) + '</span>\n' +
+' <h1 class="fw-bold mt-3 mb-3">' + esc(title) + '</h1>\n' +
+' <p class="lead mb-0">' + esc(author) + '</p>\n' +
+' </div>\n' +
 '</header>\n\n' +
-'<main class="container my-5" style="max-width:900px;">\n' +
-'  <article class="article-card">\n' +
-'    <div class="article-body">\n' +
+'<main class="container my-5" style="max-width:950px;">\n' +
+' <article class="article-card">\n' +
+' <div class="author-box">\n' +
+' <img src="' + esc(authorImage) + '" alt="' + esc(author) + '">\n' +
+' <div>\n' +
+' <h2 class="h5 fw-bold mb-1">' + esc(author) + '</h2>\n' +
+' <p class="text-muted mb-0">' + esc(category) + '</p>\n' +
+' </div>\n' +
+' </div>\n\n' +
+' <div class="article-content">' +
+subtitleHtml + '\n' +
 paragraphs + '\n' +
-'    </div>\n' +
-'  </article>\n' +
+' </div>\n' +
+' </article>\n' +
 '</main>\n\n' +
-'<footer class="text-center bg-dark text-white p-4 mt-5">\n' +
-'  <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>\n' +
+'<footer class="text-center bg-dark text-white p-4 mt-4">\n' +
+' <h5 class="mb-3">تابعونا على مواقع التواصل</h5>\n' +
+' <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">\n' +
+' <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>\n' +
+' <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>\n' +
+' <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>\n' +
+' <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>\n' +
+' <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>\n' +
+' <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>\n' +
+' </div>\n' +
+' <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>\n' +
 '</footer>\n\n' +
+'<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"><\/script>\n' +
 '</body>\n' +
 '</html>';
 
-document.getElementById("output").value = html;
+var card =
+'<div class="col-lg-6">\n' +
+' <div class="article-card p-4">\n\n' +
+' <div class="d-flex align-items-center gap-3 mb-3">\n' +
+' <img src="' + esc(authorImage) + '" alt="' + esc(author) + '" class="author-thumb">\n\n' +
+' <div>\n' +
+' <h2 class="h4 fw-bold mb-1">' + esc(title) + '</h2>\n' +
+' <p class="text-muted small mb-0">\n' +
+' بقلم:\n' +
+' <a href="' + esc(authorPage) + '" class="text-decoration-none text-muted">' + esc(author) + '</a>\n' +
+' </p>\n' +
+' </div>\n' +
+' </div>\n\n' +
+' <span class="category-pill mb-3">' + esc(category) + '</span>\n\n' +
+' <p style="line-height:2;">\n' +
+' ' + esc(summary) + '\n' +
+' </p>\n\n' +
+' <div class="d-flex gap-2 flex-wrap">\n' +
+' <a href="' + fileName + '" class="btn btn-dark">' + readWord + '</a>\n' +
+' <a href="' + esc(authorPage) + '" class="btn btn-outline-dark">صفحة الكاتب</a>\n' +
+' </div>\n\n' +
+' </div>\n' +
+'</div>';
+
+var sectionCard =
+'<a href="' + fileName + '" class="text-decoration-none text-dark">\n' +
+' <div class="article-card border p-4 mb-3">\n\n' +
+' <div class="d-flex align-items-center gap-3 mb-3">\n' +
+' <img src="' + esc(authorImage) + '" alt="' + esc(author) + '" class="author-thumb">\n\n' +
+' <div>\n' +
+' <h3 class="fw-bold mb-1">' + esc(title) + '</h3>\n' +
+' <small class="text-muted"><i class="bi bi-person"></i> ' + esc(author) + '</small>\n' +
+' </div>\n' +
+' </div>\n\n' +
+' <span class="category-pill">' + esc(category) + '</span>\n\n' +
+' <p class="text-muted mb-2" style="line-height:1.9;">\n' +
+' ' + esc(summary) + '\n' +
+' </p>\n\n' +
+' <span class="btn btn-outline-dark btn-sm">' + readWord + '</span>\n\n' +
+' </div>\n' +
+'</a>';
+
+var authorCard =
+'<div class="author-card d-flex align-items-center flex-column flex-md-row gap-4">\n\n' +
+' <img src="' + esc(authorImage) + '" class="author-img" alt="' + esc(author) + '">\n\n' +
+' <div class="text-center text-md-end">\n\n' +
+' <h3 class="h4 fw-bold mb-2">' + esc(author) + '</h3>\n\n' +
+' <p class="text-muted mb-3" style="line-height:1.9;">\n' +
+' اكتب هنا نبذة مختصرة عن الكاتب.\n' +
+' </p>\n\n' +
+' <div class="d-flex gap-2 flex-wrap justify-content-center justify-content-md-start">\n' +
+' <a href="' + esc(authorPage) + '" class="btn btn-dark btn-sm">عرض صفحة الكاتب</a>\n' +
+' <a href="' + fileName + '" class="btn btn-outline-dark btn-sm">' + readWord + '</a>\n' +
+' </div>\n\n' +
+' </div>\n\n' +
+'</div>';
+
+document.getElementById("articleOutput").value = articleHtml;
+document.getElementById("indexOutput").value = card;
+document.getElementById("articlesOutput").value = card;
+document.getElementById("sectionOutput").value = sectionCard;
+document.getElementById("authorCardOutput").value = authorCard;
 }
 
-function copyCode() {
-var output = document.getElementById("output");
-output.select();
+function copyField(id){
+var el = document.getElementById(id);
+el.select();
 document.execCommand("copy");
-alert("تم نسخ الكود");
-} </script>
+alert("تم النسخ");
+}
 
-</body>
-</html>
+function clearAll(){
+if(confirm("هل تريد تفريغ كل الحقول؟")){
+document.getElementById("articleNumber").value = "";
+document.getElementById("title").value = "";
+document.getElementById("subtitle").value = "";
+document.getElementById("author").value = "";
+document.getElementById("authorPage").value = "";
+document.getElementById("authorImage").value = "";
+document.getElementById("summary").value = "";
+document.getElementById("articleText").value = "";
+document.getElementById("articleOutput").value = "";
+document.getElementById("indexOutput").value = "";
+document.getElementById("articlesOutput").value = "";
+document.getElementById("sectionOutput").value = "";
+document.getElementById("authorCardOutput").value = "";
+}
+}
+</script>
+
+</body> </html>
