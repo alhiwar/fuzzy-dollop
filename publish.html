@@ -59,14 +59,20 @@
   </div>
 
   <div class="col-md-4">
-    <label class="form-label">القسم</label>
-    <select id="category" class="form-select">
-      <option value="الأدب">الأدب</option>
-      <option value="الفكر والسياسة">الفكر والسياسة</option>
-      <option value="البحوث العامة">البحوث العامة</option>
-      <option value="البحوث الإسلامية">البحوث الإسلامية</option>
-    </select>
-  </div>
+  <label class="form-label">نوع المادة</label>
+  <select id="contentType" class="form-select">
+    <option value="مقال">مقال</option>
+    <option value="قصيدة">قصيدة</option>
+    <option value="بحث">بحث</option>
+    <option value="دراسة">دراسة</option>
+    <option value="نص أدبي">نص أدبي</option>
+  </select>
+</div>
+
+<div class="col-md-4">
+  <label class="form-label">تاريخ النشر</label>
+  <input id="publishDate" type="date" class="form-control">
+</div>
 
   <div class="col-md-12">
     <label class="form-label">ملخص البطاقة</label>
@@ -158,6 +164,8 @@ function generateAll(){
   var authorPage = document.getElementById("authorPage").value.trim();
   var authorImage = document.getElementById("authorImage").value.trim();
   var category = document.getElementById("category").value.trim();
+  var contentType = document.getElementById("contentType").value.trim();
+var publishDate = document.getElementById("publishDate").value.trim();
   var summary = document.getElementById("summary").value.trim();
   var articleText = document.getElementById("articleText").value.trim();
 
@@ -180,6 +188,20 @@ function generateAll(){
 ' <meta name="viewport" content="width=device-width, initial-scale=1.0" />\n' +
 ' <title>' + esc(title) + ' — الحوار الثقافي</title>\n' +
 ' <meta name="description" content="' + esc(summary) + '" />\n\n' +
+' <link rel="canonical" href="https://hiwardialogue.org/' + fileName + '" />\n\n' +
+    ' <script type="application/ld+json">\n' +
+' {\n' +
+' "@context":"https://schema.org",\n' +
+' "@type":"Article",\n' +
+' "headline":"' + esc(title) + '",\n' +
+' "description":"' + esc(summary) + '",\n' +
+' "author":{"@type":"Person","name":"' + esc(author) + '"},\n' +
+' "publisher":{"@type":"Organization","name":"الحوار الثقافي"},\n' +
+' "image":"https://hiwardialogue.org/' + esc(authorImage) + '",\n' +
+' "mainEntityOfPage":"https://hiwardialogue.org/' + fileName + '",\n' +
+' "datePublished":"' + esc(publishDate) + '"\n' +
+' }\n' +
+' </script>\n\n' +
 
 ' <meta property="og:type" content="article" />\n' +
 ' <meta property="og:site_name" content="الحوار الثقافي" />\n' +
