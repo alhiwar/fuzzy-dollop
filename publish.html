@@ -198,19 +198,6 @@ var publishDate = document.getElementById("publishDate").value.trim();
 ' <title>' + esc(title) + ' — الحوار الثقافي</title>\n' +
 ' <meta name="description" content="' + esc(summary) + '" />\n\n' +
 ' <link rel="canonical" href="https://hiwardialogue.org/' + fileName + '" />\n\n' +
-    ' <script type="application/ld+json">\n' +
-' {\n' +
-' "@context":"https://schema.org",\n' +
-' "@type":"Article",\n' +
-' "headline":"' + esc(title) + '",\n' +
-' "description":"' + esc(summary) + '",\n' +
-' "author":{"@type":"Person","name":"' + esc(author) + '"},\n' +
-' "publisher":{"@type":"Organization","name":"الحوار الثقافي"},\n' +
-' "image":"https://hiwardialogue.org/' + esc(authorImage) + '",\n' +
-' "mainEntityOfPage":"https://hiwardialogue.org/' + fileName + '",\n' +
-' "datePublished":"' + esc(publishDate) + '"\n' +
-' }\n' +
-' <\/script>\n\n' +
 
 ' <meta property="og:type" content="article" />\n' +
 ' <meta property="og:site_name" content="الحوار الثقافي" />\n' +
