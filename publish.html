@@ -57,7 +57,15 @@
     <label class="form-label">صورة الكاتب</label>
     <input id="authorImage" class="form-control" placeholder="jabbar-albahadli.jpg">
   </div>
-
+<div class="col-md-4">
+  <label class="form-label">القسم</label>
+  <select id="category" class="form-select">
+    <option value="الأدب">الأدب</option>
+    <option value="الفكر والسياسة">الفكر والسياسة</option>
+    <option value="البحوث العامة">البحوث العامة</option>
+    <option value="البحوث الإسلامية">البحوث الإسلامية</option>
+  </select>
+</div>
   <div class="col-md-4">
   <label class="form-label">نوع المادة</label>
   <select id="contentType" class="form-select">
@@ -164,6 +172,7 @@ function generateAll(){
   var authorPage = document.getElementById("authorPage").value.trim();
   var authorImage = document.getElementById("authorImage").value.trim();
   var category = document.getElementById("category").value.trim();
+  var contentType = document.getElementById("contentType").value.trim();
   var contentType = document.getElementById("contentType").value.trim();
 var publishDate = document.getElementById("publishDate").value.trim();
   var summary = document.getElementById("summary").value.trim();
