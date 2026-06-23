@@ -173,7 +173,8 @@ body{background:#f4f1ea;font-family:"Tahoma","Arial",sans-serif;color:#222;}
 (5) إشارة إلى بعض القتلة الذين سبق وتصدروا واجهة المشهد السياسي العراقي ضمن نظام المحاصصة المقيت حيث أثبتت التحقيقات واعترافات المجرمين ضلوعهم في الكثير من الأعمال الإرهابية والتفجيرات والخطف والقتل والإغتصاب</pre>
 
 </article>
-  <section class="mt-5 mb-5">
+
+<section class="mt-5 mb-5">
   <div class="article-card">
     <h2 class="h5 fw-bold mb-3 text-center">شارك هذا المقال</h2>
 
@@ -211,57 +212,42 @@ body{background:#f4f1ea;font-family:"Tahoma","Arial",sans-serif;color:#222;}
 </main>
 
 <footer class="footer">
-<div class="container text-center">
-<p class="mb-1">© الحوار الثقافي</p>
-<a href="index.html">الرئيسية</a> |
-<a href="articles.html">المقالات</a> |
-<a href="authors.html">الكتّاب</a>
-</div>
+  <div class="container text-center">
+    <p class="mb-1">© الحوار الثقافي</p>
+    <a href="index.html">الرئيسية</a> |
+    <a href="articles.html">المقالات</a> |
+    <a href="authors.html">الكتّاب</a>
+  </div>
 </footer>
 
-</script>
 <script>
-function copyArticleLink() {
-  navigator.clipboard.writeText(window.location.href);
-  alert("تم نسخ رابط المقال");
-<script>
-var articleUrl = window.location.href;
-var articleTitle = document.title;
+document.addEventListener("DOMContentLoaded", function () {
+  var articleUrl = window.location.href;
+  var articleTitle = document.title;
 
-document.getElementById("share-facebook").href =
-  "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(articleUrl);
+  document.getElementById("share-facebook").href =
+    "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(articleUrl);
 
-document.getElementById("share-whatsapp").href =
-  "https://api.whatsapp.com/send?text=" +
-  encodeURIComponent(articleTitle + " " + articleUrl);
+  document.getElementById("share-whatsapp").href =
+    "https://api.whatsapp.com/send?text=" + encodeURIComponent(articleTitle + " " + articleUrl);
 
-document.getElementById("share-telegram").href =
-  "https://t.me/share/url?url=" +
-  encodeURIComponent(articleUrl) +
-  "&text=" +
-  encodeURIComponent(articleTitle);
+  document.getElementById("share-telegram").href =
+    "https://t.me/share/url?url=" + encodeURIComponent(articleUrl) + "&text=" + encodeURIComponent(articleTitle);
 
-document.getElementById("share-twitter").href =
-  "https://twitter.com/intent/tweet?url=" +
-  encodeURIComponent(articleUrl) +
-  "&text=" +
-  encodeURIComponent(articleTitle);
+  document.getElementById("share-twitter").href =
+    "https://twitter.com/intent/tweet?url=" + encodeURIComponent(articleUrl) + "&text=" + encodeURIComponent(articleTitle);
 
-document.getElementById("share-email").href =
-  "mailto:?subject=" +
-  encodeURIComponent(articleTitle) +
-  "&body=" +
-  encodeURIComponent(articleUrl);
+  document.getElementById("share-email").href =
+    "mailto:?subject=" + encodeURIComponent(articleTitle) + "&body=" + encodeURIComponent(articleUrl);
 
-function copyArticleLink() {
-  navigator.clipboard.writeText(articleUrl);
-  alert("تم نسخ رابط المقال");
-}
+  window.copyArticleLink = function () {
+    navigator.clipboard.writeText(articleUrl);
+    alert("تم نسخ رابط المقال");
+  };
+});
 </script>
 
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-
