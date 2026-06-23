@@ -28,7 +28,6 @@
   <div class="card p-4 mb-4">
     <div class="row g-3">
 
-```
   <div class="col-md-3">
     <label class="form-label">رقم المقال</label>
     <input id="articleNumber" class="form-control" placeholder="23">
@@ -85,7 +84,6 @@
   </div>
 
 </div>
-```
 
   </div>
 
@@ -274,14 +272,18 @@ paragraphs + '\n' +
 
 ' <section class="mt-5">\n' +
 ' <div class="card p-4">\n' +
-' <h2 class="h5 fw-bold mb-3">شارك هذا المقال</h2>\n' +
-' <div class="d-flex gap-2 flex-wrap">\n' +
-' <a id="shareFacebook" class="btn btn-primary" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> فيسبوك</a>\n' +
-' <a id="shareWhatsapp" class="btn btn-success" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> واتساب</a>\n' +
-' <button class="btn btn-outline-dark" onclick="copyArticleLink()"><i class="bi bi-link-45deg"></i> نسخ الرابط</button>\n' +
+' <h2 class="h5 fw-bold mb-3 text-center">شارك هذا المقال</h2>\n' +
+' <div class="d-flex gap-2 flex-wrap justify-content-center">\n' +
+' <a id="share-facebook" class="btn btn-primary" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> فيسبوك</a>\n' +
+' <a id="share-whatsapp" class="btn btn-success" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> واتساب</a>\n' +
+' <a id="share-telegram" class="btn btn-info" target="_blank" rel="noopener"><i class="bi bi-telegram"></i> تيليغرام</a>\n' +
+' <a id="share-twitter" class="btn btn-dark" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i> إكس</a>\n' +
+' <a id="share-email" class="btn btn-secondary"><i class="bi bi-envelope"></i> البريد</a>\n' +
+' <button type="button" class="btn btn-outline-dark" onclick="copyArticleLink()"><i class="bi bi-link-45deg"></i> نسخ الرابط</button>\n' +
 ' </div>\n' +
 ' </div>\n' +
 ' </section>\n\n' +
+
 '</main>\n\n' +
 
 '<footer class="text-center bg-dark text-white p-4 mt-4">\n' +
@@ -298,13 +300,19 @@ paragraphs + '\n' +
 '</footer>\n\n' +
 
 '<script>\n' +
+'document.addEventListener("DOMContentLoaded", function () {\n' +
 ' var articleUrl = window.location.href;\n' +
-' document.getElementById("shareFacebook").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(articleUrl);\n' +
-' document.getElementById("shareWhatsapp").href = "https://api.whatsapp.com/send?text=" + encodeURIComponent(articleUrl);\n' +
-' function copyArticleLink(){\n' +
+' var articleTitle = document.title;\n' +
+' document.getElementById("share-facebook").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(articleUrl);\n' +
+' document.getElementById("share-whatsapp").href = "https://api.whatsapp.com/send?text=" + encodeURIComponent(articleTitle + " " + articleUrl);\n' +
+' document.getElementById("share-telegram").href = "https://t.me/share/url?url=" + encodeURIComponent(articleUrl) + "&text=" + encodeURIComponent(articleTitle);\n' +
+' document.getElementById("share-twitter").href = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(articleUrl) + "&text=" + encodeURIComponent(articleTitle);\n' +
+' document.getElementById("share-email").href = "mailto:?subject=" + encodeURIComponent(articleTitle) + "&body=" + encodeURIComponent(articleUrl);\n' +
+' window.copyArticleLink = function(){\n' +
 ' navigator.clipboard.writeText(articleUrl);\n' +
 ' alert("تم نسخ رابط المقال");\n' +
-' }\n' +
+' };\n' +
+'});\n' +
 '</script>\n\n' +
 
 '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>\n' +
