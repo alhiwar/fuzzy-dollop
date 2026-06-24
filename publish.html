@@ -599,28 +599,17 @@ var articlesCard =
 
   </div>
 </a>`;
-
-  var authorCard =
-`<div class="author-card d-flex align-items-center flex-column flex-md-row gap-4">
-
-  <img src="${esc(authorImage)}" class="author-img" alt="${esc(author)}">
-
-  <div class="text-center text-md-end">
-
-    <h3 class="h4 fw-bold mb-2">${esc(author)}</h3>
-
-    <p class="text-muted mb-3" style="line-height:1.9;">
-      اكتب هنا نبذة مختصرة عن الكاتب.
+var authorCard =
+`<a href="${fileName}" class="text-decoration-none text-dark">
+  <div class="article-card border p-4 mb-3">
+    <span class="category-pill">${esc(category)}</span>
+    <h3 class="fw-bold mb-2">${esc(title)}</h3>
+    <p class="text-muted mb-2" style="line-height:1.9;">
+      ${esc(summary)}
     </p>
-
-    <div class="d-flex gap-2 flex-wrap justify-content-center justify-content-md-start">
-      <a href="${esc(authorPage)}" class="btn btn-dark btn-sm">عرض صفحة الكاتب</a>
-      <a href="${fileName}" class="btn btn-outline-dark btn-sm">${readWord}</a>
-    </div>
-
+    <span class="btn btn-outline-dark btn-sm">${readWord}</span>
   </div>
-
-</div>`;
+</a>`;
 
   document.getElementById("articleOutput").value = articleHtml;
  document.getElementById("indexOutput").value = indexCard;
