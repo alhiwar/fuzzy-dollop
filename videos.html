@@ -63,43 +63,6 @@
       font-weight: 600;
     }
 
-    .lang-switch {
-      position: fixed;
-      top: 12px;
-      left: 12px;
-      z-index: 9999;
-      display: flex;
-      gap: 6px;
-    }
-
-    .lang-switch a {
-      padding: 4px 10px;
-      border-radius: 8px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-      font-size: .9rem;
-    }
-
-    .lang-switch .ar {
-      background:#000;
-    }
-
-    .lang-switch .en {
-      background:#555;
-    }
-
-    #google_translate_element {
-      position: fixed;
-      bottom: 16px;
-      left: 16px;
-      z-index: 9999;
-      background: #fff;
-      padding: 4px 8px;
-      border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.2);
-    }
-
     footer a {
       text-decoration: none;
     }
@@ -109,153 +72,131 @@
 
 <body>
 
-  <div class="lang-switch" aria-label="تبديل اللغة">
-    <a class="ar" href="videos.html">AR</a>
-    <a class="en" href="index-en.html">EN</a>
-  </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
+<a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+  <img src="logo-small.svg" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%;" />
+  <span>الحوار الثقافي</span>
+</a>
 
-```
-  <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-    <img src="logo-small.svg" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%;" />
-    <span>الحوار الثقافي</span>
-  </a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="فتح القائمة">
+  <span class="navbar-toggler-icon"></span>
+</button>
 
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="فتح القائمة">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<div class="collapse navbar-collapse" id="mainNavbar">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-  <div class="collapse navbar-collapse" id="mainNavbar">
-    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+    <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+    <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+    <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
 
-      <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-      <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
-      <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
-      <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+        <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+      </ul>
+    </li>
 
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
-          <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
-        </ul>
-      </li>
+    <li class="nav-item"><a class="nav-link active" href="videos.html">الفيديوهات</a></li>
+    <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+    <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
 
-      <li class="nav-item"><a class="nav-link active" href="videos.html">الفيديوهات</a></li>
-      <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
-      <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+    <li class="nav-item">
+      <a class="nav-link" href="search.html">
+        <i class="bi bi-search"></i>
+        البحث
+      </a>
+    </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="search.html">
-          <i class="bi bi-search"></i>
-          البحث
-        </a>
-      </li>
+    <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
+    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
 
-      <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
-      <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
-
-    </ul>
-  </div>
-
+  </ul>
 </div>
-```
 
-  </nav>
+  </div>
+</nav>
 
-  <header class="hero">
-    <div class="container">
-      <img src="logo-main.svg" alt="شعار الحوار الثقافي" style="width:160px;height:auto;margin-bottom:16px;" />
-      <h1>الفيديوهات</h1>
-      <p>
-        مساحة مرئية من الحوار الثقافي، نعرض فيها المواد الفكرية والأدبية والثقافية المرتبطة بقناة الحوار الثقافي على يوتيوب.
+<header class="hero">
+  <div class="container">
+    <img src="logo-main.svg" alt="شعار الحوار الثقافي" style="width:160px;height:auto;margin-bottom:16px;" />
+    <h1>الفيديوهات</h1>
+    <p>
+      مساحة مرئية من الحوار الثقافي، نعرض فيها المواد الفكرية والأدبية والثقافية المرتبطة بقناة الحوار الثقافي على يوتيوب.
+    </p>
+  </div>
+</header>
+
+<main class="container my-5" role="main">
+
+  <section class="mb-5">
+    <h2 class="section-title h4">أحدث الفيديوهات</h2>
+
+<div class="row g-4">
+  <div class="col-lg-8 mx-auto">
+    <div class="card p-4 h-100">
+
+      <span class="category-pill mb-3">فيديو</span>
+
+      <h3 class="fw-bold mb-3">فيديو من قناة الحوار الثقافي</h3>
+
+      <p class="text-muted" style="line-height:2;">
+        مادة مرئية منشورة عبر قناة الحوار الثقافي على يوتيوب، ويمكن مشاهدتها مباشرة من داخل الموقع.
       </p>
-    </div>
-  </header>
 
-  <main class="container my-5" role="main">
-
-```
-<section class="mb-5">
-  <h2 class="section-title h4">أحدث الفيديوهات</h2>
-
-  <div class="row g-4">
-
-    <div class="col-lg-8 mx-auto">
-      <div class="card p-4 h-100">
-
-        <span class="category-pill mb-3">فيديو</span>
-
-        <h3 class="fw-bold mb-3">فيديو من قناة الحوار الثقافي</h3>
-
-        <p class="text-muted" style="line-height:2;">
-          مادة مرئية منشورة عبر قناة الحوار الثقافي على يوتيوب، ويمكن مشاهدتها مباشرة من داخل الموقع.
-        </p>
-
-        <div class="ratio ratio-16x9 my-4">
-          <iframe
-            src="https://www.youtube.com/embed/TpBdRx1iKQQ"
-            title="فيديو من قناة الحوار الثقافي"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <div class="d-flex gap-2 flex-wrap">
-          <a href="https://www.youtube.com/watch?v=TpBdRx1iKQQ" target="_blank" rel="noopener" class="btn btn-dark">
-            مشاهدة على يوتيوب
-            <i class="bi bi-youtube"></i>
-          </a>
-
-          <a href="index.html" class="btn btn-outline-dark">
-            العودة إلى الرئيسية
-            <i class="bi bi-arrow-left-short"></i>
-          </a>
-        </div>
-
+      <div class="ratio ratio-16x9 my-4">
+        <iframe
+          src="https://www.youtube.com/embed/TpBdRx1iKQQ"
+          title="فيديو من قناة الحوار الثقافي"
+          allowfullscreen>
+        </iframe>
       </div>
+
+      <div class="d-flex gap-2 flex-wrap">
+        <a href="https://www.youtube.com/watch?v=TpBdRx1iKQQ" target="_blank" rel="noopener" class="btn btn-dark">
+          مشاهدة على يوتيوب
+          <i class="bi bi-youtube"></i>
+        </a>
+
+        <a href="index.html" class="btn btn-outline-dark">
+          العودة إلى الرئيسية
+          <i class="bi bi-arrow-left-short"></i>
+        </a>
+      </div>
+
     </div>
-
   </div>
-</section>
-```
-
-  </main>
-
-  <footer class="text-center bg-dark text-white p-4 mt-4">
-    <h2 class="h5 mb-3">تابعونا على مواقع التواصل</h2>
-
-```
-<div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
-  <a href="https://www.facebook.com/profile.php?id=61590545142380" target="_blank" rel="noopener" class="text-white"><i class="bi bi-facebook"></i></a>
-  <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
-  <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
-  <a href="https://www.youtube.com/watch?v=TpBdRx1iKQQ" target="_blank" rel="noopener" class="text-white"><i class="bi bi-youtube"></i></a>
-  <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>
-  <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
 </div>
 
-<div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
-```
+  </section>
 
-  </footer>
+</main>
 
-  <div id="google_translate_element"></div>
+<footer class="text-center bg-dark text-white p-4 mt-4">
+  <h2 class="h5 mb-3">تابعونا على مواقع التواصل</h2>
 
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'ar',
-        includedLanguages: 'ar,en,fr,de,es,tr,fa,ur,hi',
-        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-      }, 'google_translate_element');
-    }
-  </script>
+  <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
+    <a href="https://www.facebook.com/profile.php?id=61590545142380" target="_blank" rel="noopener" class="text-white" aria-label="فيسبوك">
+      <i class="bi bi-facebook"></i>
+    </a>
 
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<a href="https://www.youtube.com/@JAlmamo/videos" target="_blank" rel="noopener" class="text-white" aria-label="يوتيوب">
+  <i class="bi bi-youtube"></i>
+</a>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<a href="https://api.whatsapp.com/send/?phone=13149561211&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="text-white" aria-label="واتساب">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+  </div>
+
+  <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
