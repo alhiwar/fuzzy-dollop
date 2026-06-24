@@ -514,35 +514,67 @@ ${scriptEnd}
 </body>
 </html>`;
 
-  var card =
+ var indexCard =
 `<div class="col-lg-6">
-  <div class="article-card p-4">
 
-    <div class="d-flex align-items-center gap-3 mb-3">
-      <img src="${esc(authorImage)}" alt="${esc(author)}" class="author-thumb">
+  <div class="card p-4 h-100">
 
-      <div>
-        <h2 class="h4 fw-bold mb-1">${esc(title)}</h2>
-        <p class="text-muted small mb-0">
-          بقلم:
-          <a href="${esc(authorPage)}" class="text-decoration-none text-muted">${esc(author)}</a>
-        </p>
-      </div>
-    </div>
+<div class="text-center mb-3">
+  <img src="${esc(authorImage)}" alt="${esc(author)}" class="author-img">
+</div>
 
-    <span class="category-pill mb-3">${esc(category)}</span>
+<h3 class="fw-bold mb-2">${esc(title)}</h3>
 
-    <p style="line-height:2;">
-      ${esc(summary)}
-    </p>
+<p class="text-muted mb-2">
+  بقلم:
+  <a href="${esc(authorPage)}" class="text-decoration-none text-muted">${esc(author)}</a>
+</p>
 
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="${fileName}" class="btn btn-dark">${readWord}</a>
-      <a href="${esc(authorPage)}" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
+<span class="category-pill mb-3">${esc(category)}</span>
+
+<p style="line-height:2;">
+  ${esc(summary)}
+</p>
+
+<div class="d-flex gap-2 flex-wrap">
+  <a href="${fileName}" class="btn btn-dark">${readWord}</a>
+  <a href="${esc(authorPage)}" class="btn btn-outline-dark">صفحة الكاتب</a>
+</div>
 
   </div>
 </div>`;
+
+var articlesCard =
+`<div class="col-lg-6">
+
+  <div class="article-card p-4">
+
+<div class="d-flex align-items-center gap-3 mb-3">
+  <img src="${esc(authorImage)}" alt="${esc(author)}" class="author-thumb">
+
+  <div>
+    <h2 class="h4 fw-bold mb-1">${esc(title)}</h2>
+    <p class="text-muted small mb-0">
+      بقلم:
+      <a href="${esc(authorPage)}" class="text-decoration-none text-muted">${esc(author)}</a>
+    </p>
+  </div>
+</div>
+
+<span class="category-pill mb-3">${esc(category)}</span>
+
+<p style="line-height:2;">
+  ${esc(summary)}
+</p>
+
+<div class="d-flex gap-2 flex-wrap">
+  <a href="${fileName}" class="btn btn-dark">${readWord}</a>
+  <a href="${esc(authorPage)}" class="btn btn-outline-dark">صفحة الكاتب</a>
+</div>
+
+  </div>
+</div>`;
+
 
   var sectionCard =
 `<a href="${fileName}" class="text-decoration-none text-dark">
@@ -591,8 +623,8 @@ ${scriptEnd}
 </div>`;
 
   document.getElementById("articleOutput").value = articleHtml;
-  document.getElementById("indexOutput").value = card;
-  document.getElementById("articlesOutput").value = card;
+ document.getElementById("indexOutput").value = indexCard;
+document.getElementById("articlesOutput").value = articlesCard;
   document.getElementById("sectionOutput").value = sectionCard;
   document.getElementById("authorCardOutput").value = authorCard;
 }
