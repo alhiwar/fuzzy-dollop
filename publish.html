@@ -220,7 +220,7 @@ function generateAll(){
   var paragraphs = makeParagraphs(articleText);
   var subtitleHtml = subtitle ? '<div class="article-subtitle">' + esc(subtitle) + '</div>\n\n' : "";
   var dateHtml = publishDate ? '<p class="text-muted mb-0">تاريخ النشر: ' + esc(publishDate) + '</p>' : "";
-  var scriptEnd = "<\\/script>";
+var scriptEnd = "</scr" + "ipt>";
 
   var articleHtml = `<!doctype html>
 <html lang="ar" dir="rtl">
