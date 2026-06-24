@@ -4,21 +4,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>الفكر والسياسة — الحوار الثقافي</title>
 
+  <title>الفكر والسياسة — الحوار الثقافي</title>
   <meta name="description" content="قسم الفكر والسياسة في موقع الحوار الثقافي." />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
-    body{
+    body {
       background:#f4f1ea;
       font-family:"Segoe UI",Tahoma,sans-serif;
       color:#222;
     }
 
-    .page-header{
+    .page-header {
       background:linear-gradient(135deg,#1f1a16,#5b4227);
       color:white;
       padding:65px 20px;
@@ -26,7 +26,7 @@
       border-bottom:5px solid #c9a45c;
     }
 
-    .content-card{
+    .content-card {
       background:white;
       border-radius:18px;
       padding:32px;
@@ -34,18 +34,18 @@
       border:1px solid #eee;
     }
 
-    .article-card{
+    .article-card {
       background:#faf8f4;
       border-radius:16px;
       transition:0.25s;
     }
 
-    .article-card:hover{
+    .article-card:hover {
       transform:translateY(-3px);
       box-shadow:0 10px 24px rgba(0,0,0,0.12);
     }
 
-    .author-thumb{
+    .author-thumb {
       width:76px;
       height:76px;
       border-radius:50%;
@@ -53,7 +53,7 @@
       border:3px solid #eee;
     }
 
-    .category-pill{
+    .category-pill {
       display:inline-block;
       padding:5px 12px;
       border-radius:999px;
@@ -64,7 +64,7 @@
       margin-bottom:10px;
     }
 
-    footer a{
+    footer a {
       text-decoration:none;
     }
   </style>
@@ -81,7 +81,7 @@
   <span>الحوار الثقافي</span>
 </a>
 
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPolitics">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPolitics" aria-label="فتح القائمة">
   <span class="navbar-toggler-icon"></span>
 </button>
 
@@ -89,54 +89,34 @@
   <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
     <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="about.html">من نحن</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="literature.html">الأدب</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link active" href="politics.html">الفكر والسياسة</a>
-    </li>
+    <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+    <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+    <li class="nav-item"><a class="nav-link active" href="politics.html">الفكر والسياسة</a></li>
 
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-        البحوث
-      </a>
-
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
       <ul class="dropdown-menu">
-        <li>
-          <a class="dropdown-item" href="research.html">
-            البحوث العامة
-          </a>
-        </li>
-
-        <li>
-          <a class="dropdown-item" href="islamic-research.html">
-            البحوث الإسلامية
-          </a>
-        </li>
+        <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+        <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
       </ul>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link" href="authors.html">الكتّاب</a>
-    </li>
+    <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+    <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+    <li class="nav-item"><a class="nav-link" href="videos.html">الفيديوهات</a></li>
 
     <li class="nav-item">
-      <a class="nav-link" href="articles.html">المقالات</a>
+      <a class="nav-link" href="search.html">
+        <i class="bi bi-search"></i>
+        البحث
+      </a>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link" href="contact.html">تواصل معنا</a>
-    </li>
+    <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
+    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
 
     <li class="nav-item">
-      <a class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2"
-         href="politics-en.html">
+      <a class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2" href="politics-en.html">
         EN
       </a>
     </li>
@@ -150,20 +130,16 @@
 <header class="page-header">
   <div class="container">
     <h1 class="fw-bold mb-3">الفكر والسياسة</h1>
-
-<p class="lead mb-0">
-  مقالات ودراسات فكرية وسياسية تتناول قضايا المجتمع والوعي والتحولات الإنسانية.
-</p>
-
+    <p class="lead mb-0">
+      مقالات ودراسات فكرية وسياسية تتناول قضايا المجتمع والوعي والتحولات الإنسانية.
+    </p>
   </div>
 </header>
 
 <main class="container my-5" style="max-width:950px;">
 
   <section class="content-card mb-4">
-<h2 class="h4 fw-bold mb-3">
-  قسم الفكر والسياسة
-</h2>
+    <h2 class="h4 fw-bold mb-3">قسم الفكر والسياسة</h2>
 
 <p style="line-height:2; font-size:1.08rem;">
   يضم هذا القسم المقالات والدراسات الفكرية والسياسية التي تتناول
@@ -174,59 +150,20 @@
 <p class="text-muted mb-0">
   ستُضاف هنا المقالات السياسية والفكرية المنشورة ضمن موقع الحوار الثقافي.
 </p>
-<div class="col-md-6 col-lg-4 mb-4"> <div class="card h-100 shadow-sm border-0"> <img src="jassim-author.jpg" class="card-img-top" alt="جاسم محمد علي المعموري"> <div class="card-body"> <span class="badge bg-warning text-dark mb-2">الفكر والسياسة</span> <h5 class="card-title">ينبغي للولايات المتحدة ان تسعى لعلاقات جيدة مع ايران</h5> <p class="card-text">مقال سياسي يدعو إلى تغليب لغة الحوار والمصالح المشتركة والاحترام المتبادل بين الدول.</p> <p class="text-muted mb-2">بقلم: جاسم محمد علي المعموري</p> <a href="article17.html" class="btn btn-outline-dark">قراءة المقال</a> </div> </div> </div>
+
   </section>
 
   <section class="content-card">
 
-<h2 class="h4 fw-bold mb-4">
-  <a href="article16.html" class="text-decoration-none text-dark">
+<h2 class="h4 fw-bold mb-4">المقالات المنشورة</h2>
+
+<a href="article17.html" class="text-decoration-none text-dark">
   <div class="article-card border p-4 mb-3">
-
-<div class="d-flex align-items-center gap-3 mb-3">
-  <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-thumb">
-
-  <div>
-    <h3 class="fw-bold mb-1">
-      عامر (( النووي ))!
-    </h3>
-
-    <small class="text-muted">
-      <i class="bi bi-person"></i>
-      جاسم محمد علي المعموري
-    </small>
-  </div>
-</div>
-
-<span class="category-pill">
-  الفكر والسياسة
-</span>
-
-<p class="text-muted mb-2" style="line-height:1.9;">
-  مقال فكري وسياسي يتأمل في قصة عامر بين الطائفية والتمييز والفضلات النووية بوصفها رمزاً للخراب الممتد في الإنسان والطبيعة.
-</p>
-
-<span class="btn btn-outline-dark btn-sm">
-  قراءة المقال
-</span>
-
-  </div>
-</a>
-
-  المقالات المنشورة
-</h2>
-
-<a href="article15.html" class="text-decoration-none text-dark">
-  <div class="article-card border p-4 mb-3">
-
     <div class="d-flex align-items-center gap-3 mb-3">
       <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-thumb">
 
       <div>
-        <h3 class="fw-bold mb-1">
-          أبي يتظاهر في شارع الرشيد!
-        </h3>
-
+        <h3 class="fw-bold mb-1">ينبغي للولايات المتحدة ان تسعى لعلاقات جيدة مع ايران</h3>
         <small class="text-muted">
           <i class="bi bi-person"></i>
           جاسم محمد علي المعموري
@@ -234,32 +171,71 @@
       </div>
     </div>
 
-    <span class="category-pill">
-      الفكر والسياسة
-    </span>
+    <span class="category-pill">الفكر والسياسة</span>
+
+    <p class="text-muted mb-2" style="line-height:1.9;">
+      مقال سياسي يدعو إلى تغليب لغة الحوار والمصالح المشتركة والاحترام المتبادل بين الدول.
+    </p>
+
+    <span class="btn btn-outline-dark btn-sm">قراءة المقال</span>
+  </div>
+</a>
+
+<a href="article16.html" class="text-decoration-none text-dark">
+  <div class="article-card border p-4 mb-3">
+    <div class="d-flex align-items-center gap-3 mb-3">
+      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-thumb">
+
+      <div>
+        <h3 class="fw-bold mb-1">عامر (( النووي ))!</h3>
+        <small class="text-muted">
+          <i class="bi bi-person"></i>
+          جاسم محمد علي المعموري
+        </small>
+      </div>
+    </div>
+
+    <span class="category-pill">الفكر والسياسة</span>
+
+    <p class="text-muted mb-2" style="line-height:1.9;">
+      مقال فكري وسياسي يتأمل في قصة عامر بين الطائفية والتمييز والفضلات النووية بوصفها رمزاً للخراب الممتد في الإنسان والطبيعة.
+    </p>
+
+    <span class="btn btn-outline-dark btn-sm">قراءة المقال</span>
+  </div>
+</a>
+
+<a href="article15.html" class="text-decoration-none text-dark">
+  <div class="article-card border p-4 mb-3">
+    <div class="d-flex align-items-center gap-3 mb-3">
+      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-thumb">
+
+      <div>
+        <h3 class="fw-bold mb-1">أبي يتظاهر في شارع الرشيد!</h3>
+        <small class="text-muted">
+          <i class="bi bi-person"></i>
+          جاسم محمد علي المعموري
+        </small>
+      </div>
+    </div>
+
+    <span class="category-pill">الفكر والسياسة</span>
 
     <p class="text-muted mb-2" style="line-height:1.9;">
       مقال يتأمل في صورة قديمة من تظاهرات بغداد سنة 1956 ويطرح أسئلة حول الوعي والحرية والخوف في الواقع العربي المعاصر.
     </p>
 
-    <span class="btn btn-outline-dark btn-sm">
-      قراءة المقال
-    </span>
-
+    <span class="btn btn-outline-dark btn-sm">قراءة المقال</span>
   </div>
 </a>
 
 <a href="article13.html" class="text-decoration-none text-dark">
   <div class="article-card border p-4">
-
     <div class="d-flex align-items-center gap-3 mb-3">
       <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-thumb">
 
       <div>
-        <h3 class="fw-bold mb-1">
-          يوم اكتمل فيه معنى الرسالة
-        </h3>
-
+        <h3 class="fw-bold mb-1">يوم اكتمل فيه معنى الرسالة</h3>
         <small class="text-muted">
           <i class="bi bi-person"></i>
           جاسم محمد علي المعموري
@@ -267,18 +243,13 @@
       </div>
     </div>
 
-    <span class="category-pill">
-      الفكر والسياسة
-    </span>
+    <span class="category-pill">الفكر والسياسة</span>
 
     <p class="text-muted mb-2" style="line-height:1.9;">
       مقال فكري يتناول دلالة يوم الغدير ومكانته في الوجدان الشيعي والتاريخ الإسلامي.
     </p>
 
-    <span class="btn btn-outline-dark btn-sm">
-      قراءة المقال
-    </span>
-
+    <span class="btn btn-outline-dark btn-sm">قراءة المقال</span>
   </div>
 </a>
 
@@ -287,41 +258,24 @@
 </main>
 
 <footer class="text-center bg-dark text-white p-4 mt-4">
-
   <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
+    <a href="https://www.facebook.com/profile.php?id=61590545142380" target="_blank" rel="noopener" class="text-white" aria-label="فيسبوك">
+      <i class="bi bi-facebook"></i>
+    </a>
 
-<a href="#" class="text-white">
-  <i class="bi bi-facebook"></i>
-</a>
-
-<a href="#" class="text-white">
-  <i class="bi bi-twitter"></i>
-</a>
-
-<a href="#" class="text-white">
-  <i class="bi bi-instagram"></i>
-</a>
-
-<a href="#" class="text-white">
+<a href="https://www.youtube.com/@JAlmamo/videos" target="_blank" rel="noopener" class="text-white" aria-label="يوتيوب">
   <i class="bi bi-youtube"></i>
 </a>
 
-<a href="#" class="text-white">
-  <i class="bi bi-telegram"></i>
-</a>
-
-<a href="#" class="text-white">
+<a href="https://api.whatsapp.com/send/?phone=13149561211&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="text-white" aria-label="واتساب">
   <i class="bi bi-whatsapp"></i>
 </a>
 
   </div>
 
-  <div>
-    جميع الحقوق محفوظة © 2025 — الحوار الثقافي
-  </div>
-
+  <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
