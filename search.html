@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -59,6 +60,7 @@
       text-decoration:none;
     }
   </style>
+
 </head>
 
 <body>
@@ -66,28 +68,48 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
 
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" width="55" height="55" alt="شعار الحوار الثقافي" style="border-radius:50%;">
-      <span>الحوار الثقافي</span>
-    </a>
+<a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+  <img src="logo-small.svg" width="55" height="55" alt="شعار الحوار الثقافي" style="border-radius:50%;">
+  <span>الحوار الثقافي</span>
+</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="فتح القائمة">
+  <span class="navbar-toggler-icon"></span>
+</button>
 
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<div class="collapse navbar-collapse" id="mainNavbar">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
-        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
-        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
-        <li class="nav-item"><a class="nav-link active" href="search.html">البحث</a></li>
-        <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+    <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+    <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+    <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
 
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+        <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
       </ul>
-    </div>
+    </li>
+
+    <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+    <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+    <li class="nav-item"><a class="nav-link" href="videos.html">الفيديوهات</a></li>
+
+    <li class="nav-item">
+      <a class="nav-link active" href="search.html">
+        <i class="bi bi-search"></i>
+        البحث
+      </a>
+    </li>
+
+    <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
+    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
+  </ul>
+</div>
+
   </div>
 </nav>
 
@@ -103,19 +125,18 @@
 <main class="container my-5" style="max-width:950px;">
 
   <section class="search-box mb-4">
-
     <label for="searchInput" class="form-label fw-bold">
       اكتب كلمة البحث
     </label>
 
-    <input type="search"
-           id="searchInput"
-           class="form-control form-control-lg"
-           placeholder="مثال: الشفاء، جاسم، الأدب، البحوث، السياسة">
+<input type="search"
+       id="searchInput"
+       class="form-control form-control-lg"
+       placeholder="مثال: الشفاء، جاسم، الأدب، البحوث، السياسة">
 
-    <p class="text-muted mt-3 mb-0">
-      تظهر النتائج مباشرة أثناء الكتابة.
-    </p>
+<p class="text-muted mt-3 mb-0">
+  تظهر النتائج مباشرة أثناء الكتابة.
+</p>
 
   </section>
 
@@ -124,28 +145,140 @@
 </main>
 
 <footer class="text-center bg-dark text-white p-4 mt-5">
-
   <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
-    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=61590545142380" target="_blank" rel="noopener" class="text-white" aria-label="فيسبوك">
+      <i class="bi bi-facebook"></i>
+    </a>
+
+<a href="https://www.youtube.com/@JAlmamo/videos" target="_blank" rel="noopener" class="text-white" aria-label="يوتيوب">
+  <i class="bi bi-youtube"></i>
+</a>
+
+<a href="https://api.whatsapp.com/send/?phone=13149561211&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="text-white" aria-label="واتساب">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
   </div>
 
   <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
-
 </footer>
 
 <script>
   const pages = [
     {
+      title: "اهمية دراسة  التاريخ والاطلاع على أسراره",
+      url: "article23.html",
+      category: "الأدب",
+      text: "اهمية دراسة التاريخ والاطلاع على أسراره جاسم محمد علي المعموري الأدب التاريخ"
+    },
+    {
+      title: "شَواخصٌ سَرديَّةٌ مِن رِحْلَةِ البَحثِ عَنِ المَجهُولِ",
+      url: "article22.html",
+      category: "الأدب",
+      text: "شواخص سردية رحلة البحث عن المجهول جبار ماجد البهادلي الأدب النقد الرواية"
+    },
+    {
+      title: "يا سيدي الحسين",
+      url: "article21.html",
+      category: "الأدب",
+      text: "يا سيدي الحسين يحيى السماوي قصيدة الأدب الشعر"
+    },
+    {
+      title: "الرد على (يوسف يوسف) واضطرابه بين المحكم والمتشابه والحروف المقطعة في القران الكريم",
+      url: "article20.html",
+      category: "البحوث الإسلامية",
+      text: "الرد على يوسف يوسف المحكم المتشابه الحروف المقطعة القران الكريم جاسم محمد علي المعموري"
+    },
+    {
+      title: "ثورة الامام الحسين (عليه السلام ) تسبيح الملائكة",
+      url: "article19.html",
+      category: "البحوث الإسلامية",
+      text: "ثورة الامام الحسين تسبيح الملائكة جاسم محمد علي المعموري البحوث الإسلامية"
+    },
+    {
+      title: "في ثلاثٍ وعشرينَ سنة صنعَ أمةً وغيّر وجهَ التاريخ",
+      url: "article18.html",
+      category: "البحوث الإسلامية",
+      text: "في ثلاث وعشرين سنة صنع أمة وغير وجه التاريخ الرسول القران الإمام علي جاسم محمد علي المعموري"
+    },
+    {
+      title: "ينبغي للولايات المتحدة ان تسعى لعلاقات جيدة مع ايران",
+      url: "article17.html",
+      category: "الفكر والسياسة",
+      text: "الولايات المتحدة ايران علاقات جيدة الحوار المصالح المشتركة الفكر والسياسة"
+    },
+    {
+      title: "عامر (( النووي ))!",
+      url: "article16.html",
+      category: "الفكر والسياسة",
+      text: "عامر النووي الطائفية التمييز الفضلات النووية الفكر والسياسة"
+    },
+    {
+      title: "أبي يتظاهر في شارع الرشيد!",
+      url: "article15.html",
+      category: "الفكر والسياسة",
+      text: "أبي يتظاهر في شارع الرشيد بغداد 1956 الفكر السياسة الحرية الخوف"
+    },
+    {
+      title: "زَنبورُ المحلة",
+      url: "article14.html",
+      category: "الأدب",
+      text: "زنبور المحلة جاسم محمد علي المعموري قصة الأدب النجف الطفولة"
+    },
+    {
+      title: "يوم اكتمل فيه معنى الرسالة",
+      url: "article13.html",
+      category: "الفكر والسياسة",
+      text: "يوم اكتمل فيه معنى الرسالة الغدير الفكر والسياسة جاسم محمد علي المعموري"
+    },
+    {
+      title: "بغداد روحي واغنيتي",
+      url: "article12.html",
+      category: "الأدب",
+      text: "بغداد روحي واغنيتي قصيدة جاسم محمد علي المعموري الأدب"
+    },
+    {
+      title: "بتول",
+      url: "article11.html",
+      category: "الأدب",
+      text: "بتول قصيدة جاسم محمد علي المعموري الأدب"
+    },
+    {
+      title: "لقطاتٌ حيةٌ لإحتضارِ وطن",
+      url: "article10.html",
+      category: "الأدب",
+      text: "لقطات حية لاحتضار وطن قصيدة جاسم محمد علي المعموري الأدب"
+    },
+    {
+      title: "حين يتحول الحب الى جرح فلسفي",
+      url: "article9.html",
+      category: "الأدب",
+      text: "حين يتحول الحب الى جرح فلسفي قراءة نقدية أدبية جاسم محمد علي المعموري"
+    },
+    {
+      title: "الفياض بالعلم والزهد والتقوى – الشيخ الفياض في ذمة الله !",
+      url: "article8.html",
+      category: "الأدب",
+      text: "الفياض بالعلم والزهد والتقوى الشيخ الفياض في ذمة الله جاسم محمد علي المعموري"
+    },
+    {
+      title: "هيا لنحرق العِربيد ! *",
+      url: "article7.html",
+      category: "الأدب",
+      text: "هيا لنحرق العربيد قصة جاسم محمد علي المعموري الأدب الطفولة"
+    },
+    {
+      title: "ولوج في حُبيبات المطر",
+      url: "article6.html",
+      category: "الأدب",
+      text: "ولوج في حبيبات المطر نص أدبي جاسم محمد علي المعموري الأدب"
+    },
+    {
       title: "الشفاء المعجزة وندرة البحث",
       url: "article5.html",
-      category: "مقال / بحث",
+      category: "بحث / تأمل فكري",
       text: "الشفاء المعجزة وندرة البحث جاسم محمد علي المعموري الدعاء الإيمان الشفاء النفس الجسد الروح بحث تأمل فكري"
     },
     {
@@ -155,16 +288,28 @@
       text: "جاسم محمد علي المعموري كاتب وقاص وشاعر عراقي الأدب القصة القصيرة السرد النقد الأدبي السياسة الدين"
     },
     {
+      title: "يحيى السماوي",
+      url: "author4.html",
+      category: "كاتب",
+      text: "يحيى السماوي شاعر عراقي الأدب الشعر"
+    },
+    {
+      title: "د. جبار ماجد البهادلي",
+      url: "author5.html",
+      category: "كاتب",
+      text: "جبار ماجد البهادلي ناقد وكاتب عراقي دراسات أدبية نقدية"
+    },
+    {
       title: "المقالات",
       url: "articles.html",
       category: "أرشيف",
-      text: "المقالات البحوث الدراسات المنشورات الشفاء المعجزة وندرة البحث"
+      text: "المقالات البحوث الدراسات المنشورات أرشيف المقالات"
     },
     {
       title: "الكتّاب",
       url: "authors.html",
       category: "كتّاب",
-      text: "الكتّاب المؤلفون جاسم محمد علي المعموري"
+      text: "الكتّاب المؤلفون جاسم محمد علي المعموري يحيى السماوي جبار ماجد البهادلي"
     },
     {
       title: "الأدب",
@@ -191,6 +336,12 @@
       text: "البحوث الإسلامية التراث الإسلامي الدراسات الروحية الفكرية الدعاء الإيمان"
     },
     {
+      title: "الفيديوهات",
+      url: "videos.html",
+      category: "قسم",
+      text: "الفيديوهات قناة الحوار الثقافي يوتيوب مواد مرئية ثقافية فكرية أدبية"
+    },
+    {
       title: "من نحن",
       url: "about.html",
       category: "تعريف",
@@ -206,7 +357,7 @@
       title: "تواصل معنا",
       url: "contact.html",
       category: "تواصل",
-      text: "تواصل معنا رسالة بريد إلكتروني اقتراحات"
+      text: "تواصل معنا رسالة بريد إلكتروني اقتراحات واتساب فيسبوك يوتيوب"
     }
   ];
 
