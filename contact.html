@@ -75,32 +75,54 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="logo-small.svg" width="55" height="55" alt="شعار الحوار الثقافي" style="border-radius:50%;">
-      الحوار الثقافي
-    </a>
 
-```
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+<a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+  <img src="logo-small.svg" width="55" height="55" alt="شعار الحوار الثقافي" style="border-radius:50%;">
+  الحوار الثقافي
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-label="فتح القائمة">
   <span class="navbar-toggler-icon"></span>
 </button>
 
 <div id="navbar" class="collapse navbar-collapse">
-  <ul class="navbar-nav ms-auto">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
     <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
     <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+    <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+    <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+        <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+      </ul>
+    </li>
+
     <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
     <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+    <li class="nav-item"><a class="nav-link" href="videos.html">الفيديوهات</a></li>
+
     <li class="nav-item">
       <a class="nav-link" href="search.html">
         <i class="bi bi-search"></i>
         البحث
       </a>
     </li>
+
+    <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
     <li class="nav-item"><a class="nav-link active" href="contact.html">تواصل معنا</a></li>
+
+    <li class="nav-item">
+      <a class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2" href="contact-en.html">
+        EN
+      </a>
+    </li>
+
   </ul>
 </div>
-```
 
   </div>
 </nav>
@@ -117,13 +139,13 @@
 <div class="container my-5" style="max-width:950px;">
   <div class="row g-4">
 
-```
 <div class="col-md-7">
   <div class="contact-box">
 
     <h3 class="mb-4">أرسل رسالة</h3>
 
     <form action="https://formspree.io/f/movoovwk" method="POST">
+      <input type="hidden" name="_next" value="https://hiwardialogue.org/success.html">
 
       <label class="mb-1 fw-bold">الاسم</label>
       <input type="text" name="name" class="form-control mb-3" placeholder="اكتب اسمك" required>
@@ -135,7 +157,8 @@
       <textarea name="message" rows="5" class="form-control mb-3" placeholder="اكتب رسالتك هنا..." required></textarea>
 
       <button type="submit" class="btn btn-dark w-100 py-2">
-        <i class="bi bi-send"></i> إرسال
+        <i class="bi bi-send"></i>
+        إرسال
       </button>
 
     </form>
@@ -192,7 +215,6 @@
 
   </div>
 </div>
-```
 
   </div>
 </div>
@@ -205,7 +227,6 @@
       <i class="bi bi-facebook"></i>
     </a>
 
-```
 <a href="https://www.youtube.com/@JAlmamo" target="_blank" rel="noopener" class="text-white" title="يوتيوب">
   <i class="bi bi-youtube"></i>
 </a>
@@ -213,7 +234,6 @@
 <a href="https://api.whatsapp.com/send/?phone=13149561211&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="text-white" title="واتساب">
   <i class="bi bi-whatsapp"></i>
 </a>
-```
 
   </div>
 
