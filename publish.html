@@ -684,36 +684,49 @@ function generateVideo(){
   var watchUrl = "https://www.youtube.com/watch?v=" + videoId;
 
   var indexVideo =
-`<section class="mb-5">
-  <h2 class="section-title h4">أحدث فيديو</h2>
+`<div class="card p-4">
+  <div class="row align-items-center g-4">
 
-  <div class="card p-4">
-    <div class="row align-items-center g-4">
-      <div class="col-lg-7">
-        <span class="category-pill mb-3">فيديو</span>
+    <div class="col-lg-7">
 
-        <h3 class="fw-bold mb-3">
-          ${esc(videoTitle)}
-        </h3>
+      <span class="category-pill mb-3">فيديو</span>
 
-        <p style="line-height:2;">
-          ${esc(videoSummary)}
-        </p>
+      <h3 class="fw-bold mb-3">
+        ${esc(videoTitle)}
+      </h3>
 
-        <div class="d-flex gap-2 flex-wrap">
-          <a href="videos.html" class="btn btn-dark">مشاهدة الفيديو</a>
-          <a href="${watchUrl}" target="_blank" rel="noopener" class="btn btn-outline-dark">قناة يوتيوب</a>
-        </div>
+      <p style="line-height:2;">
+        ${esc(videoSummary)}
+      </p>
+
+      <div class="d-flex gap-2 flex-wrap">
+
+        <a href="videos.html" class="btn btn-dark">
+          مشاهدة الفيديو
+        </a>
+
+        <a href="${watchUrl}" target="_blank" rel="noopener" class="btn btn-outline-dark">
+          قناة يوتيوب
+        </a>
+
       </div>
 
-      <div class="col-lg-5">
-        <div class="ratio ratio-16x9">
-          <iframe src="${embedUrl}" title="${esc(videoTitle)}" allowfullscreen></iframe>
-        </div>
-      </div>
     </div>
+
+    <div class="col-lg-5">
+
+      <div class="ratio ratio-16x9">
+        <iframe
+          src="${embedUrl}"
+          title="${esc(videoTitle)}"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+    </div>
+
   </div>
-</section>`;
+</div>`;
 
   var pageVideo =
 `<div class="col-lg-8 mx-auto mb-4">
