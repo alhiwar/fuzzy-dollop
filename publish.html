@@ -164,12 +164,47 @@
     <button type="button" onclick="copyField('sectionOutput')" class="btn btn-outline-dark mt-3">نسخ بطاقة القسم</button>
   </div>
 
-  <div class="card p-4">
-    <h2 class="h5 fw-bold mb-3">5 — بطاقة authors.html للكاتب</h2>
+  <div class="card p-4 mb-4">
+  <h2 class="h5 fw-bold mb-3">5 — بطاقة صفحة الكاتب authorX.html</h2>
     <textarea id="authorCardOutput" class="form-control output-box" readonly></textarea>
     <button type="button" onclick="copyField('authorCardOutput')" class="btn btn-outline-dark mt-3">نسخ بطاقة الكاتب</button>
   </div>
+<div class="card p-4 mb-4">
+  <h2 class="h5 fw-bold mb-3">6 — توليد فيديو جديد</h2>
 
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label">رابط الفيديو أو رقم الفيديو</label>
+      <input id="videoUrl" class="form-control" placeholder="https://www.youtube.com/watch?v=...">
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">عنوان الفيديو</label>
+      <input id="videoTitle" class="form-control">
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">وصف مختصر للفيديو</label>
+      <input id="videoSummary" class="form-control">
+    </div>
+
+    <div class="col-12">
+      <button type="button" onclick="generateVideo()" class="btn btn-dark btn-lg">توليد أكواد الفيديو</button>
+    </div>
+  </div>
+</div>
+
+<div class="card p-4 mb-4">
+  <h2 class="h5 fw-bold mb-3">7 — كود الفيديو في index.html</h2>
+  <textarea id="videoIndexOutput" class="form-control output-box" readonly></textarea>
+  <button type="button" onclick="copyField('videoIndexOutput')" class="btn btn-outline-dark mt-3">نسخ كود فيديو index.html</button>
+</div>
+
+<div class="card p-4 mb-4">
+  <h2 class="h5 fw-bold mb-3">8 — كود الفيديو في videos.html</h2>
+  <textarea id="videoPageOutput" class="form-control output-box" readonly></textarea>
+  <button type="button" onclick="copyField('videoPageOutput')" class="btn btn-outline-dark mt-3">نسخ كود فيديو videos.html</button>
+</div>
 </main>
 
 <script>
@@ -617,7 +652,100 @@ document.getElementById("articlesOutput").value = articlesCard;
   document.getElementById("sectionOutput").value = sectionCard;
   document.getElementById("authorCardOutput").value = authorCard;
 }
+function getYouTubeId(input){
+  var value = String(input || "").trim();
 
+  if(value.includes("watch?v=")){
+    return value.split("watch?v=")[1].split("&")[0];
+  }
+
+  if(value.includes("youtu.be/")){
+    return value.split("youtu.be/")[1].split("?")[0];
+  }
+
+  if(value.includes("/embed/")){
+    return value.split("/embed/")[1].split("?")[0];
+  }
+
+  return value;
+}
+
+function generateVideo(){
+  var videoId = getYouTubeId(document.getElementById("videoUrl").value);
+  var videoTitle = document.getElementById("videoTitle").value.trim();
+  var videoSummary = document.getElementById("videoSummary").value.trim();
+
+  if(!videoId || !videoTitle || !videoSummary){
+    alert("أكمل حقول الفيديو أولاً");
+    return;
+  }
+
+  var embedUrl = "https://www.youtube.com/embed/" + videoId;
+  var watchUrl = "https://www.youtube.com/watch?v=" + videoId;
+
+  var indexVideo =
+`<section class="mb-5">
+  <h2 class="section-title h4">أحدث فيديو</h2>
+
+  <div class="card p-4">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <span class="category-pill mb-3">فيديو</span>
+
+        <h3 class="fw-bold mb-3">
+          ${esc(videoTitle)}
+        </h3>
+
+        <p style="line-height:2;">
+          ${esc(videoSummary)}
+        </p>
+
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="videos.html" class="btn btn-dark">مشاهدة الفيديو</a>
+          <a href="${watchUrl}" target="_blank" rel="noopener" class="btn btn-outline-dark">قناة يوتيوب</a>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="ratio ratio-16x9">
+          <iframe src="${embedUrl}" title="${esc(videoTitle)}" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>`;
+
+  var pageVideo =
+`<div class="col-lg-8 mx-auto mb-4">
+  <div class="card p-4 h-100">
+
+    <span class="category-pill mb-3">فيديو</span>
+
+    <h3 class="fw-bold mb-3">${esc(videoTitle)}</h3>
+
+    <p class="text-muted" style="line-height:2;">
+      ${esc(videoSummary)}
+    </p>
+
+    <div class="ratio ratio-16x9 my-4">
+      <iframe src="${embedUrl}" title="${esc(videoTitle)}" allowfullscreen></iframe>
+    </div>
+
+    <div class="d-flex gap-2 flex-wrap">
+      <a href="${watchUrl}" target="_blank" rel="noopener" class="btn btn-dark">
+        مشاهدة على يوتيوب <i class="bi bi-youtube"></i>
+      </a>
+      <a href="index.html" class="btn btn-outline-dark">
+        العودة إلى الرئيسية <i class="bi bi-arrow-left-short"></i>
+      </a>
+    </div>
+
+  </div>
+</div>`;
+
+  document.getElementById("videoIndexOutput").value = indexVideo;
+  document.getElementById("videoPageOutput").value = pageVideo;
+}
 function copyField(id){
   var el = document.getElementById(id);
   el.select();
