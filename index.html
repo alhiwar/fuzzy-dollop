@@ -83,6 +83,42 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
 
+    .author-thumb {
+      width: 90px;
+      height: 90px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 3px solid #eee;
+    }
+
+    .video-section {
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .video-card {
+      padding: 28px;
+    }
+
+    .video-text {
+      padding: 8px 10px;
+    }
+
+    .video-frame {
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      background: #000;
+    }
+
+    .video-frame iframe {
+      border: 0;
+    }
+
     .lang-switch {
       position: fixed;
       top: 12px;
@@ -102,11 +138,11 @@
     }
 
     .lang-switch .ar {
-      background:#000;
+      background: #000;
     }
 
     .lang-switch .en {
-      background:#555;
+      background: #555;
     }
 
     #google_translate_element {
@@ -123,14 +159,6 @@
     footer a {
       text-decoration: none;
     }
-
-    .author-thumb {
-      width:90px;
-      height:90px;
-      border-radius:14px;
-      object-fit:cover;
-      border:3px solid #eee;
-    }
   </style>
 
 </head>
@@ -144,1014 +172,1122 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
+
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
       <img src="logo-main.png" alt="شعار الحوار الثقافي" width="55" height="55" style="border-radius:50%;" />
       <span>الحوار الثقافي</span>
     </a>
-    
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="فتح القائمة">
-  <span class="navbar-toggler-icon"></span>
-</button>
 
-<div class="collapse navbar-collapse" id="mainNavbar">
-  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-    <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
-    <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
-    <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
-    <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="فتح القائمة">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
-        <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="videos.html">الفيديوهات</a></li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="search.html">
+            <i class="bi bi-search"></i>
+            البحث
+          </a>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
       </ul>
-    </li>
-
-    <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
-    <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
-    <li class="nav-item"><a class="nav-link" href="videos.html">الفيديوهات</a></li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="search.html">
-        <i class="bi bi-search"></i>
-        البحث
-      </a>
-    </li>
-
-    <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
-    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
-  </ul>
-</div>
+    </div>
 
   </div>
 </nav>
 
 <header class="hero">
   <div class="container">
- <img src="logo-main.png" alt="شعار الحوار الثقافي" style="width:180px;height:auto;margin-bottom:16px;" />
+
+    <img src="logo-main.png" alt="شعار الحوار الثقافي" style="width:180px;height:auto;margin-bottom:16px;" />
+
     <h1>الحوار الثقافي</h1>
+
     <p>
       منصّة فكرية وثقافية تهتم بالمقالات الجادّة والبحوث والكتابات التي تفتح باب التأمل والحوار، وتحفظ للنصوص أصالتها وللكتّاب حضورهم.
     </p>
+
     <div class="d-flex justify-content-center gap-2 flex-wrap">
-      <a href="article36.html" class="btn btn-light btn-lg">قراءة أحدث مقال <i class="bi bi-arrow-left-short"></i></a>
-      <a href="submit.html" class="btn btn-outline-light btn-lg">إرسال مقال <i class="bi bi-pencil-square"></i></a>
+      <a href="article36.html" class="btn btn-light btn-lg">
+        قراءة أحدث مقال
+        <i class="bi bi-arrow-left-short"></i>
+      </a>
+
+      <a href="submit.html" class="btn btn-outline-light btn-lg">
+        إرسال مقال
+        <i class="bi bi-pencil-square"></i>
+      </a>
     </div>
+
   </div>
 </header>
 
 <main class="container my-5" role="main">
 
-<section class="mb-5">
-  <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
-    <h2 class="section-title h4 mb-0">آخر المقالات</h2>
-    <a href="articles.html" class="btn btn-outline-dark btn-sm">
-      عرض جميع المقالات <i class="bi bi-arrow-left-short"></i>
-    </a>
-  </div>
-  <div class="row g-4">
-  <div class="col-lg-6">
+  <section class="mb-5">
 
-  <div class="card p-4 h-100">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+      <h2 class="section-title h4 mb-0">آخر المقالات</h2>
 
-<div class="text-center mb-3">
-  <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-</div>
-
-<h3 class="fw-bold mb-2">مبادرة لوقف الحرب بين الولايات المتحدة وايران ومنع انزلاق المنطقة الى فوضى عارمة</h3>
-
-<p class="text-muted mb-2">
-  بقلم:
-  <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-</p>
-
-<span class="category-pill mb-3">الفكر والسياسة</span>
-
-<p style="line-height:2;">
-  ان استمرار هذه الحرب ينذر بعواقب وخيمة ستصيب الاطراف كافة , وربما تكون البداية لإثارة حروب اخرى لن تجلب للعالم سوى الخراب والمجاعة والاوبئة
-</p>
-
-<div class="d-flex gap-2 flex-wrap">
-  <a href="article36.html" class="btn btn-dark">قراءة المقال</a>
-  <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-</div>
-
-  </div>
-</div>
-  <div class="col-lg-6">
-  <div class="card p-4 h-100">
-
-<div class="text-center mb-3">
-  <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-</div>
-
-<h3 class="fw-bold mb-2">ونزرعُ في وجه الليل شعلةً لا تنطفئ</h3>
-
-<p class="text-muted mb-2">
-  بقلم:
-  <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-</p>
-
-<span class="category-pill mb-3">الأدب</span>
-
-<p style="line-height:2;">
-  قصيدة احتجاجية تستحضر البحر والأرض والذاكرة رموزًا للسيادة والمقاومة، وتوجّه نداءً متكررًا إلى الغزاة بالرحيل، مؤكدةً أن الكرامة والصمود قادران على مواجهة العدوان.
-</p>
-
-<div class="d-flex gap-2 flex-wrap">
-  <a href="article35.html" class="btn btn-dark">قراءة القصيدة</a>
-  <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-</div>
-
-  </div>
-</div>
-  <div class="col-lg-6">
-
-  <div class="card p-4 h-100">
-
-<div class="text-center mb-3">
-  <img src="jabbar-albahadli.jpg" alt="د. جبار ماجد البهادلي" class="author-img">
-</div>
-
-<h3 class="fw-bold mb-2">القصَّةُ القَصيرةُ الابنُ الشَّرعيُّ لدواعِي العَصرِ وَرِهَانٌ لِمُقتضياتهِ الإنسانيَّةِ</h3>
-
-<p class="text-muted mb-2">
-  بقلم:
-  <a href="author5.html" class="text-decoration-none text-muted">د. جبار ماجد البهادلي</a>
-</p>
-
-<span class="category-pill mb-3">الأدب</span>
-
-<p style="line-height:2;">
-  قراءة في نشأة فن القصة القصيرة وخصائصه الفنية، وتحولاته في مواجهة إيقاع العصر والتكنولوجيا الحديثة، مع استشراف مستقبله وأسباب استمرار حضوره في الأدب العربي.
-</p>
-
-<div class="d-flex gap-2 flex-wrap">
-  <a href="article34.html" class="btn btn-dark">قراءة النص</a>
-  <a href="author5.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-</div>
-
-  </div>
-</div>
-  <div class="col-lg-6">
-
-  <div class="card p-4 h-100">
-
-<div class="text-center mb-3">
-  <img src="jabbar-albahadli.jpg" alt="د. جبار ماجد البهادلي" class="author-img">
-</div>
-
-<h3 class="fw-bold mb-2">قراءات نقدية جبَّار ماجد البهادليّ: الوَاقعيَّةُ السِّحريَّةُ بَينَ يُوتوبيَا القَريَةِ ودِيستوبيَا الإقطاعِ الجَائرةِ</h3>
-
-<p class="text-muted mb-2">
-  بقلم:
-  <a href="author5.html" class="text-decoration-none text-muted">د. جبار ماجد البهادلي</a>
-</p>
-
-<span class="category-pill mb-3">الأدب</span>
-
-<p style="line-height:2;">
-  قراءة نقدية في رواية «وداعاً يا نهر الكحلاء»، تستكشف الواقعية السحرية وصراع الخير والسلطة في فضائها السردي الجنوبي.
-</p>
-
-<div class="d-flex gap-2 flex-wrap">
-  <a href="article33.html" class="btn btn-dark">قراءة النص</a>
-  <a href="author5.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-</div>
-
-  </div>
-</div>
-  <div class="col-lg-6">
-    
-
-  <div class="card p-4 h-100">
-
-<div class="text-center mb-3">
-  <img src="adnan-author.jpg" alt="عدنان الصائغ" class="author-img">
-</div>
-
-<h3 class="fw-bold mb-2">توقيعتان من كتاب الريح والغياب</h3>
-
-<p class="text-muted mb-2">
-  بقلم:
-  <a href="author7.html" class="text-decoration-none text-muted">عدنان الصائغ</a>
-</p>
-
-<span class="category-pill mb-3">الأدب</span>
-
-<p style="line-height:2;">
-  توقيعتان شعريتان يفتح فيهما عدنان الصائغ أبواب الكتب والذاكرة والمنفى، لتتداخل الشخصيات والأمكنة والأزمنة في مشهدٍ يجمع طرافة المفارقة بمرارة الغياب.
-</p>
-
-<div class="d-flex gap-2 flex-wrap">
-  <a href="article32.html" class="btn btn-dark">قراءة القصيدة</a>
-  <a href="author7.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-</div>
-
-  </div>
-</div>
-  <div class="col-lg-6">
-
-  <div class="card p-4 h-100">
-
-<div class="text-center mb-3">
-  <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-</div>
-
-<h3 class="fw-bold mb-2">مقام لا يبلغه ملك مقرب ولا نبي مرسل</h3>
-
-<p class="text-muted mb-2">
-  بقلم:
-  <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-</p>
-
-<span class="category-pill mb-3">البحوث الإسلامية</span>
-
-<p style="line-height:2;">
-  ان لمقام الامام عند المسلمين الشيعة الامامية موقع ومكانة لا يستوعبها او يفهمها الا اصحاب القلوب الطاهرة والعقول الفذة النيرة
-</p>
-
-<div class="d-flex gap-2 flex-wrap">
-  <a href="article31.html" class="btn btn-dark">قراءة المقال</a>
-  <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-</div>
-
-  </div>
-</div>
-  <div class="col-lg-6">
-
-  <div class="card p-4 h-100">
-
-<div class="text-center mb-3">
-  <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-</div>
-
-<h3 class="fw-bold mb-2">أمية النبي محمد (ص) أمية هوية وليست أمية تعليمية!*</h3>
-
-<p class="text-muted mb-2">
-  بقلم:
-  <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-</p>
-
-<span class="category-pill mb-3">البحوث الإسلامية</span>
-
-<p style="line-height:2;">
-  هل كان رسول الله صلوات الله عليه واله , وهو الاكمل الاعظم الاطهر , أميا , بمعنى لا يقرأ ولا يكتب , أم ان القران الكريم يقول غير ذلك ؟
-</p>
-
-<div class="d-flex gap-2 flex-wrap">
-  <a href="article30.html" class="btn btn-dark">قراءة المقال</a>
-  <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-</div>
-
-  </div>
-</div>
- <div class="col-lg-6">
-
-  <div class="card p-4 h-100">
-
-<div class="text-center mb-3">
-  <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-</div>
-
-<h3 class="fw-bold mb-2">لم يكن دارون ملحدا ولا شأن لنظريات التطور بالإلحاد!</h3>
-
-<p class="text-muted mb-2">
-  بقلم:
-  <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-</p>
-
-<span class="category-pill mb-3">البحوث الإسلامية</span>
-
-<p style="line-height:2;">
-  ان اعتقادي الراسخ القوي الناشئ من قراءات متعددة وطويلة الامد , والمعتمد على اسس علمية ودينية ومنطقية يؤدي الى نتيجة حاسمة وهي عدم وجود الحاد بالمعنى الحرفي للكلمة يتعارض مع الفطرة الانسانية
-</p>
-
-<div class="d-flex gap-2 flex-wrap">
-  <a href="article29.html" class="btn btn-dark">قراءة المقال</a>
-  <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-</div>
-
-  </div>
-</div> 
-  <div class="col-lg-6">
-
-  <div class="card p-4 h-100">
-
-<div class="text-center mb-3">
-  <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-</div>
-
-<h3 class="fw-bold mb-2">عندما يصف الشهيد نفسه!</h3>
-
-<p class="text-muted mb-2">
-  بقلم:
-  <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-</p>
-
-<span class="category-pill mb-3">البحوث الإسلامية</span>
-
-<p style="line-height:2;">
-  ملخص لكتاب ( الشهيد والشهادة ) للسيد علي الحسيني الخامنئي ( قدس سره الشريف)
-</p>
-
-<div class="d-flex gap-2 flex-wrap">
-  <a href="article28.html" class="btn btn-dark">قراءة المقال</a>
-  <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-</div>
-
-  </div>
-</div>
-  <div class="col-lg-6">
-
-  <div class="card p-4 h-100">
-
-<div class="text-center mb-3">
-  <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-</div>
-
-<h3 class="fw-bold mb-2">اذا لم يستحق الناس النور رفعه الله اليه</h3>
-
-<p class="text-muted mb-2">
-  بقلم:
- href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-</p>
-
-<span class="category-pill mb-3">البحوث الإسلامية</span>
-
-<p style="line-height:2;">
-  يحاول هذا المقال ان ينظر الى الشهيد نظرة جديدة , فهو بركة ونور يرفعه الله اليه ويحرم الناس من بركته حين لا يستحقون وجوده
-</p>
-
-<div class="d-flex gap-2 flex-wrap">
-  <a href="article27.html" class="btn btn-dark">قراءة المقال</a>
-  href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-</div>
-
-  </div>
-</div>
-  
-    <div class="col-lg-6">
-
-  <div class="card p-4 h-100">
-
-<div class="text-center mb-3">
-  <img src="jabbar-albahadli.jpg" alt="د. جبار ماجد البهادلي" class="author-img">
-</div>
-
-<h3 class="fw-bold mb-2">إلى أن يُزهر الصّبّار || دراسة للدكتور جبار البهادلي</h3>
-
-<p class="text-muted mb-2">
-  بقلم:
-  <a href="author5.html" class="text-decoration-none text-muted">د. جبار ماجد البهادلي</a>
-</p>
-
-<span class="category-pill mb-3">الأدب</span>
-
-<p style="line-height:2;">
-  دراسة نقدية لرواية ( إلى أنْ يُزْهِرَ الصَّبَّارُ), للأديبة والكاتبة الفلس.طينيّة ريتا عودة
-</p>
-
-<div class="d-flex gap-2 flex-wrap">
-  <a href="article26.html" class="btn btn-dark">قراءة النص</a>
-  <a href="author5.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-</div>
-
-  </div>
-</div>
-   <div class="col-lg-6">
-
-  <div class="card p-4 h-100">
-
-<div class="text-center mb-3">
-  <img src="shawqi-karim.jpg" alt="شوقي كريم حسن" class="author-img">
-</div>
-
-<h3 class="fw-bold mb-2">نشيد العابرين</h3>
-
-<p class="text-muted mb-2">
-  بقلم:
-  <a href="author6.html" class="text-decoration-none text-muted">شوقي كريم حسن</a>
-</p>
-
-<span class="category-pill mb-3">الأدب</span>
-
-<p style="line-height:2;">
-  نص مسرحي شعري يستلهم واقعة كربلاء بوصفها رمزًا دائمًا للحرية والعدل، ويجسد استمرار النداء الحسيني في الإنسان عبر الأجيال، حيث يتحول العبور من حدث تاريخي إلى موقف أخلاقي متجدد.
-</p>
-
-<div class="d-flex gap-2 flex-wrap">
-  <a href="article25.html" class="btn btn-dark">قراءة النص</a>
-  <a href="author6.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-</div>
-
-  </div>
-</div> 
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <h3 class="fw-bold mb-2">رحم الله والديّ ووالدي والديّ</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <span class="category-pill mb-3">الأدب</span>
-
-    <p style="line-height:2;">
-      وجدانية تبين أثر دموع الوالدين على الأبناء والأحفاد في ذكرى كربلاء الشموخ والإباء، تنير لهم طريق الحرية والكرامة والفداء.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article24.html" class="btn btn-dark">قراءة النص</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-
-  </div>
-</div>
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <h3 class="fw-bold mb-2">اهمية دراسة  التاريخ والاطلاع على أسراره</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <span class="category-pill mb-3">الأدب</span>
-
-    <p style="line-height:2;">
-      اهمية الاطلاع على التاريخ وفهمه من اهم الواجبات التي ينبغي للانسان ان يهتم بها
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article23.html" class="btn btn-dark">قراءة النص</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jabbar-albahadli.jpg" alt="د. جبار ماجد البهادلي" class="author-img">
-    </div>
-
-    <h3 class="fw-bold mb-2">شَواخصٌ سَرديَّةٌ مِن رِحْلَةِ البَحثِ عَنِ المَجهُولِ</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author5.html" class="text-decoration-none text-muted">د. جبار ماجد البهادلي</a>
-    </p>
-
-    <span class="category-pill mb-3">الأدب</span>
-
-    <p style="line-height:2;">
-      دراسة نقدية في رواية الحب والحرب (طفل ودفتر ذكريات)، تقارب ثنائية الحب والحرب وتمثلات الذاكرة العراقية في النص الروائي.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article22.html" class="btn btn-dark">قراءة النص</a>
-      <a href="author5.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="yahya-alsamawi.jpg" alt="يحيى السماوي" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">الأدب</span>
-
-    <h3 class="fw-bold mb-2">يا سيدي الحسين</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author4.html" class="text-decoration-none text-muted">يحيى السماوي</a>
-    </p>
-
-    <p style="line-height:2;">
-      قصيدة للشاعر العراقي يحيى السماوي تستلهم سيرة الإمام الحسين عليه السلام وتستحضر قيم التضحية والحق والحرية.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article21.html" class="btn btn-dark">قراءة القصيدة</a>
-      <a href="author4.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">البحوث الإسلامية</span>
-
-    <h3 class="fw-bold mb-2">الرد على (يوسف يوسف) واضطرابه بين المحكم والمتشابه والحروف المقطعة في القران الكريم</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <p style="line-height:2;">
-      رد علمي يتناول مفهوم المحكم والمتشابه والحروف المقطعة في القرآن الكريم والرد على الشبهات المثارة حولها.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article20.html" class="btn btn-dark">قراءة المقال</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">البحوث الإسلامية</span>
-
-    <h3 class="fw-bold mb-2">ثورة الامام الحسين (عليه السلام ) تسبيح الملائكة</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <p style="line-height:2;">
-      مقال إسلامي يتأمل في ثورة الإمام الحسين عليه السلام ومعانيها الروحية والإنسانية.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article19.html" class="btn btn-dark">قراءة المقال</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">البحوث الإسلامية</span>
-
-    <h3 class="fw-bold mb-2">في ثلاثٍ وعشرينَ سنة صنعَ أمةً وغيّر وجهَ التاريخ</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <p style="line-height:2;">
-      مقال يتناول التحول العظيم الذي أحدثه الرسول محمد صلى الله عليه وآله خلال ثلاث وعشرين سنة، ودور القرآن والإمام علي عليه السلام في صناعة الأمة والحضارة.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article18.html" class="btn btn-dark">قراءة المقال</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">الفكر والسياسة</span>
-
-    <h3 class="fw-bold mb-2">ينبغي للولايات المتحدة ان تسعى لعلاقات جيدة مع ايران</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <p style="line-height:2;">
-      مقال سياسي يدعو إلى تغليب لغة الحوار والمصالح المشتركة والاحترام المتبادل بين الدول.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article17.html" class="btn btn-dark">قراءة المقال</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">الفكر والسياسة</span>
-
-    <h3 class="fw-bold mb-2">عامر (( النووي ))!</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <p style="line-height:2;">
-      مقال فكري وسياسي يتأمل في قصة عامر بين الطائفية والتمييز والفضلات النووية بوصفها رمزاً للخراب الممتد في الإنسان والطبيعة.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article16.html" class="btn btn-dark">قراءة المقال</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">الفكر والسياسة</span>
-
-    <h3 class="fw-bold mb-2">أبي يتظاهر في شارع الرشيد!</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <p style="line-height:2;">
-      مقال يتأمل في صورة قديمة من تظاهرات بغداد سنة 1956 ويطرح أسئلة حول الوعي والحرية والخوف في الواقع العربي المعاصر.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article15.html" class="btn btn-dark">قراءة المقال</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">الأدب</span>
-
-    <h3 class="fw-bold mb-2">زَنبورُ المحلة</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <p style="line-height:2;">
-      قصة تستعيد ذكريات الطفولة في أزقة النجف القديمة، وتمزج بين البراءة والمغامرة والسخرية في حكاية لا تُنسى.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article14.html" class="btn btn-dark">قراءة القصة</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">الفكر والسياسة</span>
-
-    <h3 class="fw-bold mb-2">يوم اكتمل فيه معنى الرسالة</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <p style="line-height:2;">
-      مقال فكري يتناول دلالة يوم الغدير ومكانته في الوجدان الشيعي والتاريخ الإسلامي.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article13.html" class="btn btn-dark">قراءة المقال</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">الأدب</span>
-
-    <h3 class="fw-bold mb-2">بغداد روحي واغنيتي</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <p style="line-height:2;">
-      قصيدة وطنية للكاتب جاسم محمد علي المعموري، منشورة سنة 1998.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article12.html" class="btn btn-dark">قراءة القصيدة</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">الأدب</span>
-
-    <h3 class="fw-bold mb-2">بتول</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <p style="line-height:2;">
-      قصيدة للكاتب جاسم محمد علي المعموري، منشورة برابطها الأصلي ومؤرخة عام 1993.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article11.html" class="btn btn-dark">قراءة القصيدة</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">الأدب</span>
-
-    <h3 class="fw-bold mb-2">لقطاتٌ حيةٌ لإحتضارِ وطن</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <p style="line-height:2;">
-      قصيدة للكاتب جاسم محمد علي المعموري، كُتبت متأثرة بالأحداث الإرهابية في العراق.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article10.html" class="btn btn-dark">قراءة القصيدة</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">الأدب</span>
-
-    <h3 class="fw-bold mb-2">حين يتحول الحب الى جرح فلسفي</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <p style="line-height:2;">
-      قراءة نقدية أدبية في قصة (طريق جانبي الى حارة سيمون) للكاتب د. سامي البدري.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article9.html" class="btn btn-dark">قراءة المقال</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="card p-4 h-100">
-    <div class="text-center mb-3">
-      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
-    </div>
-
-    <span class="category-pill mb-3">الأدب</span>
-
-    <h3 class="fw-bold mb-2">الفياض بالعلم والزهد والتقوى – الشيخ الفياض في ذمة الله !</h3>
-
-    <p class="text-muted mb-2">
-      بقلم:
-      <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
-    </p>
-
-    <p style="line-height:2;">
-      مقال أدبي وتأملي يرثي آية الله العظمى الشيخ محمد إسحاق الفياض، ويستحضر سيرته في العلم والزهد والتقوى.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="article8.html" class="btn btn-dark">قراءة المقال</a>
-      <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
-    </div>
-  </div>
-</div>
-
-  </div>
-</section>
-
-<section class="mb-5">
-  <h2 class="section-title h4">أحدث فيديو</h2>
-
-  <div class="card p-4">
-    <div class="row align-items-center g-4">
-      <div class="col-lg-7">
-        <span class="category-pill mb-3">فيديو</span>
-
-    <h3 class="fw-bold mb-3">
-      أحدث فيديو من قناة الحوار الثقافي
-    </h3>
-
-    <p style="line-height:2;">
-      شاهد أحدث المواد المرئية المنشورة عبر قناة الحوار الثقافي على يوتيوب، وتابع المحتوى الثقافي والفكري والأدبي مباشرة من داخل الموقع.
-    </p>
-
-    <div class="d-flex gap-2 flex-wrap">
-      <a href="videos.html" class="btn btn-dark">
-        مشاهدة الفيديو
-      </a>
-
-      <a href="https://www.youtube.com/@JAlmamo/videos" target="_blank" rel="noopener" class="btn btn-outline-dark">
-        قناة يوتيوب
+      <a href="articles.html" class="btn btn-outline-dark btn-sm">
+        عرض جميع المقالات
+        <i class="bi bi-arrow-left-short"></i>
       </a>
     </div>
-  </div>
 
-  <div class="col-lg-5">
-    <div class="ratio ratio-16x9">
-      <iframe
-        src="https://www.youtube.com/embed/TpBdRx1iKQQ"
-        title="الحوار الثقافي"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</div>
+    <div class="row g-4">
 
-  </div>
-</section>
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
 
-<section class="mb-5">
-  <h2 class="section-title h4">أقسام الموقع</h2>
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
 
-  <div class="row g-3">
-    <div class="col-md-3 col-6">
-      <a href="literature.html" class="text-decoration-none text-dark">
-        <div class="card text-center p-4">
-          <div class="fs-2 mb-2">📚</div>
-          <div class="fw-bold">الأدب</div>
+          <h3 class="fw-bold mb-2">مبادرة لوقف الحرب بين الولايات المتحدة وايران ومنع انزلاق المنطقة الى فوضى عارمة</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الفكر والسياسة</span>
+
+          <p style="line-height:2;">
+            ان استمرار هذه الحرب ينذر بعواقب وخيمة ستصيب الاطراف كافة , وربما تكون البداية لإثارة حروب اخرى لن تجلب للعالم سوى الخراب والمجاعة والاوبئة
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article36.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
         </div>
-      </a>
-    </div>
-
-<div class="col-md-3 col-6">
-  <a href="politics.html" class="text-decoration-none text-dark">
-    <div class="card text-center p-4">
-      <div class="fs-2 mb-2">🖋️</div>
-      <div class="fw-bold">الفكر والسياسة</div>
-    </div>
-  </a>
-</div>
-
-<div class="col-md-3 col-6">
-  <a href="research.html" class="text-decoration-none text-dark">
-    <div class="card text-center p-4">
-      <div class="fs-2 mb-2">📑</div>
-      <div class="fw-bold">البحوث العامة</div>
-    </div>
-  </a>
-</div>
-
-<div class="col-md-3 col-6">
-  <a href="islamic-research.html" class="text-decoration-none text-dark">
-    <div class="card text-center p-4">
-      <div class="fs-2 mb-2">📘</div>
-      <div class="fw-bold">البحوث الإسلامية</div>
-    </div>
-  </a>
-</div>
-
-<div class="col-md-3 col-6">
-  <a href="videos.html" class="text-decoration-none text-dark">
-    <div class="card text-center p-4">
-      <div class="fs-2 mb-2">🎥</div>
-      <div class="fw-bold">الفيديوهات</div>
-    </div>
-  </a>
-</div>
-
-  </div>
-</section>
-
-<section class="mb-5">
-  <h2 class="section-title h4">الكتّاب</h2>
-
-  <div class="card p-4 d-flex flex-column flex-md-row align-items-center gap-3">
-    <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="small-author-img">
-    <div class="text-center text-md-end">
-      <h3 class="h5 fw-bold mb-1">جاسم محمد علي المعموري</h3>
-      <p class="mb-2 text-muted">
-        كاتب وقاص وشاعر عراقي، يهتم بالأدب عمومًا وبالقصة القصيرة وفنون السرد خصوصًا.
-      </p>
-      <a href="author3.html" class="text-decoration-none">زيارة صفحة الكاتب <i class="bi bi-arrow-left-short"></i></a>
-    </div>
-  </div>
-
-  <div class="card p-4 d-flex flex-column flex-md-row align-items-center gap-3 mt-3">
-    <img src="yahya-alsamawi.jpg" alt="يحيى السماوي" class="small-author-img">
-    <div class="text-center text-md-end">
-      <h3 class="h5 fw-bold mb-1">يحيى السماوي</h3>
-      <p class="mb-2 text-muted">
-        شاعر عراقي بارز من أبرز الأصوات الشعرية العربية المعاصرة، ارتبط اسمه بقصيدة الوطن والمنفى والحب والإنسان.
-      </p>
-      <a href="author4.html" class="text-decoration-none">زيارة صفحة الكاتب <i class="bi bi-arrow-left-short"></i></a>
-    </div>
-  </div>
-</section>
-
-<section class="mb-4">
-  <div class="card p-4">
-    <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
-      <div>
-        <h2 class="h4 mb-2">هل لديك مقال أو دراسة تريد نشرها؟</h2>
-        <p class="mb-0 text-muted">
-          يمكنك إرسال المقالات والبحوث مباشرة إلى إدارة الموقع لمراجعتها ونشرها ضمن القسم المناسب.
-        </p>
       </div>
 
-  <a href="submit.html" class="btn btn-dark btn-lg">
-    إرسال مقال <i class="bi bi-pencil-square"></i>
-  </a>
-</div>
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
 
-  </div>
-</section>
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">ونزرعُ في وجه الليل شعلةً لا تنطفئ</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            قصيدة احتجاجية تستحضر البحر والأرض والذاكرة رموزًا للسيادة والمقاومة، وتوجّه نداءً متكررًا إلى الغزاة بالرحيل، مؤكدةً أن الكرامة والصمود قادران على مواجهة العدوان.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article35.html" class="btn btn-dark">قراءة القصيدة</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jabbar-albahadli.jpg" alt="د. جبار ماجد البهادلي" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">القصَّةُ القَصيرةُ الابنُ الشَّرعيُّ لدواعِي العَصرِ وَرِهَانٌ لِمُقتضياتهِ الإنسانيَّةِ</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author5.html" class="text-decoration-none text-muted">د. جبار ماجد البهادلي</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            قراءة في نشأة فن القصة القصيرة وخصائصه الفنية، وتحولاته في مواجهة إيقاع العصر والتكنولوجيا الحديثة، مع استشراف مستقبله وأسباب استمرار حضوره في الأدب العربي.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article34.html" class="btn btn-dark">قراءة النص</a>
+            <a href="author5.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jabbar-albahadli.jpg" alt="د. جبار ماجد البهادلي" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">قراءات نقدية جبَّار ماجد البهادليّ: الوَاقعيَّةُ السِّحريَّةُ بَينَ يُوتوبيَا القَريَةِ ودِيستوبيَا الإقطاعِ الجَائرةِ</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author5.html" class="text-decoration-none text-muted">د. جبار ماجد البهادلي</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            قراءة نقدية في رواية «وداعاً يا نهر الكحلاء»، تستكشف الواقعية السحرية وصراع الخير والسلطة في فضائها السردي الجنوبي.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article33.html" class="btn btn-dark">قراءة النص</a>
+            <a href="author5.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="adnan-author.jpg" alt="عدنان الصائغ" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">توقيعتان من كتاب الريح والغياب</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author7.html" class="text-decoration-none text-muted">عدنان الصائغ</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            توقيعتان شعريتان يفتح فيهما عدنان الصائغ أبواب الكتب والذاكرة والمنفى، لتتداخل الشخصيات والأمكنة والأزمنة في مشهدٍ يجمع طرافة المفارقة بمرارة الغياب.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article32.html" class="btn btn-dark">قراءة القصيدة</a>
+            <a href="author7.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">مقام لا يبلغه ملك مقرب ولا نبي مرسل</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">البحوث الإسلامية</span>
+
+          <p style="line-height:2;">
+            ان لمقام الامام عند المسلمين الشيعة الامامية موقع ومكانة لا يستوعبها او يفهمها الا اصحاب القلوب الطاهرة والعقول الفذة النيرة
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article31.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">أمية النبي محمد (ص) أمية هوية وليست أمية تعليمية!*</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">البحوث الإسلامية</span>
+
+          <p style="line-height:2;">
+            هل كان رسول الله صلوات الله عليه واله , وهو الاكمل الاعظم الاطهر , أميا , بمعنى لا يقرأ ولا يكتب , أم ان القران الكريم يقول غير ذلك ؟
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article30.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">لم يكن دارون ملحدا ولا شأن لنظريات التطور بالإلحاد!</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">البحوث الإسلامية</span>
+
+          <p style="line-height:2;">
+            ان اعتقادي الراسخ القوي الناشئ من قراءات متعددة وطويلة الامد , والمعتمد على اسس علمية ودينية ومنطقية يؤدي الى نتيجة حاسمة وهي عدم وجود الحاد بالمعنى الحرفي للكلمة يتعارض مع الفطرة الانسانية
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article29.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">عندما يصف الشهيد نفسه!</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">البحوث الإسلامية</span>
+
+          <p style="line-height:2;">
+            ملخص لكتاب ( الشهيد والشهادة ) للسيد علي الحسيني الخامنئي ( قدس سره الشريف)
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article28.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">اذا لم يستحق الناس النور رفعه الله اليه</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">البحوث الإسلامية</span>
+
+          <p style="line-height:2;">
+            يحاول هذا المقال ان ينظر الى الشهيد نظرة جديدة , فهو بركة ونور يرفعه الله اليه ويحرم الناس من بركته حين لا يستحقون وجوده
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article27.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jabbar-albahadli.jpg" alt="د. جبار ماجد البهادلي" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">إلى أن يُزهر الصّبّار || دراسة للدكتور جبار البهادلي</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author5.html" class="text-decoration-none text-muted">د. جبار ماجد البهادلي</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            دراسة نقدية لرواية ( إلى أنْ يُزْهِرَ الصَّبَّارُ), للأديبة والكاتبة الفلس.طينيّة ريتا عودة
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article26.html" class="btn btn-dark">قراءة النص</a>
+            <a href="author5.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="shawqi-karim.jpg" alt="شوقي كريم حسن" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">نشيد العابرين</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author6.html" class="text-decoration-none text-muted">شوقي كريم حسن</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            نص مسرحي شعري يستلهم واقعة كربلاء بوصفها رمزًا دائمًا للحرية والعدل، ويجسد استمرار النداء الحسيني في الإنسان عبر الأجيال، حيث يتحول العبور من حدث تاريخي إلى موقف أخلاقي متجدد.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article25.html" class="btn btn-dark">قراءة النص</a>
+            <a href="author6.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">رحم الله والديّ ووالدي والديّ</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            وجدانية تبين أثر دموع الوالدين على الأبناء والأحفاد في ذكرى كربلاء الشموخ والإباء، تنير لهم طريق الحرية والكرامة والفداء.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article24.html" class="btn btn-dark">قراءة النص</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">اهمية دراسة التاريخ والاطلاع على أسراره</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            اهمية الاطلاع على التاريخ وفهمه من اهم الواجبات التي ينبغي للانسان ان يهتم بها
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article23.html" class="btn btn-dark">قراءة النص</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jabbar-albahadli.jpg" alt="د. جبار ماجد البهادلي" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">شَواخصٌ سَرديَّةٌ مِن رِحْلَةِ البَحثِ عَنِ المَجهُولِ</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author5.html" class="text-decoration-none text-muted">د. جبار ماجد البهادلي</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            دراسة نقدية في رواية الحب والحرب (طفل ودفتر ذكريات)، تقارب ثنائية الحب والحرب وتمثلات الذاكرة العراقية في النص الروائي.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article22.html" class="btn btn-dark">قراءة النص</a>
+            <a href="author5.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="yahya-alsamawi.jpg" alt="يحيى السماوي" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">يا سيدي الحسين</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author4.html" class="text-decoration-none text-muted">يحيى السماوي</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            قصيدة للشاعر العراقي يحيى السماوي تستلهم سيرة الإمام الحسين عليه السلام وتستحضر قيم التضحية والحق والحرية.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article21.html" class="btn btn-dark">قراءة القصيدة</a>
+            <a href="author4.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">الرد على (يوسف يوسف) واضطرابه بين المحكم والمتشابه والحروف المقطعة في القران الكريم</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">البحوث الإسلامية</span>
+
+          <p style="line-height:2;">
+            رد علمي يتناول مفهوم المحكم والمتشابه والحروف المقطعة في القرآن الكريم والرد على الشبهات المثارة حولها.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article20.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">ثورة الامام الحسين (عليه السلام ) تسبيح الملائكة</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">البحوث الإسلامية</span>
+
+          <p style="line-height:2;">
+            مقال إسلامي يتأمل في ثورة الإمام الحسين عليه السلام ومعانيها الروحية والإنسانية.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article19.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">في ثلاثٍ وعشرينَ سنة صنعَ أمةً وغيّر وجهَ التاريخ</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">البحوث الإسلامية</span>
+
+          <p style="line-height:2;">
+            مقال يتناول التحول العظيم الذي أحدثه الرسول محمد صلى الله عليه وآله خلال ثلاث وعشرين سنة، ودور القرآن والإمام علي عليه السلام في صناعة الأمة والحضارة.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article18.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">ينبغي للولايات المتحدة ان تسعى لعلاقات جيدة مع ايران</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الفكر والسياسة</span>
+
+          <p style="line-height:2;">
+            مقال سياسي يدعو إلى تغليب لغة الحوار والمصالح المشتركة والاحترام المتبادل بين الدول.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article17.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">عامر (( النووي ))!</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الفكر والسياسة</span>
+
+          <p style="line-height:2;">
+            مقال فكري وسياسي يتأمل في قصة عامر بين الطائفية والتمييز والفضلات النووية بوصفها رمزاً للخراب الممتد في الإنسان والطبيعة.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article16.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">أبي يتظاهر في شارع الرشيد!</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الفكر والسياسة</span>
+
+          <p style="line-height:2;">
+            مقال يتأمل في صورة قديمة من تظاهرات بغداد سنة 1956 ويطرح أسئلة حول الوعي والحرية والخوف في الواقع العربي المعاصر.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article15.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">زَنبورُ المحلة</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            قصة تستعيد ذكريات الطفولة في أزقة النجف القديمة، وتمزج بين البراءة والمغامرة والسخرية في حكاية لا تُنسى.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article14.html" class="btn btn-dark">قراءة القصة</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">يوم اكتمل فيه معنى الرسالة</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الفكر والسياسة</span>
+
+          <p style="line-height:2;">
+            مقال فكري يتناول دلالة يوم الغدير ومكانته في الوجدان الشيعي والتاريخ الإسلامي.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article13.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">بغداد روحي واغنيتي</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            قصيدة وطنية للكاتب جاسم محمد علي المعموري، منشورة سنة 1998.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article12.html" class="btn btn-dark">قراءة القصيدة</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">بتول</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            قصيدة للكاتب جاسم محمد علي المعموري، منشورة برابطها الأصلي ومؤرخة عام 1993.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article11.html" class="btn btn-dark">قراءة القصيدة</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">لقطاتٌ حيةٌ لإحتضارِ وطن</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            قصيدة للكاتب جاسم محمد علي المعموري، كُتبت متأثرة بالأحداث الإرهابية في العراق.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article10.html" class="btn btn-dark">قراءة القصيدة</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">حين يتحول الحب الى جرح فلسفي</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            قراءة نقدية أدبية في قصة (طريق جانبي الى حارة سيمون) للكاتب د. سامي البدري.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article9.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+
+          <div class="text-center mb-3">
+            <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="author-img">
+          </div>
+
+          <h3 class="fw-bold mb-2">الفياض بالعلم والزهد والتقوى – الشيخ الفياض في ذمة الله !</h3>
+
+          <p class="text-muted mb-2">
+            بقلم:
+            <a href="author3.html" class="text-decoration-none text-muted">جاسم محمد علي المعموري</a>
+          </p>
+
+          <span class="category-pill mb-3">الأدب</span>
+
+          <p style="line-height:2;">
+            مقال أدبي وتأملي يرثي آية الله العظمى الشيخ محمد إسحاق الفياض، ويستحضر سيرته في العلم والزهد والتقوى.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="article8.html" class="btn btn-dark">قراءة المقال</a>
+            <a href="author3.html" class="btn btn-outline-dark">صفحة الكاتب</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="mb-5 video-section">
+
+    <h2 class="section-title h4">أحدث فيديو</h2>
+
+    <div class="card video-card">
+
+      <div class="row align-items-center g-4">
+
+        <div class="col-lg-6">
+
+          <div class="video-text">
+
+            <span class="category-pill mb-3">فيديو</span>
+
+            <h3 class="h4 fw-bold mb-3">
+              أحدث فيديو من قناة الحوار الثقافي
+            </h3>
+
+            <p style="line-height:2;">
+              شاهد أحدث المواد المرئية المنشورة عبر قناة الحوار الثقافي على يوتيوب، وتابع المحتوى الثقافي والفكري والأدبي مباشرة من داخل الموقع.
+            </p>
+
+            <div class="d-flex gap-2 flex-wrap">
+
+              <a href="videos.html" class="btn btn-dark">
+                مشاهدة الفيديو
+              </a>
+
+              <a href="https://www.youtube.com/@JAlmamo/videos" target="_blank" rel="noopener" class="btn btn-outline-dark">
+                قناة يوتيوب
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+
+          <div class="video-frame">
+            <div class="ratio ratio-16x9">
+
+              <iframe
+                src="https://www.youtube.com/embed/TpBdRx1iKQQ"
+                title="الحوار الثقافي"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="mb-5">
+
+    <h2 class="section-title h4">أقسام الموقع</h2>
+
+    <div class="row g-3">
+
+      <div class="col-md-3 col-6">
+        <a href="literature.html" class="text-decoration-none text-dark">
+          <div class="card text-center p-4">
+            <div class="fs-2 mb-2">📚</div>
+            <div class="fw-bold">الأدب</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="politics.html" class="text-decoration-none text-dark">
+          <div class="card text-center p-4">
+            <div class="fs-2 mb-2">🖋️</div>
+            <div class="fw-bold">الفكر والسياسة</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="research.html" class="text-decoration-none text-dark">
+          <div class="card text-center p-4">
+            <div class="fs-2 mb-2">📑</div>
+            <div class="fw-bold">البحوث العامة</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="islamic-research.html" class="text-decoration-none text-dark">
+          <div class="card text-center p-4">
+            <div class="fs-2 mb-2">📘</div>
+            <div class="fw-bold">البحوث الإسلامية</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <a href="videos.html" class="text-decoration-none text-dark">
+          <div class="card text-center p-4">
+            <div class="fs-2 mb-2">🎥</div>
+            <div class="fw-bold">الفيديوهات</div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="mb-5">
+
+    <h2 class="section-title h4">الكتّاب</h2>
+
+    <div class="card p-4 d-flex flex-column flex-md-row align-items-center gap-3">
+
+      <img src="jassim-author.jpg" alt="جاسم محمد علي المعموري" class="small-author-img">
+
+      <div class="text-center text-md-end">
+
+        <h3 class="h5 fw-bold mb-1">جاسم محمد علي المعموري</h3>
+
+        <p class="mb-2 text-muted">
+          كاتب وقاص وشاعر عراقي، يهتم بالأدب عمومًا وبالقصة القصيرة وفنون السرد خصوصًا.
+        </p>
+
+        <a href="author3.html" class="text-decoration-none">
+          زيارة صفحة الكاتب
+          <i class="bi bi-arrow-left-short"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="card p-4 d-flex flex-column flex-md-row align-items-center gap-3 mt-3">
+
+      <img src="yahya-alsamawi.jpg" alt="يحيى السماوي" class="small-author-img">
+
+      <div class="text-center text-md-end">
+
+        <h3 class="h5 fw-bold mb-1">يحيى السماوي</h3>
+
+        <p class="mb-2 text-muted">
+          شاعر عراقي بارز من أبرز الأصوات الشعرية العربية المعاصرة، ارتبط اسمه بقصيدة الوطن والمنفى والحب والإنسان.
+        </p>
+
+        <a href="author4.html" class="text-decoration-none">
+          زيارة صفحة الكاتب
+          <i class="bi bi-arrow-left-short"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="mb-4">
+
+    <div class="card p-4">
+
+      <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+
+        <div>
+          <h2 class="h4 mb-2">هل لديك مقال أو دراسة تريد نشرها؟</h2>
+
+          <p class="mb-0 text-muted">
+            يمكنك إرسال المقالات والبحوث مباشرة إلى إدارة الموقع لمراجعتها ونشرها ضمن القسم المناسب.
+          </p>
+        </div>
+
+        <a href="submit.html" class="btn btn-dark btn-lg">
+          إرسال مقال
+          <i class="bi bi-pencil-square"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
 
 </main>
 
 <footer class="text-center bg-dark text-white p-4 mt-4">
+
   <h2 class="h5 mb-3">تابعونا على مواقع التواصل</h2>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
+
     <a href="https://www.facebook.com/profile.php?id=61590545142380" target="_blank" rel="noopener" class="text-white" title="فيسبوك">
       <i class="bi bi-facebook"></i>
     </a>
 
-<a href="https://www.youtube.com/@JAlmamo/videos" target="_blank" rel="noopener" class="text-white" title="يوتيوب">
-  <i class="bi bi-youtube"></i>
-</a>
+    <a href="https://www.youtube.com/@JAlmamo/videos" target="_blank" rel="noopener" class="text-white" title="يوتيوب">
+      <i class="bi bi-youtube"></i>
+    </a>
 
-<a href="https://api.whatsapp.com/send/?phone=13149561211&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="text-white" title="واتساب">
-  <i class="bi bi-whatsapp"></i>
-</a>
+    <a href="https://api.whatsapp.com/send/?phone=13149561211&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="text-white" title="واتساب">
+      <i class="bi bi-whatsapp"></i>
+    </a>
 
   </div>
 
   <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
+
 </footer>
 
 <div id="google_translate_element"></div>
