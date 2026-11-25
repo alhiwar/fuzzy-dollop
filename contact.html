@@ -1,5 +1,5 @@
-<!doctype html>
 
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -48,6 +48,31 @@
       flex-shrink:0;
     }
 
+    .email-box {
+      background:#faf8f4;
+      border:1px solid #e8dfd1;
+      border-radius:12px;
+      padding:16px;
+      margin-bottom:16px;
+      text-align:center;
+    }
+
+    .email-address {
+      display:block;
+      font-size:1rem;
+      font-weight:600;
+      direction:ltr;
+      overflow-wrap:anywhere;
+      margin-bottom:12px;
+    }
+
+    .copy-status {
+      min-height:24px;
+      font-size:0.9rem;
+      color:#27633a;
+      text-align:center;
+    }
+
     footer a {
       text-decoration:none;
     }
@@ -63,7 +88,6 @@
       box-shadow:0 0 6px rgba(0,0,0,0.2);
     }
   </style>
-
 </head>
 
 <body>
@@ -76,53 +100,53 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
 
-<a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-<img src="logo-main.png" alt="شعار الحوار الثقافي" style="width:160px;height:auto;margin-bottom:16px;" />
-  الحوار الثقافي
-</a>
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="logo-main.png" alt="شعار الحوار الثقافي" style="width:160px;height:auto;margin-bottom:16px;" />
+      الحوار الثقافي
+    </a>
 
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-label="فتح القائمة">
-  <span class="navbar-toggler-icon"></span>
-</button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-label="فتح القائمة">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<div id="navbar" class="collapse navbar-collapse">
-  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-    <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
-    <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
-    <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
 
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
-        <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="videos.html">الفيديوهات</a></li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="search.html">
+            <i class="bi bi-search"></i>
+            البحث
+          </a>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">تواصل معنا</a></li>
+
+        <li class="nav-item">
+          <a class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2" href="contact-en.html">
+            EN
+          </a>
+        </li>
+
       </ul>
-    </li>
-
-    <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
-    <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
-    <li class="nav-item"><a class="nav-link" href="videos.html">الفيديوهات</a></li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="search.html">
-        <i class="bi bi-search"></i>
-        البحث
-      </a>
-    </li>
-
-    <li class="nav-item"><a class="nav-link" href="submit.html">إرسال مقال</a></li>
-    <li class="nav-item"><a class="nav-link active" href="contact.html">تواصل معنا</a></li>
-
-    <li class="nav-item">
-      <a class="nav-link btn btn-sm btn-outline-light rounded-pill px-3 ms-2" href="contact-en.html">
-        EN
-      </a>
-    </li>
-
-  </ul>
-</div>
+    </div>
 
   </div>
 </nav>
@@ -140,82 +164,117 @@
 <div class="container my-5" style="max-width:950px;">
   <div class="row g-4">
 
-<div class="col-md-7">
-  <div class="contact-box">
+    <div class="col-md-7">
+      <div class="contact-box">
 
-    <h3 class="mb-4">أرسل رسالة</h3>
+        <h3 class="mb-4">راسلوا الحوار الثقافي</h3>
 
-    <form action="https://formspree.io/f/movoovwk" method="POST">
-      <input type="hidden" name="_next" value="https://hiwardialogue.org/success.html">
+        <p style="line-height:2;">
+          للتواصل مع إدارة موقع الحوار الثقافي أو إرسال المقالات
+          والدراسات والمقترحات، يرجى نسخ أحد عنوانَي البريد
+          الإلكتروني أدناه وإرسال رسالتكم من بريدكم الشخصي.
+        </p>
 
-      <label class="mb-1 fw-bold">الاسم</label>
-      <input type="text" name="name" class="form-control mb-3" placeholder="اكتب اسمك" required>
+        <p class="text-muted" style="line-height:1.9;">
+          يمكنكم اختيار أي من العنوانين التاليين، وكلاهما مخصص
+          لاستقبال المراسلات والمواد المرسلة إلى الموقع.
+        </p>
 
-      <label class="mb-1 fw-bold">البريد الإلكتروني</label>
-      <input type="email" name="email" class="form-control mb-3" placeholder="example@mail.com" required>
+        <div class="email-box">
+          <div class="mb-2 fw-bold">البريد الإلكتروني الأول</div>
 
-      <label class="mb-1 fw-bold">رسالتك</label>
-      <textarea name="message" rows="5" class="form-control mb-3" placeholder="اكتب رسالتك هنا..." required></textarea>
+          <span class="email-address" id="email1">
+            almamorij57@gmail.com
+          </span>
 
-      <button type="submit" class="btn btn-dark w-100 py-2">
-        <i class="bi bi-send"></i>
-        إرسال
-      </button>
+          <button type="button" class="btn btn-dark btn-sm px-4"
+                  onclick="copyEmail('almamorij57@gmail.com','status1')">
+            <i class="bi bi-clipboard"></i>
+            نسخ البريد الإلكتروني
+          </button>
 
-    </form>
+          <div id="status1" class="copy-status mt-2" role="status" aria-live="polite"></div>
+        </div>
 
-  </div>
-</div>
+        <div class="email-box">
+          <div class="mb-2 fw-bold">البريد الإلكتروني الثاني</div>
 
-<div class="col-md-5">
-  <div class="contact-box">
+          <span class="email-address" id="email2">
+            hiwarculturaldialogue@gmail.com
+          </span>
 
-    <h3 class="mb-4">معلومات التواصل</h3>
+          <button type="button" class="btn btn-dark btn-sm px-4"
+                  onclick="copyEmail('hiwarculturaldialogue@gmail.com','status2')">
+            <i class="bi bi-clipboard"></i>
+            نسخ البريد الإلكتروني
+          </button>
 
-    <div class="d-flex align-items-center mb-3">
-      <div class="icon-circle"><i class="bi bi-envelope"></i></div>
-      <div>
-        <h6 class="mb-1">إرسال المشاركات</h6>
-        <p class="text-muted mb-0">يمكن إرسال المقالات والدراسات عبر النموذج.</p>
+          <div id="status2" class="copy-status mt-2" role="status" aria-live="polite"></div>
+        </div>
+
+        <p class="text-muted mb-0" style="line-height:2;">
+          عند إرسال مادة للنشر يرجى ذكر اسم الكاتب وعنوان المادة
+          وإرفاق النص أو الملف في الرسالة الإلكترونية.
+        </p>
+
       </div>
     </div>
 
-    <div class="d-flex align-items-center mb-3">
-      <div class="icon-circle"><i class="bi bi-pencil-square"></i></div>
-      <div>
-        <h6 class="mb-1">المواد المقبولة</h6>
-        <p class="text-muted mb-0">مقالات، دراسات، بحوث، ونصوص ثقافية جادة.</p>
+    <div class="col-md-5">
+      <div class="contact-box">
+
+        <h3 class="mb-4">معلومات التواصل</h3>
+
+        <div class="d-flex align-items-center mb-3">
+          <div class="icon-circle"><i class="bi bi-envelope"></i></div>
+          <div>
+            <h6 class="mb-1">إرسال المشاركات</h6>
+            <p class="text-muted mb-0">
+              يمكن إرسال المقالات والدراسات عبر البريد الإلكتروني.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center mb-3">
+          <div class="icon-circle"><i class="bi bi-pencil-square"></i></div>
+          <div>
+            <h6 class="mb-1">المواد المقبولة</h6>
+            <p class="text-muted mb-0">
+              مقالات، دراسات، بحوث، ونصوص ثقافية جادة.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center mb-3">
+          <div class="icon-circle"><i class="bi bi-chat-dots"></i></div>
+          <div>
+            <h6 class="mb-1">المقترحات</h6>
+            <p class="text-muted mb-0">
+              نرحّب بآرائكم حول تطوير الموقع ومحتواه.
+            </p>
+          </div>
+        </div>
+
+        <hr>
+
+        <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
+
+        <div class="d-flex gap-3" style="font-size:1.7rem;">
+          <a href="https://www.facebook.com/profile.php?id=61590545142380" target="_blank" rel="noopener" class="text-dark" title="فيسبوك">
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <a href="https://www.youtube.com/@JAlmamo" target="_blank" rel="noopener" class="text-dark" title="يوتيوب">
+            <i class="bi bi-youtube"></i>
+          </a>
+
+          <a href="https://api.whatsapp.com/send/?phone=13149561211&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="text-dark" title="واتساب">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+
       </div>
     </div>
-
-    <div class="d-flex align-items-center mb-3">
-      <div class="icon-circle"><i class="bi bi-chat-dots"></i></div>
-      <div>
-        <h6 class="mb-1">المقترحات</h6>
-        <p class="text-muted mb-0">نرحّب بآرائكم حول تطوير الموقع ومحتواه.</p>
-      </div>
-    </div>
-
-    <hr>
-
-    <h5 class="mb-3">تابعونا على مواقع التواصل</h5>
-
-    <div class="d-flex gap-3" style="font-size:1.7rem;">
-      <a href="https://www.facebook.com/profile.php?id=61590545142380" target="_blank" rel="noopener" class="text-dark" title="فيسبوك">
-        <i class="bi bi-facebook"></i>
-      </a>
-
-      <a href="https://www.youtube.com/@JAlmamo" target="_blank" rel="noopener" class="text-dark" title="يوتيوب">
-        <i class="bi bi-youtube"></i>
-      </a>
-
-      <a href="https://api.whatsapp.com/send/?phone=13149561211&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="text-dark" title="واتساب">
-        <i class="bi bi-whatsapp"></i>
-      </a>
-    </div>
-
-  </div>
-</div>
 
   </div>
 </div>
@@ -228,14 +287,13 @@
       <i class="bi bi-facebook"></i>
     </a>
 
-<a href="https://www.youtube.com/@JAlmamo" target="_blank" rel="noopener" class="text-white" title="يوتيوب">
-  <i class="bi bi-youtube"></i>
-</a>
+    <a href="https://www.youtube.com/@JAlmamo" target="_blank" rel="noopener" class="text-white" title="يوتيوب">
+      <i class="bi bi-youtube"></i>
+    </a>
 
-<a href="https://api.whatsapp.com/send/?phone=13149561211&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="text-white" title="واتساب">
-  <i class="bi bi-whatsapp"></i>
-</a>
-
+    <a href="https://api.whatsapp.com/send/?phone=13149561211&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="text-white" title="واتساب">
+      <i class="bi bi-whatsapp"></i>
+    </a>
   </div>
 
   <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
@@ -243,7 +301,35 @@
 
 <div id="google_translate_element"></div>
 
-<script type="text/javascript">
+<script>
+  async function copyEmail(email, statusId) {
+    var status = document.getElementById(statusId);
+
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        var field = document.createElement('textarea');
+        field.value = email;
+        field.style.position = 'fixed';
+        field.style.opacity = '0';
+        document.body.appendChild(field);
+        field.select();
+
+        var copied = document.execCommand('copy');
+        document.body.removeChild(field);
+
+        if (!copied) {
+          throw new Error('Copy failed');
+        }
+      }
+
+      status.textContent = 'تم نسخ البريد الإلكتروني بنجاح';
+    } catch (error) {
+      status.textContent = 'تعذر النسخ التلقائي، يرجى تحديد العنوان ونسخه يدويًا';
+    }
+  }
+
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'ar',
@@ -254,7 +340,6 @@
 </script>
 
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
