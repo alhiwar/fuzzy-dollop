@@ -1,9 +1,12 @@
+
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Contact Us — Cultural Dialogue</title>
+  <meta name="description" content="Contact Cultural Dialogue to submit articles, studies, messages, and suggestions." />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -47,6 +50,40 @@
       color:#000;
     }
 
+    .email-box {
+      background:#faf8f4;
+      border:1px solid #e8dfd1;
+      border-radius:12px;
+      padding:20px;
+      margin-bottom:18px;
+      text-align:center;
+    }
+
+    .email-address {
+      display:block;
+      font-size:1.1rem;
+      font-weight:700;
+      direction:ltr;
+      overflow-wrap:anywhere;
+      margin-bottom:14px;
+    }
+
+    .copy-status {
+      min-height:24px;
+      font-size:0.9rem;
+      color:#27633a;
+      text-align:center;
+    }
+
+    .contact-note {
+      background:#faf7f1;
+      border-left:4px solid #c9a45c;
+      padding:18px;
+      border-radius:12px;
+      line-height:1.9;
+      margin-top:22px;
+    }
+
     footer a {
       text-decoration:none;
     }
@@ -72,80 +109,223 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
+
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index-en.html">
       <img src="logo-small.svg" alt="Cultural Dialogue Logo" width="55" height="55" style="border-radius:50%; margin-right:8px;">
       Cultural Dialogue
     </a>
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+            aria-label="Open navigation menu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div id="navbarMenu" class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto">
 
-        <li class="nav-item"><a class="nav-link" href="index-en.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about-en.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="authors-en.html">Authors</a></li>
-        <li class="nav-item"><a class="nav-link" href="articles-en.html">Articles</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contact-en.html">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="index-en.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about-en.html">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="authors-en.html">Authors</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="articles-en.html">Articles</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="submit-en.html">Submit Article</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="contact-en.html">Contact</a>
+        </li>
 
       </ul>
     </div>
+
   </div>
 </nav>
 
 <header class="page-header">
   <div class="container">
+
     <h1 class="fw-bold mb-3">Contact Us</h1>
+
     <p class="lead mb-0">
-      Send us your message, article, study, or publishing inquiry.
+      We welcome your messages, articles, studies,
+      publishing inquiries, and suggestions.
     </p>
+
   </div>
 </header>
 
-<div class="container my-5">
+<main class="container my-5">
 
   <div class="contact-box">
 
-    <form action="https://formspree.io/f/movoovwk" method="POST">
+    <h2 class="h4 fw-bold mb-4">Contact Cultural Dialogue</h2>
 
-      <label class="form-label fw-bold">Your Name</label>
-      <input type="text" name="name" class="form-control mb-3" required>
+    <p style="line-height:1.9;">
+      To contact the editorial team of Cultural Dialogue,
+      submit an article or study, or share your suggestions,
+      please choose and copy one of the following email addresses.
+    </p>
 
-      <label class="form-label fw-bold">Email Address</label>
-      <input type="email" name="email" class="form-control mb-3" required>
+    <p class="text-muted" style="line-height:1.9;">
+      You may use either address. After copying it,
+      open your personal email account and send your message directly.
+    </p>
 
-      <label class="form-label fw-bold">Your Message</label>
-      <textarea name="message" rows="5" class="form-control mb-3" required></textarea>
+    <div class="email-box">
 
-      <button class="btn btn-dark w-100 py-2" type="submit">
-        <i class="bi bi-send"></i> Send Message
+      <h3 class="h5 fw-bold mb-3">First Email Address</h3>
+
+      <span class="email-address">
+        almamorij57@gmail.com
+      </span>
+
+      <button type="button"
+              class="btn btn-dark px-4"
+              onclick="copyEmail('almamorij57@gmail.com','status1')">
+        <i class="bi bi-clipboard"></i>
+        Copy Email Address
       </button>
 
-    </form>
+      <div id="status1"
+           class="copy-status mt-2"
+           role="status"
+           aria-live="polite"></div>
+
+    </div>
+
+    <div class="email-box">
+
+      <h3 class="h5 fw-bold mb-3">Second Email Address</h3>
+
+      <span class="email-address">
+        hiwarculturaldialogue@gmail.com
+      </span>
+
+      <button type="button"
+              class="btn btn-dark px-4"
+              onclick="copyEmail('hiwarculturaldialogue@gmail.com','status2')">
+        <i class="bi bi-clipboard"></i>
+        Copy Email Address
+      </button>
+
+      <div id="status2"
+           class="copy-status mt-2"
+           role="status"
+           aria-live="polite"></div>
+
+    </div>
+
+    <div class="contact-note">
+
+      <h3 class="h5 fw-bold mb-3">Submitting Articles and Studies</h3>
+
+      <p class="mb-2">
+        If you are submitting material for publication,
+        please include:
+      </p>
+
+      <ul class="mb-3">
+        <li>Your full name.</li>
+        <li>The title of your article or study.</li>
+        <li>The complete text or an attached Word or PDF file.</li>
+        <li>A short biography and author photograph, if available.</li>
+      </ul>
+
+      <p class="mb-0">
+        All submissions are reviewed before publication.
+        Cultural Dialogue respects the intellectual rights
+        of contributing authors.
+      </p>
+
+    </div>
 
   </div>
-</div>
+
+</main>
 
 <footer class="text-center bg-dark text-white p-4 mt-5">
+
   <h5 class="mb-3">Follow us on Social Media</h5>
 
-  <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
-    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+  <div class="d-flex justify-content-center gap-3 mb-3"
+       style="font-size:1.6rem;">
+
+    <a href="https://www.facebook.com/profile.php?id=61590545142380"
+       target="_blank"
+       rel="noopener"
+       class="text-white"
+       aria-label="Facebook">
+      <i class="bi bi-facebook"></i>
+    </a>
+
+    <a href="https://www.youtube.com/@JAlmamo/videos"
+       target="_blank"
+       rel="noopener"
+       class="text-white"
+       aria-label="YouTube">
+      <i class="bi bi-youtube"></i>
+    </a>
+
+    <a href="https://api.whatsapp.com/send/?phone=13149561211&amp;text&amp;type=phone_number&amp;app_absent=0"
+       target="_blank"
+       rel="noopener"
+       class="text-white"
+       aria-label="WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
   </div>
 
   <div>© 2025 Cultural Dialogue — All Rights Reserved</div>
+
 </footer>
 
 <div id="google_translate_element"></div>
 
-<script type="text/javascript">
+<script>
+  async function copyEmail(email, statusId) {
+    var status = document.getElementById(statusId);
+
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        var field = document.createElement('textarea');
+        field.value = email;
+        field.style.position = 'fixed';
+        field.style.opacity = '0';
+        document.body.appendChild(field);
+        field.select();
+
+        var copied = document.execCommand('copy');
+        document.body.removeChild(field);
+
+        if (!copied) {
+          throw new Error('Copy failed');
+        }
+      }
+
+      status.textContent = 'Email address copied successfully.';
+    } catch (error) {
+      status.textContent =
+        'Unable to copy automatically. Please select and copy the address manually.';
+    }
+  }
+
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'en',
@@ -154,6 +334,7 @@
     }, 'google_translate_element');
   }
 </script>
+
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
