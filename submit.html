@@ -1,5 +1,5 @@
-<!doctype html>
 
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -64,6 +64,31 @@
       margin-bottom:25px;
     }
 
+    .email-box{
+      background:#faf8f4;
+      border:1px solid #e8dfd1;
+      border-radius:12px;
+      padding:20px;
+      margin-bottom:18px;
+      text-align:center;
+    }
+
+    .email-address{
+      display:block;
+      font-size:1.1rem;
+      font-weight:700;
+      direction:ltr;
+      overflow-wrap:anywhere;
+      margin-bottom:14px;
+    }
+
+    .copy-status{
+      min-height:24px;
+      font-size:0.9rem;
+      color:#27633a;
+      text-align:center;
+    }
+
     footer a{
       text-decoration:none;
     }
@@ -79,7 +104,6 @@
       box-shadow:0 0 6px rgba(0,0,0,0.2);
     }
   </style>
-
 </head>
 
 <body>
@@ -87,47 +111,47 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
 
-<a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
- <img src="logo-main.png" alt="شعار الحوار الثقافي" style="width:160px;height:auto;margin-bottom:16px;" />
-  <span>الحوار الثقافي</span>
-</a>
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="logo-main.png" alt="شعار الحوار الثقافي" style="width:160px;height:auto;margin-bottom:16px;" />
+      <span>الحوار الثقافي</span>
+    </a>
 
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="فتح القائمة">
-  <span class="navbar-toggler-icon"></span>
-</button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="فتح القائمة">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<div class="collapse navbar-collapse" id="mainNavbar">
-  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-    <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
-    <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
-    <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+        <li class="nav-item"><a class="nav-link" href="literature.html">الأدب</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">الفكر والسياسة</a></li>
 
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
-        <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">البحوث</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="research.html">البحوث العامة</a></li>
+            <li><a class="dropdown-item" href="islamic-research.html">البحوث الإسلامية</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="videos.html">الفيديوهات</a></li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="search.html">
+            <i class="bi bi-search"></i>
+            البحث
+          </a>
+        </li>
+
+        <li class="nav-item"><a class="nav-link active" href="submit.html">إرسال مقال</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+
       </ul>
-    </li>
-
-    <li class="nav-item"><a class="nav-link" href="authors.html">الكتّاب</a></li>
-    <li class="nav-item"><a class="nav-link" href="articles.html">المقالات</a></li>
-    <li class="nav-item"><a class="nav-link" href="videos.html">الفيديوهات</a></li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="search.html">
-        <i class="bi bi-search"></i>
-        البحث
-      </a>
-    </li>
-
-    <li class="nav-item"><a class="nav-link active" href="submit.html">إرسال مقال</a></li>
-    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
-
-  </ul>
-</div>
+    </div>
 
   </div>
 </nav>
@@ -147,65 +171,74 @@
 
   <section class="form-box">
 
-<h2 class="section-title h4">نموذج الإرسال</h2>
+    <h2 class="section-title h4">إرسال المواد للنشر</h2>
 
-<div class="info-box">
-  يتم استقبال المواد للمراجعة قبل النشر. يرجى لصق نص المقال داخل النموذج.
-  إذا كان المقال طويلًا جدًا أو لديك ملف Word أو صورة للكاتب، فاكتب ذلك في خانة الملاحظات
-  وسنرد عليك عبر البريد الإلكتروني لاستلام الملفات بطريقة مناسبة.
-</div>
+    <div class="info-box">
+      يرحب موقع الحوار الثقافي باستقبال المقالات والبحوث والدراسات
+      والنصوص الأدبية والفكرية من الكتّاب والباحثين.
+      يتم استقبال المواد عبر البريد الإلكتروني مباشرة
+      ومراجعتها قبل النشر.
+    </div>
 
-<form action="https://formspree.io/f/movoovwk" method="POST">
-  <input type="hidden" name="_next" value="https://hiwardialogue.org/success.html">
+    <p style="line-height:2;">
+      لإرسال مادة للنشر، يرجى اختيار أحد عنوانَي البريد الإلكتروني
+      التاليين ونسخه، ثم فتح بريدكم الشخصي وإرسال المادة
+      إلى العنوان الذي اخترتموه.
+    </p>
 
-  <div class="mb-3">
-    <label class="form-label fw-bold">اسم الكاتب</label>
-    <input type="text" name="author" class="form-control" required>
-  </div>
+    <div class="email-box">
+      <h3 class="h5 fw-bold mb-3">البريد الإلكتروني الأول</h3>
 
-  <div class="mb-3">
-    <label class="form-label fw-bold">البريد الإلكتروني</label>
-    <input type="email" name="email" class="form-control" required>
-  </div>
+      <span class="email-address">
+        almamorij57@gmail.com
+      </span>
 
-  <div class="mb-3">
-    <label class="form-label fw-bold">عنوان المقال أو البحث</label>
-    <input type="text" name="title" class="form-control" required>
-  </div>
+      <button type="button" class="btn btn-dark px-4"
+              onclick="copyEmail('almamorij57@gmail.com','status1')">
+        <i class="bi bi-clipboard"></i>
+        نسخ البريد الإلكتروني
+      </button>
 
-  <div class="mb-3">
-    <label class="form-label fw-bold">نوع المادة</label>
-    <select name="category" class="form-select">
-      <option>مقال فكري</option>
-      <option>بحث</option>
-      <option>أدب</option>
-      <option>قصة قصيرة</option>
-      <option>دراسة ثقافية</option>
-      <option>نص أدبي</option>
-    </select>
-  </div>
+      <div id="status1" class="copy-status mt-2" role="status" aria-live="polite"></div>
+    </div>
 
-  <div class="mb-3">
-    <label class="form-label fw-bold">نبذة مختصرة عن الكاتب</label>
-    <textarea name="author_bio" rows="4" class="form-control" placeholder="اكتب نبذة مختصرة عن الكاتب، ويمكن تركها فارغة إذا لم تكن متوفرة."></textarea>
-  </div>
+    <div class="email-box">
+      <h3 class="h5 fw-bold mb-3">البريد الإلكتروني الثاني</h3>
 
-  <div class="mb-3">
-    <label class="form-label fw-bold">نص المقال أو البحث</label>
-    <textarea name="message" rows="12" class="form-control" placeholder="الصق نص المقال أو البحث هنا..." required></textarea>
-  </div>
+      <span class="email-address">
+        hiwarculturaldialogue@gmail.com
+      </span>
 
-  <div class="mb-4">
-    <label class="form-label fw-bold">ملاحظات إضافية</label>
-    <textarea name="notes" rows="4" class="form-control" placeholder="اكتب هنا إن كان لديك ملف Word أو PDF أو صورة كاتب تريد إرسالها لاحقًا."></textarea>
-  </div>
+      <button type="button" class="btn btn-dark px-4"
+              onclick="copyEmail('hiwarculturaldialogue@gmail.com','status2')">
+        <i class="bi bi-clipboard"></i>
+        نسخ البريد الإلكتروني
+      </button>
 
-  <button type="submit" class="btn btn-dark btn-lg w-100">
-    <i class="bi bi-send"></i>
-    إرسال المادة
-  </button>
+      <div id="status2" class="copy-status mt-2" role="status" aria-live="polite"></div>
+    </div>
 
-</form>
+    <h3 class="section-title h5 mt-4">ما المطلوب عند إرسال المادة؟</h3>
+
+    <div class="info-box">
+      <p class="mb-2">
+        يرجى أن تتضمن الرسالة الإلكترونية المعلومات التالية:
+      </p>
+
+      <ul class="mb-0">
+        <li>اسم الكاتب الكامل.</li>
+        <li>عنوان المقال أو البحث أو النص الأدبي.</li>
+        <li>نوع المادة: أدب، فكر وسياسة، بحوث عامة، أو بحوث إسلامية.</li>
+        <li>نبذة مختصرة عن الكاتب، إذا كانت متوفرة.</li>
+        <li>صورة الكاتب، إذا كانت متوفرة.</li>
+        <li>نص المادة داخل الرسالة أو في ملف مرفق، ويفضل Word أو PDF.</li>
+      </ul>
+    </div>
+
+    <p class="text-muted mb-0" style="line-height:2;">
+      تخضع المواد المرسلة للمراجعة قبل النشر،
+      مع احترام حقوق الكتّاب وأسمائهم وملكية نصوصهم الفكرية.
+    </p>
 
   </section>
 
@@ -219,14 +252,13 @@
       <i class="bi bi-facebook"></i>
     </a>
 
-<a href="https://www.youtube.com/@JAlmamo/videos" target="_blank" rel="noopener" class="text-white" aria-label="يوتيوب">
-  <i class="bi bi-youtube"></i>
-</a>
+    <a href="https://www.youtube.com/@JAlmamo/videos" target="_blank" rel="noopener" class="text-white" aria-label="يوتيوب">
+      <i class="bi bi-youtube"></i>
+    </a>
 
-<a href="https://api.whatsapp.com/send/?phone=13149561211&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="text-white" aria-label="واتساب">
-  <i class="bi bi-whatsapp"></i>
-</a>
-
+    <a href="https://api.whatsapp.com/send/?phone=13149561211&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="text-white" aria-label="واتساب">
+      <i class="bi bi-whatsapp"></i>
+    </a>
   </div>
 
   <div>جميع الحقوق محفوظة © 2025 — الحوار الثقافي</div>
@@ -235,6 +267,34 @@
 <div id="google_translate_element"></div>
 
 <script>
+  async function copyEmail(email, statusId) {
+    var status = document.getElementById(statusId);
+
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        var field = document.createElement('textarea');
+        field.value = email;
+        field.style.position = 'fixed';
+        field.style.opacity = '0';
+        document.body.appendChild(field);
+        field.select();
+
+        var copied = document.execCommand('copy');
+        document.body.removeChild(field);
+
+        if (!copied) {
+          throw new Error('Copy failed');
+        }
+      }
+
+      status.textContent = 'تم نسخ البريد الإلكتروني بنجاح';
+    } catch (error) {
+      status.textContent = 'تعذر النسخ التلقائي، يرجى تحديد العنوان ونسخه يدويًا';
+    }
+  }
+
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'ar',
@@ -245,7 +305,6 @@
 </script>
 
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
