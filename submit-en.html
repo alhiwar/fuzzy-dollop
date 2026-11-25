@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
@@ -63,6 +64,31 @@
       margin-bottom:25px;
     }
 
+    .email-box{
+      background:#faf8f4;
+      border:1px solid #e8dfd1;
+      border-radius:12px;
+      padding:20px;
+      margin-bottom:18px;
+      text-align:center;
+    }
+
+    .email-address{
+      display:block;
+      font-size:1.1rem;
+      font-weight:700;
+      overflow-wrap:anywhere;
+      margin-bottom:14px;
+      direction:ltr;
+    }
+
+    .copy-status{
+      min-height:24px;
+      font-size:0.9rem;
+      color:#27633a;
+      text-align:center;
+    }
+
     footer a{
       text-decoration:none;
     }
@@ -84,7 +110,7 @@
       <span>Cultural Dialogue</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="Open navigation menu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -107,7 +133,8 @@
     <h1>Submit an Article or Study</h1>
     <p>
       Cultural Dialogue welcomes serious articles, studies, literary texts,
-      and thoughtful cultural contributions, while preserving the author’s name and intellectual rights.
+      and thoughtful cultural contributions, while preserving the author's
+      name and intellectual rights.
     </p>
   </div>
 </header>
@@ -116,72 +143,74 @@
 
   <section class="form-box">
 
-    <h2 class="section-title h4">Submission Form</h2>
+    <h2 class="section-title h4">Submit Your Work for Publication</h2>
 
     <div class="info-box">
-      Submitted materials are reviewed before publication. Please paste the article text inside the form.
-      If the article is very long or you have a Word file, PDF, or author photo, mention that in the notes,
-      and we will contact you by email to receive the files appropriately.
+      Cultural Dialogue welcomes articles, research papers, cultural studies,
+      and literary contributions from writers and researchers.
+      All submitted materials are reviewed before publication.
     </div>
 
-    <form action="https://formspree.io/f/movoovwk" method="POST">
+    <p style="line-height:2;">
+      To submit your work, please choose either of the following email
+      addresses, copy it, and send your article or study directly
+      from your personal email account.
+    </p>
 
-      <div class="mb-3">
-        <label class="form-label fw-bold">Author Name</label>
-        <input type="text" name="author" class="form-control" required>
-      </div>
+    <div class="email-box">
+      <h3 class="h5 fw-bold mb-3">First Email Address</h3>
 
-      <div class="mb-3">
-        <label class="form-label fw-bold">Email Address</label>
-        <input type="email" name="email" class="form-control" required>
-      </div>
+      <span class="email-address">
+        almamorij57@gmail.com
+      </span>
 
-      <div class="mb-3">
-        <label class="form-label fw-bold">Article or Study Title</label>
-        <input type="text" name="title" class="form-control" required>
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label fw-bold">Type of Material</label>
-        <select name="category" class="form-select">
-          <option>Intellectual Article</option>
-          <option>Research</option>
-          <option>Literature</option>
-          <option>Short Story</option>
-          <option>Cultural Study</option>
-          <option>Literary Text</option>
-        </select>
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label fw-bold">Short Author Bio</label>
-        <textarea name="author_bio" rows="4" class="form-control"
-                  placeholder="Write a short author bio. You may leave this empty if unavailable."></textarea>
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label fw-bold">Article or Study Text</label>
-        <textarea name="message"
-                  rows="12"
-                  class="form-control"
-                  placeholder="Paste the article or study text here..."
-                  required></textarea>
-      </div>
-
-      <div class="mb-4">
-        <label class="form-label fw-bold">Additional Notes</label>
-        <textarea name="notes"
-                  rows="4"
-                  class="form-control"
-                  placeholder="Mention here if you have a Word file, PDF, or author photo to send later."></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-dark btn-lg w-100">
-        <i class="bi bi-send"></i>
-        Submit Material
+      <button type="button" class="btn btn-dark px-4"
+              onclick="copyEmail('almamorij57@gmail.com','status1')">
+        <i class="bi bi-clipboard"></i>
+        Copy Email Address
       </button>
 
-    </form>
+      <div id="status1" class="copy-status mt-2" role="status" aria-live="polite"></div>
+    </div>
+
+    <div class="email-box">
+      <h3 class="h5 fw-bold mb-3">Second Email Address</h3>
+
+      <span class="email-address">
+        hiwarculturaldialogue@gmail.com
+      </span>
+
+      <button type="button" class="btn btn-dark px-4"
+              onclick="copyEmail('hiwarculturaldialogue@gmail.com','status2')">
+        <i class="bi bi-clipboard"></i>
+        Copy Email Address
+      </button>
+
+      <div id="status2" class="copy-status mt-2" role="status" aria-live="polite"></div>
+    </div>
+
+    <h3 class="section-title h5 mt-4">Submission Requirements</h3>
+
+    <div class="info-box">
+      <p class="mb-2">
+        Please include the following information in your email:
+      </p>
+
+      <ul class="mb-0">
+        <li>Full name of the author.</li>
+        <li>Title of the article, research paper, or literary work.</li>
+        <li>Category: Literature, Thought and Politics, General Research, or Islamic Research.</li>
+        <li>A short author biography, if available.</li>
+        <li>An author photograph, if available.</li>
+        <li>The complete text in the email body or as an attachment, preferably Word or PDF.</li>
+      </ul>
+    </div>
+
+    <p class="text-muted mb-0" style="line-height:2;">
+      All submissions are subject to editorial review before publication.
+      Cultural Dialogue respects the names, intellectual property,
+      and rights of contributing authors.
+    </p>
 
   </section>
 
@@ -192,17 +221,60 @@
   <h5 class="mb-3">Follow Us</h5>
 
   <div class="d-flex justify-content-center gap-3 mb-3" style="font-size:1.6rem;">
-    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+
+    <a href="https://www.facebook.com/profile.php?id=61590545142380"
+       target="_blank" rel="noopener"
+       class="text-white" aria-label="Facebook">
+      <i class="bi bi-facebook"></i>
+    </a>
+
+    <a href="https://www.youtube.com/@JAlmamo/videos"
+       target="_blank" rel="noopener"
+       class="text-white" aria-label="YouTube">
+      <i class="bi bi-youtube"></i>
+    </a>
+
+    <a href="https://api.whatsapp.com/send/?phone=13149561211&amp;text&amp;type=phone_number&amp;app_absent=0"
+       target="_blank" rel="noopener"
+       class="text-white" aria-label="WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
   </div>
 
   <div>All Rights Reserved © 2025 — Cultural Dialogue</div>
 
 </footer>
+
+<script>
+  async function copyEmail(email, statusId) {
+    var status = document.getElementById(statusId);
+
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        var field = document.createElement('textarea');
+        field.value = email;
+        field.style.position = 'fixed';
+        field.style.opacity = '0';
+        document.body.appendChild(field);
+        field.select();
+
+        var copied = document.execCommand('copy');
+        document.body.removeChild(field);
+
+        if (!copied) {
+          throw new Error('Copy failed');
+        }
+      }
+
+      status.textContent = 'Email address copied successfully.';
+    } catch (error) {
+      status.textContent = 'Unable to copy automatically. Please select and copy the address manually.';
+    }
+  }
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
